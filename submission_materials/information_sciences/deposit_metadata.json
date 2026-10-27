@@ -1,6 +1,6 @@
 {
   "title": "State Aggregation in Dynamic Graph Recovery: Separating Structural Ranking from Temporal Discrimination - Reproducibility Artifact",
-  "version": "v2026.10.27.1",
+  "version": "v2026.10.28",
   "resource_type": "software with retained simulation data and manuscript sources",
   "creators": [
     {
@@ -15,8 +15,8 @@
   "repository_status": "public versioned GitHub release",
   "doi": null,
   "public_url": "https://github.com/xschang1002/latent-state-graph-recovery",
-  "release_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1",
-  "archive_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/download/v2026.10.27.1/information_sciences_reproducibility.zip",
+  "release_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28",
+  "archive_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/download/v2026.10.28/information_sciences_reproducibility.zip",
   "identifier_status": "versioned GitHub release; no DOI has been assigned",
   "license_scope": "Project code: MIT. Third-party code and data retain their own notices and acquisition conditions.",
   "description_file": "upload_description.md",
@@ -32,12 +32,14 @@
     "selected_fresh_fits": "8 same-seed A/C generation/fitting reruns; 492 exact comparisons in the recorded environment; not independent new seeds or full-grid fresh reproduction"
   },
   "evidence_index": "docs/research_guide.md",
-  "main_pdf": "paper_preprint_2026-10-27_information_sciences_refined.pdf",
-  "supplement_pdf": "paper_supplement_2026-10-27_information_sciences_refined.pdf",
+  "main_pdf": "Manuscript.pdf",
+  "supplement_pdf": "Supplementary_Material.pdf",
   "historical_evidence_indices": [
     "docs/information_sciences_evidence_index_2026-10-24.md",
     "docs/reviewer_controls_evidence_index_2026-10-25.md",
     "docs/evaluation_revision_evidence_index_2026-10-25.md"
   ],
-  "release_checklist": "submission_materials/information_sciences/README.md"
+  "release_checklist": "submission_materials/information_sciences/README.md",
+  "scientific_content_version": "v2026.10.27.1",
+  "delivery_revision": "Formal submission filenames only; PDF bytes and scientific content are unchanged."
 }

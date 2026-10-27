@@ -32,12 +32,13 @@ available as historical provenance, with their original section numbering.
 `STCG` remains a software/package identifier. Simulation arrays are synthetic;
 third-party data acquisition conditions and notices are retained.
 
-Metadata version: v2026.10.27.1. Current PDF release assets end in
-`2026-10-27_information_sciences_refined.pdf`; package PDFs are `paper/main.pdf`
-and `paper/supplement.pdf`. Identify any delivered ZIP by its actual outer
+Delivery version: v2026.10.28. Current PDF release assets are `Manuscript.pdf`
+and `Supplementary_Material.pdf`; package compilation paths remain `paper/main.pdf`
+and `paper/supplement.pdf`. This filename-only delivery preserves the exact PDFs
+and scientific content of v2026.10.27.1. Identify any delivered ZIP by its actual outer
 manifest and file hash. Deposition metadata and remaining release steps are in
 `submission_materials/information_sciences/README.md`. Source code and the full
 archive are available at
-https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1.
+https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28.
 No DOI has been assigned. Project code is MIT licensed; third-party components
 retain their own notices and conditions.

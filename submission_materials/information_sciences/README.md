@@ -19,13 +19,16 @@ gives the executable routes.
 
 The source repository is
 [latent-state-graph-recovery](https://github.com/xschang1002/latent-state-graph-recovery).
-[Release v2026.10.27.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1)
+[Release v2026.10.28](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28)
 provides the complete `information_sciences_reproducibility.zip`, article and
 supplement PDFs, a compact submission-files ZIP, and SHA-256 checksums. No DOI
 has been assigned. GitHub's automatically generated source ZIP is a different
 container; use the named reproducibility ZIP for the delivered artifact.
 
-The current article and supplement are the dated refined PDFs. Dated evidence
+The current article and supplement are `Manuscript.pdf` and
+`Supplementary_Material.pdf`. This delivery changes filenames and metadata only;
+PDF bytes and scientific content match `v2026.10.27.1`, whose scientific archive
+link remains valid inside the PDFs. Dated evidence
 indices retain the section numbering of their own snapshots; the research guide
 gives current locations. Historical verification records describe their own
 versions of the archive and are not checksums for this release.

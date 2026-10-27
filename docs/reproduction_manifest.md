@@ -1,16 +1,18 @@
 # Reproduction manifest
 
-Current guide: 27 October 2026, release `v2026.10.27.1`.
+Current guide: 28 October 2026, delivery release `v2026.10.28`.
+This filename-only delivery preserves the PDFs and scientific content of
+`v2026.10.27.1`, whose archive link remains printed in the unchanged PDFs.
 
 The scientific entry is [research_guide.md](research_guide.md): questions,
 evidence scope and the current supplement map. Exact executable routes are in
 [information_sciences_artifact_readme.md](information_sciences_artifact_readme.md),
 and [scripts/README.md](../scripts/README.md) groups entry points by task.
-The current PDFs are `paper_preprint_2026-10-27_information_sciences_refined.pdf`
-and `paper_supplement_2026-10-27_information_sciences_refined.pdf`; package
+The current PDFs are `Manuscript.pdf`
+and `Supplementary_Material.pdf`; package
 counterparts are `paper/main.pdf` and `paper/supplement.pdf`.
 The complete named ZIP, checksums and PDF assets are in the
-[public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1).
+[public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28).
 The GitHub release and journal submission are separate actions.
 
 The supplement now follows targets (S1), procedures (S2), derivations (S3),
