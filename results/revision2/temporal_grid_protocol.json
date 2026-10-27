@@ -1,0 +1,201 @@
+{
+  "analysis": "exploratory temporal-localisation extension, no confirmatory grid tests",
+  "executed_grid_entries": 35,
+  "gmm": {
+    "components": 2,
+    "continuous_emission": "responsibilities @ responsibility-weighted prototypes",
+    "covariance_type": "diag",
+    "legacy_emission": "weighted prototypes indexed by responsibility argmax",
+    "n_init": 3,
+    "native_gate": false,
+    "random_state": "simulation seed"
+  },
+  "grid": {
+    "axes": {
+      "edge_prob": [
+        0.1,
+        0.18,
+        0.3
+      ],
+      "effect_scale": [
+        0.6,
+        1.0,
+        1.4
+      ],
+      "max_lag": [
+        3,
+        5
+      ],
+      "observation_noise": [
+        0.0,
+        0.1,
+        0.2,
+        0.4
+      ],
+      "overlap": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "state_proportions": [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.8,
+          0.2
+        ],
+        [
+          0.95,
+          0.05
+        ]
+      ],
+      "switch_period": [
+        150,
+        300,
+        600,
+        900
+      ],
+      "timesteps": [
+        600,
+        1200,
+        3000
+      ]
+    },
+    "controls": [
+      "same_support",
+      "variance_only",
+      "mean_only",
+      "trend",
+      "sign_flip",
+      "lag_shift",
+      "stationary"
+    ],
+    "core": {
+      "edge_prob": 0.18,
+      "effect_scale": 1.0,
+      "max_lag": 3,
+      "n_nodes": 8,
+      "noise_kind": "gaussian",
+      "noise_scale": 0.1,
+      "observation_noise": 0.0,
+      "overlap": 0.5,
+      "state_proportions": [
+        0.5,
+        0.5
+      ],
+      "switch_period": 300,
+      "timesteps": 1200
+    },
+    "interactions": [
+      {
+        "overlap": [
+          0.0,
+          1.0
+        ],
+        "switch_period": [
+          150,
+          300
+        ]
+      },
+      {
+        "observation_noise": [
+          0.0,
+          0.4
+        ],
+        "overlap": [
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "model": {
+      "aggregate": "max",
+      "base_model": "lasso",
+      "lasso_alpha": 0.005,
+      "n_states": 2,
+      "state_aggregate": "mean",
+      "state_features": "nonself"
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "window": {
+      "size": 300,
+      "stride": 150
+    }
+  },
+  "grid_entries": 35,
+  "hard_policy": "existing STCG gate; rejected output is static window max",
+  "intervals": {
+    "draws": 10000,
+    "minimum_n": 5,
+    "seed": 7,
+    "simultaneous": false,
+    "type": "pointwise percentile bootstrap of paired seed differences"
+  },
+  "methods": [
+    "raw_window",
+    "kmeans_hard",
+    "gmm_soft",
+    "oracle_label",
+    "gmm_weighted_argmax"
+  ],
+  "no_changing_edges": "undefined, never replaced by 0.5; denominators retained",
+  "paired_unit": "generator configuration and simulation seed",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "source_sha256": {
+    "configs/mechanism_grid.yaml": "04454a1199999587c36e0bc7574bad86b870fbe72806f72c46205cd1c6c7dc7b",
+    "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+    "scripts/run_mechanism_grid.py": "2da7028f959e6059bc5c20e44ce951c5d7e8ebc959f9e007a285803463a706b0",
+    "scripts/run_temporal_grid.py": "30b27acf0831b4f422a0197db6c409201ffd12b1c6a6fd34642be10a228b3589",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f"
+  },
+  "subgroups": "hard-gate subgroups use the same seeds for all methods; execution subset uses each method's own execution flag",
+  "unique_configurations": 31
+}

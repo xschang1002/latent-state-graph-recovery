@@ -1,0 +1,13 @@
+{
+  "array_sha256": {
+    "coefficients": "bdda29213807578018eda95a81fafd7d79d58090cac103dfde6f1030d79abb5a",
+    "initial_values": "c1629b4721233c0af957bec37e46d9744fb64bedd5533b2b87043038423d72b3",
+    "innovations": "66de906fd6af5513dcfd9f94f070b5fcd0db68dede8d4ccaf6126195e6a7d3bb",
+    "repeat_seed_words": "a27bc356b5e5ae25b679151fd4485dfb55e88ab994b84ac07656ff4b905d3e4d",
+    "spectral_radius": "d4de6f4b36951d463d8fb4e8e6bb64fe98b4441d28c55a77cc44c1f7644c560d",
+    "support": "60d1ca4ed4de06a8cd8c5be5401e737691c29e1e8e725f6327cdb127823ebe58"
+  },
+  "input_seed": "50719385174044023161950787745578861396",
+  "seed": 60029,
+  "sha256": "b8444952962356f1d524653bd46234c0e0872ce16958e20e49ac5d31b31711c9"
+}

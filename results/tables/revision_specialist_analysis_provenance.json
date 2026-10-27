@@ -1,0 +1,22 @@
+{
+  "analysis_amendment": "Preserve zero-resolution CPU measurements and mark the corresponding geometric cost ratio unavailable; no fit or metric changes.",
+  "analysis_tool_sha256": "9b2c786b05585ad8701c33b948635773980fd702501280dcb635129268abeaf8",
+  "frozen_fit_source_hashes": {
+    "scripts/run_revision_specialist_stress.py": "e1921b2a582bf4acd0e7febec79332c454924dbf6bf2c865ff79604dfe2f0bf8",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/metrics.py": "0394a2bd9b474ba2a4cf1078dc388746e736c2ae49fc01805783544040acf54f",
+    "src/stcg/neural_granger.py": "8d6135a37867cfee837fb7e7a0ac3781823db308e3366c14f9feab5367793ecf",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+    "src/stcg/synthetic.py": "b3f97f97bec729d187b6e4e33b44792c53929b6741be52e59f1a6a0f43c12586"
+  },
+  "frozen_protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "generated_at_utc": "2026-09-16T06:34:51.227676+00:00",
+  "inputs": "revision_specialist_protocol.json and revision_specialist_parts/*.json",
+  "storage_amendment_sha256": "de28c5532853045c3d5f83cc3e9940526cf26196c74f5b915a2a4f6c8b9da82c",
+  "summary": {
+    "paired_rows": 280,
+    "stored_fits": 1400,
+    "summary_rows": 75,
+    "timing_rows": 112
+  }
+}

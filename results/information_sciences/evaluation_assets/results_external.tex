@@ -1,0 +1,25 @@
+To test the evaluation protocol beyond recurrent clustering and its gate, we
+apply a fixed PELT plus segmented VAR-Lasso adapter to Study C's 30 paired
+repeats at both durations and the original $300/150$ grid. PELT uses the same
+raw window features, a penalised unknown segment count, and no K-means or
+gate. Each detected contiguous interval is independently refit on its
+nonoverlapping time range. This is a different segmentation/refit structure,
+while retaining the local linear score input; it is our graph adapter to the
+external change-point algorithm, not an off-the-shelf causal method.
+
+Table~\ref{tab:external-framework} shows why a pooled improvement alone is
+insufficient here too. PELT plus VAR raises pooled AUROC relative to raw by
+$+0.013$ $[0.006,0.020]$ at $D=300$ and $+0.008$ $[0.001,0.014]$ at
+$D=600$. State-AUROC differences are $+0.005$ $[-0.020,0.027]$ and
+$-0.006$ $[-0.020,0.008]$: neither establishes a state-ranking gain or
+equivalence. At $D=600$, its positive-change AP contrast is $-0.125$
+$[-0.205,-0.044]$, whereas standard AP gives $-0.011$ $[-0.067,0.048]$.
+The metric and zero-group distinctions therefore remain consequential
+without the prototype gate.
+
+All 60 adapter cases converge and retain 644 segment refits. PELT chooses
+9--11 segments on 23 windows, often near the minimum-length limit; the
+configuration is not retuned after observing this behaviour. The comparison
+demonstrates the protocol on one additional structure, not broad algorithmic
+generality. Exact settings, segment counts, retained failures policy and
+paired pointwise intervals are in Supplement Section~S20.

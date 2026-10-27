@@ -1,0 +1,117 @@
+Duration confirmation: 1/100 fixed repeats retained
+Duration confirmation: 2/100 fixed repeats retained
+Duration confirmation: 3/100 fixed repeats retained
+Duration confirmation: 4/100 fixed repeats retained
+Duration confirmation: 5/100 fixed repeats retained
+Duration confirmation: 6/100 fixed repeats retained
+Duration confirmation: 7/100 fixed repeats retained
+Duration confirmation: 8/100 fixed repeats retained
+Duration confirmation: 9/100 fixed repeats retained
+Duration confirmation: 10/100 fixed repeats retained
+Duration confirmation: 11/100 fixed repeats retained
+Duration confirmation: 12/100 fixed repeats retained
+Duration confirmation: 13/100 fixed repeats retained
+Duration confirmation: 14/100 fixed repeats retained
+Duration confirmation: 15/100 fixed repeats retained
+Duration confirmation: 16/100 fixed repeats retained
+Duration confirmation: 17/100 fixed repeats retained
+Duration confirmation: 18/100 fixed repeats retained
+Duration confirmation: 19/100 fixed repeats retained
+Duration confirmation: 20/100 fixed repeats retained
+Duration confirmation: 21/100 fixed repeats retained
+Duration confirmation: 22/100 fixed repeats retained
+Duration confirmation: 23/100 fixed repeats retained
+Duration confirmation: 24/100 fixed repeats retained
+Duration confirmation: 25/100 fixed repeats retained
+Duration confirmation: 26/100 fixed repeats retained
+Duration confirmation: 27/100 fixed repeats retained
+Duration confirmation: 28/100 fixed repeats retained
+Duration confirmation: 29/100 fixed repeats retained
+Duration confirmation: 30/100 fixed repeats retained
+Duration confirmation: 31/100 fixed repeats retained
+Duration confirmation: 32/100 fixed repeats retained
+Duration confirmation: 33/100 fixed repeats retained
+Duration confirmation: 34/100 fixed repeats retained
+Duration confirmation: 35/100 fixed repeats retained
+Duration confirmation: 36/100 fixed repeats retained
+Duration confirmation: 37/100 fixed repeats retained
+Duration confirmation: 38/100 fixed repeats retained
+Duration confirmation: 39/100 fixed repeats retained
+Duration confirmation: 40/100 fixed repeats retained
+Duration confirmation: 41/100 fixed repeats retained
+Duration confirmation: 42/100 fixed repeats retained
+Duration confirmation: 43/100 fixed repeats retained
+Duration confirmation: 44/100 fixed repeats retained
+Duration confirmation: 45/100 fixed repeats retained
+Duration confirmation: 46/100 fixed repeats retained
+Duration confirmation: 47/100 fixed repeats retained
+Duration confirmation: 48/100 fixed repeats retained
+Duration confirmation: 49/100 fixed repeats retained
+Duration confirmation: 50/100 fixed repeats retained
+Duration confirmation: 51/100 fixed repeats retained
+Duration confirmation: 52/100 fixed repeats retained
+Duration confirmation: 53/100 fixed repeats retained
+Duration confirmation: 54/100 fixed repeats retained
+Duration confirmation: 55/100 fixed repeats retained
+Duration confirmation: 56/100 fixed repeats retained
+Duration confirmation: 57/100 fixed repeats retained
+Duration confirmation: 58/100 fixed repeats retained
+Duration confirmation: 59/100 fixed repeats retained
+Duration confirmation: 60/100 fixed repeats retained
+Duration confirmation: 61/100 fixed repeats retained
+Duration confirmation: 62/100 fixed repeats retained
+Duration confirmation: 63/100 fixed repeats retained
+Duration confirmation: 64/100 fixed repeats retained
+Duration confirmation: 65/100 fixed repeats retained
+Duration confirmation: 66/100 fixed repeats retained
+Duration confirmation: 67/100 fixed repeats retained
+Duration confirmation: 68/100 fixed repeats retained
+Duration confirmation: 69/100 fixed repeats retained
+Duration confirmation: 70/100 fixed repeats retained
+Duration confirmation: 71/100 fixed repeats retained
+Duration confirmation: 72/100 fixed repeats retained
+Duration confirmation: 73/100 fixed repeats retained
+Duration confirmation: 74/100 fixed repeats retained
+Duration confirmation: 75/100 fixed repeats retained
+Duration confirmation: 76/100 fixed repeats retained
+Duration confirmation: 77/100 fixed repeats retained
+Duration confirmation: 78/100 fixed repeats retained
+Duration confirmation: 79/100 fixed repeats retained
+Duration confirmation: 80/100 fixed repeats retained
+Duration confirmation: 81/100 fixed repeats retained
+Duration confirmation: 82/100 fixed repeats retained
+Duration confirmation: 83/100 fixed repeats retained
+Duration confirmation: 84/100 fixed repeats retained
+Duration confirmation: 85/100 fixed repeats retained
+Duration confirmation: 86/100 fixed repeats retained
+Duration confirmation: 87/100 fixed repeats retained
+Duration confirmation: 88/100 fixed repeats retained
+Duration confirmation: 89/100 fixed repeats retained
+Duration confirmation: 90/100 fixed repeats retained
+Duration confirmation: 91/100 fixed repeats retained
+Duration confirmation: 92/100 fixed repeats retained
+Duration confirmation: 93/100 fixed repeats retained
+Duration confirmation: 94/100 fixed repeats retained
+Duration confirmation: 95/100 fixed repeats retained
+Duration confirmation: 96/100 fixed repeats retained
+Duration confirmation: 97/100 fixed repeats retained
+Duration confirmation: 98/100 fixed repeats retained
+Duration confirmation: 99/100 fixed repeats retained
+Duration confirmation: 100/100 fixed repeats retained
+scorer                              contrast  n_planned  n_paired      mean  ci95_low  ci95_high        p_raw  primary              interval_scope       p_holm
+ lasso            native_hard_minus_raw_D300        100       100 -0.068869 -0.089771  -0.047565 5.933625e-09     True pointwise, not simultaneous 1.186725e-08
+ lasso            native_hard_minus_raw_D600        100       100  0.038082  0.023093   0.052735 2.932159e-06     True pointwise, not simultaneous 2.932159e-06
+ lasso      native_hard_duration_interaction        100       100  0.106951  0.079284   0.134275 2.989374e-11     True pointwise, not simultaneous 8.968123e-11
+ lasso native_hard_minus_matched_random_D600        100       100  0.226455  0.210095   0.242888 4.966431e-47     True pointwise, not simultaneous 1.986573e-46
+ lasso            forced_hard_minus_raw_D300        100       100 -0.068869 -0.089771  -0.047565 5.933625e-09    False pointwise, not simultaneous          NaN
+ lasso            forced_hard_minus_raw_D600        100       100  0.038082  0.023093   0.052735 2.932159e-06    False pointwise, not simultaneous          NaN
+ lasso      forced_hard_duration_interaction        100       100  0.106951  0.079284   0.134275 2.989374e-11    False pointwise, not simultaneous          NaN
+ lasso forced_hard_minus_matched_random_D600        100       100  0.226455  0.210095   0.242888 4.966431e-47    False pointwise, not simultaneous          NaN
+   ols            native_hard_minus_raw_D300        100       100 -0.071318 -0.091766  -0.050931 8.905353e-10    False pointwise, not simultaneous          NaN
+   ols            native_hard_minus_raw_D600        100       100  0.031784  0.016686   0.046344 7.932078e-05    False pointwise, not simultaneous          NaN
+   ols      native_hard_duration_interaction        100       100  0.103101  0.076194   0.129032 2.187718e-11    False pointwise, not simultaneous          NaN
+   ols native_hard_minus_matched_random_D600        100       100  0.219386  0.202551   0.235884 2.278841e-45    False pointwise, not simultaneous          NaN
+   ols            forced_hard_minus_raw_D300        100       100 -0.071318 -0.091766  -0.050931 8.905353e-10    False pointwise, not simultaneous          NaN
+   ols            forced_hard_minus_raw_D600        100       100  0.031784  0.016686   0.046344 7.932078e-05    False pointwise, not simultaneous          NaN
+   ols      forced_hard_duration_interaction        100       100  0.103101  0.076194   0.129032 2.187718e-11    False pointwise, not simultaneous          NaN
+   ols forced_hard_minus_matched_random_D600        100       100  0.219386  0.202551   0.235884 2.278841e-45    False pointwise, not simultaneous          NaN

@@ -1,0 +1,9 @@
+{
+  "after_fitting_and_aggregation_utc": "2026-10-25T05:04:34.003042+00:00",
+  "before_fitting_utc": "2026-10-25T05:04:26.484426+00:00",
+  "complete": true,
+  "elapsed_seconds": 7.517126999911852,
+  "fresh_generation": true,
+  "new_fitting": true,
+  "protocol_sha256": "30fde77364fe8ffcc0d18f33ada2e1bbf37314f23379f40009e9c18a5ca4f6ad"
+}

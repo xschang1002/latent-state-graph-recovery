@@ -1,0 +1,65 @@
+{
+  "export": {
+    "pdf": "vector, embedded TrueType fonts; no creation/modification dates",
+    "png_dpi": 600
+  },
+  "figures": [
+    "fig_fallback",
+    "fig_symmetric",
+    "fig_localisation"
+  ],
+  "missing": "undefined AP slots are omitted with retained coverage; no zero substitution",
+  "role": "post-review descriptive presentation; no new fits or selected lambda/window",
+  "scope": "A/B controls reanalyse saved predictions; C is separate symmetric-generator/window robustness",
+  "sha256": {
+    "display_source.csv": "5e957ccb0f8a8d55acb1d2971ba958cb206ca8d23765cb7af1c42fabe76f49d9",
+    "fig_fallback.pdf": "31cea390204699c9e85bc2ea7aa50d33b450b1d96eeb1175c8b17f2a53b34c9b",
+    "fig_fallback.png": "b1011c36364f5323b19002b6331e607d0fb69e4cfbd94a74a7e840d575281736",
+    "fig_localisation.pdf": "7360e390bec3946365ea8ce1e9e6a7f30d60b260ae9209c2af94d0d81bb30bf5",
+    "fig_localisation.png": "2f09efcedf17f5c04d3beab9a296ee75244aaabb69ed65abd52fc0c17b0cbf9c",
+    "fig_symmetric.pdf": "d6abf5a2bdaf272db6846fe0f281f8ecff44315214946f908429e3d7b9b1d2cd",
+    "fig_symmetric.png": "e70c475a9765487d96e61de5799b9f4f8964d484b0f0ee757cc214a51dda306e",
+    "prior_results_sha256.json": "e37f1e6006fd7cc86f23e39a64fe603f1eb097862c635a40555a7a7d64b37053",
+    "results_controls.tex": "9b7d537d505b3ab29ca3ad4b3afbb85f78a752e77321710e26c3b2721c50b606",
+    "results_localisation.tex": "e1397ce7bf6a19880061d9f11e2e52ae8669a2d2436c9ccdfb5e2e4a0570674e",
+    "results_symmetric.tex": "be579304c23d6cc59bb202249270c34443c0582a2b77d485522ecc86188e3632",
+    "tab_fallback_full.tex": "c562f01f5b9a34c9b2deca8367539b76272a1af92a369bcce48d7963b6a824a0",
+    "tab_localisation_full.tex": "73481cf3efd5988312b7550b61c0f95a9ded6ce845bf2318cfaa1e3fbb68f83d",
+    "tab_score_controls.tex": "ffbd46e576072508cb444b06b7d0f85992bc9c1f084821a8e6c028571ff51c07",
+    "tab_score_controls_aux.tex": "af6cb5e0ebb1b4b19c93eb6e9606a1b0ecdd03a79887d5b6658020453822bfb8",
+    "tab_stable_changes.tex": "dcc9596285ada11cb4973524dd0550ad51b9ec7eb05a109737333b216125c592",
+    "tab_symmetric_full.tex": "09a808e5f46fe8f0502316ac5f5675d38c0536bbc0bfe5cd45abf959eb9dbc20"
+  },
+  "source_sha256": {
+    "results/information_sciences/abstract.tex": "e71a856404c3748cec01dd4c65f06ec1703d89fff870626c9627d58b31688f2a",
+    "results/information_sciences/conclusions.tex": "28f45c95c8dda3a864a118523f5948448be4bcb66f4618cc3821dc88fc3bec9c",
+    "results/information_sciences/reviewer_assets/prior_results_sha256.json": "e37f1e6006fd7cc86f23e39a64fe603f1eb097862c635a40555a7a7d64b37053",
+    "results/information_sciences/reviewer_assets/results_controls.tex": "9b7d537d505b3ab29ca3ad4b3afbb85f78a752e77321710e26c3b2721c50b606",
+    "results/information_sciences/reviewer_assets/results_localisation.tex": "e1397ce7bf6a19880061d9f11e2e52ae8669a2d2436c9ccdfb5e2e4a0570674e",
+    "results/information_sciences/reviewer_assets/results_symmetric.tex": "be579304c23d6cc59bb202249270c34443c0582a2b77d485522ecc86188e3632",
+    "results/information_sciences/score_preserving_controls/contrasts.csv": "45bfcf4fc6b5bf433d8d1937c7d5b35761c589aed9e6811113d777e39499c5b8",
+    "results/information_sciences/score_preserving_controls/detail.csv": "477917bb6b196aef1ae3d5c67afa84719c01f2889b9d307f32801deb8527ae5c",
+    "results/information_sciences/score_preserving_controls/diagnostics.json": "f4ccd9fa13d554d9a84bbfb155ee7c45b3b040f4727d58a70dbd6331219f3c97",
+    "results/information_sciences/score_preserving_controls/summary.csv": "e899c97dbb9de04f367dabcf7db4dec34cbdf4e7a51778e6a6612ba5f4af75e9",
+    "results/information_sciences/symmetric_controls/contrasts.csv": "e556f18a20dd825dc61a147ca73fafea7c971e15d53fc93a22eb8b3bcc845f0d",
+    "results/information_sciences/symmetric_controls/summary.csv": "6ff9f8dcb7c5c01a286b32b377b3cf606729ec4566cd4599732b9a26903ff179",
+    "results/information_sciences/symmetric_localisation/paired_vs_raw.csv": "235733b2630d4234d81197568acb0ec4f58fe7df080e24da91c96ea1ea785acb",
+    "results/information_sciences/symmetric_localisation/summary.csv": "01c3e9f87ed1c9f83248d6e16cf77ce5440ac0add42afb963fe45e6a83b4f75a",
+    "results/information_sciences/symmetric_sensitivity/symmetric_sensitivity_gate.csv": "648e03c46232efe6dff52999a2e6bfe57c2ae638da116461d9ee18bc063a70f7",
+    "results/information_sciences/symmetric_sensitivity/symmetric_sensitivity_summary.csv": "d0baf7700fca341fcd297bb9a95bc90cf9eaf008734bdd5eb96305f9212add05",
+    "results/information_sciences/temporal_localisation/detail.csv": "b32e4f6ba60ad148b655f7961fb378c21f938deccbf1dd5e575d47c67650487f",
+    "results/information_sciences/temporal_localisation/paired_vs_raw.csv": "a9c930931247bec7c656ed8a11dd9ad2792d6a606f44b41001de7460e5f6fc71",
+    "results/information_sciences/temporal_localisation/summary.csv": "0ace362172a7d8465e522b744631c1ab5e45b98ab56092c1e62bdde6fdba2e56",
+    "tools/build_reviewer_controls_assets.py": "9729ddf7128f34e7c04a03e590fc7231cced39d89f8a91f6bfe84469cc3516d1"
+  },
+  "tables": [
+    "tab_score_controls",
+    "tab_score_controls_aux",
+    "tab_fallback_full",
+    "tab_symmetric_full",
+    "tab_localisation_full",
+    "tab_stable_changes"
+  ],
+  "uncertainty": "pointwise paired-repeat 95% percentile bootstrap intervals; fixed 10000 resamples",
+  "workflow_reference": "Kassis et al. (2026), Scientific Agent Skills, doi:10.48550/arXiv.2609.00065"
+}

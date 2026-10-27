@@ -1,0 +1,128 @@
+{
+  "C_original_records": "Study C original freeze/run records remain in symmetric_sensitivity/ and its complete seal",
+  "external_time_attestation": false,
+  "no_hidden_change": "QA corrections retain v1 protocol/source/output digests; final numeric summaries unchanged",
+  "records": [
+    {
+      "exported_file": "score_controls_execution.json",
+      "exported_sha256": "23f90d8031512b2ab2cb3075de40b720c9f2e53354000fe31d8520f6d37648bf",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/score_controls_execution.json",
+      "original_sha256": "127323f75a1a60f4018c8e8bb48779151cd48cdc7180e5e023a3cd266833aa06"
+    },
+    {
+      "exported_file": "score_controls_amendment.json",
+      "exported_sha256": "44c900944dedf8c0efb9bf4ec786ebe7fa41abb26ebcebe1d4f3a4798807c0b1",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/score_controls_amendment.json",
+      "original_sha256": "85fca7d712a7466a8991ef15f8b3a79ece7c76ef1ea9bcaa547b8126f1dd6cbb"
+    },
+    {
+      "exported_file": "score_controls_amended_execution.json",
+      "exported_sha256": "e900ecc5a99fc117d50c2f1e53152863decfb0ab29fa113f66275dfbbc1d5764",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/score_controls_amended_execution.json",
+      "original_sha256": "c2afd49fcfa3e939beccff84a9e8af0a04fae747e6486dc7ff76754bc39f07a4"
+    },
+    {
+      "exported_file": "score_controls_completion_summary.json",
+      "exported_sha256": "bc7eae571e5a641b9ee013e5521be5350d15661b61cb88916e80aff6723eaff4",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/score_controls_completion_summary.json",
+      "original_sha256": "bc7eae571e5a641b9ee013e5521be5350d15661b61cb88916e80aff6723eaff4"
+    },
+    {
+      "exported_file": "symmetric_controls_execution.json",
+      "exported_sha256": "009bcb6d87d69142b72314741b7f6398eea3f5abe6455b265cb4821a87c2e87b",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/symmetric_controls_execution.json",
+      "original_sha256": "55e4c26eb7829e7270d26f6f41db9ebe3b627fd0e29061d0864929e1fa4d32ae"
+    },
+    {
+      "exported_file": "temporal_localisation_freeze.json",
+      "exported_sha256": "2fcea03ede4750223ff0b920fe8739ea02b733208b66fcdcd21f3a4ecb0d0865",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/temporal_localisation_freeze.json",
+      "original_sha256": "2fcea03ede4750223ff0b920fe8739ea02b733208b66fcdcd21f3a4ecb0d0865"
+    },
+    {
+      "exported_file": "temporal_localisation_run.json",
+      "exported_sha256": "ca51479805799d35b655fb291a1400aff6250cd1517be4fcd04339df492ddc8e",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/temporal_localisation_run.json",
+      "original_sha256": "ca51479805799d35b655fb291a1400aff6250cd1517be4fcd04339df492ddc8e"
+    },
+    {
+      "exported_file": "symmetric_localisation_freeze.json",
+      "exported_sha256": "e5ea32d26b3b818abc7af436e5e4cf1e53dad01d12911927a5f3b2d478d15088",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/symmetric_localisation_freeze.json",
+      "original_sha256": "e5ea32d26b3b818abc7af436e5e4cf1e53dad01d12911927a5f3b2d478d15088"
+    },
+    {
+      "exported_file": "symmetric_localisation_run.json",
+      "exported_sha256": "9f21c4175a1f2dd946438cea4966ca57a500c44b02197fbd2f8a91c8353aac2d",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/symmetric_localisation_run.json",
+      "original_sha256": "9f21c4175a1f2dd946438cea4966ca57a500c44b02197fbd2f8a91c8353aac2d"
+    },
+    {
+      "exported_file": "symmetric_localisation_QA_amendment.json",
+      "exported_sha256": "a1fc6ca5dd8c494047b470caf473db897f72751d8ab50d984c786ca5c443868f",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/symmetric_localisation_QA_amendment.json",
+      "original_sha256": "3a2e73181a76c2ec9b35b536e90caea51efcdb14081aa93de9cb9b9856acabc5"
+    },
+    {
+      "exported_file": "symmetric_localisation_QA_numeric_invariance.json",
+      "exported_sha256": "7c932ba59fc2419860889d914627d6d7cb6dca973842316be2d54e9af601b833",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/symmetric_localisation_QA_numeric_invariance.json",
+      "original_sha256": "bc160dc97eb169f1ce36278e225c83976b52819fc41bede9ae63903b993b1e2b"
+    },
+    {
+      "exported_file": "initial_v1__outputs__protocol.json",
+      "exported_sha256": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/initial_v1/outputs/protocol.json",
+      "original_sha256": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f"
+    },
+    {
+      "exported_file": "initial_v1__outputs__manifest.json",
+      "exported_sha256": "5165b84be34133c42021fee97269adbf339222536d0deceb52328e967190236d",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/initial_v1/outputs/manifest.json",
+      "original_sha256": "5165b84be34133c42021fee97269adbf339222536d0deceb52328e967190236d"
+    },
+    {
+      "exported_file": "initial_v1__scripts__analyze_score_preserving_controls.py.txt",
+      "exported_sha256": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0",
+      "normalization": "unchanged code bytes; .txt suffix for historical QA source",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/initial_v1/scripts/analyze_score_preserving_controls.py",
+      "original_sha256": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0"
+    },
+    {
+      "exported_file": "temporal_localisation_C_initial_v1__symmetric_localisation__protocol.json",
+      "exported_sha256": "ebfdc6b48edefdb701516942980730b452c27df2a45533faffe497f18a29d9fe",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/temporal_localisation_C_initial_v1/symmetric_localisation/protocol.json",
+      "original_sha256": "ebfdc6b48edefdb701516942980730b452c27df2a45533faffe497f18a29d9fe"
+    },
+    {
+      "exported_file": "temporal_localisation_C_initial_v1__symmetric_localisation__manifest.json",
+      "exported_sha256": "2afeacd84b3c40288e9dffae29b06443373c7dbfab3cf2fc8240393c4a86b417",
+      "normalization": "JSON canonicalization and workspace-prefix redaction; code snapshot unchanged as text",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/temporal_localisation_C_initial_v1/symmetric_localisation/manifest.json",
+      "original_sha256": "2afeacd84b3c40288e9dffae29b06443373c7dbfab3cf2fc8240393c4a86b417"
+    },
+    {
+      "exported_file": "temporal_localisation_C_initial_v1__analyze_symmetric_localisation.py.txt",
+      "exported_sha256": "07b9462689b3306d3635b7f0af3781a1b9fa351076b77136056e62a3a1edf702",
+      "normalization": "unchanged code bytes; .txt suffix for historical QA source",
+      "original_relative_path": "experiments/logs/reviewer_controls_2026-10-25/temporal_localisation_C_initial_v1/analyze_symmetric_localisation.py",
+      "original_sha256": "07b9462689b3306d3635b7f0af3781a1b9fa351076b77136056e62a3a1edf702"
+    }
+  ],
+  "reviewer_material": "author-supplied hypothetical review; private pasted text is not exported",
+  "scope": "retained internal post-review execution and QA amendment records; not public preregistration"
+}

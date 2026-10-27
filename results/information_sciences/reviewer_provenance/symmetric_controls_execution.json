@@ -1,0 +1,30 @@
+{
+  "after_freeze_before_controls_compute_utc": "2026-10-24T19:08:19.948772+00:00",
+  "before_freeze_utc": "2026-10-24T19:08:17.866115+00:00",
+  "frozen_C_file_count": 790,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "544b7a5a9560bd142d1b843a9dc7c5ab665c848637585a4618f1f4e57004ea47",
+  "role": "post hoc retained-output controls; Study C complete results existed before this protocol freeze",
+  "run": {
+    "exit_code": 0,
+    "exit_observed_utc": "2026-10-24T19:09:18.573821+00:00",
+    "seconds": 22.06111010001041,
+    "stderr_bytes": 0
+  },
+  "run_started_utc": "2026-10-24T19:08:56.512594+00:00",
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "scripts/analyze_symmetric_controls.py": "fe0fb480532f3998776f4e035cc6c4f591cb22ffed68df61d34ea23800b7255f",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "tests/test_symmetric_controls.py": "c5e7056a629d7c1b4515c17fe51b47e98977e1ac646999e594ba578e7449854d"
+  },
+  "tests_passed": 4,
+  "verify": {
+    "exit_code": 0,
+    "exit_observed_utc": "2026-10-24T19:09:41.038875+00:00",
+    "seconds": 22.46436810004525,
+    "stderr_bytes": 0
+  },
+  "verify_started_utc": "2026-10-24T19:09:18.574819+00:00"
+}

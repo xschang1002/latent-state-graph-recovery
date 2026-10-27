@@ -1,0 +1,243 @@
+{
+  "closure_rules": [
+    "Resolve all indexed paths relative to the extracted archive root and require they remain inside it.",
+    "Check protocol_and_evidence_sha256 and frozen_source_sha256; then recursively check each A/B seal SHA map and each repeat/case record hash.",
+    "Export manifest original_relative_path points to internal provenance, not to a required archive member; exported_relative_path must be present and match exported_sha256.",
+    "Check source labels still exist; S numbers describe this manuscript structure and are not inferred from source timestamps.",
+    "The archive manifest should bind this index, the human-readable index and manuscript bytes; it is the outer closure and avoids a self-hash cycle.",
+    "Read-only verifier replay recomputes from retained predictions/truth; it neither fits scorers nor independently reruns RNG simulation.",
+    "Passing hashes/checks establishes artifact consistency, not external time attestation or public preregistration."
+  ],
+  "frozen_source_sha256": {
+    "configs/schedule_robustness.yaml": "49eda83ab51b378ad5bfc01367a162da19909c627fbee2b0dec820170f78d8d3",
+    "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+    "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+    "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+    "scripts/run_duration_confirmation.py": "612ae0aeefd55c975b1ad8ffb50b259eaf101baafb425cd8893038483c854449",
+    "scripts/run_schedule_robustness.py": "61b4c3b680f804832b20372e32b71cba8e5f569880e1405b8ac33bb3643c9066",
+    "scripts/run_state_decomposition.py": "b1345f8fbf8f57fada6a40568b0d423e8c9eb035176eb6cc545c9a121dce74dc",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+    "tests/test_schedule_robustness.py": "cb9580f0fbeff8cc4f179097e328539ca7fba2b6a58b4ae9725996887eb8f7ea",
+    "tools/verify_duration_confirmation.py": "1d075b1f2e4ed919fad0b466962c3ef5117da6ac20b2099abc34d8de0bd6440e",
+    "tools/verify_schedule_robustness.py": "8dbe8bba444a84bde5422faf128dd5e03a0f748ec83fd82f62dab01cc15eff9b"
+  },
+  "protocol_and_evidence_sha256": {
+    "analysis/information_sciences_protocol_2026-10-24.md": "1d0301fcd27d195f7f5d23c805c3ddf066fb627a62ea2811c505aa10e591b8bc",
+    "results/information_sciences/duration_confirmation/COMPLETE.json": "a1ddca2f68c73206096116a83a3f58b8783882a67409b6cbc779e18cd1dd6eb1",
+    "results/information_sciences/duration_confirmation/protocol.json": "b75b0de47b1e380d063c1cee44c858befc5e6651150d2bc2a7ebd1d0fa030957",
+    "results/information_sciences/duration_confirmation_protocol.json": "b75b0de47b1e380d063c1cee44c858befc5e6651150d2bc2a7ebd1d0fa030957",
+    "results/information_sciences/provenance/A_completion_stage.json": "fdbe2a9c0422648af191c3e932aa14aa00e01297b13a6821feb0819b6650a8dd",
+    "results/information_sciences/provenance/A_freeze_stage.json": "26eefeb79930b3773b0379b90a09b7d40a8bf8b0425a4e6eb3d58dfdc83d40ce",
+    "results/information_sciences/provenance/A_run_stdout.txt": "e4dc7b5e1dd67e17de67ffedf504146db955604d2650fe7abae49eae8d49d3cf",
+    "results/information_sciences/provenance/A_verify_report.txt": "518fbf26cbdf7e77e10fd593403cce78ca2d994b9bdcd17da0475720cc610402",
+    "results/information_sciences/provenance/B_execution_stage.json": "8bfbf110340c0e41a2411c74994d85b4fb806b87e69d39c46fb813881f9f5fa5",
+    "results/information_sciences/provenance/B_run_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/information_sciences/provenance/B_run_stdout.txt": "599b6bd74316fcba0c7b138d049f6b91cd24e67338734593094817b86432266f",
+    "results/information_sciences/provenance/B_verify_report.json": "ab5efdc48388c2d7cad088aa996cca6509bde0f36ce59c569724533e2198cc1f",
+    "results/information_sciences/provenance/chronology.json": "13ff0c7a2eb163ee3890ef2f85b20fa7d9a06aa1d8af05ac90267543e514e1b6",
+    "results/information_sciences/provenance/export_manifest.json": "dd00bf3750ed44d7be3e9be55e74e974b2580084619ade1b56527577554b5dfd",
+    "results/information_sciences/schedule_robustness/schedule_robustness_outputs.json": "033deb6270bb9a8f0693c0fb9b7a2139ec20b37fe0310caaa5e2a432a88f3b1b",
+    "results/information_sciences/schedule_robustness/schedule_robustness_protocol.json": "7096be72312d8916d0d2b83a52675aae8a031c81e10593c3afe6e346c6eb5439"
+  },
+  "schema_version": 1,
+  "scope": "Internal source-locked A/B studies and retained execution evidence; not public preregistration",
+  "studies": {
+    "A": {
+      "design": "paired D300/D600, T1200, M7, h300, stride150; Lasso and auxiliary OLS",
+      "observed": {
+        "condition_scorer_fits": 400,
+        "detail_rows": 2400,
+        "exact_random_partition_scores": 11928,
+        "failures": 0,
+        "repeats": 100
+      },
+      "output_directory": "results/information_sciences/duration_confirmation",
+      "primary": "Lasso/native four contrasts with Holm4; twelve forced/OLS auxiliary contrasts retain raw p only",
+      "protocol": "results/information_sciences/duration_confirmation/protocol.json",
+      "protocol_copy": "results/information_sciences/duration_confirmation_protocol.json",
+      "read_only_verifier": "tools/verify_duration_confirmation.py",
+      "record_templates": [
+        "records/repeat_{seed}_inputs.npz",
+        "records/repeat_{seed}_D{300|600}_data.npz",
+        "records/repeat_{seed}_D{300|600}_{lasso|ols}.npz",
+        "records/repeat_{seed}_D{300|600}_{lasso|ols}.json",
+        "records/repeat_{seed}.json"
+      ],
+      "runner": "scripts/run_duration_confirmation.py",
+      "seal": "results/information_sciences/duration_confirmation/COMPLETE.json",
+      "seeds": {
+        "count": 100,
+        "first": 50000,
+        "last": 50099
+      },
+      "summaries": [
+        "detail.csv",
+        "summary.csv",
+        "contrasts.csv",
+        "environment.json"
+      ],
+      "unit": "independent mechanism/initialisation/innovation repeat"
+    },
+    "B": {
+      "design": "six paired cells: D300/D600 by fixed phase/random phase/irregular; T3600,M23,h300,stride150; Lasso",
+      "observed": {
+        "condition_fits": 300,
+        "failures": 0,
+        "method_rows": 1500,
+        "repeats": 50,
+        "window_rows": 6900
+      },
+      "output_directory": "results/information_sciences/schedule_robustness",
+      "protocol": "results/information_sciences/schedule_robustness/schedule_robustness_protocol.json",
+      "read_only_verifier": "tools/verify_schedule_robustness.py",
+      "record_templates": [
+        "inputs/repeat_{seed}.npz",
+        "inputs/repeat_{seed}.json",
+        "parts/repeat_{seed}_D{300|600}_{fixed_phase|random_phase|irregular}.npz",
+        "parts/repeat_{seed}_D{300|600}_{fixed_phase|random_phase|irregular}.json"
+      ],
+      "runner": "scripts/run_schedule_robustness.py",
+      "seal": "results/information_sciences/schedule_robustness/schedule_robustness_outputs.json",
+      "secondary": "six forced-minus-raw tests with Holm6; separate three paired Gamma tests with Holm3; gate/native/factors descriptive",
+      "seeds": {
+        "count": 50,
+        "first": 60000,
+        "last": 60049
+      },
+      "summaries": [
+        "schedule_robustness_detail.csv",
+        "schedule_robustness_diagnostics.csv",
+        "schedule_robustness_windows.csv",
+        "schedule_robustness_paired.csv",
+        "schedule_robustness_secondary_tests.csv",
+        "schedule_robustness_method_summary.csv",
+        "schedule_robustness_gate_summary.csv"
+      ],
+      "unit": "independent mechanism/initialisation/innovation repeat shared across six cells"
+    }
+  },
+  "supplement_locators": [
+    {
+      "label": "sec:theory",
+      "section": "S3",
+      "topic": "stylised MSE risk analysis"
+    },
+    {
+      "label": "sec:gate-geometry",
+      "section": "S4.1",
+      "topic": "gate proof"
+    },
+    {
+      "label": "sec:window-average",
+      "section": "S4.2",
+      "topic": "window mixing and denoising"
+    },
+    {
+      "label": "sec:value-vs-use",
+      "section": "S4.5",
+      "topic": "Brier risk and order interventions"
+    },
+    {
+      "figures": [
+        "S6"
+      ],
+      "label": "sec:baselines",
+      "section": "S7",
+      "tables": [
+        "S7",
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "topic": "segmentation, refit and historical timing"
+    },
+    {
+      "label": "app:penalty",
+      "section": "S10",
+      "tables": [
+        "S13"
+      ],
+      "topic": "PELT penalty"
+    },
+    {
+      "figures": [
+        "S7"
+      ],
+      "label": "sec:real",
+      "section": "S8",
+      "tables": [
+        "S11"
+      ],
+      "topic": "ESS and operating-condition labels"
+    },
+    {
+      "label": "app:temporal-grid",
+      "section": "S12",
+      "tables": [
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "topic": "earlier accepted subsets, GMM numerics and coverage"
+    },
+    {
+      "figures": [
+        "S8"
+      ],
+      "label": "app:ess-null",
+      "section": "S13",
+      "tables": [
+        "S19"
+      ],
+      "topic": "ESS null sampler and diagnostics"
+    },
+    {
+      "label": "app:frozen-studies",
+      "section": "S14",
+      "tables": [
+        "S20",
+        "S21",
+        "S22"
+      ],
+      "topic": "new A/B paired unit, RNG, tests and fit diagnostics"
+    },
+    {
+      "label": "tab:supp-a-contrasts",
+      "table": "S20",
+      "topic": "all sixteen A contrasts"
+    },
+    {
+      "label": "tab:supp-b-gate-factors",
+      "table": "S21",
+      "topic": "B gate-conditioned means and grouping factors"
+    },
+    {
+      "label": "tab:supp-fit-diagnostics",
+      "table": "S22",
+      "topic": "OLS absolute scores, rank and complete fit coverage"
+    },
+    {
+      "label": "app:provenance",
+      "section": "S15",
+      "topic": "analysis provenance"
+    },
+    {
+      "label": "app:reproduction",
+      "section": "S16",
+      "topic": "reproduction and data access"
+    },
+    {
+      "label": "app:generator-audit",
+      "section": "S14.1",
+      "topic": "post hoc retained-coefficient and observed-path diagnostics"
+    },
+    {
+      "label": "tab:generator-diagnostics",
+      "table": "S23",
+      "topic": "actual radii, finite paths, maxima and endpoint RMS"
+    }
+  ]
+}

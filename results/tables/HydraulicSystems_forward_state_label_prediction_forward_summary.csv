@@ -1,0 +1,5 @@
+dataset,label_column,method,n,accepted_rate,inferred_state_count_distribution,accuracy_mean,accuracy_std,balanced_accuracy_mean,balanced_accuracy_std,macro_f1_mean,macro_f1_std
+HydraulicSystems_forward,cooler_condition,Forward GraphFeature Centroid,5,1.0,"{""3"": 5}",0.9657142857142859,1.2412670766236366e-16,0.9657142857142859,1.2412670766236366e-16,0.4912790697674419,6.206335383118183e-17
+HydraulicSystems_forward,cooler_condition,Forward STCG-v1 State Mapping,5,1.0,"{""3"": 5}",0.9531428571428572,0.002555506259999741,0.9531428571428572,0.002555506259999741,0.4880039786661179,0.0006710773199953017
+HydraulicSystems_forward,cooler_condition,Forward SensorMeanStd Centroid,5,1.0,"{""3"": 5}",1.0,0.0,1.0,0.0,1.0,0.0
+HydraulicSystems_forward,cooler_condition,Forward Train Majority,5,1.0,"{""3"": 5}",0.0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,46 @@
+27 October 2026
+
+Dear Editors of Information Sciences,
+
+I submit “State Aggregation in Dynamic Graph Recovery: Separating Structural
+Ranking from Temporal Discrimination” for consideration as an original research
+article. The paper studies how replacing local graph estimates by shared
+state-level summaries changes recovery of edges at the times they are active.
+Its evaluation protocol separates pooled structural ranking, within-edge state
+discrimination and boundary detection on the same inputs and local scores.
+
+The contribution combines task-specific diagnostic accounting with controlled
+empirical evidence. A 100-repeat paired study finds hard-minus-raw within-edge temporal
+AUROC differences of -0.069 and +0.038 at two duration configurations.
+A separate 50-repeat schedule study and a separately specified 30-repeat
+symmetric-generator/window study bound the conditions under which the contrast
+occurs. Duration also changes switch coverage, so the findings remain
+configuration-specific.
+
+Fixed score controls show that pooled-ranking gains can occur without changed
+temporal order. Residual pair accounting distinguishes restored within-group
+ordering from cross-group reordering. Reporting both standard and positive-change
+AP with fixed threshold references changes the assessment of boundary recovery
+on the same predictions. A PELT plus segment-VAR comparator applies the protocol
+to another partition/refit construction: pooled ranking improves, while neither
+duration has an established within-edge temporal AUROC advantage. The prototype gate
+is one implementation case. The scope remains the tested two-state linear
+systems and local linear scorers.
+
+These distinctions are relevant to information aggregation and the evaluation
+of data-driven structure recovery. A separate supplement presents definitions,
+procedures, derivations, study designs and results. The accompanying archive
+contains complete retained simulation inputs and fitted outputs, analysis code
+and reproduction instructions. Eight selected same-seed pipelines were also
+generated and fitted afresh, with all 492 recorded comparisons exact in the
+recorded environment. The industrial example supplies static expert truth only.
+
+This work has not been formally published and is not under consideration
+elsewhere. AI assistance in research code and manuscript preparation is disclosed.
+I retain responsibility for the scientific content and submission.
+
+Sincerely,
+Xuansong Chang
+Stony Brook Institute at Anhui University
+Anhui University, 3 Feixi Road, Shushan District, Hefei, Anhui 230039, China
+alec.xs.chang@gmail.com

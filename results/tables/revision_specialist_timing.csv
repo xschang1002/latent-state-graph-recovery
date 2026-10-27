@@ -1,0 +1,113 @@
+phase,setting_id,opponent,metric,n,dedicated_exclusive_phase,ratio_available,ratio_unavailable_reason,zero_clock_stcg_count,zero_clock_opponent_count,geometric_mean_opponent_over_stcg,ratio_ci_low,ratio_ci_high
+stress,64ce2eda95d3,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.41821123800353716,0.3972207336807282,0.4378898403461177
+stress,64ce2eda95d3,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,3,,,
+stress,64ce2eda95d3,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11805729101848499,0.11227104369689145,0.12408796239129645
+stress,64ce2eda95d3,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,17,,,
+stress,64ce2eda95d3,Regime-PCMCI,fit_seconds,20,False,True,,0,0,8742.963291505384,8236.50581476886,9231.805000387225
+stress,64ce2eda95d3,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,8652.858237816243,7934.408093497631,9658.942060148373
+stress,64ce2eda95d3,cMLP,fit_seconds,20,False,True,,0,0,75.60636456492153,71.48875005421627,79.55688706431626
+stress,64ce2eda95d3,cMLP,fit_cpu_seconds,20,False,True,,0,0,74.76990260159293,66.52788863430115,86.10556119643391
+stress,49793b389a0e,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4212540450814319,0.3949177277258981,0.44969701384562927
+stress,49793b389a0e,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,6,,,
+stress,49793b389a0e,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11921000594332515,0.11298509198376602,0.1269118362137316
+stress,49793b389a0e,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,14,,,
+stress,49793b389a0e,Regime-PCMCI,fit_seconds,20,False,True,,0,0,9026.485847767963,8531.71151195331,9576.538729544163
+stress,49793b389a0e,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,9529.118537577871,8371.868180722862,11031.286912790189
+stress,49793b389a0e,cMLP,fit_seconds,20,False,True,,0,0,74.7834567566584,69.63948663436214,79.85570174443075
+stress,49793b389a0e,cMLP,fit_cpu_seconds,20,False,True,,0,0,78.91402815907983,68.1708780159883,92.56774459676275
+stress,8b663b04d6fd,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4287367688524221,0.40591172427861494,0.45430477170149536
+stress,8b663b04d6fd,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,4,,,
+stress,8b663b04d6fd,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11473983733258511,0.10813303804649783,0.12141033019515422
+stress,8b663b04d6fd,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,16,,,
+stress,8b663b04d6fd,Regime-PCMCI,fit_seconds,20,False,True,,0,0,8595.374879004863,7933.853845486898,9233.937039730854
+stress,8b663b04d6fd,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,9234.94549515487,8154.009816804318,10636.943536506997
+stress,8b663b04d6fd,cMLP,fit_seconds,20,False,True,,0,0,76.91680490244721,74.13111979217263,79.8383375987855
+stress,8b663b04d6fd,cMLP,fit_cpu_seconds,20,False,True,,0,0,82.7588859516273,73.37705538497323,95.06552758351722
+stress,1cd64b6fef02,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4278164267157217,0.4104056387360157,0.4498638575493185
+stress,1cd64b6fef02,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,4,,,
+stress,1cd64b6fef02,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11592816478635601,0.10831154692037802,0.12389394800745127
+stress,1cd64b6fef02,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,12,,,
+stress,1cd64b6fef02,Regime-PCMCI,fit_seconds,20,False,True,,0,0,8529.085564405716,7821.418545009104,9198.419047455294
+stress,1cd64b6fef02,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,7967.464225163929,7348.019784653849,8751.997122771314
+stress,1cd64b6fef02,cMLP,fit_seconds,20,False,True,,0,0,77.27260327855882,72.40615556102826,81.90392316015648
+stress,1cd64b6fef02,cMLP,fit_cpu_seconds,20,False,True,,0,0,72.52433802963523,67.46844633570961,79.14973150627296
+stress,f5e047a0d608,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.2583623968314112,0.24309595078544197,0.27358841363711983
+stress,f5e047a0d608,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,7,,,
+stress,f5e047a0d608,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11490798151296261,0.10853843435413457,0.12104033844914938
+stress,f5e047a0d608,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,17,,,
+stress,f5e047a0d608,Regime-PCMCI,fit_seconds,20,False,True,,0,0,1810.8995255456998,1691.072032770556,1917.1559471967944
+stress,f5e047a0d608,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,1882.9204679161937,1613.2397155451001,2202.206632244235
+stress,f5e047a0d608,cMLP,fit_seconds,20,False,True,,0,0,90.10477590662018,83.66103387567577,96.19299336733995
+stress,f5e047a0d608,cMLP,fit_cpu_seconds,20,False,True,,0,0,93.42763432818212,79.16305791425742,110.08511303950893
+stress,cd36e8b41b41,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.28571769728066343,0.26727742414955885,0.3026975320133134
+stress,cd36e8b41b41,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,13,,,
+stress,cd36e8b41b41,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.13361256063114066,0.12491805081230363,0.14181829407344457
+stress,cd36e8b41b41,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,16,,,
+stress,cd36e8b41b41,Regime-PCMCI,fit_seconds,20,False,True,,0,0,4813.691757130263,4414.737994946741,5189.236201205854
+stress,cd36e8b41b41,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,4549.96123440304,3791.5770837986524,5440.594088404518
+stress,cd36e8b41b41,cMLP,fit_seconds,20,False,True,,0,0,94.41893678531532,85.42541887250559,102.32356452864293
+stress,cd36e8b41b41,cMLP,fit_cpu_seconds,20,False,True,,0,0,89.38576020063695,74.81421174998573,106.12466564922428
+stress,ed9ac630f7cb,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4999701379825743,0.46545479999404404,0.5358320198748618
+stress,ed9ac630f7cb,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,1,,,
+stress,ed9ac630f7cb,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11194476447479133,0.10430701126794116,0.12041832557546876
+stress,ed9ac630f7cb,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,17,,,
+stress,ed9ac630f7cb,Regime-PCMCI,fit_seconds,20,False,True,,0,0,15680.713976989136,14216.67210729798,17253.366651483848
+stress,ed9ac630f7cb,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,16187.472762366187,14302.953956140811,18303.840655169457
+stress,ed9ac630f7cb,cMLP,fit_seconds,20,False,True,,0,0,67.42690860623728,62.57039180035989,72.75946908897656
+stress,ed9ac630f7cb,cMLP,fit_cpu_seconds,20,False,True,,0,0,69.73837814079975,63.118854945963925,77.98621468103867
+stress,7905c50920a7,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.42209395560541496,0.3941225844906151,0.4521967031101698
+stress,7905c50920a7,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,6,,,
+stress,7905c50920a7,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11645375313620018,0.11078496237831606,0.12293783456780198
+stress,7905c50920a7,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,19,,,
+stress,7905c50920a7,Regime-PCMCI,fit_seconds,20,False,True,,0,0,8466.119382368752,8013.49534742584,8945.613180034095
+stress,7905c50920a7,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,8925.002791569039,7702.088162184689,10575.451966833023
+stress,7905c50920a7,cMLP,fit_seconds,20,False,True,,0,0,78.82189489870014,74.08075957117151,83.40601600394761
+stress,7905c50920a7,cMLP,fit_cpu_seconds,20,False,True,,0,0,82.84058872165198,72.88244484068773,95.96627808143855
+stress,c84ced5a1b91,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4232693236697517,0.3893405253877339,0.4591690426432315
+stress,c84ced5a1b91,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,6,,,
+stress,c84ced5a1b91,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11864087587716476,0.11015668733399199,0.12698559105859852
+stress,c84ced5a1b91,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,17,,,
+stress,c84ced5a1b91,Regime-PCMCI,fit_seconds,20,False,True,,0,0,9121.811929023663,8440.074254838792,9847.922398253977
+stress,c84ced5a1b91,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,10057.141804438601,8609.570623913754,11852.208789815568
+stress,c84ced5a1b91,cMLP,fit_seconds,20,False,True,,0,0,76.46807986571845,71.0343628300935,81.68391413341396
+stress,c84ced5a1b91,cMLP,fit_cpu_seconds,20,False,True,,0,0,84.53517409262186,72.54700426206935,99.15172442125129
+stress,ba66e441719f,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.39456718531914764,0.36891703104946094,0.4191653192364799
+stress,ba66e441719f,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,6,,,
+stress,ba66e441719f,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11503729297896828,0.10672464514012603,0.12358593815395785
+stress,ba66e441719f,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,16,,,
+stress,ba66e441719f,Regime-PCMCI,fit_seconds,20,False,True,,0,0,8797.650555908367,8284.274217594055,9324.23460341348
+stress,ba66e441719f,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,8922.102086468461,7660.17476001579,10535.467152524445
+stress,ba66e441719f,cMLP,fit_seconds,20,False,True,,0,0,72.66025344703338,66.81720449705762,78.56944335597642
+stress,ba66e441719f,cMLP,fit_cpu_seconds,20,False,True,,0,0,73.43581775872384,62.65460918602372,86.73696268746488
+stress,75b1de2443e7,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4637344073797689,0.43917438484097776,0.4912928521917674
+stress,75b1de2443e7,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,2,,,
+stress,75b1de2443e7,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11855479292153533,0.1119558061715441,0.12630492281586028
+stress,75b1de2443e7,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,16,,,
+stress,75b1de2443e7,Regime-PCMCI,fit_seconds,20,False,True,,0,0,11560.999959966442,10770.36001331699,12328.051150632156
+stress,75b1de2443e7,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,11967.610399284564,10630.59815417052,13584.723651508515
+stress,75b1de2443e7,cMLP,fit_seconds,20,False,True,,0,0,75.89505270797731,71.39015907242377,79.9199084065142
+stress,75b1de2443e7,cMLP,fit_cpu_seconds,20,False,True,,0,0,78.22736093124567,71.00145370599914,87.66586053153883
+stress,f3cb92c65405,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.4457827920140144,0.40509273975716753,0.48782172515356736
+stress,f3cb92c65405,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,1,,,
+stress,f3cb92c65405,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.1121357558232774,0.10215881618834811,0.12319854332210917
+stress,f3cb92c65405,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,17,,,
+stress,f3cb92c65405,Regime-PCMCI,fit_seconds,20,False,True,,0,0,10970.418725530564,9988.634709658443,11966.921666632377
+stress,f3cb92c65405,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,11694.526277017907,10110.474032009159,13699.429757121214
+stress,f3cb92c65405,cMLP,fit_seconds,20,False,True,,0,0,70.02664878254409,63.971957708149674,76.48361137897803
+stress,f3cb92c65405,cMLP,fit_cpu_seconds,20,False,True,,0,0,74.6916846393892,65.78840612365049,86.05901399926994
+stress,b810a66badd2,DynVAR-Lasso,fit_seconds,20,False,True,,0,0,0.43924364083169914,0.4046198921003925,0.47624546072811275
+stress,b810a66badd2,DynVAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,3,,,
+stress,b810a66badd2,VAR-Lasso,fit_seconds,20,False,True,,0,0,0.11075554514640404,0.10262656598436938,0.11873528434852502
+stress,b810a66badd2,VAR-Lasso,fit_cpu_seconds,20,False,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,14,,,
+stress,b810a66badd2,Regime-PCMCI,fit_seconds,20,False,True,,0,0,10965.503331469446,10272.765348398912,11687.03531806272
+stress,b810a66badd2,Regime-PCMCI,fit_cpu_seconds,20,False,True,,0,0,11284.213764169042,10292.658431879181,12551.32926569738
+stress,b810a66badd2,cMLP,fit_seconds,20,False,True,,0,0,68.80217673467229,63.62519890235311,74.19162050088893
+stress,b810a66badd2,cMLP,fit_cpu_seconds,20,False,True,,0,0,70.93706479884905,63.286144318323544,81.07150468967598
+timing,64ce2eda95d3,DynVAR-Lasso,fit_seconds,20,True,True,,0,0,0.4580112268939767,0.4295480041584226,0.4921344951925273
+timing,64ce2eda95d3,DynVAR-Lasso,fit_cpu_seconds,20,True,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,2,,,
+timing,64ce2eda95d3,VAR-Lasso,fit_seconds,20,True,True,,0,0,0.11627643544882034,0.10969030630361992,0.1238392965751466
+timing,64ce2eda95d3,VAR-Lasso,fit_cpu_seconds,20,True,False,At least one measured duration is below the clock resolution; no imputation or pair exclusion,0,15,,,
+timing,64ce2eda95d3,Regime-PCMCI,fit_seconds,20,True,True,,0,0,5575.361193129641,5245.668686095606,5983.952898543065
+timing,64ce2eda95d3,Regime-PCMCI,fit_cpu_seconds,20,True,True,,0,0,6293.145859722737,5474.58338400419,7285.682404275989
+timing,64ce2eda95d3,cMLP,fit_seconds,20,True,True,,0,0,86.55181647921357,81.83056591940802,92.06474827008478
+timing,64ce2eda95d3,cMLP,fit_cpu_seconds,20,True,True,,0,0,91.55299758773224,79.91008635938381,105.6353494056427

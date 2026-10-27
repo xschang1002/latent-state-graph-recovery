@@ -1,0 +1,54 @@
+{
+  "diagnostic": {
+    "candidate_C_edge": 0.52,
+    "candidate_J": 0.6666666666666667,
+    "candidate_J_times_C": 0.34666666666666673,
+    "candidate_group0_n": 2,
+    "candidate_group1_n": 5,
+    "candidate_group_count": 2,
+    "candidate_identity_gap": 1.1102230246251565e-16,
+    "center_switches": 1,
+    "clustering_warnings": [],
+    "hard_gate_accepted": true,
+    "hard_gate_coherence": 0.5916666666666668,
+    "hard_gate_improvement": 0.23397530878826958,
+    "n_random_partitions": 21,
+    "n_switches": 2,
+    "n_windows": 7,
+    "numerical": [
+      {
+        "warnings": [],
+        "window": 0
+      },
+      {
+        "warnings": [],
+        "window": 1
+      },
+      {
+        "warnings": [],
+        "window": 2
+      },
+      {
+        "warnings": [],
+        "window": 3
+      },
+      {
+        "warnings": [],
+        "window": 4
+      },
+      {
+        "warnings": [],
+        "window": 5
+      },
+      {
+        "warnings": [],
+        "window": 6
+      }
+    ],
+    "true_window_state0_n": 3,
+    "true_window_state1_n": 4,
+    "window_purity_mean": 0.880952380952381,
+    "window_purity_min": 0.6666666666666666
+  },
+  "status": "success"
+}

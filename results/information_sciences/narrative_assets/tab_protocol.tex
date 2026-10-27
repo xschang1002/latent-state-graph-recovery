@@ -1,0 +1,9 @@
+\begin{tabular}{llrll}
+\toprule
+Study: repeats / seeds & Paired design & $T$ & Window grid: $h/s$; $M$ & Statistical role \\
+\midrule
+\shortstack[l]{A: 100 independent repeats\\50000--50099} & \shortstack[l]{Fixed phase; $D=300,600$\\Two cells per repeat} & 1200 & $300/150$; $7$ & \shortstack[l]{Confirmation: gated Lasso Holm4\\Forced and OLS auxiliary} \\
+\shortstack[l]{B: 50 independent repeats\\60000--60049} & \shortstack[l]{Fixed/random/irregular\\$\bar D=300,600$; six cells} & 3600 & $300/150$; $23$ & \shortstack[l]{Secondary robustness\\Forced--raw Holm6; duration Holm3} \\
+\shortstack[l]{C: 30 independent repeats\\70000--70029} & \shortstack[l]{Symmetric generator\\$D=300,600$; ten cells} & 3600 & \shortstack[l]{$200/100$; $35$\\$300/150$; $23$\\$400/200$; $17$\\$300/75$; $45$\\$300/300$; $12$} & \shortstack[l]{Separate robustness study\\Pointwise 95\% intervals\\No confirmatory family} \\
+\bottomrule
+\end{tabular}

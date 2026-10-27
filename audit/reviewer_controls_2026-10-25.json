@@ -1,0 +1,986 @@
+{
+  "base_commit": "e0a28138a17aaa82737d9d8b4c49846632ddc1f1",
+  "checks": {
+    "combined_readonly_gate": {
+      "bundle_payloads_verified": 0,
+      "cache_replay": {
+        "A": {
+          "exact_partition_scores_replayed": 11928,
+          "primary_contrasts": 4,
+          "read_only": true,
+          "repeats": 100,
+          "replayed_successful_fits": 400,
+          "retained_failed_fits": 0,
+          "scorer_refits": 0
+        },
+        "B": {
+          "all_study_files_unchanged": 709,
+          "failed_cases_retained": 0,
+          "fit_or_resimulation_performed": false,
+          "independent_input_repeats": 50,
+          "maximum_actual_spectral_radius": 0.6272691844423648,
+          "maximum_identity_gap": 3.3306690738754696e-16,
+          "method_metric_rows_recomputed": 1500,
+          "planned_cases": 300,
+          "protocol_sha256": "7096be72312d8916d0d2b83a52675aae8a031c81e10593c3afe6e346c6eb5439",
+          "secondary_family_sizes": [
+            6,
+            3
+          ],
+          "status": "passed",
+          "summary_csvs_recomputed": 7,
+          "verified_cases": 300,
+          "window_diagnostics_recomputed": 6900
+        }
+      },
+      "cache_replay_performed": true,
+      "files_unchanged": 3874,
+      "generator_audit": {
+        "frozen_files": 1915,
+        "frozen_sources": 12,
+        "mechanisms_recomputed": 150,
+        "observed_trajectories_recomputed": 500,
+        "outputs": 9,
+        "summary_rows": 2,
+        "tables_reconstructed": 1
+      },
+      "interpretation": {
+        "A_records": 16,
+        "B_records": 9
+      },
+      "manifests": {
+        "asset_outputs": 18,
+        "asset_sources": 13,
+        "interpretation_outputs": 5,
+        "interpretation_sources": 2,
+        "supplement_frozen_sources": 1915,
+        "supplement_outputs": 8
+      },
+      "manuscript": {
+        "abstract_words": 188,
+        "contributions": 3,
+        "main_figures": 6,
+        "main_tables": 5,
+        "real_author_details": true
+      },
+      "new_fits": 0,
+      "original_bundle_byte_check_skipped": false,
+      "presentation": {
+        "B_display_cells": 6,
+        "factor_rows": 8,
+        "finite_example_cells": 32,
+        "tables_reconstructed": 4
+      },
+      "provenance": {
+        "chronology_source_fields": 9,
+        "exported_records": 8,
+        "frozen_sources": 14,
+        "indexed_repeat_records": 1900,
+        "indexed_studies": 2,
+        "optional_private_originals_checked": 8,
+        "protocol_and_evidence_files": 16,
+        "supplement_source_labels": 17
+      },
+      "read_only": true,
+      "reviewer_controls": {
+        "analyses": {
+          "score_preserving_controls": {
+            "affine_edge_checks": 470400,
+            "affine_event_rows": 0,
+            "affine_nonfinite_checks": 0,
+            "cases": 700,
+            "changed_edge_auc_count": 0,
+            "failed_cases": 0,
+            "files_unchanged": 9,
+            "lost_tied_pairs": 0,
+            "max_abs_edge_auc_difference": 0.0,
+            "method_failed_rows": 0,
+            "method_rows": 9100,
+            "method_undefined_rows": 0,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "new_tied_pairs": 0,
+            "read_only": true,
+            "reference_method_rows_checked": 2100,
+            "reversed_pairs": 0,
+            "role": "post hoc descriptive; no confirmatory-family assignments",
+            "status": "passed",
+            "temporal_evaluable_edge_checks": 76520
+          },
+          "symmetric_controls": {
+            "affine_edge_checks": 201600,
+            "affine_events": 0,
+            "cases": 300,
+            "changed_edge_auc_count": 0,
+            "failed_cases": 0,
+            "files_unchanged": 9,
+            "lost_tied_pairs": 0,
+            "method_failed_rows": 0,
+            "method_rows": 3900,
+            "method_undefined_rows": 0,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "new_tied_pairs": 0,
+            "read_only": true,
+            "reference_method_rows_checked": 900,
+            "reversed_pairs": 0,
+            "role": "post hoc score-preserving controls on Study C",
+            "status": "passed",
+            "temporal_evaluable_edge_checks": 36440
+          },
+          "symmetric_localisation": {
+            "C_files_unchanged": 790,
+            "cases": 300,
+            "files_unchanged": 306,
+            "frozen_AB_files_unchanged": 1915,
+            "method_rows_recomputed": 4500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "paired_rows_recomputed": 900,
+            "read_only": true,
+            "retained_failures": 0,
+            "status": "passed",
+            "summary_rows_recomputed": 900
+          },
+          "symmetric_sensitivity": {
+            "failed_fits": 0,
+            "files_unchanged": 790,
+            "independent_repeats": 30,
+            "maximum_factor_identity_gap": 3.3306690738754696e-16,
+            "maximum_final_radius": 0.6729117997570452,
+            "metric_rows_recomputed": 1500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "passed": true,
+            "planned_fits": 300,
+            "role": "Post-review robustness; not part of A/B confirmation or public preregistration"
+          },
+          "temporal_localisation": {
+            "cases": 700,
+            "files_unchanged": 706,
+            "frozen_files_unchanged": 1915,
+            "frozen_source_files_unchanged": 12,
+            "method_rows_recomputed": 10500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "paired_rows_recomputed": 900,
+            "read_only": true,
+            "retained_failures": 0,
+            "status": "passed",
+            "summary_rows_recomputed": 900
+          }
+        },
+        "assets": {
+          "figures": 3,
+          "new_fits": 0,
+          "outputs_verified": 17,
+          "source_files": 20,
+          "tables_reconstructed": 6
+        },
+        "coverage": {
+          "score_preserving_controls": {
+            "cases": 700,
+            "failed_method_rows": 0,
+            "method_rows": 9100,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "symmetric_controls": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 3900,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "symmetric_localisation": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 4500,
+            "missing_metric_entries": {
+              "absent_false_change_rate": 0,
+              "boundary_positive_change_ap": 450,
+              "boundary_slot_f1": 0,
+              "persistent_false_change_rate": 0,
+              "stable_any_change_edge_fraction": 0,
+              "stable_false_change_rate": 0
+            }
+          },
+          "symmetric_sensitivity": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 1500,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "temporal_localisation": {
+            "cases": 700,
+            "failed_method_rows": 0,
+            "method_rows": 10500,
+            "missing_metric_entries": {
+              "absent_false_change_rate": 0,
+              "boundary_positive_change_ap": 0,
+              "boundary_slot_f1": 0,
+              "persistent_false_change_rate": 0,
+              "stable_any_change_edge_fraction": 0,
+              "stable_false_change_rate": 0
+            }
+          }
+        },
+        "files_unchanged": 4071,
+        "new_fits": 0,
+        "new_simulations": 0,
+        "preservation": {
+          "frozen_A_B_files": 1915,
+          "frozen_sources": 12,
+          "prior_stage_csvs": 242
+        },
+        "provenance": {
+          "external_time_attestation": false,
+          "files": 18,
+          "local_originals_checked": 17,
+          "private_originals_required": false,
+          "records": 17
+        },
+        "read_only": true,
+        "replay": true,
+        "status": "passed"
+      },
+      "static": {
+        "main": {
+          "assets": 6,
+          "errors": 0,
+          "tex_sources": 13
+        },
+        "supplement": {
+          "assets": 9,
+          "errors": 0,
+          "tex_sources": 28
+        }
+      },
+      "status": "passed"
+    },
+    "existing_swig_deprecation_warnings": 3,
+    "full_pytest_passed": 415,
+    "manual_review": "all rendered pages, key figures/tables and independent source-number crosscheck",
+    "pdf_qa": {
+      "main": {
+        "all_fonts_embedded": true,
+        "font_count": 18,
+        "overfull_boxes": 0,
+        "pages": 31,
+        "pdf_sha256": "8f505bdb0390b1821b19d70783b8ceb5d1f6b968e579c8a20c06ce180641235b",
+        "undefined_references_or_citations": 0
+      },
+      "supplement": {
+        "all_fonts_embedded": true,
+        "font_count": 23,
+        "overfull_boxes": 0,
+        "pages": 42,
+        "pdf_sha256": "80e764661427456d62d3414116ed5a03247e49a2018ac89530174c76f6d5df81",
+        "undefined_references_or_citations": 0
+      }
+    }
+  },
+  "clean_package_validation": {
+    "PDF_comparison": {
+      "figures": [
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/fig_target_example.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/fig_confirmation.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/fig_schedule.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/fig_gate.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/reviewer_assets/fig_fallback.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/reviewer_assets/fig_symmetric.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {},
+          "metadata_before": {},
+          "metadata_fields_changed": [],
+          "page_boxes_identical": true,
+          "path": "results/information_sciences/reviewer_assets/fig_localisation.pdf"
+        },
+        {
+          "drawing_streams_identical": true,
+          "metadata_after": {
+            "/CreationDate": "D:20261025040137+08'00'"
+          },
+          "metadata_before": {
+            "/CreationDate": "D:20261023041121+08'00'"
+          },
+          "metadata_fields_changed": [
+            "/CreationDate"
+          ],
+          "page_boxes_identical": true,
+          "path": "results/figures/rev2_temporal_grid.pdf"
+        }
+      ],
+      "manuscript_pdf_pages": {
+        "main": 31,
+        "supplement": 42
+      }
+    },
+    "archive_bytes": 282395249,
+    "archive_sha256": "cbb4e17c5a8d5edbe57cf4b33b87271386b709014d5007e416620b53709a1e10",
+    "available_memory_bytes": 15097876480,
+    "baseline_sha256": "c7ee38cd13540bb2d428d1f3625cacc64941a6a29aeca58315b397902a65f82f",
+    "candidate": "<workspace>\\submission_package\\information_sciences_reviewer_validation_v2.zip",
+    "completed_utc": "2026-10-24T20:04:52.887046+00:00",
+    "environment": {
+      "isolation": "reviewer_clean_environment.json",
+      "pins_matched": 47,
+      "pip_check_exit_code": 0
+    },
+    "execution_mode": "parallel independent subprocesses",
+    "new_fits": 0,
+    "new_simulations": 0,
+    "payload_count": 5894,
+    "phase": "v2 validation candidate; final export changes completed audit MD/JSON only",
+    "rebuild": {
+      "all_files_including_manifest": 5895,
+      "all_result_csv_byte_identical": 264,
+      "all_tables_byte_identical": 68,
+      "changed_payloads": [
+        "results/figures/rev2_temporal_grid.pdf"
+      ],
+      "command": [
+        "<workspace>\\experiments\\logs\\mlj_final_text_2026-10-23\\clean_venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/reproduce_paper.py",
+        "--rebuild"
+      ],
+      "cwd": "<workspace>\\experiments\\logs\\reviewer_controls_2026-10-25\\reviewer_clean_rebuild_v2",
+      "elapsed_seconds": 215.9709875000408,
+      "exit_code": 0,
+      "generated_count_basis": "builder-declared 19+4+3+1+6",
+      "generated_table_paths": [
+        "results/information_sciences/generator_audit/tab_generator_diagnostics.tex",
+        "results/information_sciences/reviewer_assets/tab_fallback_full.tex",
+        "results/information_sciences/reviewer_assets/tab_localisation_full.tex",
+        "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+        "results/information_sciences/reviewer_assets/tab_score_controls_aux.tex",
+        "results/information_sciences/reviewer_assets/tab_stable_changes.tex",
+        "results/information_sciences/reviewer_assets/tab_symmetric_full.tex",
+        "results/information_sciences/tab_ess_compact.tex",
+        "results/information_sciences/tab_factors.tex",
+        "results/information_sciences/tab_main_results.tex",
+        "results/information_sciences/tab_protocol.tex",
+        "results/information_sciences/tab_supp_a_contrasts.tex",
+        "results/information_sciences/tab_supp_b_gate_factors.tex",
+        "results/information_sciences/tab_supp_diagnostics_ols.tex",
+        "results/revision2/tab_aggregation.tex",
+        "results/revision2/tab_confirmatory.tex",
+        "results/revision2/tab_controls.tex",
+        "results/revision2/tab_cost.tex",
+        "results/revision2/tab_ess.tex",
+        "results/revision2/tab_ess_diagnostics.tex",
+        "results/revision2/tab_factorial.tex",
+        "results/revision2/tab_final.tex",
+        "results/revision2/tab_grouping_factors.tex",
+        "results/revision2/tab_known_k.tex",
+        "results/revision2/tab_matched_grouping.tex",
+        "results/revision2/tab_metrics_layers.tex",
+        "results/revision2/tab_penalty_scan.tex",
+        "results/revision2/tab_segmentation.tex",
+        "results/revision2/tab_temporal_coverage.tex",
+        "results/revision2/tab_temporal_delta.tex",
+        "results/revision2/tab_temporal_gmm_numerics.tex",
+        "results/revision2/tab_temporal_grid.tex",
+        "results/revision2/tab_temporal_grid_accepted.tex"
+      ],
+      "generated_tables_byte_identical": 33,
+      "guard_counts": {
+        "A_B_files": 1915,
+        "A_B_sources": 12,
+        "C_files": 790,
+        "C_sources": 10
+      },
+      "manuscript": {
+        "abstract_words": 188,
+        "contributions": 3,
+        "main_figures": 6,
+        "main_tables": 5,
+        "real_author_details": true
+      },
+      "missing_AP_preserved": {
+        "symmetric_localisation": {
+          "missing_boundary_AP": 450,
+          "rows": 4500
+        },
+        "temporal_localisation": {
+          "missing_boundary_AP": 0,
+          "rows": 10500
+        }
+      },
+      "new_fits_detected": false,
+      "new_simulations_detected": false,
+      "new_three_PDF_and_PNG_pairs_byte_identical": true,
+      "payloads": 5894,
+      "prior_four_main_PDFs_byte_identical": true,
+      "prior_result_csv_byte_identical": 242,
+      "read_only_analysis_replay": {
+        "analyses": {
+          "score_preserving_controls": {
+            "affine_edge_checks": 470400,
+            "affine_event_rows": 0,
+            "affine_nonfinite_checks": 0,
+            "cases": 700,
+            "changed_edge_auc_count": 0,
+            "failed_cases": 0,
+            "files_unchanged": 9,
+            "lost_tied_pairs": 0,
+            "max_abs_edge_auc_difference": 0.0,
+            "method_failed_rows": 0,
+            "method_rows": 9100,
+            "method_undefined_rows": 0,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "new_tied_pairs": 0,
+            "read_only": true,
+            "reference_method_rows_checked": 2100,
+            "reversed_pairs": 0,
+            "role": "post hoc descriptive; no confirmatory-family assignments",
+            "status": "passed",
+            "temporal_evaluable_edge_checks": 76520
+          },
+          "symmetric_controls": {
+            "affine_edge_checks": 201600,
+            "affine_events": 0,
+            "cases": 300,
+            "changed_edge_auc_count": 0,
+            "failed_cases": 0,
+            "files_unchanged": 9,
+            "lost_tied_pairs": 0,
+            "method_failed_rows": 0,
+            "method_rows": 3900,
+            "method_undefined_rows": 0,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "new_tied_pairs": 0,
+            "read_only": true,
+            "reference_method_rows_checked": 900,
+            "reversed_pairs": 0,
+            "role": "post hoc score-preserving controls on Study C",
+            "status": "passed",
+            "temporal_evaluable_edge_checks": 36440
+          },
+          "symmetric_localisation": {
+            "C_files_unchanged": 790,
+            "cases": 300,
+            "files_unchanged": 306,
+            "frozen_AB_files_unchanged": 1915,
+            "method_rows_recomputed": 4500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "paired_rows_recomputed": 900,
+            "read_only": true,
+            "retained_failures": 0,
+            "status": "passed",
+            "summary_rows_recomputed": 900
+          },
+          "symmetric_sensitivity": {
+            "failed_fits": 0,
+            "files_unchanged": 790,
+            "independent_repeats": 30,
+            "maximum_factor_identity_gap": 3.3306690738754696e-16,
+            "maximum_final_radius": 0.6729117997570452,
+            "metric_rows_recomputed": 1500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "passed": true,
+            "planned_fits": 300,
+            "role": "Post-review robustness; not part of A/B confirmation or public preregistration"
+          },
+          "temporal_localisation": {
+            "cases": 700,
+            "files_unchanged": 706,
+            "frozen_files_unchanged": 1915,
+            "frozen_source_files_unchanged": 12,
+            "method_rows_recomputed": 10500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "paired_rows_recomputed": 900,
+            "read_only": true,
+            "retained_failures": 0,
+            "status": "passed",
+            "summary_rows_recomputed": 900
+          }
+        },
+        "assets": {
+          "figures": 3,
+          "new_fits": 0,
+          "outputs_verified": 17,
+          "source_files": 20,
+          "tables_reconstructed": 6
+        },
+        "coverage": {
+          "score_preserving_controls": {
+            "cases": 700,
+            "failed_method_rows": 0,
+            "method_rows": 9100,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "symmetric_controls": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 3900,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "symmetric_localisation": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 4500,
+            "missing_metric_entries": {
+              "absent_false_change_rate": 0,
+              "boundary_positive_change_ap": 450,
+              "boundary_slot_f1": 0,
+              "persistent_false_change_rate": 0,
+              "stable_any_change_edge_fraction": 0,
+              "stable_false_change_rate": 0
+            }
+          },
+          "symmetric_sensitivity": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 1500,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "temporal_localisation": {
+            "cases": 700,
+            "failed_method_rows": 0,
+            "method_rows": 10500,
+            "missing_metric_entries": {
+              "absent_false_change_rate": 0,
+              "boundary_positive_change_ap": 0,
+              "boundary_slot_f1": 0,
+              "persistent_false_change_rate": 0,
+              "stable_any_change_edge_fraction": 0,
+              "stable_false_change_rate": 0
+            }
+          }
+        },
+        "files_unchanged": 4071,
+        "new_fits": 0,
+        "new_simulations": 0,
+        "preservation": {
+          "frozen_A_B_files": 1915,
+          "frozen_sources": 12,
+          "prior_stage_csvs": 242
+        },
+        "provenance": {
+          "external_time_attestation": false,
+          "files": 18,
+          "local_originals_checked": 0,
+          "private_originals_required": false,
+          "records": 17
+        },
+        "read_only": true,
+        "replay": true,
+        "status": "passed"
+      },
+      "reviewer_provenance_files_unchanged": 18,
+      "stderr": "reviewer_clean_rebuild.stderr.txt",
+      "stderr_bytes": 0,
+      "stdout": "reviewer_clean_rebuild.stdout.txt"
+    },
+    "root_scientific_guards_unchanged": true,
+    "started_utc": "2026-10-24T19:59:55.427378+00:00",
+    "status": "passed",
+    "verify": {
+      "all_files_including_manifest": 5895,
+      "changed_payloads": [],
+      "command": [
+        "<workspace>\\experiments\\logs\\mlj_final_text_2026-10-23\\clean_venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/reproduce_paper.py",
+        "--verify"
+      ],
+      "cwd": "<workspace>\\experiments\\logs\\reviewer_controls_2026-10-25\\reviewer_clean_verify_v2",
+      "elapsed_seconds": 176.25822690001223,
+      "exit_code": 0,
+      "guard_counts": {
+        "A_B_files": 1915,
+        "A_B_sources": 12,
+        "C_files": 790,
+        "C_sources": 10
+      },
+      "manuscript": {
+        "abstract_words": 188,
+        "contributions": 3,
+        "main_figures": 6,
+        "main_tables": 5,
+        "real_author_details": true
+      },
+      "missing_AP_preserved": {
+        "symmetric_localisation": {
+          "missing_boundary_AP": 450,
+          "rows": 4500
+        },
+        "temporal_localisation": {
+          "missing_boundary_AP": 0,
+          "rows": 10500
+        }
+      },
+      "payloads": 5894,
+      "read_only_analysis_replay": {
+        "analyses": {
+          "score_preserving_controls": {
+            "affine_edge_checks": 470400,
+            "affine_event_rows": 0,
+            "affine_nonfinite_checks": 0,
+            "cases": 700,
+            "changed_edge_auc_count": 0,
+            "failed_cases": 0,
+            "files_unchanged": 9,
+            "lost_tied_pairs": 0,
+            "max_abs_edge_auc_difference": 0.0,
+            "method_failed_rows": 0,
+            "method_rows": 9100,
+            "method_undefined_rows": 0,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "new_tied_pairs": 0,
+            "read_only": true,
+            "reference_method_rows_checked": 2100,
+            "reversed_pairs": 0,
+            "role": "post hoc descriptive; no confirmatory-family assignments",
+            "status": "passed",
+            "temporal_evaluable_edge_checks": 76520
+          },
+          "symmetric_controls": {
+            "affine_edge_checks": 201600,
+            "affine_events": 0,
+            "cases": 300,
+            "changed_edge_auc_count": 0,
+            "failed_cases": 0,
+            "files_unchanged": 9,
+            "lost_tied_pairs": 0,
+            "method_failed_rows": 0,
+            "method_rows": 3900,
+            "method_undefined_rows": 0,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "new_tied_pairs": 0,
+            "read_only": true,
+            "reference_method_rows_checked": 900,
+            "reversed_pairs": 0,
+            "role": "post hoc score-preserving controls on Study C",
+            "status": "passed",
+            "temporal_evaluable_edge_checks": 36440
+          },
+          "symmetric_localisation": {
+            "C_files_unchanged": 790,
+            "cases": 300,
+            "files_unchanged": 306,
+            "frozen_AB_files_unchanged": 1915,
+            "method_rows_recomputed": 4500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "paired_rows_recomputed": 900,
+            "read_only": true,
+            "retained_failures": 0,
+            "status": "passed",
+            "summary_rows_recomputed": 900
+          },
+          "symmetric_sensitivity": {
+            "failed_fits": 0,
+            "files_unchanged": 790,
+            "independent_repeats": 30,
+            "maximum_factor_identity_gap": 3.3306690738754696e-16,
+            "maximum_final_radius": 0.6729117997570452,
+            "metric_rows_recomputed": 1500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "passed": true,
+            "planned_fits": 300,
+            "role": "Post-review robustness; not part of A/B confirmation or public preregistration"
+          },
+          "temporal_localisation": {
+            "cases": 700,
+            "files_unchanged": 706,
+            "frozen_files_unchanged": 1915,
+            "frozen_source_files_unchanged": 12,
+            "method_rows_recomputed": 10500,
+            "new_fits": 0,
+            "new_simulations": 0,
+            "paired_rows_recomputed": 900,
+            "read_only": true,
+            "retained_failures": 0,
+            "status": "passed",
+            "summary_rows_recomputed": 900
+          }
+        },
+        "assets": {
+          "figures": 3,
+          "new_fits": 0,
+          "outputs_verified": 17,
+          "source_files": 20,
+          "tables_reconstructed": 6
+        },
+        "coverage": {
+          "score_preserving_controls": {
+            "cases": 700,
+            "failed_method_rows": 0,
+            "method_rows": 9100,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "symmetric_controls": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 3900,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "symmetric_localisation": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 4500,
+            "missing_metric_entries": {
+              "absent_false_change_rate": 0,
+              "boundary_positive_change_ap": 450,
+              "boundary_slot_f1": 0,
+              "persistent_false_change_rate": 0,
+              "stable_any_change_edge_fraction": 0,
+              "stable_false_change_rate": 0
+            }
+          },
+          "symmetric_sensitivity": {
+            "cases": 300,
+            "failed_method_rows": 0,
+            "method_rows": 1500,
+            "missing_metric_entries": {
+              "pooled_temporal_auroc": 0,
+              "temporal_delta_auroc": 0
+            }
+          },
+          "temporal_localisation": {
+            "cases": 700,
+            "failed_method_rows": 0,
+            "method_rows": 10500,
+            "missing_metric_entries": {
+              "absent_false_change_rate": 0,
+              "boundary_positive_change_ap": 0,
+              "boundary_slot_f1": 0,
+              "persistent_false_change_rate": 0,
+              "stable_any_change_edge_fraction": 0,
+              "stable_false_change_rate": 0
+            }
+          }
+        },
+        "files_unchanged": 4071,
+        "new_fits": 0,
+        "new_simulations": 0,
+        "preservation": {
+          "frozen_A_B_files": 1915,
+          "frozen_sources": 12,
+          "prior_stage_csvs": 242
+        },
+        "provenance": {
+          "external_time_attestation": false,
+          "files": 18,
+          "local_originals_checked": 0,
+          "private_originals_required": false,
+          "records": 17
+        },
+        "read_only": true,
+        "replay": true,
+        "status": "passed"
+      },
+      "stderr": "reviewer_clean_verify.stderr.txt",
+      "stderr_bytes": 0,
+      "stdout": "reviewer_clean_verify.stdout.txt"
+    }
+  },
+  "client_date": "2026-10-25 Asia/Shanghai",
+  "direct_metrics": {
+    "C_AP_missing_method_cases": 450,
+    "condition_scorer_cases": 1000,
+    "definitions": [
+      "positive-change AP with zero abstention",
+      "boundary-slot F1 at shared raw-q95 threshold",
+      "stable/persistent/absent change-strength exceedances"
+    ],
+    "method_rows": 15000,
+    "missing_reason": "no negative slots in D300/h300/s300; no imputation",
+    "scope": "stride-resolution change detection; not sample-level boundary distance or calibrated support recovery"
+  },
+  "final_export_verification": {
+    "ZIP_digest_not_self_embedded": true,
+    "external_record": "experiments/logs/reviewer_controls_2026-10-25/final_export_verification.json",
+    "required_changes_from_tested_candidate": [
+      "audit/reviewer_controls_2026-10-25.json",
+      "audit/reviewer_controls_2026-10-25.md"
+    ]
+  },
+  "final_scientific_scope_correction": "Abstract residual-loss claim restricted to Study A; C adverse cells retained; no numeric/protocol/code change",
+  "formal_submission_readiness_claimed": false,
+  "git_commit_created": false,
+  "journal_guidance": "live guide returned HTTP403; prior official snapshot retained provisionally; no new submission-ready assertion",
+  "local_execution_records": "experiments/logs/reviewer_controls_2026-10-25; required reviewer evidence exported separately",
+  "new_study": {
+    "changes_bundled_not_factorial": true,
+    "durations": [
+      300,
+      600
+    ],
+    "generator": "exchangeable nonself support; shared coefficients; common lag-aware scaling",
+    "independent_repeats": 30,
+    "planned_fits": 300,
+    "role": "internally frozen post-review symmetric-generator/window robustness; not new A/B primary confirmation",
+    "seed_range": [
+      70000,
+      70029
+    ],
+    "successful_fits": 300,
+    "windows": [
+      [
+        200,
+        100
+      ],
+      [
+        300,
+        150
+      ],
+      [
+        400,
+        200
+      ],
+      [
+        300,
+        75
+      ],
+      [
+        300,
+        300
+      ]
+    ]
+  },
+  "postfit_controls": {
+    "affine_edge_checks": 672000,
+    "affine_order_tie_auc_events": 0,
+    "analysed_condition_scorer_cases": 1000,
+    "changing_edge_auc_checks": 112960,
+    "hard_endpoint": 0.0,
+    "lambdas": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "method_rows": 13000,
+    "new_fits": 0,
+    "selection": "none; every fixed value reported"
+  },
+  "preservation": {
+    "A_B_files_unchanged": 1915,
+    "C_sealed_files": 790,
+    "all_prior_result_csvs_unchanged": 242,
+    "frozen_source_files_unchanged": 12,
+    "frozen_source_sha256": {
+      "configs/schedule_robustness.yaml": "49eda83ab51b378ad5bfc01367a162da19909c627fbee2b0dec820170f78d8d3",
+      "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+      "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+      "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+      "scripts/run_duration_confirmation.py": "612ae0aeefd55c975b1ad8ffb50b259eaf101baafb425cd8893038483c854449",
+      "scripts/run_schedule_robustness.py": "61b4c3b680f804832b20372e32b71cba8e5f569880e1405b8ac33bb3643c9066",
+      "scripts/run_state_decomposition.py": "b1345f8fbf8f57fada6a40568b0d423e8c9eb035176eb6cc545c9a121dce74dc",
+      "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+      "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+      "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+      "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+      "tools/verify_duration_confirmation.py": "1d075b1f2e4ed919fad0b466962c3ef5117da6ac20b2099abc34d8de0bd6440e"
+    },
+    "prior_archive_sha256": "c7ee38cd13540bb2d428d1f3625cacc64941a6a29aeca58315b397902a65f82f"
+  },
+  "protocol_sha256": {
+    "results/information_sciences/score_preserving_controls/protocol.json": "cda9cb757384c32e8c478934c6bbacf9d1c93f4f2a7a205052cb61eda56bad51",
+    "results/information_sciences/symmetric_controls/protocol.json": "544b7a5a9560bd142d1b843a9dc7c5ab665c848637585a4618f1f4e57004ea47",
+    "results/information_sciences/symmetric_localisation/protocol.json": "db922a7429f0f9639d1f087350af74954638785fda46e143b3080e8f5508de99",
+    "results/information_sciences/symmetric_sensitivity/symmetric_sensitivity_protocol.json": "9695fba6db49b70dfee55f4aceda199d9f20769b734425302b6fed2022c66e26",
+    "results/information_sciences/temporal_localisation/protocol.json": "8220cffbe369d2ba3ed932de94e5be460887878f0f42ad5437d5a8604c69918f"
+  },
+  "qa_amendments": [
+    {
+      "component": "A/B affine-event listing",
+      "correction": "exclude undefined NaN differences from events",
+      "numerical_tables_unchanged": true,
+      "retained_history": "results/information_sciences/reviewer_provenance/"
+    },
+    {
+      "component": "C localisation error-field serialization",
+      "correction": "successful null normalized to empty",
+      "retained_history": "results/information_sciences/reviewer_provenance/",
+      "summary_csvs_and_numeric_arrays_unchanged": true
+    }
+  ],
+  "review_source": "author-provided hypothetical review; private original not exported",
+  "stage": "post-review controls, bounded robustness and explicit metric separation",
+  "uploaded_or_submitted": false,
+  "workflow_reference": {
+    "authors": "Kassis et al.",
+    "doi": "10.48550/arXiv.2609.00065",
+    "record_checked_client_date": "2026-10-25",
+    "research_claim_evidence": false,
+    "year": 2026
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "analysis": "symmetric_score_preserving_controls_v1",
+  "fixed_score_control_source_sha256": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+  "input_manifest_sha256": "052aa3371ed934f3272d307a19a72e6fc6a3c7a1a2a8653c457134f987296303",
+  "lambda_positive": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "methods": [
+    "raw_window",
+    "forced_hard",
+    "native_hard",
+    "raw_fallback",
+    "shrink_l025",
+    "shrink_l050",
+    "shrink_l075",
+    "shrink_l100",
+    "residual_hard_l000",
+    "residual_hard_l025",
+    "residual_hard_l050",
+    "residual_hard_l075",
+    "residual_hard_l100"
+  ],
+  "metrics": [
+    "temporal_delta_auroc",
+    "pooled_temporal_auroc"
+  ],
+  "missing": "retain failed cases/methods and undefined targets, finite complete pairs only; no imputation/replacement",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "no_lambda_selection": true,
+  "residual_endpoints": [
+    0.0,
+    1.0
+  ],
+  "role": "post hoc application to completed Study C outputs; not a new confirmation or public preregistration",
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "scripts/analyze_symmetric_controls.py": "fe0fb480532f3998776f4e035cc6c4f591cb22ffed68df61d34ea23800b7255f",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "tests/test_symmetric_controls.py": "c5e7056a629d7c1b4515c17fe51b47e98977e1ac646999e594ba578e7449854d"
+  },
+  "statistics": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261025,
+    "minimum_n": 5,
+    "references": [
+      "raw_window",
+      "forced_hard"
+    ],
+    "scope": "95% pointwise paired-repeat descriptive intervals; no hypothesis tests or family assignment"
+  },
+  "studies": "all 30 seeds70000-70029, D300/600, five prespecified window/stride cells; 300 retained fits",
+  "threads": 1
+}

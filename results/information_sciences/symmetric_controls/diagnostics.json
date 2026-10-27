@@ -1,0 +1,18 @@
+{
+  "affine_edge_checks": 201600,
+  "affine_events": 0,
+  "cases": 300,
+  "changed_edge_auc_count": 0,
+  "failed_cases": 0,
+  "lost_tied_pairs": 0,
+  "method_failed_rows": 0,
+  "method_rows": 3900,
+  "method_undefined_rows": 0,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "new_tied_pairs": 0,
+  "reference_method_rows_checked": 900,
+  "reversed_pairs": 0,
+  "role": "post hoc score-preserving controls on Study C",
+  "temporal_evaluable_edge_checks": 36440
+}

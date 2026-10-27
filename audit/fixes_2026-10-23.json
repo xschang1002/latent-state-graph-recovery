@@ -1,0 +1,60 @@
+{
+  "audit_date": "2026-10-23",
+  "base_commit": "e0a28138a17aaa82737d9d8b4c49846632ddc1f1",
+  "command": "python scripts/run_ess_alignment.py --all-imputations",
+  "environment": {
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "python": "3.12.13",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0",
+    "torch": "2.14.0+cpu"
+  },
+  "null": {
+    "approximate_finite_chain": true,
+    "burn_in_per_edge": 100,
+    "draws": 200,
+    "model": "labelled_in_out_degree_switch_chain",
+    "rejected_proposals_retained": true,
+    "seed": 0,
+    "thinning_per_edge": 10,
+    "three_cycle_proposal_probability": 0.1,
+    "two_edge_proposal_probability": 0.9
+  },
+  "sha256": {
+    "analysis/statistical_plan.md": "05259d69468644f5189d70e7f8449a0b803b4c3fb600e9a899d92f90ce3584ef",
+    "paper/main.tex": "b7e15f2342cc4820ab824415dadbeee5350bb25e51564eb917763bd174405dad",
+    "paper_preprint_2026-10-23.pdf": "7b5516a1db047be9864dbb38ec9118cafc313b544e5d75bf1bef355c6e3aa483",
+    "results/figures/rev2_ess.png": "3ae1eb38015fc661e386f7690058f7eefbec873b0bb7cbff1cd44ea76c3ec00d",
+    "results/revision2/ess_alignment_before_audit_2026-10-23.csv": "e44e9f6408c674a1b514e03214353135c41ff4a55a34b3723acea2ec4e632338",
+    "results/revision2/tab_ess.tex": "e764fc3b212b38bdbfb8f01f7bce5cfff078085248edb33c5285ea7fb50ec945",
+    "results/tables/ess_alignment.csv": "d66f53efff6bf598f15131d9fa70f072e614d68f7c28238ce528eca4684bb4b0",
+    "scripts/freeze_original.py": "2a3b01e20d81e36e8a75d1f0eb2a61262a08a1e7bdc109dd5c0628641cca7f94",
+    "scripts/run_ess_alignment.py": "a5fc13ccf602679e3e33c15ce2bc6023de889b4b04e908eafc9a41af8624f04f",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/randomization.py": "0c54fa881eb10a7e76d48a3bfd7b4750ac848771cf5da36d87b30c73162b63d8",
+    "src/stcg/segmented.py": "7cf5cba9bb756d5ba199b344d3ff66515acddda713839fc822549ef5a294b24b",
+    "tests/test_ess_alignment.py": "80ecc14bb33065c8821458df1c403576152d4cf3f639acb8814d79bf40638441",
+    "tests/test_evaluation.py": "4b7591d8125f800e1b48a904157e9ddae1198b7ceeec38579983a508b2067605",
+    "tests/test_freeze_original.py": "47a2dbd778d33365b364688ddc59edd9f395fe392343d9ae102936186626968f",
+    "tests/test_paper_delivery.py": "58db0b856c61c274c1f7980a2c62a792ff824c1bfb49b3f31f8421c0e3e2c093",
+    "tests/test_segmented.py": "6267a4320717bc4660bbad2bdfff74a912391a55d79ed6a5b98db60f29262c4e"
+  },
+  "validation": {
+    "combined_32_test_min_holm_p": 0.1592039800995008,
+    "data_files_verified": 9,
+    "ess_replay_exact": true,
+    "ess_replay_shape": [
+      32,
+      20
+    ],
+    "historical_summary_pairs_match": 49,
+    "numeric_checks": 174,
+    "pdf_pages": 25,
+    "pdf_reviewed_pages": [
+      17,
+      20
+    ],
+    "pytest_passed": 254
+  }
+}

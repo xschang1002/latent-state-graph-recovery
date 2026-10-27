@@ -1,0 +1,15 @@
+{
+  "after_input_snapshot_sha256": "696d17655eba5787b7cb09b433c5cb0c0d0eb1596179fc5ffed0f297876928ae",
+  "before_after_inputs_equal": true,
+  "checked_utc": "2026-10-25T05:10:48.720624+00:00",
+  "frozen_input_manifest_sha256": "696d17655eba5787b7cb09b433c5cb0c0d0eb1596179fc5ffed0f297876928ae",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "original_AB_files": 1915,
+  "original_AB_sources": 12,
+  "original_C_files": 790,
+  "original_C_sources": 10,
+  "previous_analysis_files": 1030,
+  "scope": "Internal local post-computation hash check, not an independent timestamp or preregistration",
+  "source_sha256": "4cd6b7376bcee633fcb2e3d7b2103a2224e6214226563f804d8d65255a45976a"
+}

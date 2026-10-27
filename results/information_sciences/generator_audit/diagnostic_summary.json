@@ -1,0 +1,89 @@
+{
+  "coverage": {
+    "A": "saved observed X covers full times [100,1300), T=1200; 100 burn-in X values are not retained",
+    "B": "saved observed X covers full times [100,3700), T=3600; 100 burn-in X values are not retained",
+    "exogenous_inputs": "initial history at full times0..2 and full innovations/schedules are retained; missing burn-in X is not reconstructed here",
+    "pre_rescale_radius": "not saved; the number of applied rescales is not inferred from final radii alone",
+    "runtime_check": "the frozen simulator checks finiteness before discarding burn-in, but this post hoc audit independently inspects only saved observed X"
+  },
+  "definitions": {
+    "RMS": "sqrt(mean(X**2)) over every node and the first/last 300 saved observed time points, calculated with overflow-safe scaling",
+    "growth_ratio": "late-block RMS divided by early-block RMS; undefined if early RMS is zero; descriptive endpoint ratio, not a fitted growth rate",
+    "max_abs": "maximum absolute value over all saved observed time points and nodes",
+    "radius": "companion-matrix radius recomputed from each retained final state coefficient tensor; independent mechanisms counted once",
+    "thresholds": "none; endpoint block size 300 selected post hoc to match the analysis window, not a prespecified diagnostic cutoff"
+  },
+  "frozen_files_unchanged": 1915,
+  "frozen_source_files_unchanged": 12,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "role": "post hoc descriptive audit of retained outputs; no preset stability threshold or general stability claim",
+  "source_sha256": {
+    "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d"
+  },
+  "study_summary": [
+    {
+      "base_empty_fallback_compatible_mechanisms": 0,
+      "early_rms_max": 0.11052130454619001,
+      "early_rms_min": 0.10099406636340626,
+      "finite_observed_trajectories": 200,
+      "independent_mechanisms": 100,
+      "late_rms_max": 0.1097633538032779,
+      "late_rms_min": 0.10013928427449087,
+      "late_to_early_rms_ratio_max": 1.0508831252544815,
+      "late_to_early_rms_ratio_min": 0.9307697566399682,
+      "maximum_absolute_observed_value": 0.5328544414501174,
+      "observed_trajectories": 200,
+      "postconstruction_radius_max": 0.6759867255743086,
+      "postconstruction_radius_min": 0.38054636740022285,
+      "realised_retained_fraction_max": 0.7419354838709677,
+      "realised_retained_fraction_min": 0.28125,
+      "rms_ratio_evaluable_trajectories": 200,
+      "state0_self_edges_max": 0,
+      "state0_self_edges_min": 0,
+      "state1_empty_fallback_compatible_mechanisms": 0,
+      "state1_self_edges_max": 7,
+      "state1_self_edges_min": 0,
+      "state_coefficient_tensors": 200,
+      "study": "A"
+    },
+    {
+      "base_empty_fallback_compatible_mechanisms": 0,
+      "early_rms_max": 0.10994639632499535,
+      "early_rms_min": 0.09864344766138895,
+      "finite_observed_trajectories": 300,
+      "independent_mechanisms": 50,
+      "late_rms_max": 0.10829183353921382,
+      "late_rms_min": 0.09973279179286111,
+      "late_to_early_rms_ratio_max": 1.063833604727856,
+      "late_to_early_rms_ratio_min": 0.9361569374077672,
+      "maximum_absolute_observed_value": 0.5553126534916604,
+      "observed_trajectories": 300,
+      "postconstruction_radius_max": 0.6272691844423648,
+      "postconstruction_radius_min": 0.40378455719192574,
+      "realised_retained_fraction_max": 0.7058823529411765,
+      "realised_retained_fraction_min": 0.3333333333333333,
+      "rms_ratio_evaluable_trajectories": 300,
+      "state0_self_edges_max": 0,
+      "state0_self_edges_min": 0,
+      "state1_empty_fallback_compatible_mechanisms": 0,
+      "state1_self_edges_max": 6,
+      "state1_self_edges_min": 0,
+      "state_coefficient_tensors": 100,
+      "study": "B"
+    }
+  ],
+  "support_rule": {
+    "B_empty_fallback": "if the entire proposed B support is empty, copy original A support",
+    "additions_eligibility": "absent in the original state-A base support, not absent after retention deletions",
+    "base_empty_fallback": "force one nonself lag1 edge from random source to its cyclic successor",
+    "fallback_compatibility": "flags only possible activation from final support; false excludes activation, true does not prove it",
+    "o_conditional_retention_probability": 0.5,
+    "overlap": "o is per-base-edge retention probability, not a guarantee that realised shared/A edge fraction equals0.5",
+    "p_A_nonself": 0.18,
+    "p_B_nonself_ignoring_empty_fallbacks": 0.1638,
+    "p_add_if_originally_absent": 0.09,
+    "self_edges": "state-A diagonals are cleared; state-B additions include those originally absent self positions at probability0.09"
+  }
+}

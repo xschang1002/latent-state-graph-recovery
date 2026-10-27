@@ -1,0 +1,104 @@
+{
+  "boundaries": [
+    "No independent external timestamp, registry or notarisation was retained.",
+    "SHA-256 identifies bytes, not the historical time at which they existed.",
+    "File mtimes are supporting metadata and are not sufficient proof of temporal precedence.",
+    "Run stdout reports progress and results without per-line event timestamps.",
+    "Explanations of launcher semantics are current audit interpretation; no historical event was reconstructed as a new original log."
+  ],
+  "events": [
+    {
+      "asia_shanghai": "2026-10-24T04:02:39.659963+08:00",
+      "evidence_kind": "filesystem_mtime_observation",
+      "field": "analysis_plan_mtime_utc",
+      "interpretation": "File stat converted to UTC; supporting metadata, not an independently witnessed event time.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_freeze_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:02:39.659963+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:03:25.183092+08:00",
+      "evidence_kind": "internal_launcher_clock_record",
+      "field": "before_freeze_utc",
+      "interpretation": "Recorded around freeze_protocol in one launcher; no simulation in that launcher. Internal, not externally attested.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_freeze_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:03:25.183092+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:03:25.184092+08:00",
+      "evidence_kind": "filesystem_mtime_observation",
+      "field": "protocol_mtime_utc",
+      "interpretation": "File stat converted to UTC; supporting metadata, not an independently witnessed event time.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_freeze_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:03:25.184092+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:03:25.191091+08:00",
+      "evidence_kind": "internal_launcher_clock_record",
+      "field": "after_freeze_before_simulation_utc",
+      "interpretation": "Recorded around freeze_protocol in one launcher; no simulation in that launcher. Internal, not externally attested.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_freeze_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:03:25.191091+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:03:39.128937+08:00",
+      "evidence_kind": "posthoc_filesystem_mtime_observation",
+      "field": "first_input_saved_utc",
+      "interpretation": "Post-hoc min input-file mtime or COMPLETE.json mtime; insufficient alone to prove freeze-before-execution.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_completion_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:03:39.128937+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:04:13.567755+08:00",
+      "evidence_kind": "posthoc_filesystem_mtime_observation",
+      "field": "complete_record_mtime_utc",
+      "interpretation": "Post-hoc min input-file mtime or COMPLETE.json mtime; insufficient alone to prove freeze-before-execution.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_completion_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:04:13.567755+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:05:54.608049+08:00",
+      "evidence_kind": "postverification_record_assembly_clock",
+      "field": "verified_utc",
+      "interpretation": "Time the post-verification stage record was assembled, not the exact verifier end time.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/A_completion_stage.json",
+      "study": "A",
+      "utc": "2026-10-23T20:05:54.608049+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:27:19.725369+08:00",
+      "evidence_kind": "internal_prelaunch_clock_record",
+      "field": "run_started_utc",
+      "interpretation": "Prelaunch record observes the output directory containing only the hashed protocol; no separate retained B freeze-event UTC.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/B_execution_stage.json",
+      "study": "B",
+      "utc": "2026-10-23T20:27:19.725369+00:00"
+    },
+    {
+      "asia_shanghai": "2026-10-24T04:33:02.085727+08:00",
+      "evidence_kind": "internal_postrun_observation_clock",
+      "field": "run_exit_observed_utc",
+      "interpretation": "Time exit/post-run status was recorded; not the exact process-completion time. The same execution record was augmented after the run.",
+      "local_date": "2026-10-24",
+      "source": "results/information_sciences/provenance/B_execution_stage.json",
+      "study": "B",
+      "utc": "2026-10-23T20:33:02.085727+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "status": "retained internal records, not public preregistration",
+  "timezone": "Asia/Shanghai"
+}

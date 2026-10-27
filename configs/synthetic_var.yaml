@@ -1,0 +1,23 @@
+# Documentation only; no code loads this file. The runnable defaults live in
+# script argparse options (see scripts/run_synthetic_sanity.py and
+# scripts/run_synthetic_recovery.py).
+
+dataset:
+  kind: var
+  n_nodes: 8
+  timesteps: 1000
+  max_lag: 3
+  edge_prob: 0.18
+  noise_scale: 0.10
+  seed: 0
+
+evaluation:
+  scorer: lagged_correlation
+  metrics:
+    - edge_auc
+    - precision_at_k
+    - lag_accuracy
+
+output:
+  save_npz: false
+  path: results/tables/synthetic_sanity.npz

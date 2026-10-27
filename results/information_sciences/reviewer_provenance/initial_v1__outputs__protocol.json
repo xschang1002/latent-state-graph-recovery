@@ -1,0 +1,163 @@
+{
+  "analysis": "score_preserving_controls_v1",
+  "arithmetic": "float64; retain endpoints as byte-exact copies; record new/lost ties, inversions and per-edge AUROC changes without repair",
+  "excluded": "self edges excluded from both targets; stable edges excluded only from within-changing-edge target",
+  "failure_policy": "retain all planned case/method rows; no replacement, no 0.5 imputation; counts/undefined reasons reported",
+  "formulas": {
+    "raw_fallback": "forced candidate if gate accepts, raw otherwise",
+    "residual_hard": "lambda * raw + (1-lambda) * forced_candidate",
+    "shrink": "lambda * raw + (1-lambda) * raw.mean(axis=0)"
+  },
+  "input_manifest_sha256": "e0f34a5d1f8190a8f1fdb9fa6cf72ec574714cc6273cc7f43b626f93589e8879",
+  "lambda_positive": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "methods": [
+    {
+      "duplicate_of": "",
+      "family": "reference",
+      "lambda": 1.0,
+      "method": "raw_window"
+    },
+    {
+      "duplicate_of": "",
+      "family": "reference",
+      "lambda": 0.0,
+      "method": "forced_hard"
+    },
+    {
+      "duplicate_of": "",
+      "family": "reference",
+      "lambda": null,
+      "method": "native_hard"
+    },
+    {
+      "duplicate_of": "",
+      "family": "raw_fallback",
+      "lambda": null,
+      "method": "raw_fallback"
+    },
+    {
+      "duplicate_of": "",
+      "family": "shrink",
+      "lambda": 0.25,
+      "method": "shrink_l025"
+    },
+    {
+      "duplicate_of": "",
+      "family": "shrink",
+      "lambda": 0.5,
+      "method": "shrink_l050"
+    },
+    {
+      "duplicate_of": "",
+      "family": "shrink",
+      "lambda": 0.75,
+      "method": "shrink_l075"
+    },
+    {
+      "duplicate_of": "raw_window",
+      "family": "shrink",
+      "lambda": 1.0,
+      "method": "shrink_l100"
+    },
+    {
+      "duplicate_of": "forced_hard",
+      "family": "residual_hard",
+      "lambda": 0.0,
+      "method": "residual_hard_l000"
+    },
+    {
+      "duplicate_of": "",
+      "family": "residual_hard",
+      "lambda": 0.25,
+      "method": "residual_hard_l025"
+    },
+    {
+      "duplicate_of": "",
+      "family": "residual_hard",
+      "lambda": 0.5,
+      "method": "residual_hard_l050"
+    },
+    {
+      "duplicate_of": "",
+      "family": "residual_hard",
+      "lambda": 0.75,
+      "method": "residual_hard_l075"
+    },
+    {
+      "duplicate_of": "raw_window",
+      "family": "residual_hard",
+      "lambda": 1.0,
+      "method": "residual_hard_l100"
+    }
+  ],
+  "new_fits": 0,
+  "new_simulations": 0,
+  "no_lambda_selection": true,
+  "residual_endpoints": [
+    0.0,
+    1.0
+  ],
+  "role": "post hoc descriptive retained-output analysis; not new confirmation or public preregistration",
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0",
+    "tests/test_score_preserving_controls.py": "8a4d9ae2066338db7749f82f981e08e95ca5e07065672efbccecfe5ca8072bd9"
+  },
+  "statistics": {
+    "draws": 10000,
+    "hypothesis_tests": "none",
+    "interval": "95% pointwise paired-repeat percentile bootstrap, minimum n5, finite complete pairs",
+    "original_A_B_families": "unchanged",
+    "references": [
+      "raw_window",
+      "forced_hard"
+    ],
+    "seed": 20261025,
+    "unit": "independent repeat; pair methods within the same repeat"
+  },
+  "studies": {
+    "A": {
+      "durations": [
+        300,
+        600
+      ],
+      "n": 100,
+      "scorers": [
+        "lasso",
+        "ols"
+      ],
+      "seeds": [
+        50000,
+        50099
+      ]
+    },
+    "B": {
+      "durations": [
+        300,
+        600
+      ],
+      "n": 50,
+      "schedules": [
+        "fixed_phase",
+        "random_phase",
+        "irregular"
+      ],
+      "scorers": [
+        "lasso"
+      ],
+      "seeds": [
+        60000,
+        60049
+      ]
+    }
+  },
+  "targets": [
+    "temporal_delta_auroc",
+    "pooled_temporal_auroc"
+  ],
+  "threads": 1
+}

@@ -1,0 +1,101 @@
+{
+  "AP": {
+    "coverage": "No positive or no negative slot remains missing for BOTH AP conventions, including C D300/stride300",
+    "identity": "For each edge AP_standard=AP_plus+prevalence*(1-positive_strength_recall). Average the product, not marginal means.",
+    "positive": "Old positive-change AP with zero-strength abstention, unchanged",
+    "standard": "Noninterpolated AP over every distinct score including final zero-strength group, whole-group ties"
+  },
+  "analysis": "posthoc_boundary_sensitivity_and_residual_pairs_v1",
+  "cases": "Original A400 fits (Lasso/OLS), B300 and C300; 1000 fits from paired repeats. External validation fits are separate.",
+  "input_manifest_sha256": "696d17655eba5787b7cb09b433c5cb0c0d0eb1596179fc5ffed0f297876928ae",
+  "methods": [
+    "raw_window",
+    "forced_hard",
+    "native_hard",
+    "raw_fallback",
+    "shrink_l025",
+    "shrink_l050",
+    "shrink_l075",
+    "shrink_l100",
+    "residual_hard_l000",
+    "residual_hard_l025",
+    "residual_hard_l050",
+    "residual_hard_l075",
+    "residual_hard_l100",
+    "oracle_label",
+    "static_mean"
+  ],
+  "new_fits": 0,
+  "new_simulations": 0,
+  "quantiles": [
+    0.8,
+    0.9,
+    0.95,
+    0.975,
+    0.99
+  ],
+  "residual": {
+    "arithmetic": "lambda*raw+(1-lambda)*forced, exact endpoint copies",
+    "credit": "1 for >, 0 for <, half for exact ties",
+    "identity": "within_delta+across_delta=residual_state_AUROC-hard_state_AUROC, floating gaps retained",
+    "near_zero": "1e-8 is fixed finite-precision/tie-breaking diagnostic, not a fitted model choice",
+    "pairs": "positive/negative time pairs per nonself changing edge",
+    "partition": "candidate labels equal vs unequal; each component divided by that edge's ALL positive-negative pair count, then macro-averaged"
+  },
+  "residual_lambdas": [
+    0.0,
+    1e-08,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "role": "Post hoc extension after observing all preceding A/B/C outcomes; not an independent confirmation",
+  "source_sha256": {
+    "scripts/analyze_boundary_sensitivity.py": "4cd6b7376bcee633fcb2e3d7b2103a2224e6214226563f804d8d65255a45976a",
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "scripts/analyze_temporal_localisation.py": "afc2b2d400bb871278bf3dc483b79210c2403b8182d6fee34fdae6cc75ad59a7",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "tests/test_boundary_sensitivity.py": "9dc6688bfa6d6b7e2eb6dc0502a801632c960413b3811eaafddd7a563fccd881"
+  },
+  "statistics": {
+    "bootstrap_metrics": {
+      "AP": [
+        "boundary_positive_change_ap",
+        "boundary_standard_ap",
+        "boundary_zero_group_increment"
+      ],
+      "residual": [
+        "hard_state_auroc",
+        "residual_state_auroc",
+        "within_auc_delta",
+        "across_auc_delta",
+        "total_auc_delta"
+      ],
+      "threshold": [
+        "boundary_slot_f1",
+        "stable_false_change_rate",
+        "persistent_false_change_rate",
+        "absent_false_change_rate",
+        "stable_any_change_edge_fraction"
+      ]
+    },
+    "counts": "Retained exactly, not bootstrapped; failures/undefined pairs remain explicit missing denominators",
+    "draws": 10000,
+    "reuse": "One repeat index matrix per cell/finite-mask, reused across metrics/methods/q/absolute and paired estimates via equivalent count weights",
+    "scope": "95% pointwise paired-repeat percentile intervals; no tests/families or multiplicity claim",
+    "seed": 20261025,
+    "streams": "SeedSequence(seed, first4 little-endian u32 of SHA256(JSON(cell_identity, finite_mask)))"
+  },
+  "thresholds": {
+    "event": "strict strength>threshold",
+    "interpretation": "Fixed descriptive amplitude or method-relative reference, not independently calibrated false-positive rates; no best-q selection",
+    "labels_used": false,
+    "modes": [
+      "raw_shared",
+      "method_self"
+    ],
+    "pool": "All nonself edge-slot abs differences within one fit",
+    "quantile_interpolation": "linear"
+  }
+}

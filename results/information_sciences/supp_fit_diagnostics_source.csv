@@ -1,0 +1,7 @@
+study,scorer,D,n_fits,n_failed,n_window_matrices,rank_min,rank_max,rank_deficient_matrices,window_warning_count,cluster_warning_count
+A,lasso,300,100,0,700,,,0,0,0
+A,lasso,600,100,0,700,,,0,0,0
+A,ols,300,100,0,700,24.0,24.0,0,0,0
+A,ols,600,100,0,700,24.0,24.0,0,0,0
+B,lasso,300,150,0,3450,,,0,0,0
+B,lasso,600,150,0,3450,,,0,0,0

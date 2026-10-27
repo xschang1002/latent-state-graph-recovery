@@ -1,0 +1,118 @@
+{
+  "base_commit": "e0a28138a17aaa82737d9d8b4c49846632ddc1f1",
+  "command": "python scripts/run_ess_alignment.py --all-imputations --draws 5000 --null-seeds 0 1 2 3 4",
+  "date": "2026-10-23",
+  "environment": {
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "python": "3.12.13",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0",
+    "torch": "2.14.0+cpu"
+  },
+  "families": {
+    "descriptive": "32 method-by-edge-set-by-imputation tests separately within each seed",
+    "primary": "8 forward-fill tests separately within each seed",
+    "seeds_pooled": false
+  },
+  "null": {
+    "approximate_finite_chain": true,
+    "burn_in_per_edge": 100,
+    "draws": 5000,
+    "model": "labelled_in_out_degree_switch_chain",
+    "reference_seed": 0,
+    "rejected_proposals_retained": true,
+    "resolution": 0.0001999600079984003,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "shared_across_methods_and_imputations": true,
+    "thinning_per_edge": 10
+  },
+  "seed_results": [
+    {
+      "forward_fill_holm_p": 0.0255948810237952,
+      "forward_fill_raw_p": 0.0031993601279744,
+      "linear_combined32_p": 0.0447910417916416,
+      "mean_combined32_p": 0.0805838832233553,
+      "seed": 0
+    },
+    {
+      "forward_fill_holm_p": 0.031993601279744,
+      "forward_fill_raw_p": 0.003999200159968,
+      "linear_combined32_p": 0.031993601279744,
+      "mean_combined32_p": 0.0991801639672065,
+      "seed": 1
+    },
+    {
+      "forward_fill_holm_p": 0.0335932813437312,
+      "forward_fill_raw_p": 0.0041991601679664,
+      "linear_combined32_p": 0.0511897620475904,
+      "mean_combined32_p": 0.0929814037192561,
+      "seed": 2
+    },
+    {
+      "forward_fill_holm_p": 0.015996800639872,
+      "forward_fill_raw_p": 0.001999600079984,
+      "linear_combined32_p": 0.0191961607678464,
+      "mean_combined32_p": 0.0433913217356528,
+      "seed": 3
+    },
+    {
+      "forward_fill_holm_p": 0.0367926414717056,
+      "forward_fill_raw_p": 0.0045990801839632,
+      "linear_combined32_p": 0.0383923215356928,
+      "mean_combined32_p": 0.0867826434713057,
+      "seed": 4
+    }
+  ],
+  "sha256": {
+    "analysis/statistical_plan.md": "257f0ad8a15fe50645f31fae4880fb02be318640e13773b35d5c3c3c5fdef00f",
+    "audit/ess_monte_carlo_5000_2026-10-23.md": "ced2df5c2c2408fb5287a5b2d77bbe2d2260d59e3456b8b3e34b17f0ce9913e5",
+    "data/external/essdata/adjMatrix.csv": "4558e912e77d15e01ba5411cbf338f874f8c4951a480bec1c8a8d542064e2dcb",
+    "data/external/essdata/preprocessedData.csv": "c91eaa4c514e6c433e751ba62b3d438b388aa6bc5f652b74ac1fc201c2f32b87",
+    "data/external/essdata/pv_subsystem_map.csv": "aada841b521dec9fa45cd716d0bfbe61a277db78e7ebedc3c01258e90967961f",
+    "paper/main.tex": "d8860ecb423aac2663cb9adb0189671272e729615bcfaece9669fb2984a1f980",
+    "paper_preprint_2026-10-23_5000_draws.pdf": "63ac2cb40aaa5372232c7f6d7293fac0585c8cc3a268bea5e281b63e3645d826",
+    "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+    "results/figures/rev2_ess.png": "d08e533efe2807fc383dc320d3e0f56e0dd70cc474291aeaa1b3b48893f170e4",
+    "results/revision2/ess_alignment_200_draws_seed0.csv": "d66f53efff6bf598f15131d9fa70f072e614d68f7c28238ce528eca4684bb4b0",
+    "results/revision2/tab_ess.tex": "59804a85573231fe76b7a3adeb8191990e1618329730e528735a5764f845d725",
+    "results/tables/ess_alignment.csv": "b2825203c1985cd4e3c85a04fad8654a5698b1233bbca2b15a0b77c6003f0d58",
+    "results/tables/ess_alignment_seed_sensitivity.csv": "47fbecf413c43fe2bb5a8974e6e325fe9396720f526e58607940046fb49970f4",
+    "scripts/run_ess_alignment.py": "91d8b15e5d7f9460555aaca45571c6b5b9fdf0fe0f7b36eb2c709a8e363b912e",
+    "src/stcg/randomization.py": "0c54fa881eb10a7e76d48a3bfd7b4750ac848771cf5da36d87b30c73162b63d8",
+    "src/stcg/segmented.py": "7cf5cba9bb756d5ba199b344d3ff66515acddda713839fc822549ef5a294b24b",
+    "tests/test_ess_alignment.py": "45143930f703297109ec51a333b0ce84ef4fc87237cadea75b2a7d8ddbc00936",
+    "tests/test_paper_delivery.py": "e92699d2efa483f701a3bce88d097760cdb3008591f4a6d2f705026b36d6e452",
+    "tools/build_revision2_tables.py": "b73a5e4a86c6b7ab5abf6577f9ddcdf2bd279ab71f4715c5ca7b50a9769321cf",
+    "tools/verify_revision2_numbers.py": "31cc62c7654dbc966f052641f7c8794bf37e4f41695df26a0a223c054c55f30f"
+  },
+  "validation": {
+    "data_checksums": 9,
+    "holm_checked_with_statsmodels": true,
+    "numeric_checks": 184,
+    "observed_metrics_unchanged": true,
+    "pdf_pages": 25,
+    "pdf_reviewed_pages": [
+      17,
+      20,
+      21
+    ],
+    "pytest_passed": 266,
+    "reference_replay_shape": [
+      32,
+      22
+    ],
+    "replay_exact": true,
+    "sensitivity_replay_shape": [
+      160,
+      22
+    ],
+    "static_errors": 0
+  }
+}

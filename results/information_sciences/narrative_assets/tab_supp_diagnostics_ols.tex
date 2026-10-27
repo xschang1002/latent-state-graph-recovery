@@ -1,0 +1,28 @@
+\begin{minipage}{\linewidth}
+\centering\small
+(a) Auxiliary OLS absolute within-edge AUROC\par\medskip
+\begin{tabular}{rrrrrr}
+\toprule
+$D$ & Raw & Gated = forced hard & Matched random & Oracle & Static mean \\
+\midrule
+300 & 0.704 & 0.633 & 0.558 & 0.793 & 0.500 \\
+600 & 0.765 & 0.797 & 0.577 & 0.847 & 0.500 \\
+\bottomrule
+\end{tabular}
+\par\bigskip
+(b) Complete fit and window-design coverage\par\medskip
+\begin{tabular}{lllrrrrr}
+\toprule
+Study & Scorer & $D$ & Fits & Failed & Window matrices & Rank range & Warnings \\
+\midrule
+A & Lasso & 300 & 100 & 0 & 700 & -- & 0 \\
+A & Lasso & 600 & 100 & 0 & 700 & -- & 0 \\
+A & OLS & 300 & 100 & 0 & 700 & 24--24 & 0 \\
+A & OLS & 600 & 100 & 0 & 700 & 24--24 & 0 \\
+B & Lasso & 300 & 150 & 0 & 3450 & -- & 0 \\
+B & Lasso & 600 & 150 & 0 & 3450 & -- & 0 \\
+\bottomrule
+\end{tabular}
+\par\medskip\raggedright\small
+All OLS matrices are $297\times24$ with rank $24$. The minimum recorded singular value is $9.083$; the largest recorded condition number is $3.004$. Lasso ranks were not a fitting criterion and are not reported.
+\end{minipage}

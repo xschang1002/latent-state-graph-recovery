@@ -1,0 +1,15 @@
+{
+  "after_freeze_before_computation_utc": "2026-10-25T05:03:20.283828+00:00",
+  "before_freeze_utc": "2026-10-25T05:03:18.705789+00:00",
+  "input_manifest_sha256": "696d17655eba5787b7cb09b433c5cb0c0d0eb1596179fc5ffed0f297876928ae",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "8686f3fb013b3078f9c1a2853caadb2270f78eba730087b4c5d859a5114ca74a",
+  "source_sha256": {
+    "scripts/analyze_boundary_sensitivity.py": "4cd6b7376bcee633fcb2e3d7b2103a2224e6214226563f804d8d65255a45976a",
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "scripts/analyze_temporal_localisation.py": "afc2b2d400bb871278bf3dc483b79210c2403b8182d6fee34fdae6cc75ad59a7",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "tests/test_boundary_sensitivity.py": "9dc6688bfa6d6b7e2eb6dc0502a801632c960413b3811eaafddd7a563fccd881"
+  }
+}

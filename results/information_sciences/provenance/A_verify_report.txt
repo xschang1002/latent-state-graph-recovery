@@ -1,0 +1,9 @@
+{
+  "repeats": 100,
+  "replayed_successful_fits": 400,
+  "retained_failed_fits": 0,
+  "exact_partition_scores_replayed": 11928,
+  "primary_contrasts": 4,
+  "scorer_refits": 0,
+  "read_only": true
+}

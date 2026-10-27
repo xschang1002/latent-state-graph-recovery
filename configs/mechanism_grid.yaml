@@ -1,0 +1,67 @@
+# Mechanism grid for WP2.
+#
+# Design: one core operating point, one-factor-at-a-time scans on every axis,
+# two key interactions, and a negative-control family. This is deliberately not
+# a full factorial; the earlier manuscript's stress grid was already a partial
+# grid and treating its cells as independent was a statistical error.
+#
+# `noise_scale` is the innovation scale. It is deliberately NOT an axis: a
+# linear VAR driven by c*eps produces the same standardised series for every c,
+# so z-scored Lasso scores are invariant to it. Measurement contamination is
+# the `observation_noise` axis instead.
+
+core:
+  n_nodes: 8
+  timesteps: 1200
+  max_lag: 3
+  edge_prob: 0.18
+  switch_period: 300
+  overlap: 0.5
+  effect_scale: 1.0
+  noise_scale: 0.10
+  observation_noise: 0.0
+  noise_kind: gaussian
+  state_proportions: [0.5, 0.5]
+
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+axes:
+  overlap: [0.0, 0.25, 0.5, 0.75, 1.0]
+  switch_period: [150, 300, 600, 900]
+  observation_noise: [0.0, 0.1, 0.2, 0.4]
+  edge_prob: [0.10, 0.18, 0.30]
+  timesteps: [600, 1200, 3000]
+  effect_scale: [0.6, 1.0, 1.4]
+  max_lag: [3, 5]
+  state_proportions: [[0.5, 0.5], [0.8, 0.2], [0.95, 0.05]]
+
+interactions:
+  # purity x state difference: short segments crossed with high/low overlap
+  - switch_period: [150, 300]
+    overlap: [0.0, 1.0]
+  # measurement noise x state difference
+  - observation_noise: [0.0, 0.4]
+    overlap: [0.0, 1.0]
+
+controls:
+  - same_support
+  - variance_only
+  - mean_only
+  - trend
+  - sign_flip
+  - lag_shift
+  - stationary
+
+window:
+  # Fixed across the grid so that timesteps is the only axis that changes the
+  # number of windows. h = 300, stride = 150 is the manuscript's operating point.
+  size: 300
+  stride: 150
+
+model:
+  n_states: 2
+  base_model: lasso
+  lasso_alpha: 0.005
+  aggregate: max
+  state_aggregate: mean
+  state_features: nonself

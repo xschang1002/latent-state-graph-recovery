@@ -1,0 +1,84 @@
+{
+  "authorized_change": "Parent authorized recording/analysis repair: retain undefined metric as null, preserve successful fit status, and analyze finite common seeds separately for each metric. No scientific protocol, algorithm, input, seed, budget, or paired-test change.",
+  "cache_compatibility": "All existing valid completed records remain eligible under the original protocol hash. Loader verifies both old and new runner hashes, unchanged AST hashes for five frozen functions, and exact equality of every other fixed-spec field. New records store their recording runner hash.",
+  "completed_at_utc": "2026-09-13T12:39:44.147664+00:00",
+  "frozen_function_ast_hashes": {
+    "fit_method": "3536a5cd103c6077e308e2457393141547bdd24edd32a0e2dafdb5db6ca23e22",
+    "fixed_spec": "cb99ad19d03df896c2c1a8a7ada35355f0afab7a6baa3f9fc82a06060133b117",
+    "generate_dataset": "5636caccec0c2f79215e9672e2d5f2c9e676c6d1129b85bf901422c8e530935e",
+    "make_grid": "d3ef875b5daa0ad6bcaa269fd13708348e4a9c613a6d1db3a1ed00c895c1a520",
+    "paired_statistics": "db19afc457221268b4e609a198ac32d2bb0154ae5fbd129ab93cbd471e307c12"
+  },
+  "interrupted_retries": [
+    {
+      "job": "stress_49793b389a0e_seed100_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_75b1de2443e7_seed108_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_75b1de2443e7_seed109_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_7905c50920a7_seed101_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_b810a66badd2_seed103_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_b810a66badd2_seed116_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_c84ced5a1b91_seed113_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    },
+    {
+      "job": "stress_f3cb92c65405_seed108_regimepcmci",
+      "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Incomplete worker interrupted only to apply storage repair"
+    }
+  ],
+  "interrupted_status_snapshot": "revision_specialist_interrupted_status.json",
+  "new_runner_sha256": "8d9dc22c3ef74bd4bcac0df5f9e60a393ffc0ae1cc5157f00b0a826dc777cea3",
+  "old_runner_sha256": "e1921b2a582bf4acd0e7febec79332c454924dbf6bf2c865ff79604dfe2f0bf8",
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "reason": "Successful high-density fits can have mathematically undefined Pair AUC. JSON must retain null for that metric and fit success, with metric-specific finite complete-case analysis. No estimation or grid changes.",
+  "recorded_at_utc": "2026-09-13T12:34:31.518557+00:00",
+  "serialization_retries": [
+    {
+      "job": "stress_ba66e441719f_seed102_regimepcmci",
+      "original_log_sha256": "728cd7053d842bf4ac73751fdbbdbe8990b8918aee2606b69af3ce4bffea3638",
+      "original_record": "revision_specialist_parts_history\\stress_ba66e441719f_seed102_regimepcmci.json",
+      "original_record_sha256": "56b22367232f3491412964ad5ca96d884d90001d7ddca48ccdd5431938db6dd7",
+      "reason": "Serialization of mathematically undefined Pair AUC, not estimator failure"
+    },
+    {
+      "job": "stress_ba66e441719f_seed112_cmlp",
+      "original_log_sha256": "728cd7053d842bf4ac73751fdbbdbe8990b8918aee2606b69af3ce4bffea3638",
+      "original_record": "revision_specialist_parts_history\\stress_ba66e441719f_seed112_cmlp.json",
+      "original_record_sha256": "a78400326c16fe22eefbcecc88a967fad4523ef21b61fc7ca79fdd3861c01763",
+      "reason": "Serialization of mathematically undefined Pair AUC, not estimator failure"
+    },
+    {
+      "job": "stress_ba66e441719f_seed119_dynvarlasso",
+      "original_log_sha256": "728cd7053d842bf4ac73751fdbbdbe8990b8918aee2606b69af3ce4bffea3638",
+      "original_record": "revision_specialist_parts_history\\stress_ba66e441719f_seed119_dynvarlasso.json",
+      "original_record_sha256": "84e0be523878f77b9b2029b88880d794925e82b60e69caf8e44cedb1e2b25fb9",
+      "reason": "Serialization of mathematically undefined Pair AUC, not estimator failure"
+    }
+  ],
+  "successful_records_retained": 70
+}

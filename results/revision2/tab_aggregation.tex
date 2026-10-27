@@ -1,0 +1,17 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Switching} & \multicolumn{3}{c}{Stationary} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & U-AUROC & R-AUROC & T-AUROC & U-AUROC & R-AUROC & T-AUROC \\
+\midrule
+Window mean & 0.804 & -- & 0.795 & 0.919 & -- & 0.919 \\
+Window max & 0.804 & -- & 0.791 & 0.893 & -- & 0.893 \\
+Bagged mean & 0.800 & -- & 0.792 & 0.918 & -- & 0.918 \\
+Random balanced & 0.798 & 0.783 & 0.773 & 0.910 & 0.893 & 0.887 \\
+K-means hard & 0.801 & 0.786 & 0.776 & 0.908 & 0.886 & 0.871 \\
+GMM weighted + argmax & 0.789 & 0.777 & 0.776 & 0.906 & 0.896 & 0.876 \\
+Temporal DP & 0.795 & 0.775 & 0.765 & 0.909 & 0.889 & 0.873 \\
+Oracle label & 0.814 & 0.805 & 0.806 & 0.919 & 0.919 & 0.919 \\
+Oracle refit & 0.844 & -- & -- & 0.954 & -- & -- \\
+\bottomrule
+\end{tabular}

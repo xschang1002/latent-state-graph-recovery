@@ -1,0 +1,24 @@
+Pooled ranking gains also arise without grouping (Table~\ref{tab:score-controls}).
+In Study A, shrinkage at $\lambda=0.25$ raises pooled AUROC to $0.804$
+at $D=300$ and $0.843$ at $D=600$, while preserving the respective raw
+within-edge temporal AUROCs $0.707$ and $0.767$. Weights $0.5$ and
+$0.75$ also improve pooled ranking. Every positive shrinkage weight preserves
+within-edge comparisons, including ties, across the A--C predictions.
+Equation~\eqref{eq:score-shrink} attributes these gains to cross-edge reordering.
+
+Window residuals improve the hard-emission comparison. At $D=300$, residual
+weights $0.25$, $0.5$ and $0.75$ yield temporal gains over raw of $+0.010$
+$[0.001,0.020]$, $+0.009$ $[0.003,0.015]$ and $+0.006$
+$[0.003,0.008]$, respectively, compared with hard emission's $-0.069$.
+At $D=600$, weight $0.25$ yields $+0.057$ $[0.050,0.064]$, compared
+with hard's $+0.038$. These additional analyses report all fixed weights
+with pointwise intervals and remain outside the primary confirmatory family.
+
+Changing the rejection output explains much of the gated loss in Study B.
+At $D=600$, gains with raw fallback are $+0.013$ $[0.003,0.024]$,
+$+0.013$ $[0.004,0.024]$ and $+0.012$ $[0.003,0.022]$ for the
+three schedules, compared with static-fallback gains near $-0.21$.
+Both rules accept exactly the same candidates. At $D=300$, the corresponding
+raw-fallback means are $-0.006$, $0$ and $-0.009$.
+Equation~\eqref{eq:fallback-decomposition} separates losses on rejected
+repeats from the quality of the accepted candidates.

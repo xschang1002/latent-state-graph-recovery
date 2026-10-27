@@ -1,0 +1,17 @@
+dataset,protocol,interval_id,train_start,train_end,start,end
+HydraulicSystems,forward,0,0,26460,26460,52920
+HydraulicSystems,forward,1,0,52920,52920,79380
+HydraulicSystems,forward,2,0,79380,79380,105840
+HydraulicSystems,forward,3,0,105840,105840,132300
+HydraulicSystems,segment,0,-1,-1,12480,13980
+HydraulicSystems,segment,1,-1,-1,45555,47055
+HydraulicSystems,segment,2,-1,-1,78630,80130
+HydraulicSystems,segment,3,-1,-1,111705,113205
+AReMActivities,forward,0,0,8447,8447,16894
+AReMActivities,forward,1,0,16894,16894,25342
+AReMActivities,forward,2,0,25342,25342,33789
+AReMActivities,forward,3,0,33789,33789,42237
+AReMActivities,segment,0,-1,-1,3473,4973
+AReMActivities,segment,1,-1,-1,14032,15532
+AReMActivities,segment,2,-1,-1,24592,26092
+AReMActivities,segment,3,-1,-1,35151,36651

@@ -1,0 +1,31 @@
+{
+  "config": {
+    "edge_prob": 0.45,
+    "max_lag": 3,
+    "n_nodes": 8,
+    "noise_scale": 0.1,
+    "observation_noise": 0.0,
+    "state_seed_offset": 50000,
+    "switch_period": null,
+    "timesteps": 1000,
+    "window_size": 300,
+    "window_stride": 150
+  },
+  "dispatch_seconds": 3.0492184000322595,
+  "edge_auc": null,
+  "error": "See retained worker log",
+  "exclusive_timing": false,
+  "execution_workers": 8,
+  "exit_code": 1,
+  "finished_at_utc": "2026-09-13T12:30:15.177659+00:00",
+  "lag_accuracy": null,
+  "method": "DynVAR-Lasso",
+  "pair_auc": null,
+  "phase": "stress",
+  "precision_at_k": null,
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "seed": 119,
+  "setting_id": "ba66e441719f",
+  "shd": null,
+  "status": "crashed"
+}

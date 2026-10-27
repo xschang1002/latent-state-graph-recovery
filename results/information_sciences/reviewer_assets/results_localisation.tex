@@ -1,0 +1,32 @@
+We distinguish the state-ranking target from adjacent-centre change detection.
+For each edge, a slot is positive if true support switches between consecutive
+window centres; its score is the absolute change in emitted edge score.
+Positive-change AP ranks strictly positive changes with tied levels kept
+together and zero changes abstaining. Boundary-slot F1 uses a single
+label-free threshold per fit, the $95$th percentile of raw nonself score
+changes, shared by all methods. Stable-edge exceedances use that same
+amplitude reference. These are stride-resolution diagnostics, not estimates
+of sample-level boundary error; their exact coverage and conventions are in
+Supplement Section~S17.2.
+
+Figure~\ref{fig:localisation} shows that the metrics can disagree.
+In Study A, forced-hard boundary-AP change is $-0.230$
+$[-0.296,-0.162]$ at $D=300$ and $+0.184$ $[0.096,0.268]$
+at $D=600$. The latter boundary-F1 change is only $+0.021$
+$[-0.005,0.047]$ under the fixed amplitude reference.
+In Study B at $D=600$, AP changes are $+0.068$, $+0.074$ and
+$-0.022$ for fixed, random and irregular schedules; all three pointwise
+intervals cross zero. Boundary F1 decreases by $0.077$, $0.068$ and
+$0.087$, with all three intervals below zero. The positive state-AUROC
+effects therefore do not establish improved boundary detection. Study C's
+central $300/150$ grid likewise gives boundary-AP change $-0.055$
+$[-0.132,0.026]$ and F1 change $-0.100$ $[-0.121,-0.080]$ at $D=600$,
+despite its positive state-discrimination gain.
+
+Hard emission reduces stable-edge threshold exceedances, but it also
+suppresses genuine changes under this amplitude rule. Shrinkage preserves
+change-ranking AP on these saved outputs while reducing change magnitudes;
+it need not preserve threshold-based F1. The complete fixed-weight results,
+stable-present/stable-absent denominators and all C grids are retained in
+the numerical supplement. No absolute AP comparison is made across distinct
+stride grids: effects compare each method with raw on the same slots.

@@ -1,0 +1,156 @@
+{
+  "aggregation": {
+    "candidate": "KMeans K2, n_init10; unweighted mean state maps",
+    "features": "nonself absolute Lasso coefficients, standardised per feature across windows with std+1e-8",
+    "gate": "two nonempty groups and (improvement>=.12 or (improvement>=.04 and coherence>=.55 and minimum_fraction>=.10))",
+    "native_fallback": "same window scores collapsed by static maximum",
+    "self_lags": "included in regression; excluded from scored edges and clustering features"
+  },
+  "configuration": {
+    "durations": [
+      300,
+      600
+    ],
+    "mechanism": {
+      "burn_in": 100,
+      "edge_prob": 0.18,
+      "effect_scale": 1.0,
+      "max_lag": 3,
+      "n_nodes": 8,
+      "n_states": 2,
+      "noise_kind": "gaussian",
+      "noise_scale": 0.1,
+      "observation_noise": 0.0,
+      "overlap": 0.5,
+      "timesteps": 3600
+    },
+    "model": {
+      "lasso_alpha": 0.005,
+      "n_init": 10,
+      "scorer": "lasso"
+    },
+    "schedules": [
+      "fixed_phase",
+      "random_phase",
+      "irregular"
+    ],
+    "seed_count": 50,
+    "seed_start": 60000,
+    "statistics": {
+      "alpha": 0.05,
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 20261024,
+      "minimum_ci_n": 5
+    },
+    "study": "information_sciences_schedule_robustness_v1",
+    "threads": 1,
+    "window": {
+      "size": 300,
+      "stride": 150
+    }
+  },
+  "configuration_sha256": "49eda83ab51b378ad5bfc01367a162da19909c627fbee2b0dec820170f78d8d3",
+  "expected_cells": 6,
+  "expected_fits": 300,
+  "expected_windows_per_fit": 23,
+  "inference": {
+    "B_duration_difference_family": "three paired Gamma=Delta(600)-Delta(300), one per schedule; two-sided t, Holm3",
+    "B_forced_family": "six two-sided paired-repeat one-sample t tests; Holm6",
+    "intervals": "pointwise paired-repeat percentile bootstrap; not simultaneous intervals",
+    "missing": "retain failures and undefined targets; finite complete pairs only, no 0.5 imputation; fixed family size retained",
+    "native_gate_factors": "descriptive; no accepted-only confirmatory tests"
+  },
+  "methods": [
+    "raw_window",
+    "native_hard",
+    "forced_hard",
+    "oracle_label",
+    "static_mean"
+  ],
+  "paired_unit": "independent mechanism/initialisation/innovation repeat, shared across all six cells",
+  "primary_estimand_within_B": "forced_hard minus raw_window changing-edge temporal AUROC",
+  "repeats": [
+    60000,
+    60001,
+    60002,
+    60003,
+    60004,
+    60005,
+    60006,
+    60007,
+    60008,
+    60009,
+    60010,
+    60011,
+    60012,
+    60013,
+    60014,
+    60015,
+    60016,
+    60017,
+    60018,
+    60019,
+    60020,
+    60021,
+    60022,
+    60023,
+    60024,
+    60025,
+    60026,
+    60027,
+    60028,
+    60029,
+    60030,
+    60031,
+    60032,
+    60033,
+    60034,
+    60035,
+    60036,
+    60037,
+    60038,
+    60039,
+    60040,
+    60041,
+    60042,
+    60043,
+    60044,
+    60045,
+    60046,
+    60047,
+    60048,
+    60049
+  ],
+  "retained": "base coefficients/support/initial values/innovations; full and observed schedules/series; window scores/labels/maps/purity; actual and centre switches; J,C,JC and edge denominators",
+  "rng": {
+    "base_helper": "SeedSequence([input_seed,domain]): domain0 coefficients, domain1 initial values, domain2 innovations",
+    "domains": {
+      "cluster": "clustering",
+      "inputs": "base_inputs",
+      "schedule": "schedule,D,kind"
+    },
+    "namespace": "stcg_information_sciences_schedule_v1",
+    "no_optional_stopping": true,
+    "seed_derivation": "little-endian first128 SHA256 bits of canonical compact JSON [namespace, repeat_seed, domain, *parts]; clustering first32 bits"
+  },
+  "role": "prespecified secondary schedule robustness; separate from A confirmatory family",
+  "schedule": {
+    "censoring": "retain sampled/full-time segments and flag burn-in/endpoint truncation",
+    "fixed_phase": "full time origin0, state=floor(t/D)%2, then discard100 burn-in",
+    "irregular": "full origin0 state0, alternating states, independent inclusive integerUniform[ceil(.75D),floor(1.25D)] lengths before burn-in",
+    "random_phase": "independent q~integerUniform[0,2D-1], state=floor((t+q)/D)%2 before burn-in"
+  },
+  "source_sha256": {
+    "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+    "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+    "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+    "scripts/run_schedule_robustness.py": "61b4c3b680f804832b20372e32b71cba8e5f569880e1405b8ac33bb3643c9066",
+    "scripts/run_state_decomposition.py": "b1345f8fbf8f57fada6a40568b0d423e8c9eb035176eb6cc545c9a121dce74dc",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f"
+  },
+  "stability": "preserve existing one-pass scalar stabilisation; report actual spectral radii, no rejection/resampling",
+  "study": "information_sciences_schedule_robustness_v1"
+}

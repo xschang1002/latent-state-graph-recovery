@@ -1,0 +1,20 @@
+{
+  "input_manifest_sha256": "e0f34a5d1f8190a8f1fdb9fa6cf72ec574714cc6273cc7f43b626f93589e8879",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+  "sha256": {
+    "affine_checks.csv": "0a8bc166c7b28fb2311c3747c90d0561e47e80b8932d782b92279a8445bd31f5",
+    "affine_events.csv": "df12c70dd8ffe554606fe316debb94670f969f33e31e56636ae7e9b445e5f268",
+    "contrasts.csv": "45bfcf4fc6b5bf433d8d1937c7d5b35761c589aed9e6811113d777e39499c5b8",
+    "detail.csv": "477917bb6b196aef1ae3d5c67afa84719c01f2889b9d307f32801deb8527ae5c",
+    "diagnostics.json": "b703ad18c7a2e30e7d6c50b9e64fcc3c233f3e08e3af0d7bb513f3abddb04262",
+    "input_manifest.json": "e0f34a5d1f8190a8f1fdb9fa6cf72ec574714cc6273cc7f43b626f93589e8879",
+    "protocol.json": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+    "summary.csv": "e899c97dbb9de04f367dabcf7db4dec34cbdf4e7a51778e6a6612ba5f4af75e9"
+  },
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0",
+    "tests/test_score_preserving_controls.py": "8a4d9ae2066338db7749f82f981e08e95ca5e07065672efbccecfe5ca8072bd9"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "diagnostic": {
+    "candidate_C_edge": 0.07692307692307693,
+    "candidate_J": 0.5,
+    "candidate_J_times_C": 0.038461538461538464,
+    "candidate_group0_n": 5,
+    "candidate_group1_n": 2,
+    "candidate_group_count": 2,
+    "candidate_identity_gap": 0.0,
+    "center_switches": 3,
+    "clustering_warnings": [],
+    "hard_gate_accepted": true,
+    "hard_gate_coherence": 0.5916666666666668,
+    "hard_gate_improvement": 0.2260348087370659,
+    "n_random_partitions": 21,
+    "n_switches": 4,
+    "n_windows": 7,
+    "numerical": [
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 22.93487882342403,
+        "singular_min": 12.009738419239692,
+        "window": 0
+      },
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 24.173414711631416,
+        "singular_min": 10.233957813191722,
+        "window": 1
+      },
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 23.230313736351384,
+        "singular_min": 11.767784332567123,
+        "window": 2
+      },
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 22.402969342661045,
+        "singular_min": 11.84694320656003,
+        "window": 3
+      },
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 23.242797502423343,
+        "singular_min": 11.975635618414174,
+        "window": 4
+      },
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 23.080175795651698,
+        "singular_min": 11.442396263875237,
+        "window": 5
+      },
+      {
+        "n_features": 24,
+        "n_rows": 297,
+        "rank": 24,
+        "singular_max": 22.59559792825357,
+        "singular_min": 12.208865692336008,
+        "window": 6
+      }
+    ],
+    "true_window_state0_n": 3,
+    "true_window_state1_n": 4,
+    "window_purity_mean": 0.7380952380952381,
+    "window_purity_min": 0.6666666666666666
+  },
+  "status": "success"
+}

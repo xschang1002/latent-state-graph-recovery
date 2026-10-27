@@ -1,0 +1,20 @@
+\begin{tabular}{llrrrr}
+\toprule
+Outcome & Comparison & $\Delta$ & 95\% CI & $p_{\mathrm{Holm}}$ & Sig. \\
+\midrule
+Union AUROC & $-$ window max & +0.0109 & [+0.0073, +0.0146] & $<$0.0001 & yes \\
+Union AUROC & $-$ PELT+refit & +0.0382 & [+0.0317, +0.0448] & $<$0.0001 & yes \\
+Union AUROC & $-$ constrained refit & +0.0234 & [+0.0168, +0.0306] & $<$0.0001 & yes \\
+Union AUPRC & $-$ window max & +0.0229 & [+0.0169, +0.0289] & $<$0.0001 & yes \\
+Union AUPRC & $-$ PELT+refit & +0.0830 & [+0.0745, +0.0912] & $<$0.0001 & yes \\
+Union AUPRC & $-$ constrained refit & +0.0398 & [+0.0307, +0.0498] & $<$0.0001 & yes \\
+Temporal graph AUROC & $-$ window max & +0.0021 & [-0.0029, +0.0070] & 0.4176 & no \\
+Temporal graph AUROC & $-$ PELT+refit & +0.1015 & [+0.0957, +0.1071] & $<$0.0001 & yes \\
+Temporal graph AUROC & $-$ constrained refit & +0.0422 & [+0.0370, +0.0473] & $<$0.0001 & yes \\
+\midrule
+\multicolumn{6}{l}{\emph{Descriptive reference, not in the Holm family}} \\
+Union AUROC & $-$ global VAR-Lasso & +0.0006 & [-0.0061, +0.0071] & -- & -- \\
+Union AUPRC & $-$ global VAR-Lasso & -0.0206 & [-0.0287, -0.0128] & -- & -- \\
+Temporal graph AUROC & $-$ global VAR-Lasso & -0.0001 & [-0.0073, +0.0066] & -- & -- \\
+\bottomrule
+\end{tabular}

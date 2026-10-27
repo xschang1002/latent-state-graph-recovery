@@ -1,0 +1,36 @@
+grid_entry,config_id,axis,level,M,n_total,n_evaluable,n_no_support_change,n_no_observed_flip
+0,784de171d622bbd0,core,core,7,20,20,0,0
+1,a843587dc49f8f57,overlap,0.0,7,20,20,0,0
+2,47e3f09d94c1d5b9,overlap,0.25,7,20,20,0,0
+3,5abf87267b0f305c,overlap,0.75,7,20,20,0,0
+4,5befc40246850cdc,overlap,1.0,7,20,0,20,0
+5,39ab64548c01b820,switch_period,150,7,20,20,0,0
+6,ce53429bfadec3a2,switch_period,600,7,20,20,0,0
+7,dcf4258ae0fe5771,switch_period,900,7,20,20,0,0
+8,562a71142b30ab0b,observation_noise,0.1,7,20,20,0,0
+9,1d576e5bea3b9041,observation_noise,0.2,7,20,20,0,0
+10,1d87cd561452d0d4,observation_noise,0.4,7,20,20,0,0
+11,684d4cb9e0713e1f,edge_prob,0.1,7,20,20,0,0
+12,d064b695d11d241b,edge_prob,0.3,7,20,20,0,0
+13,181f332c40ef4cb2,timesteps,600,3,20,20,0,0
+14,ad71e26fa3acb415,timesteps,3000,19,20,20,0,0
+15,2bdb4aef83534013,effect_scale,0.6,7,20,20,0,0
+16,773acd67c7105be9,effect_scale,1.4,7,20,20,0,0
+17,987f74d84b0e5d07,max_lag,5,7,20,20,0,0
+18,f00b0cb11ca9e8df,state_proportions,"[0.8, 0.2]",7,20,20,0,0
+19,a8f9b59db4cf8536,state_proportions,"[0.95, 0.05]",7,20,0,0,20
+20,3aeb82dedffeded4,switch_period+overlap,150|0.0,7,20,20,0,0
+21,9d25f315d4eff761,switch_period+overlap,150|1.0,7,20,0,20,0
+22,a843587dc49f8f57,switch_period+overlap,300|0.0,7,20,20,0,0
+23,5befc40246850cdc,switch_period+overlap,300|1.0,7,20,0,20,0
+24,a843587dc49f8f57,observation_noise+overlap,0.0|0.0,7,20,20,0,0
+25,5befc40246850cdc,observation_noise+overlap,0.0|1.0,7,20,0,20,0
+26,42aafeebefd6754f,observation_noise+overlap,0.4|0.0,7,20,20,0,0
+27,8983c3210d034e65,observation_noise+overlap,0.4|1.0,7,20,0,20,0
+28,0276eeb2fecfcd14,control,same_support,7,20,0,20,0
+29,7a8c5aec19156d27,control,variance_only,7,20,0,20,0
+30,7de1d94121342485,control,mean_only,7,20,0,20,0
+31,1297abc5b1a5deea,control,trend,7,20,0,20,0
+32,abaab4957be20014,control,sign_flip,7,20,0,20,0
+33,8fbac68954cdc6ea,control,lag_shift,7,20,20,0,0
+34,d7731b4dd96cc5ae,control,stationary,7,20,0,20,0

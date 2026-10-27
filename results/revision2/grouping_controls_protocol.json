@@ -1,0 +1,67 @@
+{
+  "bootstrap": {
+    "coverage": "pointwise 95% percentile",
+    "draws": 10000,
+    "seed": 7
+  },
+  "factor_cells": {
+    "core300": [
+      300,
+      7,
+      "native"
+    ],
+    "duration600": [
+      600,
+      7,
+      "native"
+    ],
+    "long300": [
+      300,
+      19,
+      "forced"
+    ]
+  },
+  "independent_unit": "simulation seed, not enumerated partition",
+  "matched_cell": {
+    "D": 600,
+    "M": 7,
+    "T": 1200,
+    "h": 300
+  },
+  "partitions": "enumerate each fixed-size unlabelled bipartition; score before within-seed averaging",
+  "role": "exploratory controls on existing seeds, no independent positive-gain confirmation",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "source_sha256": {
+    "configs/mechanism_grid.yaml": "04454a1199999587c36e0bc7574bad86b870fbe72806f72c46205cd1c6c7dc7b",
+    "results/revision2/state_decomposition.csv": "7a4a8c9d3872fc69b39c5311189b8c8139e30de1623240669e5326929d87b729",
+    "results/revision2/temporal_grid_detail.csv": "d6fd2d813c534d8193bdd99d28fd743bbaf6b21fcbaf3e1bacc21404a010db93",
+    "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+    "scripts/run_grouping_controls.py": "00d43eda8827f905e858b816b82c81f9b172c01bb6a1c0a987244aaa410cefea",
+    "scripts/run_state_decomposition.py": "b1345f8fbf8f57fada6a40568b0d423e8c9eb035176eb6cc545c9a121dce74dc",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f"
+  }
+}

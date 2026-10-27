@@ -1,0 +1,11 @@
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+pandas>=2.0
+matplotlib>=3.7
+torch>=2.1
+pytest>=8.0
+tigramite>=5.2.10
+statsmodels>=0.14
+ortools>=9.10
+ruptures>=1.1

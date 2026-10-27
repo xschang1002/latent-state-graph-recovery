@@ -1,0 +1,7 @@
+{
+  "AB_analysis_sources_unchanged": true,
+  "C_experiment_sources_unchanged": true,
+  "no_parameter_seed_or_metric_change": true,
+  "prior_protocol_sha256": "ebfdc6b48edefdb701516942980730b452c27df2a45533faffe497f18a29d9fe",
+  "reason": "QA-only null-error serialization fix authorized by root; v1 complete run/output and failure retained"
+}

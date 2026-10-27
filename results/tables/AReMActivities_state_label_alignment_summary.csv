@@ -1,0 +1,6 @@
+dataset,seed,n_windows,true_state_count,inferred_state_count,adjusted_rand,aligned_accuracy,mean_label_purity,true_label_counts,inferred_state_counts,state_mapping
+AReMActivities,0,197,6,2,0.2505899802096966,0.4873096446700508,0.9873096446700508,bending1:22;bending2:19;cycling:48;lying:48;sitting:48;standing:12,0:51;1:146,"{""0"": ""cycling"", ""1"": ""sitting""}"
+AReMActivities,1,197,6,2,0.2505899802096966,0.4873096446700508,0.9873096446700508,bending1:22;bending2:19;cycling:48;lying:48;sitting:48;standing:12,0:146;1:51,"{""0"": ""sitting"", ""1"": ""cycling""}"
+AReMActivities,2,197,6,2,0.2505899802096966,0.4873096446700508,0.9873096446700508,bending1:22;bending2:19;cycling:48;lying:48;sitting:48;standing:12,0:51;1:146,"{""0"": ""cycling"", ""1"": ""sitting""}"
+AReMActivities,3,197,6,2,0.2505899802096966,0.4873096446700508,0.9873096446700508,bending1:22;bending2:19;cycling:48;lying:48;sitting:48;standing:12,0:51;1:146,"{""0"": ""cycling"", ""1"": ""sitting""}"
+AReMActivities,4,197,6,2,0.2505899802096966,0.4873096446700508,0.9873096446700508,bending1:22;bending2:19;cycling:48;lying:48;sitting:48;standing:12,0:51;1:146,"{""0"": ""cycling"", ""1"": ""sitting""}"

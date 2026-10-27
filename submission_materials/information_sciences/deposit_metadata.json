@@ -1,0 +1,43 @@
+{
+  "title": "State Aggregation in Dynamic Graph Recovery: Separating Structural Ranking from Temporal Discrimination - Reproducibility Artifact",
+  "version": "v2026.10.27",
+  "resource_type": "software with retained simulation data and manuscript sources",
+  "creators": [
+    {
+      "name": "Xuansong Chang",
+      "given_name": "Xuansong",
+      "family_name": "Chang",
+      "affiliation": "Stony Brook Institute at Anhui University, Hefei, China",
+      "email": "alec.xs.chang@gmail.com",
+      "postal_address": "Anhui University, 3 Feixi Road, Shushan District, Hefei, Anhui 230039, China"
+    }
+  ],
+  "repository_status": "public versioned GitHub release",
+  "doi": null,
+  "public_url": "https://github.com/xschang1002/latent-state-graph-recovery",
+  "release_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27",
+  "archive_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/download/v2026.10.27/information_sciences_reproducibility.zip",
+  "identifier_status": "versioned GitHub release; no DOI has been assigned",
+  "license_scope": "Project code: MIT. Third-party code and data retain their own notices and acquisition conditions.",
+  "description_file": "upload_description.md",
+  "archive_file": "information_sciences_reproducibility.zip",
+  "evidence_scope": {
+    "A": "unchanged original primary confirmation of gated hard (static-max fallback), with auxiliary OLS",
+    "B": "unchanged original secondary schedule robustness",
+    "new_controls": "post hoc complete fixed-lambda and raw-fallback analyses",
+    "C": "separately specified symmetric-generator/window robustness study, 30 new independent repeats and 300 fitted cells; separate from original A/B test families",
+    "direct_metrics": "retained original AP-plus/raw-q95 metrics; within-edge temporal AUROC remains a distinct target",
+    "metric_sensitivity": "post hoc standard/positive-change AP, five fixed raw-shared/method-own quantiles and near-zero residual pair accounting on 1000 retained A/B/C cases; no new fits",
+    "external_adapter": "60 PELT detector fits plus 644 non-overlapping segment VAR-Lasso refits on retained C inputs; 45 cases at the 11-segment minimum-length cap",
+    "selected_fresh_fits": "8 same-seed A/C generation/fitting reruns; 492 exact comparisons in the recorded environment; not independent new seeds or full-grid fresh reproduction"
+  },
+  "evidence_index": "docs/research_guide.md",
+  "main_pdf": "paper_preprint_2026-10-27_information_sciences_refined.pdf",
+  "supplement_pdf": "paper_supplement_2026-10-27_information_sciences_refined.pdf",
+  "historical_evidence_indices": [
+    "docs/information_sciences_evidence_index_2026-10-24.md",
+    "docs/reviewer_controls_evidence_index_2026-10-25.md",
+    "docs/evaluation_revision_evidence_index_2026-10-25.md"
+  ],
+  "release_checklist": "submission_materials/information_sciences/README.md"
+}

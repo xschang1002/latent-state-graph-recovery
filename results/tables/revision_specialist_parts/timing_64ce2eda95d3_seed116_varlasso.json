@@ -1,0 +1,75 @@
+{
+  "config": {
+    "edge_prob": 0.18,
+    "max_lag": 3,
+    "n_nodes": 8,
+    "noise_scale": 0.1,
+    "observation_noise": 0.0,
+    "state_seed_offset": 50000,
+    "switch_period": null,
+    "timesteps": 1000,
+    "window_size": 300,
+    "window_stride": 150
+  },
+  "edge_auc": 0.7566474887264811,
+  "edge_density": 0.35119047619047616,
+  "exclusive_timing": true,
+  "execution_workers": 1,
+  "finished_at_utc": "2026-09-13T15:44:33.558217+00:00",
+  "fit_cpu_seconds": 0.0,
+  "fit_seconds": 0.0034260000102221966,
+  "input_sha256": "c7211dceae13a8a43e539ba048816c7939b4ca2bd0ca014c7ba819f1f9f76a5e",
+  "lag_accuracy": 0.7560975609756098,
+  "method": "VAR-Lasso",
+  "pair_auc": 0.7934959349593496,
+  "phase": "timing",
+  "precision_at_k": 0.5932203389830508,
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "recording_runner_sha256": "8d9dc22c3ef74bd4bcac0df5f9e60a393ffc0ae1cc5157f00b0a826dc777cea3",
+  "scores_sha256": "482f80bdb4dc2274d5535293f0c31bf21cecf80ab8f00507b9de97f72347de16",
+  "seed": 116,
+  "setting_id": "64ce2eda95d3",
+  "shd": 48.0,
+  "started_at_utc": "2026-09-13T15:44:33.483573+00:00",
+  "status": "ok",
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "LOKY_MAX_CPU_COUNT": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    }
+  ],
+  "true_edges": 59.0,
+  "truth_sha256": "5ac951d532e676f2663d6cb663eb951a3d4409543ffe2845f1be0b651ca248d1",
+  "undefined_metrics": [],
+  "worker_pid": 152608
+}

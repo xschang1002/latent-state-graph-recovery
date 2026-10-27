@@ -1,0 +1,2 @@
+role,n_edges,n_centres,state0_centres,state1_centres,changing_edges,pooled_auroc,changing_edge_temporal_auroc
+"deterministic finite illustration, not an experimental estimate",4,8,6,2,2,0.9375,0.5

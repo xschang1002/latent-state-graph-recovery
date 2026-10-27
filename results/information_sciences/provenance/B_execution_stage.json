@@ -1,0 +1,30 @@
+{
+  "authorisation": "Root explicitly authorised fixed300 cells after threads1 review; no additional seeds",
+  "run_started_utc": "2026-10-23T20:27:19.725369+00:00",
+  "protocol_sha256": "7096be72312d8916d0d2b83a52675aae8a031c81e10593c3afe6e346c6eb5439",
+  "outputs_before_run": [
+    "schedule_robustness_protocol.json"
+  ],
+  "freeze_preceded_all_inputs_and_parts": true,
+  "planned_repeats": 50,
+  "planned_cells": 300,
+  "threads": 1,
+  "helper_sha256": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+  "run_exit_code": 0,
+  "run_exit_observed_utc": "2026-10-23T20:33:02.085727+00:00",
+  "stdout": "schedule_robustness_run.stdout.log",
+  "stderr": "schedule_robustness_run.stderr.log",
+  "stderr_bytes": 0,
+  "verification": "schedule_robustness_verify.json",
+  "verification_sha256": "ab5efdc48388c2d7cad088aa996cca6509bde0f36ce59c569724533e2198cc1f",
+  "protocol_unchanged": true,
+  "implementation_tests_passed": 15,
+  "thread_limit_test_passed": true,
+  "source_sha256_final": {
+    "configs/schedule_robustness.yaml": "49eda83ab51b378ad5bfc01367a162da19909c627fbee2b0dec820170f78d8d3",
+    "scripts/run_schedule_robustness.py": "61b4c3b680f804832b20372e32b71cba8e5f569880e1405b8ac33bb3643c9066",
+    "tests/test_schedule_robustness.py": "cb9580f0fbeff8cc4f179097e328539ca7fba2b6a58b4ae9725996887eb8f7ea",
+    "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+    "tools/verify_schedule_robustness.py": "8dbe8bba444a84bde5422faf128dd5e03a0f748ec83fd82f62dab01cc15eff9b"
+  }
+}

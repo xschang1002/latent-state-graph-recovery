@@ -1,0 +1,78 @@
+{
+  "config": {
+    "edge_prob": 0.18,
+    "max_lag": 3,
+    "n_nodes": 8,
+    "noise_scale": 0.1,
+    "observation_noise": 0.0,
+    "state_seed_offset": 50000,
+    "switch_period": null,
+    "timesteps": 1500,
+    "window_size": 300,
+    "window_stride": 150
+  },
+  "edge_auc": 0.7694765672550213,
+  "edge_density": 0.36904761904761907,
+  "exclusive_timing": false,
+  "execution_workers": 8,
+  "finished_at_utc": "2026-09-13T12:30:26.731722+00:00",
+  "fit_cpu_seconds": 0.03125,
+  "fit_seconds": 0.029487599967978895,
+  "input_sha256": "328b4c46a27cfc7583b15f2efc7857716a1fd2eb0ccf43d0d67ade9cbd2f78a9",
+  "lag_accuracy": 0.7857142857142857,
+  "method": "STCG-v1",
+  "pair_auc": 0.7721088435374149,
+  "phase": "stress",
+  "precision_at_k": 0.6451612903225806,
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "scores_sha256": "1111c6a040cb5c9895fa3a12a49bb0beca3aeacc1b15d47321a50a6649528969",
+  "seed": 111,
+  "setting_id": "ed9ac630f7cb",
+  "shd": 44.0,
+  "started_at_utc": "2026-09-13T12:30:26.632447+00:00",
+  "state_count": 2,
+  "state_improvement": 0.2052679403764138,
+  "states_accepted": true,
+  "status": "ok",
+  "temporal_coherence": 0.746875,
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "LOKY_MAX_CPU_COUNT": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    }
+  ],
+  "true_edges": 62.0,
+  "truth_sha256": "820687ca6b7a0c8559bcd53fbf3716835711df70ddff18b05d66c6ed9c9e94bd",
+  "window_regime_ari": 0.55,
+  "worker_pid": 160072
+}

@@ -1,0 +1,11 @@
+{
+  "before_after_frozen_files_equal": true,
+  "before_after_frozen_sources_equal": true,
+  "detail_rows": 10500,
+  "failed_cases_retained": 0,
+  "frozen_files": 1915,
+  "frozen_sources": 12,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "planned_cases_retained": 700
+}

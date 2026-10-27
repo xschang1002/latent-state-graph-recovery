@@ -1,0 +1,77 @@
+# Documentation only; no code loads this file. The runnable settings live in
+# script argparse options and defaults (see scripts/run_synthetic_recovery.py
+# and scripts/run_stcg_ablation.py). Only implemented methods/metrics appear
+# in the active sections; planned but unimplemented entries are quarantined
+# under `future:` below.
+
+synthetic:
+  # Main descriptive panel used by the paper (2026-09-16 checkpoint).
+  # Historical exploratory axes are noted under `historical_axes:` below.
+  generators:
+    - var
+    - nonlinear_var
+    - switching_var
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  n_nodes: [8]
+  max_lag: [3]
+  edge_prob: [0.18]
+  window_size: 300
+  window_stride: 150
+
+baselines:
+  classical:
+    - granger
+    - var_lasso
+    - dynamic_var_lasso
+    - pcmci
+    - pcmci_plus
+    - regime_pcmci
+  neural:
+    - stcg_v0
+    - stcg_v1
+    - cmlp
+  score_based:
+    - dynotears
+
+historical_axes:
+  # Earlier smoke/robustness templates; not the main panel.
+  n_nodes: [8, 16]
+  max_lag: [2, 3, 5]
+  edge_prob: [0.10, 0.30, 0.45]
+
+# Implemented by scripts/run_stcg_ablation.py.
+ablations:
+  - no_state
+  - state_only
+  - forced_states_contrast
+  - state_contrast
+
+metrics:
+  structure:
+    - edge_auc
+    - pair_auc
+    - precision_at_k
+    - shd
+    - lag_accuracy
+  downstream:
+    - mae
+    - rmse
+    - f1
+
+future:
+  # Planned but NOT implemented in this workspace; kept for traceability only.
+  baselines:
+    - mtgnn
+    - graph_wavenet
+    - transformer
+  ablations:
+    - no_lag_contrast
+    - no_masked_reconstruction
+    - no_temporal_consistency
+    - no_topk
+    - static_graph
+  metrics:
+    - nll
+    - auroc
+    - auprc
+    - sparsity

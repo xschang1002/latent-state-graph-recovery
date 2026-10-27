@@ -1,0 +1,75 @@
+{
+  "derived_chronology": {
+    "path": "results/information_sciences/provenance/chronology.json",
+    "sha256": "13ff0c7a2eb163ee3890ef2f85b20fa7d9a06aa1d8af05ac90267543e514e1b6"
+  },
+  "exports": [
+    {
+      "bytes": 2591,
+      "exported_relative_path": "results/information_sciences/provenance/A_freeze_stage.json",
+      "exported_sha256": "26eefeb79930b3773b0379b90a09b7d40a8bf8b0425a4e6eb3d58dfdc83d40ce",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_a_2026-10-24/freeze_stage.json",
+      "original_sha256": "26eefeb79930b3773b0379b90a09b7d40a8bf8b0425a4e6eb3d58dfdc83d40ce"
+    },
+    {
+      "bytes": 4720,
+      "exported_relative_path": "results/information_sciences/provenance/A_completion_stage.json",
+      "exported_sha256": "fdbe2a9c0422648af191c3e932aa14aa00e01297b13a6821feb0819b6650a8dd",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_a_2026-10-24/completion_stage.json",
+      "original_sha256": "fdbe2a9c0422648af191c3e932aa14aa00e01297b13a6821feb0819b6650a8dd"
+    },
+    {
+      "bytes": 8129,
+      "exported_relative_path": "results/information_sciences/provenance/A_run_stdout.txt",
+      "exported_sha256": "e4dc7b5e1dd67e17de67ffedf504146db955604d2650fe7abae49eae8d49d3cf",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_a_2026-10-24/stdout.txt",
+      "original_sha256": "e4dc7b5e1dd67e17de67ffedf504146db955604d2650fe7abae49eae8d49d3cf"
+    },
+    {
+      "bytes": 207,
+      "exported_relative_path": "results/information_sciences/provenance/A_verify_report.txt",
+      "exported_sha256": "518fbf26cbdf7e77e10fd593403cce78ca2d994b9bdcd17da0475720cc610402",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_a_2026-10-24/verify_stdout.txt",
+      "original_sha256": "518fbf26cbdf7e77e10fd593403cce78ca2d994b9bdcd17da0475720cc610402"
+    },
+    {
+      "bytes": 1590,
+      "exported_relative_path": "results/information_sciences/provenance/B_execution_stage.json",
+      "exported_sha256": "8bfbf110340c0e41a2411c74994d85b4fb806b87e69d39c46fb813881f9f5fa5",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_2026-10-24/schedule_robustness_execution.json",
+      "original_sha256": "8bfbf110340c0e41a2411c74994d85b4fb806b87e69d39c46fb813881f9f5fa5"
+    },
+    {
+      "bytes": 4610,
+      "exported_relative_path": "results/information_sciences/provenance/B_run_stdout.txt",
+      "exported_sha256": "599b6bd74316fcba0c7b138d049f6b91cd24e67338734593094817b86432266f",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_2026-10-24/schedule_robustness_run.stdout.log",
+      "original_sha256": "599b6bd74316fcba0c7b138d049f6b91cd24e67338734593094817b86432266f"
+    },
+    {
+      "bytes": 0,
+      "exported_relative_path": "results/information_sciences/provenance/B_run_stderr.txt",
+      "exported_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_2026-10-24/schedule_robustness_run.stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 593,
+      "exported_relative_path": "results/information_sciences/provenance/B_verify_report.json",
+      "exported_sha256": "ab5efdc48388c2d7cad088aa996cca6509bde0f36ce59c569724533e2198cc1f",
+      "normalization": "none required; byte-identical copy; relative paths only",
+      "original_relative_path": "experiments/logs/information_sciences_2026-10-24/schedule_robustness_verify.json",
+      "original_sha256": "ab5efdc48388c2d7cad088aa996cca6509bde0f36ce59c569724533e2198cc1f"
+    }
+  ],
+  "not_external_attestation": true,
+  "schema_version": 1,
+  "scope": "Eight retained formation/execution/QA records copied from internal ignored logs; original logs unchanged."
+}

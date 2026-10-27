@@ -1,0 +1,73 @@
+{
+  "config": {
+    "edge_prob": 0.3,
+    "max_lag": 3,
+    "n_nodes": 8,
+    "noise_scale": 0.1,
+    "observation_noise": 0.0,
+    "state_seed_offset": 50000,
+    "switch_period": null,
+    "timesteps": 1000,
+    "window_size": 300,
+    "window_stride": 150
+  },
+  "edge_auc": 0.7496774193548387,
+  "edge_density": 0.5535714285714286,
+  "exclusive_timing": false,
+  "execution_workers": 8,
+  "finished_at_utc": "2026-09-13T12:30:13.442785+00:00",
+  "fit_cpu_seconds": 2.0625,
+  "fit_seconds": 2.0985902000102215,
+  "input_sha256": "db33deff36f7d316b0d6b59af063650f2203e775457ab5c7360fd7de0778191b",
+  "lag_accuracy": 0.7692307692307693,
+  "method": "cMLP",
+  "pair_auc": 0.9663461538461539,
+  "phase": "stress",
+  "precision_at_k": 0.6989247311827957,
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "scores_sha256": "4e678f2ad0a1c49b6da7b1f8676e47c15e8cccab5e6c6c9179eb06467ad31843",
+  "seed": 114,
+  "setting_id": "c84ced5a1b91",
+  "shd": 56.0,
+  "started_at_utc": "2026-09-13T12:30:11.270031+00:00",
+  "status": "ok",
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "LOKY_MAX_CPU_COUNT": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    }
+  ],
+  "true_edges": 93.0,
+  "truth_sha256": "97228cbe5ca0e06f2487202cd1217f918feeb51c32a31e8998a6382a236b25ce",
+  "worker_pid": 158916
+}

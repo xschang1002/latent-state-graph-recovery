@@ -1,0 +1,169 @@
+{
+  "asset_builder_sha256": "b9f76b978bcbaa3ec2ec570a2729e99b710994f0f9e947a221dbd734e2341753",
+  "experiments_fitted": 0,
+  "figures": [
+    {
+      "description": "A deterministic four-edge example: a constant occupancy score has pooled AUROC 0.9375 and changing-edge temporal AUROC 0.5, despite no time-varying prediction.",
+      "height_inches": 2.9,
+      "minimum_nominal_font_pt": 8.5,
+      "pdf": "fig_target_example.pdf",
+      "pdf_fonttype": 42,
+      "png": "fig_target_example.png",
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "png_pixels": [
+        3960,
+        1740
+      ],
+      "rasterized_artists": false,
+      "uncertainty": "none; exact finite calculation",
+      "unit": "finite edge/time table; no inferential replicate",
+      "width_inches": 6.6
+    },
+    {
+      "description": "Four prespecified Lasso comparisons on 100 independent paired repeats: loss at D300, gain at D600, their paired duration difference, and D600 gain over size-matched random grouping.",
+      "height_inches": 3.2,
+      "inference": "two-sided t tests, Holm4; OLS excluded from family",
+      "minimum_nominal_font_pt": 8.5,
+      "pdf": "fig_confirmation.pdf",
+      "pdf_fonttype": 42,
+      "png": "fig_confirmation.png",
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "png_pixels": [
+        3960,
+        1920
+      ],
+      "rasterized_artists": false,
+      "uncertainty": "pointwise 95% percentile bootstrap, 10000 resamples, seed20261024",
+      "unit": "independent mechanism/noise repeat, n=100",
+      "width_inches": 6.6
+    },
+    {
+      "description": "Six schedule cells compare forced hard-minus-raw temporal AUROC and describe mean centre-switch count and mean within-repeat window purity. Repeats, not windows, define uncertainty.",
+      "height_inches": 4.1,
+      "inference": "forced differences are prespecified secondary Holm6; switch/purity intervals are descriptive",
+      "minimum_nominal_font_pt": 8.5,
+      "pdf": "fig_schedule.pdf",
+      "pdf_fonttype": 42,
+      "png": "fig_schedule.png",
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "png_pixels": [
+        3960,
+        2460
+      ],
+      "rasterized_artists": false,
+      "uncertainty": "pointwise 95% paired-repeat percentile bootstrap, 10000 resamples, seed20261024",
+      "unit": "independent simulation repeat, n=50/cell",
+      "width_inches": 6.6
+    },
+    {
+      "description": "Native and forced hard-minus-raw temporal AUROC differences share six schedule rows. A separate axis reports gate counts without conditioning the performance analysis on acceptance.",
+      "height_inches": 4.1,
+      "minimum_nominal_font_pt": 8.5,
+      "pdf": "fig_gate.pdf",
+      "pdf_fonttype": 42,
+      "png": "fig_gate.png",
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "png_pixels": [
+        3960,
+        2460
+      ],
+      "rasterized_artists": false,
+      "selected_subgroups": "accepted-only performance omitted from main figure and retained in supplement",
+      "uncertainty": "pointwise 95% repeat-bootstrap intervals for paired differences; gate fractions are counts, without inferential intervals",
+      "unit": "independent simulation repeat, n=50/cell",
+      "width_inches": 6.6
+    }
+  ],
+  "main_figure_count": 4,
+  "main_table_count": 4,
+  "output_sha256": {
+    "factor_table_source.csv": "5385a7f358e01c68251d30cc2a5e2bb81940db41e342acf83d6be14df37453ac",
+    "fig_confirmation.pdf": "87e4d588960acb647f329bc09b30d274dbdfb7e98c82bf56a7988fb877ac2f8d",
+    "fig_confirmation.png": "f156521aa9594ec5b210c20153070e1981eb2b961606aed8f0ea620f8419091c",
+    "fig_confirmation_source.csv": "55d60d538977702eb78b616ff74453541e0a695eca682d36a7330176984b15ac",
+    "fig_gate.pdf": "b0e340417ec596053a0491d8ed6dbccba6e59c9c7efa246eae283cf6f57ac90c",
+    "fig_gate.png": "93c214e9241077eb346136ba36a87f4a7e469979ae652a292678341312814628",
+    "fig_gate_source.csv": "3645553f26d3c0d1e025adac2e5d6a084205ce500957147a7f04a1c662ce59fb",
+    "fig_schedule.pdf": "4aefef00222fcd491874ad75289c21425fe0e0a5a8aea5ee73eba122c04da6bc",
+    "fig_schedule.png": "1d717728e3e84e862068e38bef3a32924702c712186d9f1d634d019a574c3af9",
+    "fig_schedule_source.csv": "3645553f26d3c0d1e025adac2e5d6a084205ce500957147a7f04a1c662ce59fb",
+    "fig_target_example.pdf": "d1bdef6747e942e44e4422a0bc9a5b63fec1193f643e38db82162b7cb27111d4",
+    "fig_target_example.png": "aad71b709aeed9447efab8c98fbe86508f9fc8d158cea5511c2d02d18df5539a",
+    "tab_ess_compact.tex": "b3743b4705ae4d5100416bf141f207d21295dc9aa32672a03afe611dfcc7654a",
+    "tab_factors.tex": "879f1eafb657425623931b9aaa1eaeb6d72dc0f09b440d90e1af63b5306cfd5f",
+    "tab_main_results.tex": "2081227080e99b03afb8cdf4eb757c88b90cba46dcf6ccecefd9a3823a10fca4",
+    "tab_protocol.tex": "66b6c1bbda8981a849a1ac64881f356ca365c2d86cb4ea99510185b3490f9b44",
+    "target_example.csv": "8cef9a9d31e09b5cef659767152e0ecce11702c64b1c6f0f3cb0797e88e45471",
+    "target_example_metrics.csv": "f8ca149ec21b6bdc2cff30b1ce3d3427aec8b79b980edaca13061ada95608275"
+  },
+  "publisher_export": {
+    "figure_width_inches": 6.6,
+    "journal": "Information Sciences",
+    "live_guide_check": "2026-10-24, ScienceDirect guide-for-authors returned HTTP403",
+    "pdf_fonts": "embedded TrueType (Type42 request)",
+    "phase": "initial manuscript preparation",
+    "png_dpi": 600,
+    "status": "general scientific figure export; no journal-compliance certification"
+  },
+  "retained_source_hashes_unchanged": true,
+  "source_sha256": {
+    "results/information_sciences/duration_confirmation/COMPLETE.json": "a1ddca2f68c73206096116a83a3f58b8783882a67409b6cbc779e18cd1dd6eb1",
+    "results/information_sciences/duration_confirmation/contrasts.csv": "95877c23c646e60ac589bc0c4fb1367cb49fcd88eec82bdfa915e3d353b464d9",
+    "results/information_sciences/duration_confirmation/detail.csv": "e11c75a9ac06e944e7c9b363b96b8140cb4ee066aee3173737961684b9883c3f",
+    "results/information_sciences/duration_confirmation/protocol.json": "b75b0de47b1e380d063c1cee44c858befc5e6651150d2bc2a7ebd1d0fa030957",
+    "results/information_sciences/duration_confirmation/summary.csv": "3b482f0b5fc8bfad7f1f1661296170cfa53287bdbeff5d1a6f237465e2afd192",
+    "results/information_sciences/schedule_robustness/schedule_robustness_detail.csv": "b0475beb0aeb6c16814e432b6d0f0b52b66697d4e2d8f758498cb8cdcdcb41fd",
+    "results/information_sciences/schedule_robustness/schedule_robustness_diagnostics.csv": "8b6c093b515f6cbaf87e964536532469851cf21a7cda722067ea4511a53352d4",
+    "results/information_sciences/schedule_robustness/schedule_robustness_gate_summary.csv": "e6cb139354ebdb615525d7578e5f4ea87637130a6cf078a0d9579306e1cc67e8",
+    "results/information_sciences/schedule_robustness/schedule_robustness_outputs.json": "033deb6270bb9a8f0693c0fb9b7a2139ec20b37fe0310caaa5e2a432a88f3b1b",
+    "results/information_sciences/schedule_robustness/schedule_robustness_paired.csv": "b6aec1ff9fe4b2193fbf74b399f0c98daafed1c208c3049119339ccb5273a5ee",
+    "results/information_sciences/schedule_robustness/schedule_robustness_protocol.json": "7096be72312d8916d0d2b83a52675aae8a031c81e10593c3afe6e346c6eb5439",
+    "results/information_sciences/schedule_robustness/schedule_robustness_secondary_tests.csv": "c366fc071dc8114420cd7b93c83f5d7abd1446a5bdb11eac1f2a8277c9146e7c",
+    "results/tables/ess_alignment.csv": "b2825203c1985cd4e3c85a04fad8654a5698b1233bbca2b15a0b77c6003f0d58"
+  },
+  "toy": {
+    "changing_edge_temporal_auroc": 0.5,
+    "changing_edges": 2,
+    "n_centres": 8,
+    "n_edges": 4,
+    "pooled_auroc": 0.9375,
+    "role": "deterministic finite illustration, not an experimental estimate",
+    "state0_centres": 6,
+    "state1_centres": 2
+  },
+  "uncertainty": "pointwise 95% percentile bootstrap, 10000 repeat resamples, seed20261024; missing CI not replaced by zero",
+  "units": {
+    "A": "100 independent paired mechanism/history/noise repeats; 7 windows per fit",
+    "B": "50 separate independent repeats paired over six schedules; 23 windows per fit",
+    "ESS": "one observed hour; four-imputation range is sensitivity, not a confidence interval",
+    "factor_table": "jointly evaluable repeat set per row; mean per-repeat product, not product of means",
+    "matched_random": "partition-specific metrics averaged within repeat, not extra replicates"
+  },
+  "workflow_reference": {
+    "authors": [
+      "Timothy Kassis",
+      "Vinayak Agarwal",
+      "Yuhuan He",
+      "Darshil Patel",
+      "Aubrey M. Brueckner"
+    ],
+    "doi": "https://doi.org/10.48550/arXiv.2609.00065",
+    "metadata_source": "https://arxiv.org/abs/2609.00065",
+    "metadata_verified": "2026-10-24",
+    "title": "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents",
+    "version_observed": "v2, last revised 2026-09-02; citation uses the unversioned DOI",
+    "year": 2026
+  }
+}

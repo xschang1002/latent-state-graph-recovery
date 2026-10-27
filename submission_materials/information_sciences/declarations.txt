@@ -1,0 +1,61 @@
+Author and correspondence
+
+Xuansong Chang
+Stony Brook Institute at Anhui University, Hefei, China
+Postal address: Anhui University, 3 Feixi Road, Shushan District,
+Hefei, Anhui 230039, China
+Corresponding author: Xuansong Chang
+Email: alec.xs.chang@gmail.com
+
+Previous publication and overlapping submissions
+
+The work has not been formally published and is not under consideration
+elsewhere. Xuansong Chang is the sole author.
+
+Funding
+
+This research received no external funding.
+
+Declaration of competing interests
+
+The author declares no competing interests. The publisher's declarations tool
+must still be completed for the actual submission; this locally prepared
+statement does not purport to be its generated form.
+
+CRediT authorship contribution statement
+
+Xuansong Chang: Conceptualization, Methodology, Software, Validation, Formal
+analysis, Investigation, Data curation, Visualization, Writing - original draft,
+Writing - review and editing.
+
+Research use of generative AI
+
+OpenAI Codex (OpenAI) assisted code implementation, regression tests, experiment
+orchestration, numerical verification, figure preparation and manuscript
+drafting. Frozen protocols, retained inputs and fitted outputs, and reproducible
+analytical checks accompany the study. The assistance did not replace the
+author's scientific interpretation or responsibility. No unrecorded model-build
+identifier is asserted. The manuscript discloses this research use as well as manuscript preparation.
+
+Declaration of generative AI and AI-assisted technologies in manuscript preparation
+
+OpenAI Codex assisted drafting and editorial revision. Xuansong Chang retains
+responsibility for the final text, interpretation and publication decision.
+The author should review and approve this statement with the final submission
+version.
+
+Data and code availability
+
+For Studies A, B and C, complete simulation inputs, frozen protocols, fitted
+outputs, analysis code and reproduction entry points are prepared in the
+accompanying archive. Earlier auxiliary studies retain their stated outputs
+and separate generation/provenance records. The archive supports
+verification of retained outputs, rebuilding displays and separate fresh-fitting
+routes. AP/threshold sensitivity, residual pair accounting and the distinct PELT
+segment-refit adapter are retained separately. Eight selected same-seed fresh
+generation/fitting comparisons are bounded reproduction checks, not a new
+independent study or a full-grid fresh run. The source code and complete archive
+are available in version v2026.10.27 at
+https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.
+No DOI has been assigned. Existing third-party sources retain their licensing
+and acquisition conditions.

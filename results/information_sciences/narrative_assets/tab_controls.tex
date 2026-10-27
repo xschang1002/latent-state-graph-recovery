@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrrrrr}
+\toprule
+Category & Condition & $K_{\mathrm{dyn}}$ & $K_{\mathrm{graph}}$ & Lag AUROC & Pair AUROC & Regime AUPRC & Pooled AUROC & Assignment ARI \\
+\midrule
+structure change & Switching (reference) & 2 & 2 & 0.801 & 0.792 & 0.587 & 0.776 & +0.292 \\
+structure change & Lag shift & 2 & 2 & 0.784 & 0.875 & 0.567 & 0.761 & +0.407 \\
+\midrule
+mechanism change & Same support & 2 & 1 & 0.847 & 0.824 & 0.634 & 0.810 & -0.041 \\
+mechanism change & Sign flip & 2 & 1 & 0.764 & 0.705 & 0.462 & 0.728 & +0.153 \\
+\midrule
+nuisance change & Variance only & 2 & 1 & 0.881 & 0.861 & 0.701 & 0.839 & -0.096 \\
+nuisance change & Mean only & 2 & 1 & 0.640 & 0.604 & 0.373 & 0.649 & -0.143 \\
+nuisance change & Trend & 2 & 1 & 0.672 & 0.628 & 0.402 & 0.660 & -0.148 \\
+\midrule
+no change & Stationary & 1 & 1 & 0.908 & 0.883 & 0.775 & 0.871 & +0.000 \\
+\bottomrule
+\end{tabular}

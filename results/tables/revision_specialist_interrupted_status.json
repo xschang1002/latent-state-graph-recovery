@@ -1,0 +1,49 @@
+{
+  "active": [
+    {
+      "elapsed_seconds": 296.4400319000124,
+      "job": "stress_f3cb92c65405_seed108_regimepcmci",
+      "pid": 164312
+    },
+    {
+      "elapsed_seconds": 272.6181825000094,
+      "job": "stress_b810a66badd2_seed116_regimepcmci",
+      "pid": 149420
+    },
+    {
+      "elapsed_seconds": 239.79555310000433,
+      "job": "stress_b810a66badd2_seed103_regimepcmci",
+      "pid": 163664
+    },
+    {
+      "elapsed_seconds": 195.92522330000065,
+      "job": "stress_49793b389a0e_seed100_regimepcmci",
+      "pid": 136520
+    },
+    {
+      "elapsed_seconds": 170.8639656000305,
+      "job": "stress_75b1de2443e7_seed109_regimepcmci",
+      "pid": 165120
+    },
+    {
+      "elapsed_seconds": 34.31078569998499,
+      "job": "stress_7905c50920a7_seed101_regimepcmci",
+      "pid": 137756
+    },
+    {
+      "elapsed_seconds": 22.05892479995964,
+      "job": "stress_75b1de2443e7_seed108_regimepcmci",
+      "pid": 145480
+    }
+  ],
+  "calibration": false,
+  "completed_jobs": 72,
+  "controller_pid": 162340,
+  "elapsed_seconds": 296.4883851999766,
+  "pending_jobs": 1221,
+  "phase": "stress",
+  "planned_jobs": 1300,
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "updated_at_utc": "2026-09-13T12:35:05.313193+00:00",
+  "workers": 8
+}

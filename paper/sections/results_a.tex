@@ -1,0 +1,21 @@
+Hard aggregation improves pooled ranking while having opposite temporal
+effects at the two duration configurations (Table~\ref{tab:main-results}).
+At $D=300$, pooled AUROC rises from $0.727$ to $0.780$, while within-edge
+temporal AUROC falls from $0.707$ to $0.639$. The paired temporal difference
+is $-0.069$ $[-0.090,-0.048]$, compared with $+0.038$ $[0.023,0.053]$
+at $D=600$. Their direct paired difference is $\Gamma=+0.107$
+$[0.079,0.134]$. Hard aggregation also exceeds size-matched random grouping
+by $+0.226$ $[0.210,0.243]$ at $D=600$. All four primary comparisons pass
+Holm4 correction; the largest adjusted p value is $2.93\times10^{-6}$.
+
+All 400 Lasso/OLS fits succeed and all temporal targets are evaluable. The
+gate accepts all $100/100$ fits at both durations, so gated and forced hard
+outputs coincide here. The observed records contain four versus two switches,
+and the seven window centres contain three versus one switches, at
+$D=300$ versus $600$. Thus Figure~\ref{fig:confirmation} compares two
+complete duration/coverage configurations.
+
+The prespecified OLS check yields the same contrast: hard-minus-raw is
+$-0.071$ $[-0.092,-0.051]$ at $D=300$ and $+0.032$ $[0.017,0.046]$
+at $D=600$, with paired difference $+0.103$ $[0.076,0.129]$.
+Supplement Section~S4 reports all contrasts, scores and fit diagnostics.

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: >-
+  If you use these materials, cite this versioned research artifact and the
+  accompanying manuscript. GitHub provides the source and complete release archive.
+type: software
+title: >-
+  State Aggregation in Dynamic Graph Recovery: Separating Structural Ranking
+  from Temporal Discrimination - Reproducibility Artifact
+authors:
+  - family-names: Chang
+    given-names: Xuansong
+    affiliation: Stony Brook Institute at Anhui University, Hefei, China
+    email: alec.xs.chang@gmail.com
+version: v2026.10.27
+date-released: '2026-10-27'
+repository-code: https://github.com/xschang1002/latent-state-graph-recovery
+url: https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27
+license: MIT
+abstract: >-
+  Code, simulation inputs and retained fitted outputs for the study of state
+  aggregation in dynamic graph recovery. The evaluation separates pooled
+  structural ranking, within-edge state discrimination and boundary detection.
+  Includes paired duration and schedule studies; a separately specified
+  symmetric-generator/window study; fixed shrinkage and residual controls;
+  standard and positive-change AP and threshold sensitivity; a PELT segment-refit
+  comparator; selected same-seed fresh-fitting checks; and auxiliary evidence.
+  Current scientific guidance is in docs/research_guide.md, with dated protocols
+  and execution provenance retained separately. MIT applies to project code;
+  third-party components retain their own notices and conditions.
+keywords:
+  - dynamic graph recovery
+  - temporal state discrimination
+  - boundary-slot detection
+  - state aggregation
+  - reproducibility

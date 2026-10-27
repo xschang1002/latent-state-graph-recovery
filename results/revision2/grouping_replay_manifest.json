@@ -1,0 +1,13 @@
+{
+  "cache_sha256": "68ce3f465bc4f813f66585957a257a076acd0b4aeb9c26eafce99f5d488b6dcd",
+  "fit_source_sha256": {
+    "configs/mechanism_grid.yaml": "04454a1199999587c36e0bc7574bad86b870fbe72806f72c46205cd1c6c7dc7b",
+    "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f"
+  },
+  "new_seeds": 0,
+  "replayed_old_fits": 40
+}

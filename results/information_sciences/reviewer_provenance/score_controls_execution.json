@@ -1,0 +1,33 @@
+{
+  "after_freeze_before_compute_utc": "2026-10-24T18:57:40.159309+00:00",
+  "before_freeze_utc": "2026-10-24T18:57:27.381336+00:00",
+  "complete_utc": "2026-10-24T18:58:40.558627+00:00",
+  "input_manifest_sha256": "e0f34a5d1f8190a8f1fdb9fa6cf72ec574714cc6273cc7f43b626f93589e8879",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "outputs_before_run": [
+    "input_manifest.json",
+    "protocol.json"
+  ],
+  "protocol_sha256": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+  "role": "post hoc analysis frozen internally before retained-score computation; not public preregistration",
+  "run": {
+    "exit_code": 0,
+    "exit_observed_utc": "2026-10-24T18:58:08.099606+00:00",
+    "seconds": 27.931429199990816,
+    "stderr_bytes": 0
+  },
+  "run_started_utc": "2026-10-24T18:57:40.168309+00:00",
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0",
+    "tests/test_score_preserving_controls.py": "8a4d9ae2066338db7749f82f981e08e95ca5e07065672efbccecfe5ca8072bd9"
+  },
+  "tests_passed": 19,
+  "verify": {
+    "exit_code": 0,
+    "exit_observed_utc": "2026-10-24T18:58:40.558627+00:00",
+    "seconds": 32.457441900041886,
+    "stderr_bytes": 0
+  },
+  "verify_started_utc": "2026-10-24T18:58:08.100606+00:00"
+}

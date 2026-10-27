@@ -1,0 +1,21 @@
+{
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "544b7a5a9560bd142d1b843a9dc7c5ab665c848637585a4618f1f4e57004ea47",
+  "sha256": {
+    "affine_checks.csv": "0039a1aedf1204d14a542d1f87e0665ae8d0325b19040831683650dc9e3b60ad",
+    "affine_events.csv": "a1aaea827839ad771f127570fd4320671e2f106e9fd67308a75a9c54e9051868",
+    "contrasts.csv": "e556f18a20dd825dc61a147ca73fafea7c971e15d53fc93a22eb8b3bcc845f0d",
+    "detail.csv": "9e8a1358108a6a41a72333cbe0375d908f699e2f4e90c13d237078d1badc1ee6",
+    "diagnostics.json": "9013ef54dd14369e94891cce42002877d750dc4f0de069449499b714c9d54854",
+    "input_manifest.json": "052aa3371ed934f3272d307a19a72e6fc6a3c7a1a2a8653c457134f987296303",
+    "protocol.json": "544b7a5a9560bd142d1b843a9dc7c5ab665c848637585a4618f1f4e57004ea47",
+    "summary.csv": "6ff9f8dcb7c5c01a286b32b377b3cf606729ec4566cd4599732b9a26903ff179"
+  },
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "scripts/analyze_symmetric_controls.py": "fe0fb480532f3998776f4e035cc6c4f591cb22ffed68df61d34ea23800b7255f",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "tests/test_symmetric_controls.py": "c5e7056a629d7c1b4515c17fe51b47e98977e1ac646999e594ba578e7449854d"
+  }
+}

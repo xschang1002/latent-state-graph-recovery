@@ -1,0 +1,8 @@
+{
+  "after_protocol_write_before_analysis_utc": "2026-10-24T19:17:20.161767+00:00",
+  "before_protocol_write_utc": "2026-10-24T19:17:20.159764+00:00",
+  "definition_protocol_sha256": "8220cffbe369d2ba3ed932de94e5be460887878f0f42ad5437d5a8604c69918f",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "db922a7429f0f9639d1f087350af74954638785fda46e143b3080e8f5508de99"
+}

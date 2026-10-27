@@ -1,0 +1,171 @@
+{
+  "analysis": "score_preserving_controls_v1",
+  "arithmetic": "float64; retain endpoints as byte-exact copies; record new/lost ties, inversions and per-edge AUROC changes without repair",
+  "excluded": "self edges excluded from both targets; stable edges excluded only from within-changing-edge target",
+  "failure_policy": "retain all planned case/method rows; no replacement, no 0.5 imputation; counts/undefined reasons reported",
+  "formulas": {
+    "raw_fallback": "forced candidate if gate accepts, raw otherwise",
+    "residual_hard": "lambda * raw + (1-lambda) * forced_candidate",
+    "shrink": "lambda * raw + (1-lambda) * raw.mean(axis=0)"
+  },
+  "input_manifest_sha256": "e0f34a5d1f8190a8f1fdb9fa6cf72ec574714cc6273cc7f43b626f93589e8879",
+  "lambda_positive": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "methods": [
+    {
+      "duplicate_of": "",
+      "family": "reference",
+      "lambda": 1.0,
+      "method": "raw_window"
+    },
+    {
+      "duplicate_of": "",
+      "family": "reference",
+      "lambda": 0.0,
+      "method": "forced_hard"
+    },
+    {
+      "duplicate_of": "",
+      "family": "reference",
+      "lambda": null,
+      "method": "native_hard"
+    },
+    {
+      "duplicate_of": "",
+      "family": "raw_fallback",
+      "lambda": null,
+      "method": "raw_fallback"
+    },
+    {
+      "duplicate_of": "",
+      "family": "shrink",
+      "lambda": 0.25,
+      "method": "shrink_l025"
+    },
+    {
+      "duplicate_of": "",
+      "family": "shrink",
+      "lambda": 0.5,
+      "method": "shrink_l050"
+    },
+    {
+      "duplicate_of": "",
+      "family": "shrink",
+      "lambda": 0.75,
+      "method": "shrink_l075"
+    },
+    {
+      "duplicate_of": "raw_window",
+      "family": "shrink",
+      "lambda": 1.0,
+      "method": "shrink_l100"
+    },
+    {
+      "duplicate_of": "forced_hard",
+      "family": "residual_hard",
+      "lambda": 0.0,
+      "method": "residual_hard_l000"
+    },
+    {
+      "duplicate_of": "",
+      "family": "residual_hard",
+      "lambda": 0.25,
+      "method": "residual_hard_l025"
+    },
+    {
+      "duplicate_of": "",
+      "family": "residual_hard",
+      "lambda": 0.5,
+      "method": "residual_hard_l050"
+    },
+    {
+      "duplicate_of": "",
+      "family": "residual_hard",
+      "lambda": 0.75,
+      "method": "residual_hard_l075"
+    },
+    {
+      "duplicate_of": "raw_window",
+      "family": "residual_hard",
+      "lambda": 1.0,
+      "method": "residual_hard_l100"
+    }
+  ],
+  "new_fits": 0,
+  "new_simulations": 0,
+  "no_lambda_selection": true,
+  "qa_amendment": {
+    "previous_protocol_sha256": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+    "previous_script_sha256": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0",
+    "reason": "QA-only event filter correction: undefined NaN AUROC differences are not nonzero events; new/lost ties and reversals still count independently",
+    "timing": "Internal amendment/freeze clocks and preserved v1 evidence are retained in the execution stage; no public preregistration claimed",
+    "unchanged": "lambdas, metrics, samples, comparisons, pointwise bootstrap, detail/summary/contrasts/affine_checks CSVs; only affine_events and its diagnostic count change; no result selection",
+    "v1_complete_results_observed": true
+  },
+  "residual_endpoints": [
+    0.0,
+    1.0
+  ],
+  "role": "post hoc descriptive retained-output analysis; not new confirmation or public preregistration",
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "tests/test_score_preserving_controls.py": "fdec04b4b5691abdd6b7f59a65bff4aca64e11e9a1353fc539e95af68ac38389"
+  },
+  "statistics": {
+    "draws": 10000,
+    "hypothesis_tests": "none",
+    "interval": "95% pointwise paired-repeat percentile bootstrap, minimum n5, finite complete pairs",
+    "original_A_B_families": "unchanged",
+    "references": [
+      "raw_window",
+      "forced_hard"
+    ],
+    "seed": 20261025,
+    "unit": "independent repeat; pair methods within the same repeat"
+  },
+  "studies": {
+    "A": {
+      "durations": [
+        300,
+        600
+      ],
+      "n": 100,
+      "scorers": [
+        "lasso",
+        "ols"
+      ],
+      "seeds": [
+        50000,
+        50099
+      ]
+    },
+    "B": {
+      "durations": [
+        300,
+        600
+      ],
+      "n": 50,
+      "schedules": [
+        "fixed_phase",
+        "random_phase",
+        "irregular"
+      ],
+      "scorers": [
+        "lasso"
+      ],
+      "seeds": [
+        60000,
+        60049
+      ]
+    }
+  },
+  "targets": [
+    "temporal_delta_auroc",
+    "pooled_temporal_auroc"
+  ],
+  "threads": 1
+}

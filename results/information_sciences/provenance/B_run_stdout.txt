@@ -1,0 +1,60 @@
+Completed paired repeat 60000: six schedule cells
+Completed paired repeat 60001: six schedule cells
+Completed paired repeat 60002: six schedule cells
+Completed paired repeat 60003: six schedule cells
+Completed paired repeat 60004: six schedule cells
+Completed paired repeat 60005: six schedule cells
+Completed paired repeat 60006: six schedule cells
+Completed paired repeat 60007: six schedule cells
+Completed paired repeat 60008: six schedule cells
+Completed paired repeat 60009: six schedule cells
+Completed paired repeat 60010: six schedule cells
+Completed paired repeat 60011: six schedule cells
+Completed paired repeat 60012: six schedule cells
+Completed paired repeat 60013: six schedule cells
+Completed paired repeat 60014: six schedule cells
+Completed paired repeat 60015: six schedule cells
+Completed paired repeat 60016: six schedule cells
+Completed paired repeat 60017: six schedule cells
+Completed paired repeat 60018: six schedule cells
+Completed paired repeat 60019: six schedule cells
+Completed paired repeat 60020: six schedule cells
+Completed paired repeat 60021: six schedule cells
+Completed paired repeat 60022: six schedule cells
+Completed paired repeat 60023: six schedule cells
+Completed paired repeat 60024: six schedule cells
+Completed paired repeat 60025: six schedule cells
+Completed paired repeat 60026: six schedule cells
+Completed paired repeat 60027: six schedule cells
+Completed paired repeat 60028: six schedule cells
+Completed paired repeat 60029: six schedule cells
+Completed paired repeat 60030: six schedule cells
+Completed paired repeat 60031: six schedule cells
+Completed paired repeat 60032: six schedule cells
+Completed paired repeat 60033: six schedule cells
+Completed paired repeat 60034: six schedule cells
+Completed paired repeat 60035: six schedule cells
+Completed paired repeat 60036: six schedule cells
+Completed paired repeat 60037: six schedule cells
+Completed paired repeat 60038: six schedule cells
+Completed paired repeat 60039: six schedule cells
+Completed paired repeat 60040: six schedule cells
+Completed paired repeat 60041: six schedule cells
+Completed paired repeat 60042: six schedule cells
+Completed paired repeat 60043: six schedule cells
+Completed paired repeat 60044: six schedule cells
+Completed paired repeat 60045: six schedule cells
+Completed paired repeat 60046: six schedule cells
+Completed paired repeat 60047: six schedule cells
+Completed paired repeat 60048: six schedule cells
+Completed paired repeat 60049: six schedule cells
+            family  family_size  duration_mean     schedule                       comparison  n_planned  n_pairs  mean_difference  ci95_low  ci95_high    t_stat        p_raw       p_holm  significant_holm
+B_forced_minus_raw            6          300.0  fixed_phase     forced_hard_minus_raw_window         50       50        -0.025077 -0.053772   0.003559 -1.684970 9.835408e-02 2.950622e-01             False
+B_forced_minus_raw            6          300.0 random_phase     forced_hard_minus_raw_window         50       50         0.002699 -0.021458   0.027191  0.212912 8.322788e-01 8.322788e-01             False
+B_forced_minus_raw            6          300.0    irregular     forced_hard_minus_raw_window         50       50        -0.019239 -0.045721   0.007398 -1.403362 1.668145e-01 3.336291e-01             False
+B_forced_minus_raw            6          600.0  fixed_phase     forced_hard_minus_raw_window         50       50         0.072298  0.054611   0.089356  8.235869 8.346451e-11 5.007871e-10              True
+B_forced_minus_raw            6          600.0 random_phase     forced_hard_minus_raw_window         50       50         0.072220  0.050257   0.093813  6.452728 4.674712e-08 2.337356e-07              True
+B_forced_minus_raw            6          600.0    irregular     forced_hard_minus_raw_window         50       50         0.069837  0.046965   0.091121  6.171090 1.274624e-07 5.098498e-07              True
+  B_duration_gamma            3            NaN  fixed_phase forced_minus_raw_D600_minus_D300         50       50         0.097374  0.066041   0.129000  6.044576 1.998037e-07 5.994112e-07              True
+  B_duration_gamma            3            NaN random_phase forced_minus_raw_D600_minus_D300         50       50         0.069521  0.039405   0.098238  4.627726 2.736785e-05 2.736785e-05              True
+  B_duration_gamma            3            NaN    irregular forced_minus_raw_D600_minus_D300         50       50         0.089075  0.057074   0.120771  5.377369 2.095941e-06 4.191883e-06              True

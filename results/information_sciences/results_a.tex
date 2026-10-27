@@ -1,0 +1,30 @@
+Study A retained all $100$ planned repeats in both durations and scorers:
+all $400$ fits succeeded, and every temporal target was evaluable.
+The independent sample again separates ranking from timing. At $D=300$, native
+hard raises pooled AUROC from $0.727$ to $0.780$ while lowering changing-edge
+temporal AUROC from $0.707$ to $0.639$ (Table~\ref{tab:main-results}).
+Native hard-minus-raw is $-0.069$ with pointwise interval
+$[-0.090,-0.048]$ at $D=300$, but $+0.038$ $[0.023,0.053]$ at $D=600$.
+The direct paired condition difference is $\Gamma=+0.107$
+$[0.079,0.134]$. All four frozen primary tests pass Holm4 correction, including
+the $D=600$ hard-minus-matched comparison $+0.226$ $[0.210,0.243]$;
+the largest adjusted p value in that family is $2.93\times10^{-6}$.
+This is independent confirmation at the two selected configurations, including
+a direct test of their difference, rather than an inference from differing
+significance labels.
+
+Both durations accept the gate in all $100/100$ fits, so native and forced
+outputs coincide in Study A. The observed sequences have four versus two
+switches; their seven window centres contain three versus one switches at
+$D=300$ versus $600$. The centre-state counts are three/four at both durations.
+Thus common mechanisms and noise do not make duration the only changed
+coverage feature. Figure~\ref{fig:confirmation} reports the fixed primary
+contrasts without extrapolating a general $h/D$ threshold.
+
+The prespecified OLS check reproduces the signs: hard-minus-raw is
+$-0.071$ $[-0.092,-0.051]$ at $D=300$ and
+$+0.032$ $[0.017,0.046]$ at $D=600$, with paired change
+$+0.103$ $[0.076,0.129]$. All $1,400$ OLS window designs have
+full rank $24$; no solver substitution occurs. These are auxiliary results,
+outside the four-test primary family. Supplement Table~S20 gives all sixteen
+contrasts, and Table~S22 gives the OLS scores and full rank/fit coverage.

@@ -1,0 +1,3 @@
+kind,n,change_point_accept,score_gate_accept,p_median,p_q25
+boundary,6,1.0,1.0,0.01,0.01
+stable,6,1.0,1.0,0.01,0.01

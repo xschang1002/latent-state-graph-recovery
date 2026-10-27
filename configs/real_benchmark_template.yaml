@@ -1,0 +1,37 @@
+# Template for documenting a local real-data benchmark run.
+# Documentation only; no code loads this file. The current scripts do not
+# require this file; it records the intended run settings (scripts use
+# argparse defaults — see scripts/run_real_benchmark_from_inventory.py and
+# scripts/run_downstream_forecasting.py) so each external dataset can be
+# audited before results are reported.
+
+dataset:
+  name: your_dataset
+  input_csv: data/raw/your_timeseries.csv
+  time_column: timestamp
+  columns: []
+  missing: interpolate
+
+precheck:
+  min_rows: 300
+  preferred_rows: 1000
+  min_numeric_columns: 2
+  preferred_numeric_columns: 4
+
+forecasting:
+  train_fraction: 0.70
+  max_lag: 3
+  ridge_alpha: 1.0
+  lasso_alpha: 0.005
+  graph_fraction: 0.25
+
+stcg:
+  window_size: 300
+  window_stride: 150
+  window_aggregate: max
+  state_aggregate: mean
+  diagnostic_top_k: 30
+
+outputs:
+  tables: results/tables
+  figures: results/figures

@@ -1,0 +1,28 @@
+The score-preserving control changes the interpretation of structural gains
+(Table~\ref{tab:score-controls}). In Study A, shrinkage at $\lambda=0.25$ raises
+pooled AUROC to $0.804$ at $D=300$ and $0.843$ at $D=600$, while preserving
+the respective raw state-discrimination AUROCs $0.707$ and $0.767$.
+The intermediate values $0.5$ and $0.75$ also raise pooled ranking without
+changing this temporal target. The theoretical invariance holds numerically
+for every positive-$\lambda$ shrinkage in the retained A/B and C scores,
+including their ties. Thus a structural ranking gain need not demonstrate
+state identification, nor require a loss of within-edge temporal ordering.
+
+Keeping raw residuals also changes the hard-emission tradeoff. At $D=300$,
+the three non-endpoint residual weights give state-AUROC gains over raw of
+$+0.010$ $[0.001,0.020]$, $+0.009$ $[0.003,0.015]$ and
+$+0.006$ $[0.003,0.008]$, instead of hard emission's $-0.069$.
+At $D=600$, weight $0.25$ gives $+0.057$ $[0.050,0.064]$,
+compared with hard's $+0.038$. All fixed weights and their endpoints are
+retained; these post-review pointwise intervals do not define a selected
+hyperparameter or a new confirmatory family.
+
+Changing only the rejection output removes a large component of the native
+loss in Study B (Figure~\ref{fig:gate}). At $D=600$, raw-fallback gains are
+$+0.013$ $[0.003,0.024]$, $+0.013$ $[0.004,0.024]$ and
+$+0.012$ $[0.003,0.022]$ for fixed, random and irregular schedules.
+These replace the original native estimates near $-0.21$ while retaining the
+same accepted candidates. At $D=300$ the corresponding means are
+$-0.006$, $0$ and $-0.009$; raw fallback can still execute a harmful accepted
+candidate. Equation~\eqref{eq:fallback-decomposition} separates that selection
+effect from the constant output's information loss on rejected repeats.

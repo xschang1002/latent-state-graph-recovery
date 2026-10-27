@@ -1,0 +1,10 @@
+{
+  "execution_complete": true,
+  "expected_fits": 300,
+  "mode": "fixed planned execution with checksum-verified resume; no optional sample extension",
+  "post_run_utc": "2026-10-24T19:03:58.642525+00:00",
+  "pre_run_utc": "2026-10-24T19:03:31.288674+00:00",
+  "protocol_sha256": "9695fba6db49b70dfee55f4aceda199d9f20769b734425302b6fed2022c66e26",
+  "repeat_count": 30,
+  "wall_seconds": 27.35389320005197
+}

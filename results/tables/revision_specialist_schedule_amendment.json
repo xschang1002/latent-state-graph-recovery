@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-09-13T12:30:07.836727+00:00",
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "amendment_type": "Scheduling only, after single-worker resource calibration",
+  "authorized_by": "Parent task instruction, 2026-09-13",
+  "initial_calibration_workers": 1,
+  "full_stress_workers": 8,
+  "cpu_threads_per_fit": 1,
+  "machine_logical_cpus": 24,
+  "reason": "Calibration RPCMCI fit used 198.9615263 wall seconds / 196.78125 CPU seconds; another gate experiment has finished and one real-data worker remains. Eight isolated fits preserve interactive capacity.",
+  "unchanged": [
+    "all 15 display settings",
+    "all 20 new seeds100--119",
+    "all five methods",
+    "RPCMCI20 iterations x10 annealings",
+    "all estimator parameters",
+    "per-fit thread limit1",
+    "timeout3600",
+    "independent fit processes"
+  ],
+  "timing_limit": "Stress wall times are under the recorded concurrent load. Exclusive timing remains a later one-worker phase."
+}

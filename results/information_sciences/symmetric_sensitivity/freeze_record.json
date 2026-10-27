@@ -1,0 +1,20 @@
+{
+  "after_freeze_utc": "2026-10-24T19:03:07.669605+00:00",
+  "before_freeze_utc": "2026-10-24T19:03:07.668595+00:00",
+  "clock_status": "internal unverified wall clock; not public registration",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "9695fba6db49b70dfee55f4aceda199d9f20769b734425302b6fed2022c66e26",
+  "source_sha256": {
+    "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+    "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "src/stcg/__init__.py": "a01e900e2575b3a18707dfc02d2fee28fc6fb96815ddf62ec92f498712b6cdba",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+    "tests/test_symmetric_sensitivity.py": "fba3c129374ab1a6402528b89edd5a6fa3a777325e309a15adb0c11ef34f4c4b"
+  },
+  "stage": "freeze_only"
+}

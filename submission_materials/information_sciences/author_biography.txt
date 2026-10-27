@@ -1,0 +1,3 @@
+Xuansong Chang is affiliated with the Stony Brook Institute at Anhui University,
+Hefei, China. Current research examines evaluation targets and state aggregation
+in dynamic graph recovery.

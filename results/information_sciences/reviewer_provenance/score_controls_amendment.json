@@ -1,0 +1,39 @@
+{
+  "amended_freeze_and_execution_record": "score_controls_amended_execution.json",
+  "amended_protocol_sha256": "cda9cb757384c32e8c478934c6bbacf9d1c93f4f2a7a205052cb61eda56bad51",
+  "amended_source_sha256": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+  "amendment_record_created_utc": "2026-10-24T19:01:26.023276+00:00",
+  "completed_utc": "2026-10-24T19:03:50.350710+00:00",
+  "corrected_event_rows": 0,
+  "original_input_manifest_byte_unchanged": true,
+  "preserved_relative_directory": "initial_v1",
+  "preserved_sha256": {
+    "outputs/affine_checks.csv": "0a8bc166c7b28fb2311c3747c90d0561e47e80b8932d782b92279a8445bd31f5",
+    "outputs/affine_events.csv": "df12c70dd8ffe554606fe316debb94670f969f33e31e56636ae7e9b445e5f268",
+    "outputs/contrasts.csv": "45bfcf4fc6b5bf433d8d1937c7d5b35761c589aed9e6811113d777e39499c5b8",
+    "outputs/detail.csv": "477917bb6b196aef1ae3d5c67afa84719c01f2889b9d307f32801deb8527ae5c",
+    "outputs/diagnostics.json": "b703ad18c7a2e30e7d6c50b9e64fcc3c233f3e08e3af0d7bb513f3abddb04262",
+    "outputs/input_manifest.json": "e0f34a5d1f8190a8f1fdb9fa6cf72ec574714cc6273cc7f43b626f93589e8879",
+    "outputs/manifest.json": "5165b84be34133c42021fee97269adbf339222536d0deceb52328e967190236d",
+    "outputs/protocol.json": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+    "outputs/summary.csv": "e899c97dbb9de04f367dabcf7db4dec34cbdf4e7a51778e6a6612ba5f4af75e9",
+    "score_controls_execution.json": "127323f75a1a60f4018c8e8bb48779151cd48cdc7180e5e023a3cd266833aa06",
+    "score_controls_run.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "score_controls_run.stdout.txt": "ad074413354442f038ef6bde921e7aa4f3d5cc6e7677c839fe63b87bdbe4e2be",
+    "score_controls_tests.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "score_controls_tests.stdout.txt": "87642ef3aa49d8fa21d68c8973326c505db8da0d1b80da4c28898f8d607f972c",
+    "score_controls_verify.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "score_controls_verify.stdout.txt": "8e82d0ef105e6146316d6a19b6c63f85233ea4dd9daec99f5b6ffaf4c4340584",
+    "scripts/analyze_score_preserving_controls.py": "6c4ff19b9e7148cac979d868060113066d018dd6438334bab6c8d57e8acde5a0",
+    "tests/test_score_preserving_controls.py": "8a4d9ae2066338db7749f82f981e08e95ca5e07065672efbccecfe5ca8072bd9"
+  },
+  "previous_protocol_sha256": "9a7acfd19faa96ac80d2c415de15391e8cd75320a72f504f71c1c0126c67415f",
+  "reason": "QA-only event filter correction: NaN!=0 included undefined targets as events; parameters, metric definitions, samples and comparisons unchanged; v2 numerical tables must match v1 byte for byte",
+  "unchanged_csvs": [
+    "detail.csv",
+    "summary.csv",
+    "contrasts.csv",
+    "affine_checks.csv"
+  ],
+  "v1_results_observed": true
+}

@@ -1,0 +1,9 @@
+{
+  "after_protocol_write_before_analysis_utc": "2026-10-24T19:05:20.239747+00:00",
+  "before_protocol_write_utc": "2026-10-24T19:05:20.237213+00:00",
+  "input_files": 1915,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "protocol_sha256": "8220cffbe369d2ba3ed932de94e5be460887878f0f42ad5437d5a8604c69918f",
+  "source_files": 12
+}

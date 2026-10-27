@@ -1,0 +1,23 @@
+The effect of aggregation is sensitive to window resolution within the
+same generator (Figure~\ref{fig:symmetric}). Study C uses exchangeable
+non-self support with marginal probability $0.18$ in both states, no self
+edges, identical coefficients on shared support and common lagwise radius
+scaling. These changes are assessed jointly. Thirty independent repeats are
+paired across two durations and five window settings at $T=3600$; all 300
+fits succeed.
+
+At $h=300$, stride $150$, forced-hard within-edge temporal AUROC gains are
+$-0.047$ at $D=300$ and $+0.037$ at $D=600$, matching the direction
+of Study A's contrast. With $h/s=200/100$, $300/150$ and $400/200$,
+the gains are $+0.011$, $-0.047$, $-0.139$ at $D=300$, and
+$+0.072$, $+0.037$, $+0.045$ at $D=600$. Holding $h=300$ and using
+stride $75$ gives $-0.028$ and $+0.100$; stride $300$ gives $-0.089$
+and $-0.014$. The latter $D=600$ interval is $[-0.049,0.022]$, so this
+grid supports neither a positive gain nor a population sign reversal.
+
+Acceptance still matters when rejection preserves raw scores. At
+$D=600,h/s=300/150$, the raw-fallback gain is $-0.007$ despite the
+positive all-candidate gain; at $300/300$ it is also $-0.007$.
+Supplement Section~S4 gives the full window grid and gate denominators,
+and Section~S5 reports its score-emission controls. These robustness
+comparisons are separate from Study A's primary four-test family.

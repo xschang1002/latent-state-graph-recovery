@@ -1,0 +1,6 @@
+dataset,setting,ridge_alpha,graph_min_weight,graph_weight_power,seed,stcg_v1_weighted_rmse,dynvar_lasso_weighted_rmse,paired_delta_rmse
+AReMActivities,auto_k4_min_0.00,100.0,0.01,4.0,0,0.901711,0.906191,-0.004480
+AReMActivities,auto_k4_min_0.00,100.0,0.01,4.0,1,0.905970,0.906191,-0.000221
+AReMActivities,auto_k4_min_0.00,100.0,0.01,4.0,2,0.900868,0.906191,-0.005323
+AReMActivities,auto_k4_min_0.00,100.0,0.01,4.0,3,0.905693,0.906191,-0.000498
+AReMActivities,auto_k4_min_0.00,100.0,0.01,4.0,4,0.906203,0.906191,+0.000011

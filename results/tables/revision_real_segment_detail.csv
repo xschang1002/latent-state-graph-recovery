@@ -1,0 +1,37 @@
+dataset,label_column,interval_id,method,seed,start,end,supplied_k,status,error,true_sample_k,true_window_k,true_label_counts,transitions,n_windows,error_free_annealings,fit_seconds,worker_wall_seconds,timeout_budget_seconds,sample_ari,sample_aligned_accuracy,window_ari,window_aligned_accuracy,inferred_sample_k,inferred_window_k,state_collapse,scored_samples,recording_boundaries
+HydraulicSystems,cooler_condition,0,STCG Fixed K2,0,12480,13980,2,ok,,1,1,"{""3"": 1500}",0,5,,0.04447879997314885,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,0,STCG Fixed K2,0,12480,13980,2,ok,,4,3,"{""100"": 180, ""73"": 600, ""80"": 600, ""90"": 120}",3,5,,0.04447879997314885,,,0.3801707988050835,0.68,0.09090909090909091,0.6,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,0,Sensor KMeans K2,0,12480,13980,2,ok,,1,1,"{""3"": 1500}",0,5,,0.0022575000184588134,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,0,Sensor KMeans K2,0,12480,13980,2,ok,,4,3,"{""100"": 180, ""73"": 600, ""80"": 600, ""90"": 120}",3,5,,0.0022575000184588134,,,0.20722481547057878,0.52,0.2857142857142857,0.6,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,0,Regime-PCMCI K2,0,12480,13980,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""3"": 1500}",0,5,,,120.03465699998196,120.0,,,,,,,,,
+HydraulicSystems,valve_condition,0,Regime-PCMCI K2,0,12480,13980,2,timeout,worker terminated at fixed 120s wall budget,4,3,"{""100"": 180, ""73"": 600, ""80"": 600, ""90"": 120}",3,5,,,120.03465699998196,120.0,,,,,,,,,
+HydraulicSystems,cooler_condition,1,STCG Fixed K2,0,45555,47055,2,ok,,1,1,"{""20"": 1500}",0,5,,0.002169199986383319,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,1,STCG Fixed K2,0,45555,47055,2,ok,,1,1,"{""100"": 1500}",0,5,,0.002169199986383319,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,1,Sensor KMeans K2,0,45555,47055,2,ok,,1,1,"{""20"": 1500}",0,5,,0.0020153000368736684,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,1,Sensor KMeans K2,0,45555,47055,2,ok,,1,1,"{""100"": 1500}",0,5,,0.0020153000368736684,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,1,Regime-PCMCI K2,0,45555,47055,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""20"": 1500}",0,5,,,120.02507789997617,120.0,,,,,,,,,
+HydraulicSystems,valve_condition,1,Regime-PCMCI K2,0,45555,47055,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""100"": 1500}",0,5,,,120.02507789997617,120.0,,,,,,,,,
+HydraulicSystems,cooler_condition,2,STCG Fixed K2,0,78630,80130,2,ok,,1,1,"{""20"": 1500}",0,5,,0.0020741999614983797,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,2,STCG Fixed K2,0,78630,80130,2,ok,,3,2,"{""100"": 870, ""80"": 30, ""90"": 600}",2,5,,0.0020741999614983797,,,-0.0013232036870719165,0.56,-0.15384615384615385,0.6,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,2,Sensor KMeans K2,0,78630,80130,2,ok,,1,1,"{""20"": 1500}",0,5,,0.0030542000313289464,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,2,Sensor KMeans K2,0,78630,80130,2,ok,,3,2,"{""100"": 870, ""80"": 30, ""90"": 600}",2,5,,0.0030542000313289464,,,0.02742291699293972,0.6,-0.15384615384615385,0.6,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,2,Regime-PCMCI K2,0,78630,80130,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""20"": 1500}",0,5,,,120.01945620001061,120.0,,,,,,,,,
+HydraulicSystems,valve_condition,2,Regime-PCMCI K2,0,78630,80130,2,timeout,worker terminated at fixed 120s wall budget,3,2,"{""100"": 870, ""80"": 30, ""90"": 600}",2,5,,,120.01945620001061,120.0,,,,,,,,,
+HydraulicSystems,cooler_condition,3,STCG Fixed K2,0,111705,113205,2,ok,,1,1,"{""100"": 1500}",0,5,,0.0025759999989531934,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,3,STCG Fixed K2,0,111705,113205,2,ok,,3,3,"{""100"": 465, ""80"": 435, ""90"": 600}",2,5,,0.0025759999989531934,,,0.15449440054047198,0.49,-0.36363636363636365,0.4,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,3,Sensor KMeans K2,0,111705,113205,2,ok,,1,1,"{""100"": 1500}",0,5,,0.0030391000327654183,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,
+HydraulicSystems,valve_condition,3,Sensor KMeans K2,0,111705,113205,2,ok,,3,3,"{""100"": 465, ""80"": 435, ""90"": 600}",2,5,,0.0030391000327654183,,,0.3924534332074359,0.6,0.09090909090909091,0.6,2.0,2.0,0.0,1500.0,
+HydraulicSystems,cooler_condition,3,Regime-PCMCI K2,0,111705,113205,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""100"": 1500}",0,5,,,120.02423919999273,120.0,,,,,,,,,
+HydraulicSystems,valve_condition,3,Regime-PCMCI K2,0,111705,113205,2,timeout,worker terminated at fixed 120s wall budget,3,3,"{""100"": 465, ""80"": 435, ""90"": 600}",2,5,,,120.02423919999273,120.0,,,,,,,,,
+AReMActivities,activity,0,STCG Fixed K2,0,3473,4973,2,ok,,1,1,"{""bending2"": 1500}",0,5,,0.0021962999599054456,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,0,Sensor KMeans K2,0,3473,4973,2,ok,,1,1,"{""bending2"": 1500}",0,5,,0.00282550003612414,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,0,Regime-PCMCI K2,0,3473,4973,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""bending2"": 1500}",0,5,,,120.02196089999052,120.0,,,,,,,,,3.0
+AReMActivities,activity,1,STCG Fixed K2,0,14032,15532,2,ok,,1,1,"{""lying"": 1500}",0,5,,0.0020189000060781837,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,1,Sensor KMeans K2,0,14032,15532,2,ok,,1,1,"{""lying"": 1500}",0,5,,0.001997100014705211,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,1,Regime-PCMCI K2,0,14032,15532,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""lying"": 1500}",0,5,,,120.01570990000619,120.0,,,,,,,,,3.0
+AReMActivities,activity,2,STCG Fixed K2,0,24592,26092,2,ok,,1,1,"{""sitting"": 1500}",0,5,,0.0025957999750971794,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,2,Sensor KMeans K2,0,24592,26092,2,ok,,1,1,"{""sitting"": 1500}",0,5,,0.0019839999731630087,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,2,Regime-PCMCI K2,0,24592,26092,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""sitting"": 1500}",0,5,,,120.01797120005358,120.0,,,,,,,,,3.0
+AReMActivities,activity,3,STCG Fixed K2,0,35151,36651,2,ok,,1,1,"{""walking"": 1500}",0,5,,0.002094200055580586,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,3,Sensor KMeans K2,0,35151,36651,2,ok,,1,1,"{""walking"": 1500}",0,5,,0.0022843999904580414,,,0.0,1.0,0.0,1.0,2.0,2.0,0.0,1500.0,3.0
+AReMActivities,activity,3,Regime-PCMCI K2,0,35151,36651,2,timeout,worker terminated at fixed 120s wall budget,1,1,"{""walking"": 1500}",0,5,,,120.03484400000889,120.0,,,,,,,,,3.0

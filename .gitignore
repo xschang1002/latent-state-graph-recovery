@@ -1,0 +1,94 @@
+# Python / environment
+__pycache__/
+.coverage
+.coverage.*
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# LaTeX build artefacts (the final preprint PDF lives at the repo root)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+main.pdf
+paper/main.pdf
+paper/supplement.pdf
+paper/legacy/*.pdf
+
+# Raw datasets. The files needed to reproduce this manuscript are committed
+# and checksummed (see data/README.md); everything else stays out of git.
+data/raw/*
+data/processed/*
+data/external/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/raw/AReMActivities.csv
+!data/raw/HydraulicSystems.csv
+!data/raw/ess/
+!data/raw/ess/accp_dataset_reduced.zip
+!data/processed/AReMActivities_labels.csv
+!data/processed/HydraulicSystems_labels.csv
+!data/external/essdata/
+!data/external/essdata/LICENSE
+!data/external/essdata/adjMatrix.csv
+!data/external/essdata/preprocessedData.csv
+!data/external/essdata/pv_subsystem_map.csv
+
+experiments/logs/*
+!experiments/logs/.gitkeep
+
+# Results: keep tables/figures, drop transient outputs
+results/figures/*
+results/tables/*
+!results/figures/.gitkeep
+!results/figures/*.png
+!results/tables/.gitkeep
+!results/tables/gate_audit/
+!results/tables/gate_audit/*.csv
+!results/tables/*.csv
+!results/tables/*.md
+!results/tables/*.tex
+results/figures/*smoke*
+results/tables/*smoke*
+
+# Old deliverables and model weights
+archive/
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Old CIKM submission package (keep only the latest stcg anonymous artifact)
+submission_package/cikm2026_*
+
+# Scratch table written by scripts/run_temporal_delta.py on a default run.
+# The manuscript inputs results/revision2/tab_temporal_delta.tex, which is
+# generated from the same CSV by tools/build_revision2_tables.py.
+results/revision2/temporal_delta_tab.tex
+
+# Vector source for the manuscript's temporal-grid figure.
+!results/figures/rev2_temporal_grid.pdf
+!submission_materials/mlj_contribution_information/main.pdf
+
+# Retained numeric outputs of the forty existing fits used by grouping diagnostics.
+!results/revision2/grouping_replay_outputs.npz
+!results/information_sciences/**/*.npz
+
+# Author's private working notes (submission history, reviews, planning).
+# Kept on disk, never committed or packaged.
+notes/private/
+
+# WorkBuddy workspace memory (local session notes)
+.workbuddy/

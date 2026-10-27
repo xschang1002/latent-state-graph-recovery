@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "planned_cases": 300,
+  "verified_cases": 300,
+  "independent_input_repeats": 50,
+  "failed_cases_retained": 0,
+  "method_metric_rows_recomputed": 1500,
+  "window_diagnostics_recomputed": 6900,
+  "summary_csvs_recomputed": 7,
+  "secondary_family_sizes": [
+    6,
+    3
+  ],
+  "maximum_identity_gap": 3.3306690738754696e-16,
+  "maximum_actual_spectral_radius": 0.6272691844423648,
+  "all_study_files_unchanged": 709,
+  "protocol_sha256": "7096be72312d8916d0d2b83a52675aae8a031c81e10593c3afe6e346c6eb5439",
+  "fit_or_resimulation_performed": false
+}

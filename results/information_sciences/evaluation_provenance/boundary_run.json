@@ -1,0 +1,14 @@
+{
+  "AP_identity_max_gap": 1.1102230246251565e-16,
+  "ap_rows": 15000,
+  "cases": 1000,
+  "completed_utc": "2026-10-25T05:05:10.173438+00:00",
+  "manifest_sha256": "911179467d1213f9e8b2cc17ac9597755f45f3d205e836aa1457c9b0b3966ea8",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "residual_identity_max_gap": 1.1102230246251565e-16,
+  "residual_rows": 6000,
+  "retained_failures": 0,
+  "started_utc": "2026-10-25T05:03:52.996736+00:00",
+  "threshold_rows": 150000
+}

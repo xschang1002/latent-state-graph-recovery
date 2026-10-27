@@ -1,0 +1,77 @@
+{
+  "config": {
+    "edge_prob": 0.18,
+    "max_lag": 3,
+    "n_nodes": 8,
+    "noise_scale": 0.1,
+    "observation_noise": 0.0,
+    "state_seed_offset": 50000,
+    "switch_period": null,
+    "timesteps": 1500,
+    "window_size": 300,
+    "window_stride": 150
+  },
+  "edge_auc": 0.863716814159292,
+  "edge_density": 0.3273809523809524,
+  "error_free_annealings": 10,
+  "exclusive_timing": false,
+  "execution_workers": 16,
+  "finished_at_utc": "2026-09-13T13:27:56.891615+00:00",
+  "fit_cpu_seconds": 590.46875,
+  "fit_seconds": 597.3435621000244,
+  "input_sha256": "8f5dd57f7aba0169e35a005193bbaa57e06b2fb80e209f48f28a8de383327479",
+  "lag_accuracy": 0.8421052631578947,
+  "method": "Regime-PCMCI",
+  "pair_auc": 0.8903508771929824,
+  "phase": "stress",
+  "precision_at_k": 0.7272727272727273,
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "recording_runner_sha256": "8d9dc22c3ef74bd4bcac0df5f9e60a393ffc0ae1cc5157f00b0a826dc777cea3",
+  "sample_regime_ari": 0.9188258649008588,
+  "scores_sha256": "6c9aea23addaff177e2d39e6ede2aa9d8932bb057f2b460a81bf0bdc1fed9f22",
+  "seed": 105,
+  "setting_id": "ed9ac630f7cb",
+  "shd": 30.0,
+  "started_at_utc": "2026-09-13T13:17:59.480342+00:00",
+  "status": "ok",
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "LOKY_MAX_CPU_COUNT": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "user_api": "openmp"
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "user_api": "blas"
+    }
+  ],
+  "true_edges": 55.0,
+  "truth_sha256": "6857d46629b92c9cce39f520abaa45e803eb0fc5dba815c6f6c353114591f153",
+  "undefined_metrics": [],
+  "worker_pid": 159564
+}

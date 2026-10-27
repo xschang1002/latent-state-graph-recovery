@@ -1,0 +1,23 @@
+Boundary assessments change with zero-score treatment and threshold reference
+(Figure~\ref{fig:localisation}). For an eligible edge, standard AP exceeds
+positive-change AP by $\pi_{\rm boundary}(1-R_+)$, where $R_+$ is the
+fraction of true boundary slots with positive predicted strength.
+At $D=600$ in Study B, hard-minus-raw standard-AP differences are
+$+0.140$, $+0.154$ and $+0.077$ for fixed, random and irregular schedules,
+with pointwise intervals above zero. Positive-change AP gives $+0.068$,
+$+0.074$ and $-0.022$, with intervals crossing zero.
+
+Amplitude references are also consequential. In B's fixed schedule, q95 F1
+favours raw under the common raw-amplitude threshold, with hard-minus-raw
+$-0.077$ $[-0.093,-0.060]$, and favours hard under each method's own
+q95, with $+0.223$ $[0.178,0.268]$. In C's $300/150$ grid at $D=600$,
+the respective contrasts are $-0.100$ $[-0.122,-0.079]$ and $+0.150$
+$[0.093,0.206]$; its standard-AP contrast is $+0.040$ $[-0.020,0.104]$.
+
+These comparisons describe different operating rules for the same predictions.
+Method-relative quantiles remove uniform positive rescaling but do not
+calibrate equal false-alarm rates, and exact zero ties remain relevant.
+Shrinkage preserves both AP definitions and method-relative F1 on these
+outputs while potentially lowering common-threshold F1. Supplement Section~S5
+reports all five fixed quantiles and stable-edge rates, with no selection of
+an optimal F1 on the evaluation truth.

@@ -1,0 +1,13 @@
+\begin{tabular}{lrrrr}
+\toprule
+& \multicolumn{2}{c}{Switching} & \multicolumn{2}{c}{State-specific} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Partition & ARI & U-AUROC & ARI & U-AUROC \\
+\midrule
+K-means (2 groups) & +0.292 & 0.801 & +0.471 & 0.768 \\
+Constrained 2 segments & -0.061 & 0.795 & -0.042 & 0.755 \\
+Raw VAR split & +0.045 & 0.786 & +0.042 & 0.751 \\
+PELT BIC & +0.000 & 0.804 & +0.000 & 0.771 \\
+First-true-changepoint & +0.103 & 0.773 & +0.103 & 0.744 \\
+\bottomrule
+\end{tabular}

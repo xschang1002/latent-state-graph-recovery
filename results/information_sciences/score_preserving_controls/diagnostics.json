@@ -1,0 +1,20 @@
+{
+  "affine_edge_checks": 470400,
+  "affine_event_rows": 0,
+  "affine_nonfinite_checks": 0,
+  "cases": 700,
+  "changed_edge_auc_count": 0,
+  "failed_cases": 0,
+  "lost_tied_pairs": 0,
+  "max_abs_edge_auc_difference": 0.0,
+  "method_failed_rows": 0,
+  "method_rows": 9100,
+  "method_undefined_rows": 0,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "new_tied_pairs": 0,
+  "reference_method_rows_checked": 2100,
+  "reversed_pairs": 0,
+  "role": "post hoc descriptive; no confirmatory-family assignments",
+  "temporal_evaluable_edge_checks": 76520
+}

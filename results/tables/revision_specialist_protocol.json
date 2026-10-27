@@ -1,0 +1,359 @@
+{
+  "environment": {
+    "dependencies": {
+      "numpy": "2.5.3",
+      "ortools": "9.15.6755",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.1",
+      "threadpoolctl": "3.6.0",
+      "tigramite": "5.2.10.1",
+      "torch": "2.14.0+cpu"
+    },
+    "logical_cpus": 24,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "python": "3.12.14 (main, Sep  1 2026, 14:17:39) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "frozen_at_utc": "2026-09-13T12:25:49.295661+00:00",
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "specification": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260913,
+    "cmlp": {
+      "activation": "tanh",
+      "epochs": 300,
+      "hidden": 8,
+      "lr": 0.05,
+      "momentum": 0.9,
+      "optimizer": "sgd",
+      "penalty": 0.15,
+      "weight_decay": 0.0
+    },
+    "dispatch_seed": 20260913,
+    "display_cells": [
+      {
+        "axis": "obs_noise",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "64ce2eda95d3",
+        "value": 0.0
+      },
+      {
+        "axis": "obs_noise",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.05,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "49793b389a0e",
+        "value": 0.05
+      },
+      {
+        "axis": "obs_noise",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.1,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "8b663b04d6fd",
+        "value": 0.1
+      },
+      {
+        "axis": "obs_noise",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.2,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "1cd64b6fef02",
+        "value": 0.2
+      },
+      {
+        "axis": "timesteps",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 300,
+          "window_size": 150,
+          "window_stride": 75
+        },
+        "setting_id": "f5e047a0d608",
+        "value": 300
+      },
+      {
+        "axis": "timesteps",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 600,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "cd36e8b41b41",
+        "value": 600
+      },
+      {
+        "axis": "timesteps",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "64ce2eda95d3",
+        "value": 1000
+      },
+      {
+        "axis": "timesteps",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1500,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "ed9ac630f7cb",
+        "value": 1500
+      },
+      {
+        "axis": "edge_prob",
+        "config": {
+          "edge_prob": 0.1,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "7905c50920a7",
+        "value": 0.1
+      },
+      {
+        "axis": "edge_prob",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "64ce2eda95d3",
+        "value": 0.18
+      },
+      {
+        "axis": "edge_prob",
+        "config": {
+          "edge_prob": 0.3,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "c84ced5a1b91",
+        "value": 0.3
+      },
+      {
+        "axis": "edge_prob",
+        "config": {
+          "edge_prob": 0.45,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 50000,
+          "switch_period": null,
+          "timesteps": 1000,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "ba66e441719f",
+        "value": 0.45
+      },
+      {
+        "axis": "switch_period",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 90000,
+          "switch_period": 150,
+          "timesteps": 1200,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "75b1de2443e7",
+        "value": 150
+      },
+      {
+        "axis": "switch_period",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 90000,
+          "switch_period": 300,
+          "timesteps": 1200,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "f3cb92c65405",
+        "value": 300
+      },
+      {
+        "axis": "switch_period",
+        "config": {
+          "edge_prob": 0.18,
+          "max_lag": 3,
+          "n_nodes": 8,
+          "noise_scale": 0.1,
+          "observation_noise": 0.0,
+          "state_seed_offset": 90000,
+          "switch_period": 600,
+          "timesteps": 1200,
+          "window_size": 300,
+          "window_stride": 150
+        },
+        "setting_id": "b810a66badd2",
+        "value": 600
+      }
+    ],
+    "methods": [
+      "STCG-v1",
+      "DynVAR-Lasso",
+      "VAR-Lasso",
+      "Regime-PCMCI",
+      "cMLP"
+    ],
+    "protocol_document_sha256": "1591fbc1a996dc67fb0d1e30d0b03f902b2fc89306c9d2fa1c957d5a14694487",
+    "rpcmci": {
+      "alpha_level": 0.01,
+      "max_anneal": 10,
+      "max_transitions": 10,
+      "n_jobs": 1,
+      "num_iterations": 20,
+      "num_regimes": 2,
+      "pc_alpha": 0.05,
+      "score": "statistic",
+      "switch_thres": 0.05
+    },
+    "schema": 1,
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119
+    ],
+    "source_hashes": {
+      "scripts/run_revision_specialist_stress.py": "e1921b2a582bf4acd0e7febec79332c454924dbf6bf2c865ff79604dfe2f0bf8",
+      "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+      "src/stcg/metrics.py": "0394a2bd9b474ba2a4cf1078dc388746e736c2ae49fc01805783544040acf54f",
+      "src/stcg/neural_granger.py": "8d6135a37867cfee837fb7e7a0ac3781823db308e3366c14f9feab5367793ecf",
+      "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+      "src/stcg/synthetic.py": "b3f97f97bec729d187b6e4e33b44792c53929b6741be52e59f1a6a0f43c12586"
+    },
+    "stcg": {
+      "aggregate": "max",
+      "auto_states": true,
+      "contrast_mix": 0.0,
+      "lasso_alpha": 0.005,
+      "n_states": 2,
+      "state_aggregate": "mean"
+    },
+    "thread_environment": {
+      "BLIS_NUM_THREADS": "1",
+      "LOKY_MAX_CPU_COUNT": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "timeout_seconds": 3600
+  }
+}

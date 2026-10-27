@@ -1,0 +1,378 @@
+{
+  "base_commit": "e0a28138a17aaa82737d9d8b4c49846632ddc1f1",
+  "checks": {
+    "existing_A_verifier": "deterministic replay of retained stochastic inputs checks cached observations",
+    "independent_definition_crosscheck": {
+      "B_schedules": 300,
+      "candidate_groupings": 700,
+      "issues_found": 0,
+      "scope": "coherence, window counts, random phase, irregular nominal lengths; read-only retained-array checks"
+    },
+    "legacy_number_checks_passed": 237,
+    "new_generator_audit": "reads retained arrays only; no generation or fits",
+    "pdf_qa": {
+      "main": {
+        "all_fonts_embedded": true,
+        "font_count": 18,
+        "overfull_boxes": 0,
+        "pages": 24,
+        "pdf_sha256": "64b5ea4e89515fb4ed33058c815cf3c4c5f8e0d24e462ae70a3af5d3a589eaaf",
+        "undefined_references_or_citations": 0
+      },
+      "supplement": {
+        "all_fonts_embedded": true,
+        "font_count": 23,
+        "overfull_boxes": 0,
+        "pages": 36,
+        "pdf_sha256": "61d52b723330e843d3df7b42b9b9c7ed805647f8a7e34a02fa7cc951cad42546",
+        "undefined_references_or_citations": 0
+      }
+    },
+    "preexisting_swig_deprecation_warnings": 3,
+    "pytest_passed": 353
+  },
+  "clean_package_validation": {
+    "archive": "<workspace>\\submission_package\\information_sciences_clarifications_validation.zip",
+    "archive_bytes": 150246678,
+    "archive_sha256": "a345e6bc25fafa4027baec59a6bcabeaae141a3deee72f8bd4f289b8899474f6",
+    "archive_sha256_after_validation": "a345e6bc25fafa4027baec59a6bcabeaae141a3deee72f8bd4f289b8899474f6",
+    "completed_utc": "2026-10-24T16:10:11.420741+00:00",
+    "environment": {
+      "isolation_report": "clean_environment_validation.json",
+      "pinned_versions": 47,
+      "pip_check_exit_code": 0
+    },
+    "local_postprocessing_note": "Original verifier/rebuilder both exited 0. The initial local directory-prefix classifier counted two retained, non-generated tables (tab_axes and tab_prevalence); postprocessing was corrected to builder-declared outputs without repeating either execution. All 62 delivered tables were checked byte-identical in the original comparison and again here.",
+    "payload_count": 4019,
+    "phase": "validation candidate; final export changes completed audit MD/JSON only",
+    "previous_archive_sha256": "fb9122419b96de34aec3e1964fab61c8ad35c2ba55d3df651ec173c69cf31033",
+    "python": "<workspace>\\experiments\\logs\\mlj_final_text_2026-10-23\\clean_venv\\Scripts\\python.exe",
+    "rebuild": {
+      "all_delivered_tables_byte_identical": 62,
+      "all_result_csv_byte_identical": 242,
+      "changed_payloads": [
+        "results/figures/rev2_temporal_grid.pdf"
+      ],
+      "command": [
+        "<workspace>\\experiments\\logs\\mlj_final_text_2026-10-23\\clean_venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/reproduce_paper.py",
+        "--rebuild"
+      ],
+      "cwd": "<workspace>\\experiments\\logs\\information_sciences_clarifications_2026-10-24\\clean_rebuild_validation",
+      "elapsed_seconds": 109.45535080006812,
+      "exit_code": 0,
+      "frozen_A_B_files_unchanged": 1915,
+      "frozen_scientific_sources_unchanged": 12,
+      "generated_table_count_basis": "builder-declared outputs: revision2 tables dict 19 + assets manifest 4 + supplement manifest 3 + generator table 1",
+      "generated_table_paths": [
+        "results/information_sciences/generator_audit/tab_generator_diagnostics.tex",
+        "results/information_sciences/tab_ess_compact.tex",
+        "results/information_sciences/tab_factors.tex",
+        "results/information_sciences/tab_main_results.tex",
+        "results/information_sciences/tab_protocol.tex",
+        "results/information_sciences/tab_supp_a_contrasts.tex",
+        "results/information_sciences/tab_supp_b_gate_factors.tex",
+        "results/information_sciences/tab_supp_diagnostics_ols.tex",
+        "results/revision2/tab_aggregation.tex",
+        "results/revision2/tab_confirmatory.tex",
+        "results/revision2/tab_controls.tex",
+        "results/revision2/tab_cost.tex",
+        "results/revision2/tab_ess.tex",
+        "results/revision2/tab_ess_diagnostics.tex",
+        "results/revision2/tab_factorial.tex",
+        "results/revision2/tab_final.tex",
+        "results/revision2/tab_grouping_factors.tex",
+        "results/revision2/tab_known_k.tex",
+        "results/revision2/tab_matched_grouping.tex",
+        "results/revision2/tab_metrics_layers.tex",
+        "results/revision2/tab_penalty_scan.tex",
+        "results/revision2/tab_segmentation.tex",
+        "results/revision2/tab_temporal_coverage.tex",
+        "results/revision2/tab_temporal_delta.tex",
+        "results/revision2/tab_temporal_gmm_numerics.tex",
+        "results/revision2/tab_temporal_grid.tex",
+        "results/revision2/tab_temporal_grid_accepted.tex"
+      ],
+      "generated_tables_byte_identical": 27,
+      "generator_diagnostic_payloads_verified": 9,
+      "new_four_main_figures_byte_identical": true,
+      "no_new_fits_detected": true,
+      "pdf_drawing_streams_verified": 5,
+      "previous_result_csv_byte_identical": 239,
+      "revised_mechanism_png_byte_identical": true,
+      "saved_fit_cache_used": true,
+      "stderr": "clean_rebuild_validation.stderr.txt",
+      "stderr_bytes": 0,
+      "stdout": "clean_rebuild_validation.stdout.txt",
+      "supplement_locators_verified": 17,
+      "table_paths": [
+        "results/information_sciences/generator_audit/tab_generator_diagnostics.tex",
+        "results/information_sciences/tab_ess_compact.tex",
+        "results/information_sciences/tab_factors.tex",
+        "results/information_sciences/tab_main_results.tex",
+        "results/information_sciences/tab_protocol.tex",
+        "results/information_sciences/tab_supp_a_contrasts.tex",
+        "results/information_sciences/tab_supp_b_gate_factors.tex",
+        "results/information_sciences/tab_supp_diagnostics_ols.tex",
+        "results/revision2/tab_aggregation.tex",
+        "results/revision2/tab_axes.tex",
+        "results/revision2/tab_confirmatory.tex",
+        "results/revision2/tab_controls.tex",
+        "results/revision2/tab_cost.tex",
+        "results/revision2/tab_ess.tex",
+        "results/revision2/tab_ess_diagnostics.tex",
+        "results/revision2/tab_factorial.tex",
+        "results/revision2/tab_final.tex",
+        "results/revision2/tab_grouping_factors.tex",
+        "results/revision2/tab_known_k.tex",
+        "results/revision2/tab_matched_grouping.tex",
+        "results/revision2/tab_metrics_layers.tex",
+        "results/revision2/tab_penalty_scan.tex",
+        "results/revision2/tab_prevalence.tex",
+        "results/revision2/tab_segmentation.tex",
+        "results/revision2/tab_temporal_coverage.tex",
+        "results/revision2/tab_temporal_delta.tex",
+        "results/revision2/tab_temporal_gmm_numerics.tex",
+        "results/revision2/tab_temporal_grid.tex",
+        "results/revision2/tab_temporal_grid_accepted.tex",
+        "results/tables/change_point_gate_table.tex",
+        "results/tables/paper_evidence_summary_table.tex",
+        "results/tables/real_benchmark_forecasting_table.tex",
+        "results/tables/real_change_point_gate_table.tex",
+        "results/tables/real_regime_discovery_comparison_table.tex",
+        "results/tables/revision_gate_paper_table.tex",
+        "results/tables/revision_real_forward_table.tex",
+        "results/tables/revision_real_paper_table.tex",
+        "results/tables/revision_specialist_paper_table.tex",
+        "results/tables/revision_specialist_timing_table.tex",
+        "results/tables/stcg_ensemble_table.tex",
+        "results/tables/stcg_knob_ablation_table.tex",
+        "results/tables/stcg_v1_ablation_table.tex",
+        "results/tables/stcg_v1_robustness_table.tex",
+        "results/tables/synthetic_all_methods_table.tex",
+        "results/tables/synthetic_dynotears_baseline_table.tex",
+        "results/tables/synthetic_dynotears_paired_comparison_table.tex",
+        "results/tables/synthetic_msvar_baseline_table.tex",
+        "results/tables/synthetic_msvar_paired_comparison_table.tex",
+        "results/tables/synthetic_neural_granger_baseline_table.tex",
+        "results/tables/synthetic_neural_granger_paired_comparison_table.tex",
+        "results/tables/synthetic_pcmci_baseline_table.tex",
+        "results/tables/synthetic_pcmciplus_baseline_table.tex",
+        "results/tables/synthetic_pcmciplus_paired_comparison_table.tex",
+        "results/tables/synthetic_recovery_paired_comparison_table.tex",
+        "results/tables/synthetic_recovery_paired_granger_comparison_table.tex",
+        "results/tables/synthetic_recovery_paired_pcmci_comparison_table.tex",
+        "results/tables/synthetic_recovery_table.tex",
+        "results/tables/synthetic_rpcmci_baseline_table.tex",
+        "results/tables/synthetic_rpcmci_paired_comparison_table.tex",
+        "results/tables/synthetic_state_oracle_table.tex",
+        "results/tables/synthetic_switch_difficulty_table.tex",
+        "results/tables/synthetic_switching_paired_edge_auc_table.tex"
+      ],
+      "verifier_report": {
+        "generator_audit": {
+          "frozen_files": 1915,
+          "frozen_sources": 12,
+          "mechanisms_recomputed": 150,
+          "observed_trajectories_recomputed": 500,
+          "outputs": 9,
+          "summary_rows": 2,
+          "tables_reconstructed": 1
+        },
+        "new_fits": 0,
+        "provenance": {
+          "chronology_source_fields": 9,
+          "exported_records": 8,
+          "frozen_sources": 14,
+          "indexed_repeat_records": 1900,
+          "indexed_studies": 2,
+          "optional_private_originals_checked": 0,
+          "protocol_and_evidence_files": 16,
+          "supplement_source_labels": 17
+        },
+        "read_only": true,
+        "status": "passed"
+      }
+    },
+    "root_frozen_and_scientific_sources_unchanged": true,
+    "scope": "Fresh independent extracted copies with existing isolated venv; no installation, pytest or fitting",
+    "started_utc": "2026-10-24T16:02:53.610656+00:00",
+    "status": "passed",
+    "verify": {
+      "all_files_including_manifest_unchanged": 4020,
+      "command": [
+        "<workspace>\\experiments\\logs\\mlj_final_text_2026-10-23\\clean_venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/reproduce_paper.py",
+        "--verify"
+      ],
+      "cwd": "<workspace>\\experiments\\logs\\information_sciences_clarifications_2026-10-24\\clean_verify_validation",
+      "elapsed_seconds": 73.75921309995465,
+      "exit_code": 0,
+      "payloads_unchanged": 4019,
+      "stderr": "clean_verify_validation.stderr.txt",
+      "stderr_bytes": 0,
+      "stdout": "clean_verify_validation.stdout.txt"
+    }
+  },
+  "date": "2026-10-24 Asia/Shanghai",
+  "definitions": {
+    "B_additions": "absent in original A, not after deletion",
+    "B_nonself_marginal_ignoring_fallbacks": 0.1638,
+    "paired_D300": {
+      "display_difference": -0.069,
+      "native_mean": 0.6385365723,
+      "paired_difference": -0.0688690804,
+      "raw_mean": 0.7074056527,
+      "rounding": "differences computed before rounding"
+    },
+    "self_support": "A cleared; B additions may include self positions"
+  },
+  "diagnostics": {
+    "coverage": {
+      "A": "saved observed X covers full times [100,1300), T=1200; 100 burn-in X values are not retained",
+      "B": "saved observed X covers full times [100,3700), T=3600; 100 burn-in X values are not retained",
+      "exogenous_inputs": "initial history at full times0..2 and full innovations/schedules are retained; missing burn-in X is not reconstructed here",
+      "pre_rescale_radius": "not saved; the number of applied rescales is not inferred from final radii alone",
+      "runtime_check": "the frozen simulator checks finiteness before discarding burn-in, but this post hoc audit independently inspects only saved observed X"
+    },
+    "definitions": {
+      "RMS": "sqrt(mean(X**2)) over every node and the first/last 300 saved observed time points, calculated with overflow-safe scaling",
+      "growth_ratio": "late-block RMS divided by early-block RMS; undefined if early RMS is zero; descriptive endpoint ratio, not a fitted growth rate",
+      "max_abs": "maximum absolute value over all saved observed time points and nodes",
+      "radius": "companion-matrix radius recomputed from each retained final state coefficient tensor; independent mechanisms counted once",
+      "thresholds": "none; endpoint block size 300 selected post hoc to match the analysis window, not a prespecified diagnostic cutoff"
+    },
+    "frozen_files_unchanged": 1915,
+    "frozen_source_files_unchanged": 12,
+    "new_fits": 0,
+    "new_simulations": 0,
+    "role": "post hoc descriptive audit of retained outputs; no preset stability threshold or general stability claim",
+    "source_sha256": {
+      "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+      "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d"
+    },
+    "study_summary": [
+      {
+        "base_empty_fallback_compatible_mechanisms": 0,
+        "early_rms_max": 0.11052130454619001,
+        "early_rms_min": 0.10099406636340626,
+        "finite_observed_trajectories": 200,
+        "independent_mechanisms": 100,
+        "late_rms_max": 0.1097633538032779,
+        "late_rms_min": 0.10013928427449087,
+        "late_to_early_rms_ratio_max": 1.0508831252544815,
+        "late_to_early_rms_ratio_min": 0.9307697566399682,
+        "maximum_absolute_observed_value": 0.5328544414501174,
+        "observed_trajectories": 200,
+        "postconstruction_radius_max": 0.6759867255743086,
+        "postconstruction_radius_min": 0.38054636740022285,
+        "realised_retained_fraction_max": 0.7419354838709677,
+        "realised_retained_fraction_min": 0.28125,
+        "rms_ratio_evaluable_trajectories": 200,
+        "state0_self_edges_max": 0,
+        "state0_self_edges_min": 0,
+        "state1_empty_fallback_compatible_mechanisms": 0,
+        "state1_self_edges_max": 7,
+        "state1_self_edges_min": 0,
+        "state_coefficient_tensors": 200,
+        "study": "A"
+      },
+      {
+        "base_empty_fallback_compatible_mechanisms": 0,
+        "early_rms_max": 0.10994639632499535,
+        "early_rms_min": 0.09864344766138895,
+        "finite_observed_trajectories": 300,
+        "independent_mechanisms": 50,
+        "late_rms_max": 0.10829183353921382,
+        "late_rms_min": 0.09973279179286111,
+        "late_to_early_rms_ratio_max": 1.063833604727856,
+        "late_to_early_rms_ratio_min": 0.9361569374077672,
+        "maximum_absolute_observed_value": 0.5553126534916604,
+        "observed_trajectories": 300,
+        "postconstruction_radius_max": 0.6272691844423648,
+        "postconstruction_radius_min": 0.40378455719192574,
+        "realised_retained_fraction_max": 0.7058823529411765,
+        "realised_retained_fraction_min": 0.3333333333333333,
+        "rms_ratio_evaluable_trajectories": 300,
+        "state0_self_edges_max": 0,
+        "state0_self_edges_min": 0,
+        "state1_empty_fallback_compatible_mechanisms": 0,
+        "state1_self_edges_max": 6,
+        "state1_self_edges_min": 0,
+        "state_coefficient_tensors": 100,
+        "study": "B"
+      }
+    ],
+    "support_rule": {
+      "B_empty_fallback": "if the entire proposed B support is empty, copy original A support",
+      "additions_eligibility": "absent in the original state-A base support, not absent after retention deletions",
+      "base_empty_fallback": "force one nonself lag1 edge from random source to its cyclic successor",
+      "fallback_compatibility": "flags only possible activation from final support; false excludes activation, true does not prove it",
+      "o_conditional_retention_probability": 0.5,
+      "overlap": "o is per-base-edge retention probability, not a guarantee that realised shared/A edge fraction equals0.5",
+      "p_A_nonself": 0.18,
+      "p_B_nonself_ignoring_empty_fallbacks": 0.1638,
+      "p_add_if_originally_absent": 0.09,
+      "self_edges": "state-A diagonals are cleared; state-B additions include those originally absent self positions at probability0.09"
+    }
+  },
+  "evidence": {
+    "B_freeze_time": "no separately retained freeze-event UTC; protocol-only prelaunch observation",
+    "chronology": "internal launcher clocks distinguished from file mtimes; not external preregistration",
+    "exported_original_records": 8,
+    "human_index": "docs/information_sciences_evidence_index_2026-10-24.md",
+    "machine_index": "results/information_sciences/provenance/evidence_index.json",
+    "manuscript_locators": 17,
+    "study_A_seeds": [
+      50000,
+      50099
+    ],
+    "study_B_seeds": [
+      60000,
+      60049
+    ]
+  },
+  "execution_logs": "experiments/logs/information_sciences_clarifications_2026-10-24 (local execution records; not required for package replay)",
+  "final_export_verification": {
+    "boundary": "external execution record, not a self-referential payload",
+    "record": "experiments/logs/information_sciences_clarifications_2026-10-24/final_export_verification.json",
+    "required_candidate_changes": [
+      "audit/information_sciences_clarifications_2026-10-24.json",
+      "audit/information_sciences_clarifications_2026-10-24.md"
+    ]
+  },
+  "frozen": {
+    "source_files_unchanged": 12,
+    "source_sha256": {
+      "configs/schedule_robustness.yaml": "49eda83ab51b378ad5bfc01367a162da19909c627fbee2b0dec820170f78d8d3",
+      "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+      "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+      "scripts/run_aggregation_controls.py": "23cff61220399f64342facef9d95d3c842600ad88b89a25be25088db7a6fc9e4",
+      "scripts/run_duration_confirmation.py": "612ae0aeefd55c975b1ad8ffb50b259eaf101baafb425cd8893038483c854449",
+      "scripts/run_schedule_robustness.py": "61b4c3b680f804832b20372e32b71cba8e5f569880e1405b8ac33bb3643c9066",
+      "scripts/run_state_decomposition.py": "b1345f8fbf8f57fada6a40568b0d423e8c9eb035176eb6cc545c9a121dce74dc",
+      "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+      "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+      "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+      "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+      "tools/verify_duration_confirmation.py": "1d075b1f2e4ed919fad0b466962c3ef5117da6ac20b2099abc34d8de0bd6440e"
+    },
+    "study_files_unchanged": 1915
+  },
+  "git_commit_created": false,
+  "prior_archive": {
+    "historical_result_csvs_excluding_new_studies": 218,
+    "result_csvs_unchanged": 239,
+    "sha256": "fb9122419b96de34aec3e1964fab61c8ad35c2ba55d3df651ec173c69cf31033"
+  },
+  "stage": "existing-output clarification; no new experimental generation/fitting",
+  "uploaded_or_submitted": false,
+  "workflow_attribution": {
+    "doi": "10.48550/arXiv.2609.00065",
+    "reference": "Kassis et al. (2026), Scientific Agent Skills",
+    "research_evidence": false,
+    "skill": "scientific-visualization"
+  }
+}

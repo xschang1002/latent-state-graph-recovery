@@ -1,0 +1,5 @@
+Structural ranking and temporal state discrimination can favour different outputs.
+Paired studies show configuration-dependent temporal gains from aggregation.
+Shrinkage and residual controls separate pooled gains from temporal ordering.
+AP conventions and fixed threshold references can change boundary assessments.
+PELT segment refits show pooled gains without established temporal AUROC gains.

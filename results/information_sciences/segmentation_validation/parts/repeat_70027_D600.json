@@ -1,0 +1,18 @@
+{
+  "arrays_sha256": "278bc881990b5d7cca1e42f6aa53d9a6f38be86ae51e6070a3f50ae5dc208973",
+  "diagnostic": {
+    "n_detected_segments": 11,
+    "n_pcs": 5,
+    "n_refit_segments": 11,
+    "penalty": 15.677471079645748
+  },
+  "duration": 600,
+  "error": "",
+  "fit_seconds": 0.022705799899995327,
+  "new_fitting": true,
+  "repeat_seed": 70027,
+  "source": "results/information_sciences/symmetric_sensitivity/parts/repeat_70027_D600_h300_s150.npz",
+  "source_sha256": "69d3a03d72ced407ac976b4a617e996616b4cce69224066210a20b916466b1b2",
+  "status": "ok",
+  "warnings": []
+}

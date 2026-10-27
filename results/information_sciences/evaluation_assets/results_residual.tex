@@ -1,0 +1,12 @@
+Residual gains also separate a rank effect from amplitude recovery.
+At diagnostic weight $10^{-8}$, Study A's Lasso temporal AUROC rises from
+$0.639$ to $0.707$ at $D=300$ and from $0.805$ to $0.830$ at $D=600$.
+The increases $0.068$ and $0.025$ come entirely from restoring same-group
+positive--negative comparisons; cross-group credit is unchanged in this
+probe. At weight $0.25$ in the long-duration condition, within-group credit
+still adds $0.025$ but cross-group reordering subtracts $0.006$, leaving
+$0.019$ relative to hard emission. Supplement Section~S19 gives the exact
+edge-normalised pair decomposition, all original weights and the near-zero
+diagnostic. This accounting explains a discontinuity at the hard endpoint;
+it does not show better state assignment or guarantee stable thresholded
+detection at tiny residual amplitudes.

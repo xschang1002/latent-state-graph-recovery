@@ -1,0 +1,25 @@
+\begin{tabular}{lllrrrr}
+\toprule
+Scorer & Hard policy & Contrast & $n$ & Mean [95\% interval] & $p_{\rm raw}$ & $p_{\rm Holm4}$ \\
+\midrule
+Lasso & Gated$^{P}$ & $\Delta_{300}$ & 100 & $-0.069\;[-0.090,-0.048]$ & $5.93\times10^{-9}$ & $1.19\times10^{-8}$ \\
+Lasso & Gated$^{P}$ & $\Delta_{600}$ & 100 & $+0.038\;[0.023,0.053]$ & $2.93\times10^{-6}$ & $2.93\times10^{-6}$ \\
+Lasso & Gated$^{P}$ & $\Gamma$ & 100 & $+0.107\;[0.079,0.134]$ & $2.99\times10^{-11}$ & $8.97\times10^{-11}$ \\
+Lasso & Gated$^{P}$ & Hard--matched, $600$ & 100 & $+0.226\;[0.210,0.243]$ & $4.97\times10^{-47}$ & $1.99\times10^{-46}$ \\
+\midrule
+Lasso & Forced & $\Delta_{300}$ & 100 & $-0.069\;[-0.090,-0.048]$ & $5.93\times10^{-9}$ & -- \\
+Lasso & Forced & $\Delta_{600}$ & 100 & $+0.038\;[0.023,0.053]$ & $2.93\times10^{-6}$ & -- \\
+Lasso & Forced & $\Gamma$ & 100 & $+0.107\;[0.079,0.134]$ & $2.99\times10^{-11}$ & -- \\
+Lasso & Forced & Hard--matched, $600$ & 100 & $+0.226\;[0.210,0.243]$ & $4.97\times10^{-47}$ & -- \\
+\midrule
+OLS & Gated & $\Delta_{300}$ & 100 & $-0.071\;[-0.092,-0.051]$ & $8.91\times10^{-10}$ & -- \\
+OLS & Gated & $\Delta_{600}$ & 100 & $+0.032\;[0.017,0.046]$ & $7.93\times10^{-5}$ & -- \\
+OLS & Gated & $\Gamma$ & 100 & $+0.103\;[0.076,0.129]$ & $2.19\times10^{-11}$ & -- \\
+OLS & Gated & Hard--matched, $600$ & 100 & $+0.219\;[0.203,0.236]$ & $2.28\times10^{-45}$ & -- \\
+\midrule
+OLS & Forced & $\Delta_{300}$ & 100 & $-0.071\;[-0.092,-0.051]$ & $8.91\times10^{-10}$ & -- \\
+OLS & Forced & $\Delta_{600}$ & 100 & $+0.032\;[0.017,0.046]$ & $7.93\times10^{-5}$ & -- \\
+OLS & Forced & $\Gamma$ & 100 & $+0.103\;[0.076,0.129]$ & $2.19\times10^{-11}$ & -- \\
+OLS & Forced & Hard--matched, $600$ & 100 & $+0.219\;[0.203,0.236]$ & $2.28\times10^{-45}$ & -- \\
+\bottomrule
+\end{tabular}

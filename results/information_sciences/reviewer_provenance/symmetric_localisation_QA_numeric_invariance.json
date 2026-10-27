@@ -1,0 +1,9 @@
+{
+  "all_detail_nonerror_values_identical": true,
+  "detail_nonerror_columns_unchanged": 47,
+  "detail_rows": 4500,
+  "paired_byte_identical": true,
+  "per_edge_cases_unchanged": 300,
+  "role": "serialization-only QA amendment; no numerical changes",
+  "summary_byte_identical": true
+}

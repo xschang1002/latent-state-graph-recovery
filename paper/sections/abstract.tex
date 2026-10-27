@@ -1,0 +1,20 @@
+Post-estimation aggregation of dynamic graph estimates can improve edge
+ranking while weakening recovery of when edges are active. We study this
+distinction through paired interventions that hold local lagged-edge scores
+fixed while varying their temporal emission. Evaluation separates pooled
+AUROC, within-edge temporal AUROC and boundary detection, supported by exact
+diagnostic identities for static scores and two-state hard aggregation.
+Across 100 independent paired simulations, hard aggregation increases pooled
+AUROC from $0.727$ to $0.780$ but reduces within-edge temporal AUROC from
+$0.707$ to $0.639$ at the shorter-duration configuration. At the longer-duration
+configuration, its temporal gain is $0.038$. Schedule, generator and window
+comparisons reveal configuration dependence, including changes in switch
+coverage. Shrinkage toward edgewise means improves pooled ranking without
+changing temporal order. Retaining window-level residuals restores comparisons
+lost through hard-output ties, with a measurable rank jump at a near-zero
+positive residual weight. Boundary assessments also depend on zero-score
+conventions and threshold references. A segmentation-and-refit comparator
+improves pooled ranking without an established within-edge temporal gain.
+Together, these findings in two-state linear systems motivate separate
+evaluation of structural ranking, temporal discrimination and boundary
+detection in dynamic graph recovery.

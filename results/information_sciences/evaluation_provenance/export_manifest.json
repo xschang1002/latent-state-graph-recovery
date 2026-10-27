@@ -1,0 +1,42 @@
+{
+  "external_time_attestation": false,
+  "private_originals_required": false,
+  "records": [
+    {
+      "exported_file": "boundary_freeze.json",
+      "exported_sha256": "3be0a71706afc96ca80f4f89da350cc00a2793f19543d1fe36d10322a83bea2e",
+      "normalization": "Canonical JSON; workspace and known user-home path prefixes redacted; numerical results unchanged",
+      "original_relative_path": "experiments/logs/boundary_sensitivity_2026-10-25/freeze.json",
+      "original_sha256": "3be0a71706afc96ca80f4f89da350cc00a2793f19543d1fe36d10322a83bea2e"
+    },
+    {
+      "exported_file": "boundary_run.json",
+      "exported_sha256": "6b4e0a9baee98d857738e704acbd69058c94bb45a6c70647cdd287a686db5d29",
+      "normalization": "Canonical JSON; workspace and known user-home path prefixes redacted; numerical results unchanged",
+      "original_relative_path": "experiments/logs/boundary_sensitivity_2026-10-25/run.json",
+      "original_sha256": "6b4e0a9baee98d857738e704acbd69058c94bb45a6c70647cdd287a686db5d29"
+    },
+    {
+      "exported_file": "boundary_rebuild.json",
+      "exported_sha256": "9745b3a027c2df8e267fb7c0295168f8e6be43f5be214aa45a21de3c90614e6f",
+      "normalization": "Canonical JSON; workspace and known user-home path prefixes redacted; numerical results unchanged",
+      "original_relative_path": "experiments/logs/boundary_sensitivity_2026-10-25/rebuild.json",
+      "original_sha256": "9745b3a027c2df8e267fb7c0295168f8e6be43f5be214aa45a21de3c90614e6f"
+    },
+    {
+      "exported_file": "boundary_preservation.json",
+      "exported_sha256": "1d7edf9e15a2d94b5f1fc6b6b3507c4d19bade69ad8a8b1a5bdeb3965467eac8",
+      "normalization": "Canonical JSON; workspace and known user-home path prefixes redacted; numerical results unchanged",
+      "original_relative_path": "experiments/logs/boundary_sensitivity_2026-10-25/preservation_after.json",
+      "original_sha256": "1d7edf9e15a2d94b5f1fc6b6b3507c4d19bade69ad8a8b1a5bdeb3965467eac8"
+    },
+    {
+      "exported_file": "segmentation_isolated_environment.json",
+      "exported_sha256": "4b34a372ba408fcf29c6d07091c3cd9a3378426660d8fe9dafea54c3b3beab5b",
+      "normalization": "Canonical JSON; workspace, known user-home and base interpreter path prefixes redacted; numerical results unchanged",
+      "original_relative_path": "experiments/logs/segmentation_validation_2026-10-25/isolated_environment.json",
+      "original_sha256": "2748a85197bcd1d30c86a8866e1a1d03e38672238a6de1c4f77e12b4d7506523"
+    }
+  ],
+  "scope": "Internal source-lock/execution/QA records. Historical source paths describe origin, not mandatory runtime inputs. Freeze chronology is not public preregistration. Segmentation original execution records remain in its sealed output directory."
+}

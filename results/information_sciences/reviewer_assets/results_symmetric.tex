@@ -1,0 +1,30 @@
+Study C uses a separate exchangeable-support generator: both states exclude
+self edges, have marginal nonself probability $0.18$, and retain identical
+coefficients on shared support. Common lagwise radius scaling preserves
+those equalities. This grouped change tests transfer beyond the original
+asymmetric generator; it does not isolate each nuisance's contribution.
+Thirty new repeats are paired across both durations and five window settings
+at $T=3600$, with $300$ successful fits and no replacement.
+The exact construction and internal freeze records are in Supplement
+Section~S18 and the accompanying evidence index.
+
+At the original $h=300$, stride $150$ setting, forced-hard state-AUROC gain
+is $-0.047$ at $D=300$ and $+0.037$ at $D=600$, reproducing the direction
+of the original selected contrast under this new generator.
+Figure~\ref{fig:symmetric} shows substantial window dependence. For
+$h/s=200/100$, $300/150$ and $400/200$, gains are respectively
+$+0.011$, $-0.047$, $-0.139$ at $D=300$ and
+$+0.072$, $+0.037$, $+0.045$ at $D=600$.
+Holding $h=300$ and changing stride to $75$ gives gains $-0.028$ and
+$+0.100$; stride $300$ instead gives $-0.089$ and $-0.014$.
+The latter $D=600$ interval is $[-0.049,0.022]$. Its point estimate is
+negative, but the interval does not establish a population sign reversal.
+Positive gain is therefore not established at every tested long-duration grid.
+
+Raw fallback removes constant emission on rejection but does not solve gate
+selection. At $D=600,h/s=300/150$, its mean gain is $-0.007$ despite the
+positive all-candidate gain; at $300/300$ it is also $-0.007$.
+The full window grid, gate denominators, residual controls and paired
+intervals are supplied in Supplement Section~S18 and numerical files.
+These post-review robustness estimates remain separate from Study A's
+original four-comparison family.

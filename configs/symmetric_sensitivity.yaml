@@ -1,0 +1,30 @@
+# Study C: post-review, bounded generator/window robustness; not A/B confirmation.
+study: information_sciences_symmetric_sensitivity_v1
+generator: exchangeable_support_shared_coefficients_lag_scaled_v1
+threads: 1
+seed_start: 70000
+seed_count: 30
+durations: [300, 600]
+mechanism:
+  n_nodes: 8
+  timesteps: 3600
+  max_lag: 3
+  edge_prob: 0.18
+  overlap: 0.5
+  noise_scale: 0.10
+  burn_in: 100
+  target_radius: 0.90
+windows:
+  - {size: 200, stride: 100}
+  - {size: 300, stride: 150}
+  - {size: 400, stride: 200}
+  - {size: 300, stride: 75}
+  - {size: 300, stride: 300}
+model:
+  scorer: lasso
+  lasso_alpha: 0.005
+  n_init: 10
+statistics:
+  bootstrap_draws: 10000
+  bootstrap_seed: 20261025
+  minimum_ci_n: 5

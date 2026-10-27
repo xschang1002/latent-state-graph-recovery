@@ -1,0 +1,136 @@
+{
+  "configuration": {
+    "durations": [
+      300,
+      600
+    ],
+    "generator": "exchangeable_support_shared_coefficients_lag_scaled_v1",
+    "mechanism": {
+      "burn_in": 100,
+      "edge_prob": 0.18,
+      "max_lag": 3,
+      "n_nodes": 8,
+      "noise_scale": 0.1,
+      "overlap": 0.5,
+      "target_radius": 0.9,
+      "timesteps": 3600
+    },
+    "model": {
+      "lasso_alpha": 0.005,
+      "n_init": 10,
+      "scorer": "lasso"
+    },
+    "seed_count": 30,
+    "seed_start": 70000,
+    "statistics": {
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 20261025,
+      "minimum_ci_n": 5
+    },
+    "study": "information_sciences_symmetric_sensitivity_v1",
+    "threads": 1,
+    "windows": [
+      {
+        "size": 200,
+        "stride": 100
+      },
+      {
+        "size": 300,
+        "stride": 150
+      },
+      {
+        "size": 400,
+        "stride": 200
+      },
+      {
+        "size": 300,
+        "stride": 75
+      },
+      {
+        "size": 300,
+        "stride": 300
+      }
+    ]
+  },
+  "configuration_sha256": "8fb21c194023c4268c6a6dce637348b1e7fb9a799e51e3295434db7e0bd4627c",
+  "expected_fits": 300,
+  "generator": {
+    "coefficients": "shared support has identical values; exclusive supports independently signed Uniform(.08,.35)/lag",
+    "empty_support": "allowed without fallback or conditional resampling",
+    "grouped_change": "self rule, marginal support density and shared coefficients change together; not a factorial attribution",
+    "name": "exchangeable_support_shared_coefficients_lag_scaled_v1",
+    "p_B_given_A": 0.5,
+    "p_B_given_not_A": 0.1097560975609756,
+    "p_both_nonself": 0.18,
+    "self": "absent in both states",
+    "stability": "ideal a=min(1,.90/max initial state rho); when a<1 multiply a by (1-1e-12) as a recorded numerical safety margin; both states lag l multiplied by same a**l; verify final rho=a*initial rho and <=.90; no arbitrary-switching guarantee"
+  },
+  "inference": "paired-repeat descriptive means and pointwise percentile bootstrap intervals; no new confirmatory p-value family; undefined targets/failures retain fixed planned denominators",
+  "methods": [
+    "raw_window",
+    "native_hard",
+    "forced_hard",
+    "oracle_label",
+    "static_mean"
+  ],
+  "no_optional_stopping": true,
+  "pairing": "Within repeat, both D and all five window settings share coefficients, initial history and innovations; no replacement or extension",
+  "repeats": [
+    70000,
+    70001,
+    70002,
+    70003,
+    70004,
+    70005,
+    70006,
+    70007,
+    70008,
+    70009,
+    70010,
+    70011,
+    70012,
+    70013,
+    70014,
+    70015,
+    70016,
+    70017,
+    70018,
+    70019,
+    70020,
+    70021,
+    70022,
+    70023,
+    70024,
+    70025,
+    70026,
+    70027,
+    70028,
+    70029
+  ],
+  "rng": {
+    "address": "SHA256 compact JSON [namespace, repeat, domain], little-endian first128 bits; cluster first32 bits",
+    "domains": [
+      "mechanism",
+      "initial_history",
+      "innovations",
+      "clustering"
+    ],
+    "namespace": "stcg_symmetric_sensitivity_v1"
+  },
+  "role": "Post-review robustness; not part of A/B confirmation or public preregistration",
+  "schedule": "fixed full-time floor(t/D)%2, origin0; common100 burn-in discarded; no random phase",
+  "source_sha256": {
+    "requirements-revision.txt": "3781795b2057cec87ddf50284b97d42c6e60b74ac64a6bddd4bb9abf20bea4da",
+    "scripts/aggregation_study_common.py": "25ea666df3ed074288d544505643b5afbf3c1850c71c3c625e8c8ff05c2bb424",
+    "scripts/run_symmetric_sensitivity.py": "c6aef2201ed19f2254a906b912aea761228e81615aebe4e3917da0bf86ac9a63",
+    "src/stcg/__init__.py": "a01e900e2575b3a18707dfc02d2fee28fc6fb96815ddf62ec92f498712b6cdba",
+    "src/stcg/baselines.py": "1862a09d07d312f85206f1c36a6f46c8e1c88d9169cef2c449bc9a5bb8639cc9",
+    "src/stcg/evaluation.py": "20aa607d0d73dc6db9229bce831e912465d5fbfe175731859030c844ba402ae3",
+    "src/stcg/mechanism.py": "98ee1d0af238fa70c6bd0879c81eb0a1f541aef0932cff4c4206705ec63a898d",
+    "src/stcg/self_supervised.py": "985e2008749f0053d167e2783b0b943a798e45bd25198b43ece1d2a5ba6a3b4f",
+    "tests/test_symmetric_sensitivity.py": "fba3c129374ab1a6402528b89edd5a6fa3a777325e309a15adb0c11ef34f4c4b"
+  },
+  "study": "information_sciences_symmetric_sensitivity_v1",
+  "threads": 1,
+  "window_design": "h/s proportional triplet plus stride-only contrasts at fixed h300; the triplet alone does not isolate h from stride or M"
+}

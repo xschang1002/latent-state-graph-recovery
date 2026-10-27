@@ -1,0 +1,13 @@
+{
+  "cases": 700,
+  "detail_rows": 10500,
+  "failed_cases": 0,
+  "finished_utc": "2026-10-24T19:05:47.833755+00:00",
+  "manifest_sha256": "0b21609b99564a24510f17b63fe0e930ee8f71da26efaa373fe33e2811fc65a6",
+  "new_fits": 0,
+  "new_simulations": 0,
+  "paired_rows": 900,
+  "protocol_sha256": "8220cffbe369d2ba3ed932de94e5be460887878f0f42ad5437d5a8604c69918f",
+  "started_utc": "2026-10-24T19:05:26.714320+00:00",
+  "summary_rows": 900
+}

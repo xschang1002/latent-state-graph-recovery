@@ -1,0 +1,84 @@
+{
+  "A_B": {
+    "diagnostics": {
+      "affine_edge_checks": 470400,
+      "affine_event_rows": 0,
+      "affine_nonfinite_checks": 0,
+      "cases": 700,
+      "changed_edge_auc_count": 0,
+      "failed_cases": 0,
+      "lost_tied_pairs": 0,
+      "max_abs_edge_auc_difference": 0.0,
+      "method_failed_rows": 0,
+      "method_rows": 9100,
+      "method_undefined_rows": 0,
+      "new_fits": 0,
+      "new_simulations": 0,
+      "new_tied_pairs": 0,
+      "reference_method_rows_checked": 2100,
+      "reversed_pairs": 0,
+      "role": "post hoc descriptive; no confirmatory-family assignments",
+      "temporal_evaluable_edge_checks": 76520
+    },
+    "execution_record": "score_controls_amended_execution.json",
+    "manifest_sha256": "46ca3e44210093b710d1ae01d49bbadb8a1e5ad740469107100e2f2977879ce9",
+    "protocol_sha256": "cda9cb757384c32e8c478934c6bbacf9d1c93f4f2a7a205052cb61eda56bad51"
+  },
+  "C": {
+    "diagnostics": {
+      "affine_edge_checks": 201600,
+      "affine_events": 0,
+      "cases": 300,
+      "changed_edge_auc_count": 0,
+      "failed_cases": 0,
+      "lost_tied_pairs": 0,
+      "method_failed_rows": 0,
+      "method_rows": 3900,
+      "method_undefined_rows": 0,
+      "new_fits": 0,
+      "new_simulations": 0,
+      "new_tied_pairs": 0,
+      "reference_method_rows_checked": 900,
+      "reversed_pairs": 0,
+      "role": "post hoc score-preserving controls on Study C",
+      "temporal_evaluable_edge_checks": 36440
+    },
+    "execution_record": "symmetric_controls_execution.json",
+    "manifest_sha256": "9636c1a6048e2e58db93862de4ec499f4c921f9e8ea0174add3779b41039889a",
+    "protocol_sha256": "544b7a5a9560bd142d1b843a9dc7c5ab665c848637585a4618f1f4e57004ea47"
+  },
+  "completed_utc": "2026-10-24T19:11:49.624427+00:00",
+  "guard": {
+    "C_files_unchanged": 790,
+    "C_frozen_sources_unchanged": 10,
+    "original_A_B_files_unchanged": 1915,
+    "original_frozen_sources_unchanged": 12
+  },
+  "new_fits": 0,
+  "new_simulations": 0,
+  "qa_amendment": {
+    "corrected": "Exclude undefined NaN differences from affine_events; no metric/parameter/sample/interval change",
+    "initial_v1_preserved": "initial_v1",
+    "record": "score_controls_amendment.json",
+    "unchanged_bytes": [
+      "detail.csv",
+      "summary.csv",
+      "contrasts.csv",
+      "affine_checks.csv",
+      "input_manifest.json"
+    ],
+    "v1_results_preceded_QA_correction": true
+  },
+  "role": "post hoc descriptive controls; no original-family assignments or lambda selection",
+  "source_sha256": {
+    "scripts/analyze_score_preserving_controls.py": "a5ac44d412d2edeb0a9699ce95b954ba06f5cb96170c7b21ab48b1f50bd7a7c4",
+    "scripts/analyze_symmetric_controls.py": "fe0fb480532f3998776f4e035cc6c4f591cb22ffed68df61d34ea23800b7255f",
+    "tests/test_score_preserving_controls.py": "fdec04b4b5691abdd6b7f59a65bff4aca64e11e9a1353fc539e95af68ac38389",
+    "tests/test_symmetric_controls.py": "c5e7056a629d7c1b4515c17fe51b47e98977e1ac646999e594ba578e7449854d"
+  },
+  "status": "passed",
+  "tests": {
+    "score_controls": 21,
+    "symmetric_controls": 4
+  }
+}

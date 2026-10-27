@@ -1,0 +1,439 @@
+frozen_at: '2026-10-21T09:08:14Z'
+purpose: Pre-revision freeze for the STCG estimand/mechanism revision.
+git:
+  commit: 06e8a26804f7c4660a896af45221db0108355222
+  dirty: true
+  n_dirty_paths: 62
+  provenance_note: >-
+    This commit is unreachable in the current repository: the history was rebuilt
+    around the final preprint (commit 96ca43b) and the pre-revision code snapshot
+    was not retained. The digests below identify the baseline but cannot
+    re-create it; only the archived manuscript and the committed result CSVs
+    remain.
+  dirty_sample:
+  - ' M .gitignore'
+  - ' M README.md'
+  - ' M configs/experiment_matrix.yaml'
+  - ' M docs/acceptance_fixes_2026-09-13.md'
+  - ' M docs/anonymous_artifact_readme.md'
+  - ' M docs/related_work_scope_2026-09-13.md'
+  - ' M docs/reproduction_manifest.md'
+  - ' M docs/submission_checklist.md'
+  - ' M paper/main.tex'
+  - ' M paper/references.bib'
+  - ' M results/tables/stcg_knob_ablation_table.tex'
+  - ' M scripts/build_submission_package.py'
+  - ' M tools/verify_paper_numbers.py'
+  - ?? configs/original_frozen.yaml
+  - ?? docs/change_point_gate_protocol_2026-10-21.md
+  - ?? docs/estimands.md
+  - ?? docs/gate_identifiability_audit_2026-10-21.md
+  - ?? docs/third_party_notices.md
+  - ?? results/figures/stcg_ensemble_instability.png
+  - ?? results/original_reproduction.csv
+environment:
+  python: 3.12.14
+  platform: Windows-11-10.0.26200-SP0
+  machine: AMD64
+  cpu_count: 24
+  numpy: 2.5.3
+  scipy: 1.17.1
+  scikit_learn: 1.8.0
+  torch: 2.14.0+cpu
+  pandas: 2.3.3
+seeds:
+  exploration:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  gate_stress:
+  - 100
+  - 101
+  - 102
+  - 103
+  - 104
+  - 105
+  - 106
+  - 107
+  - 108
+  - 109
+  - 110
+  - 111
+  - 112
+  - 113
+  - 114
+  - 115
+  - 116
+  - 117
+  - 118
+  - 119
+  previous_validation:
+  - 200
+  - 201
+  - 202
+  - 203
+  - 204
+  - 205
+  - 206
+  - 207
+  - 208
+  - 209
+  - 210
+  - 211
+  - 212
+  - 213
+  - 214
+  - 215
+  - 216
+  - 217
+  - 218
+  - 219
+  development_new:
+  - 1000
+  - 1001
+  - 1002
+  - 1003
+  - 1004
+  - 1005
+  - 1006
+  - 1007
+  - 1008
+  - 1009
+  - 1010
+  - 1011
+  - 1012
+  - 1013
+  - 1014
+  - 1015
+  - 1016
+  - 1017
+  - 1018
+  - 1019
+  - 1020
+  - 1021
+  - 1022
+  - 1023
+  - 1024
+  - 1025
+  - 1026
+  - 1027
+  - 1028
+  - 1029
+  - 1030
+  - 1031
+  - 1032
+  - 1033
+  - 1034
+  - 1035
+  - 1036
+  - 1037
+  - 1038
+  - 1039
+  - 1040
+  - 1041
+  - 1042
+  - 1043
+  - 1044
+  - 1045
+  - 1046
+  - 1047
+  - 1048
+  - 1049
+  confirmation_new:
+  - 2000
+  - 2001
+  - 2002
+  - 2003
+  - 2004
+  - 2005
+  - 2006
+  - 2007
+  - 2008
+  - 2009
+  - 2010
+  - 2011
+  - 2012
+  - 2013
+  - 2014
+  - 2015
+  - 2016
+  - 2017
+  - 2018
+  - 2019
+  - 2020
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  - 2026
+  - 2027
+  - 2028
+  - 2029
+  - 2030
+  - 2031
+  - 2032
+  - 2033
+  - 2034
+  - 2035
+  - 2036
+  - 2037
+  - 2038
+  - 2039
+  - 2040
+  - 2041
+  - 2042
+  - 2043
+  - 2044
+  - 2045
+  - 2046
+  - 2047
+  - 2048
+  - 2049
+panels:
+  stationary_var:
+    generator: var
+    n_nodes: 8
+    timesteps: 1000
+    max_lag: 3
+    edge_prob: 0.18
+    window_size: 300
+    window_stride: 150
+  switching_var:
+    generator: switching_var
+    n_nodes: 8
+    timesteps: 1000
+    max_lag: 3
+    edge_prob: 0.18
+    switch_period: 500
+  nonlinear_var:
+    generator: nonlinear_var
+    n_nodes: 8
+    timesteps: 1000
+    max_lag: 3
+    edge_prob: 0.18
+  fast_switching:
+    source: revision_specialist_detail.csv
+    phase: stress
+    switch_period: 150
+hashes:
+  code_combined_sha256: e975d986569e9b951f6a01f26fef215c07e9d7eea37dc4738f29b0305a2ab843
+  configs_combined_sha256: 0968ab7919144ed8619518b2f9216388f7fd29364fb97a6f0db095b83726144d
+  results_combined_sha256: b1186744a8f8560f1791ee0ee8a03f80913c340c4be6d376e7e5481098f443bd
+  n_code_files: 11
+  n_config_files: 4
+  n_result_files: 191
+  result_hashes:
+    aggregation_bias.csv: 0942bc5bc7761da68de9a2e6e73fb3ec97b0603fb908c9ee50148b68cf319d90
+    AReMActivities_K4_state_label_prediction_detail.csv: 7cc5e345e8afa3948e146c4bcaabb797db511da06196e1e68cbb392e1b86ef99
+    AReMActivities_K4_state_label_prediction_summary.csv: 6941b2ab41790b05799aac292572a5d03a64b5249dd952e3d3f23fa28cce31df
+    AReMActivities_selectK_state_count_selection_detail.csv: dccfa9dfb5b8c4002637a8661a7b89d347f638dd7408deb2216f505560cf2a8d
+    AReMActivities_selectK_state_count_selection_selected.csv: fdb329f724a0955c5c3cc454789d7fb338edcdfffabfb6b233c7e73bc04ede58
+    AReMActivities_selectK_state_count_selection_summary.csv: e0cf161f51e1142311d757d6453349082f039807362ca824b983b45a785b0e4b
+    AReMActivities_state_label_alignment_detail.csv: 396f3a8111d14de2b9d6e3c5e964773cf1e3045282ff5fec5d9cca195b3b12ec
+    AReMActivities_state_label_alignment_summary.csv: 4590a15b9cea227517c45dc0c4a4d68c80d1e89b581f81ff1776557194857ae1
+    AReMActivities_state_sensitivity_summary.csv: ce5877d6df0c3d95492b55041d5bb3efb1d3a74b561a966cd536859bc47c109e
+    AReMActivities_state_threshold_forecasting_detail.csv: 10fbb0a4daa4788fea6c2922f4fdfde5efabb82e59262f92b06422914d26e1cb
+    AReMActivities_state_threshold_forecasting_summary.csv: c510ed9cb15e10953f0a7f5bd43d61a2969f8fc36536110527b2b6a19f2df44d
+    AReMActivities_threshold_paired_tests.csv: edc4b1a30ea94e17b9f81dbf219b2c23524a02b24230dcca08f6a41f06cd2fd0
+    change_point_gate_development.csv: 95e2266e0776d0f5430266077dbdbbec965dfdbafc9e2971f00be41b31b8f294
+    change_point_gate_development_summary.csv: 7874459ad662b0eab42956fee8991fab4a4c48a055112b08bbdb37e7fa43793d
+    change_point_gate_table.tex: 6339922cf49b79ec0ad9a5fde676a83f7690437b241ed9f121b60257ae5a2aa4
+    change_point_gate_validation.csv: 45f5eaf4d89aa316b14d62fc4736eb3a7ef05531ab27b97817044b2d96e26154
+    change_point_gate_validation_summary.csv: 5a3b7a77d114d2d7b3dde7c77b3933a2c71965819ce257b5f556d546f2bc1cbc
+    downstream_forecasting_detail.csv: 8b9b0f25ceb86d7be4544533bc28415f0a94ac388a65febd0b2bf9796a3d5e29
+    downstream_forecasting_summary.csv: e03cd38d49b5fed21173e1b4695d014820d2822aaddf39d440367bcd4a50d95e
+    downstream_graph_states.csv: b608db263ce311e5649c02400d715ecde1db5cd95ab5a3539ce313eee4c87dfb
+    downstream_graph_top_edges.csv: a0a96d081fa38d6b339946dac509c70aab69cccdeb84bed6394923cab59d940e
+    HydraulicSystems_cooler_condition_state_threshold_forecasting_detail.csv: 7c0f613639a0c6e13107273a299256e0fc78ed4a64321fb6ad373cddb5b54dad
+    HydraulicSystems_cooler_condition_state_threshold_forecasting_summary.csv: adf24559c19f3116c24494997f1cb5f793122b2b7c39ea080a3125fd5a4f73c2
+    HydraulicSystems_cooler_K3_state_label_prediction_detail.csv: 0bc90e50bd455b9fddd34f431c0301f347f3a8c533be224923ac14ffab6d04bf
+    HydraulicSystems_cooler_K3_state_label_prediction_summary.csv: 083896770e1983768893d71d690c62ef4cc56afd5fa9c18812d163dac3c36905
+    HydraulicSystems_cooler_selectK_state_count_selection_detail.csv: c08315a14c56a744381e164a5dd040fac59c6763e4536af960d7245ed45a35e6
+    HydraulicSystems_cooler_selectK_state_count_selection_selected.csv: e9d70849fadf354a69692e8b1811339913ea8eeec7c9ef08b5106d9fd55b07fc
+    HydraulicSystems_cooler_selectK_state_count_selection_summary.csv: 5f4dc849171f86f28067a8467ca98b9c9c3a3a3f138501fd01d543a948be19cb
+    HydraulicSystems_forward_state_label_prediction_forward_detail.csv: 982e590acb5071350a599997ba48cc1e23211ab4d90cd4d09bcde6f839d6ce90
+    HydraulicSystems_forward_state_label_prediction_forward_summary.csv: 99ced7c24609255667a8dc90d14cfa79989828aa4eeba002f93cba450ab79f04
+    HydraulicSystems_hydraulic_accumulator_state_threshold_forecasting_detail.csv: 814a09ae8275584f8248696f46e8939764be309566f639d0d12a16e81cf50c50
+    HydraulicSystems_hydraulic_accumulator_state_threshold_forecasting_summary.csv: d5c67f2e9dde96a249731b4972775141497bc50a0f9196d3b9e2c5383e3d3f98
+    HydraulicSystems_internal_pump_leakage_state_threshold_forecasting_detail.csv: 9dea05cfb249a503163932484dc66e90f60a72952dc2c462424026267e4cc2e7
+    HydraulicSystems_internal_pump_leakage_state_threshold_forecasting_summary.csv: c09127700a73ac62102bcb4dbe5573a561e77b8790422b29f853655bdf1ce6a1
+    HydraulicSystems_state_label_alignment_detail.csv: 5360cdccf982a0ea1932e30893c2ad2ca6c7139b65fbcdcda70b954a20412062
+    HydraulicSystems_state_label_alignment_summary.csv: 6aa065ee9104805d7b0712dfbdda7fc6655a3bea1e8cc4aa8810c3b42ab279f6
+    HydraulicSystems_state_label_prediction_detail.csv: 85ef5af3f9c3bd42570ce7c325204abaae62eecd97b4c6932bb1321a9671f1cd
+    HydraulicSystems_state_label_prediction_summary.csv: 1b7352719261c62d3d6af40aad6c1a4cf8246f26ad50adc61fbc5c3f18c547e1
+    HydraulicSystems_state_threshold_forecasting_detail.csv: a542c6d57c52ecf825108e65427ffec4e785e18beb57c9627e8f9cf644b90dbf
+    HydraulicSystems_state_threshold_forecasting_summary.csv: 2efa97be57ac92ce88c8d58b2c919037bf0629fcb570c74afefaf9f5c95de238
+    HydraulicSystems_transition_warning_detail.csv: b06879b321caf4fd978c5101a83899ee8eebec722f65a659ef180471762aa8bc
+    HydraulicSystems_valve_condition_state_threshold_forecasting_detail.csv: 50f010a673f8345fd5c1f3ddb39f753f9db49a73c05ef84e2051618bdfe49df8
+    HydraulicSystems_valve_condition_state_threshold_forecasting_summary.csv: 75757364bd81bfea1f16a96b2417f9cfb647c8a19a2950ab3bff8599205a1f06
+    HydraulicSystems_valve_forward_state_label_prediction_forward_detail.csv: a15b623348903aaf775d15baf02b1a07778aacf802ebed84bd48ab72aa5ff713
+    HydraulicSystems_valve_forward_state_label_prediction_forward_summary.csv: da5379d09fbb07029169979b8089c303df46f5d86b373e3a0445ec1a2c6d78f3
+    HydraulicSystems_warning_ablation_detail.csv: ef6db270b13fcb942724478961a804e0151264840ced2dbde8f27d55d1d520dc
+    HydraulicSystems_warning_ablation_selected.csv: cf70b50513b3b9ddea8d7a91670966f851e65386f588bb424b690bc886aa6876
+    OccupancySensors_state_label_alignment_detail.csv: eb2837ea347c48598178cba8541f1cf6eb22cce38e03c16a67f77dab78b953a4
+    OccupancySensors_state_label_alignment_summary.csv: 07bd6dfa682a940d2fbb9e95cf4f32df95c137891e5b716471b07a701d47f4e9
+    paper_evidence_summary_table.tex: 1f80f5fef17adc0567e5d1ccc88365151cd0bcbf1e22d34cd54c7a963c266761
+    real_benchmark_forecasting_summary.csv: 654528fc2cf3a9369b1700f841fcd44fe54d97d79a45126a4091d2ccfe60e819
+    real_benchmark_forecasting_table.tex: f7d9ab27685e79dd42e72bd78186489b2d6fa405b64038c4ea67a25927356417
+    real_benchmark_state_summary.csv: f1fbf2cc3a90b9971633b8aa65931e893701e4b26d01b77c1be286fb434b27ee
+    real_benchmark_top_edges.csv: cc4766b809ef963a8dc9771ba2b743d47a4d1c1799e51f37df99d7d2e9a1c78c
+    real_change_point_gate_arem.csv: ddf714c3f2ef7c1395e4aa8e493dbb6a9117144d00227d0f5680743992b76f62
+    real_change_point_gate_arem_summary.csv: a287c51adf7dc4ed881e269bf05d0a7e71e9034e09b8313bb55f0352558c99de
+    real_change_point_gate_hydraulic.csv: c4ee9f8e9cddeb8434aa0c2dbb69d7736540e6abe771da9c2c07676e63d8f8f6
+    real_change_point_gate_hydraulic_summary.csv: 242e960705d2adfb8451877c852b721076f7531fd8bdafa35443ce1a9e259568
+    real_change_point_gate_table.tex: 4ee673cf4d8a6b053c4b3a6c86b51d2749c4489b842ba06ef30559173f0a9f06
+    real_data_inventory.csv: 9f5f03c02571c2536a491fb96a16e106e3fd72f768eb25879d2941fad6ba7d02
+    real_mask_sweep_detail.csv: 2e1911922a338f916be1938d62d42c0a1a1bcf78b9ececc876afc6576d517c52
+    real_mask_sweep_summary.csv: 186b51909c0a352425c54b1b7f6c55034de38746d250c3987ac1cb9f528cfdcd
+    real_regime_discovery_comparison.csv: ca788a295edbebca7a8d43967872f1026890f9a15fbe1a80f476e9270cced119
+    real_regime_discovery_comparison_detail.csv: 7c709c70e85fe0a2947a0a300616db0b37f6bd66aa24109b471e5dfdd5a20aba
+    real_regime_discovery_comparison_table.tex: 073c10744b3e1c4e7d7b28d521cce626d60fb36152f93e6393ce39567040828d
+    real_weight_sweep_detail.csv: 61118c05f7b1b1841faf1bdeb4691d400dc921c3fb34c084197ae67e4675c278
+    real_weight_sweep_summary.csv: a3fbbe4f8adaf6349228d020dd649547ae5be7c531c0e506f9b59734f9eab502
+    revision_gate_candidates.csv: 54d42fbb14642902cc150990cc7ee8a0db9cffb0b05eb467707b4eae9a68c134
+    revision_gate_failures.csv: 16361e6f73957ecdba943afea4648aeb50906f163cc81873ff1e660a164e3139
+    revision_gate_paired_changes.csv: f7126ed424b8d49023e30853a043012f8519122c8d6812d1b9223741e28faef7
+    revision_gate_paper_table.tex: 62291004ada1cae2d5a16f5bcde35499b66eddcbd8d0ca263f5928bf667ee9b5
+    revision_gate_real_selector_policy_check.csv: 9b0b1a6b0a279ffb8436f89ca9504b5ace39ec42cb121d4ef9da97e1ce28f658
+    revision_gate_run_metadata.csv: c0fe8b13673f4c110ca703e7fe401c038c7308438b73254d0d62c0f98779e8d5
+    revision_gate_stress_detail.csv: 5b02b96daba4370b724bb5509733cd0f004bbe366dc18c07a818b7b21a828768
+    revision_gate_stress_summary.csv: 732ffdce0102eab2b327de4a69cf6cecd841d204b564e173c53a96d8a4f860e1
+    revision_joint_msvar_coverage.csv: e5c8141050db0e22d9b8bb9ae4aa81a588fb64f4c343ca94723a544462d0827a
+    revision_joint_msvar_detail.csv: 7a42e38d38518dd2af2067f58de1d1c69a2783a93ff3a620ccc951424a8e4d01
+    revision_joint_msvar_paired.csv: 7b9dc60d753641e6f055c1f36886c8c09447a5b68ae535ef90e3288bc5a946b1
+    revision_joint_msvar_starts.csv: 0ce508e96f63e474b66777ca7c04e5ef4d9c951132244dfd9c5e06fd9f7bfb9e
+    revision_joint_msvar_summary.csv: ff5b0f12e9c09bbbc86c667df55dc80efe2f3d77d5c89bb565ae818c08633162
+    revision_real_forward_detail.csv: 1827fc73eb038d754b84adc6030b4b6834c5114cf349228007e8110e4d22ef2a
+    revision_real_forward_origins.csv: b7b2ad22d153d35c33e68c087dc01cdc8e7fcfecf7679b5a8585c66cf2354854
+    revision_real_forward_predictions.csv: 02fc859467ea8c669b603bd8ce15bb11306d951c78502ee82546cde919505b75
+    revision_real_forward_summary.csv: 7287f37ae1424dc4d34dea202c76115c108615a6e83431b6ffaf18eab3d26018
+    revision_real_forward_table.tex: 07ec7df8d8d3ae428a5be85b9023b047dc0e840065b2c182ebbcd7f1484c883b
+    revision_real_paper_table.tex: 095760a27fa390a113558f633687f8760705d5c6df749741ed080822f0f72ddc
+    revision_real_plan.csv: 390f5bf387c90248b733b0ac7886ff5095bd54ec15fb85c05d68303e17696a9d
+    revision_real_segment_detail.csv: 25a2409195f17c99f54bcf4d8724eae587e3cd08c410e4de70253d9d939900e7
+    revision_real_segment_summary.csv: fb7e083a2d6b7a8d307febac2e36b4ec4bbb6725b5b7cb65e04ddd750cf40d6e
+    revision_specialist_coverage.csv: a1d782ed8db16ad9155dd62534d0cc0cd9b28de8fc3c9f4b22bc5ef00c07bcd2
+    revision_specialist_detail.csv: 71253b7b478367e318c1740223c00bcbf555464d45c25d30fcd037f9bb71dce6
+    revision_specialist_paired.csv: dc87ba032fad093201d327664a4b405335644d235c6ce6a47841580f9a13d647
+    revision_specialist_paper_table.tex: 1afb33ccc7e60c33420c9556843482b4e5f2615fe08d95acf4a7d474cca9a36e
+    revision_specialist_summary.csv: a29fe7f04016a7eb7094f44f088a178feaed7df4049b845fa255010b8505d738
+    revision_specialist_timing.csv: 8d5af85b6c45a29938bb70e784096db82e344a4786db4185c936fc14f9101d2c
+    revision_specialist_timing_table.tex: 2cbeec4b878aba00a59afa9160f67c3572a1fd0bafa6bc94a290c5cab0a29ea8
+    stcg_ensemble_b_sensitivity.csv: d3ff3e1be4463ea6c773fb4e754d690edfaa9c5cfe316aebf804b90fce0033b1
+    stcg_ensemble_b_sensitivity_summary.csv: 3dfe584717713641d4c24a808e334a7150b9c259da4beba086659014fd4ec6fe
+    stcg_ensemble_controls_detail.csv: 3d8e8c718c00ca4f8f844bbdab72703b7e9bd9c5a8224eb2f84d5de6f512881d
+    stcg_ensemble_controls_summary.csv: 29a0d9367cf0d8e5903985ae677dcc13ca049421b9ed50e5beb4862c989ae8d4
+    stcg_ensemble_detail.csv: 38d3976bed9ab49b5e94ca49e06889a77518a686c24e0d23c7c5ee320a6a7a03
+    stcg_ensemble_instability.csv: bf9c58cc4f7f21df01b7d90f7cc0d49a13754b402105bb356a11b5e2ab2a9002
+    stcg_ensemble_instability_stats.csv: c70e738d5d704edcf6f2842bfd8d3e70896893a14c309bcbb38acf6e820ab420
+    stcg_ensemble_instability_summary.csv: 6970721365a5b325004e377c93ddd090c95783e06db14c0a772ff723e296dca8
+    stcg_ensemble_paired.csv: 982bd6531ba0dc370bcf67822769bb8ec64b6e85e5d4aa24455eefd17bec8d7d
+    stcg_ensemble_stress_detail.csv: 3cbd8f7f785cb20f5ad79725bfce7ad06556a0ccef4193e76eb27458153b300f
+    stcg_ensemble_stress_paired.csv: 637f8f409d312e7b27c756cbcf91fd31a83de956ecbf4b5fa26407a92ca6a901
+    stcg_ensemble_stress_summary.csv: 6921606c192a5fe681f06ee45a278fab05938636bfb67463f41e695d926bd19d
+    stcg_ensemble_summary.csv: 07aeb9a7321097ce7602f5b4df73c81087adcf13bec2151fd9691c704b3ca4fd
+    stcg_ensemble_table.tex: e84439c9e5c89b7eac38bad8468a6e8ab2239bdf79b7d3eb8418b70f090c80bd
+    stcg_ensemble_variance.csv: fdced6983f5e65c05e6d52ef76acd05cbdf5471897ad153a5b0a1a711102fca2
+    stcg_knob_ablation_aggregators_detail.csv: 47a80de159dd3a6e5d7252fca41a4eab60aab99c50a68158c36e38a7d4c2f066
+    stcg_knob_ablation_aggregators_summary.csv: 039f98933ba3e7d385574ec51cda4d03817f10a2d0ac3e0f7f7d90a4aaf24a54
+    stcg_knob_ablation_features_detail.csv: bc7cf83cbff267784debed395b0a613759f2ce5ac50b4ead9b9328cd81424dc0
+    stcg_knob_ablation_features_summary.csv: 2008d866dd18b4a1aa143b7505b11768bd145ae391353371dc8d34af05d74104
+    stcg_knob_ablation_gates_detail.csv: c62ca11c5e8de1756053cccbc67a3eb06283c8e742cfeb087a5b4877369e7f3e
+    stcg_knob_ablation_gates_summary.csv: db445f1deca5c5cffda34c5adfca5b6cf430ec4bbec97986dfee35e66ad7ec1e
+    stcg_knob_ablation_table.tex: f5f1c9129e08383ad9ac4674ca3cd95758c88ddb7066e3c5e84589ee3dbf9ace
+    stcg_knob_ablation_windows_detail.csv: 5c69085aa7b5dc572ae488d43b55d72db7860847383852a03dea878c8d4901ff
+    stcg_knob_ablation_windows_summary.csv: 8d3190995fa06c23e879be0ce740b5d2855bc3ad74f258edc5aa92e483bd55ee
+    stcg_v1_ablation_detail.csv: 0bda79db7d3a8b4b15860deb1f304a97ed68a2251f1b116c2a2a8bd941e35cea
+    stcg_v1_ablation_summary.csv: 60ab4b8457d82697d00772e9826b44e9d3b3cba1e1ea40470225dc052bc5853c
+    stcg_v1_ablation_table.tex: 5eb03b108052901b2d627b9c6504480eaa7d6458ebc845e26eee8ca227ef60eb
+    stcg_v1_robustness_detail.csv: b5766983e0389c340854f22c2a111714ba273aa372908c295f1a4022268e4f5d
+    stcg_v1_robustness_summary.csv: 01da7a1e0bc89737695fffc4e262153ed0c03559b5f35af195404958fbb95f46
+    stcg_v1_robustness_table.tex: 8086032aa164bfe8cef4027c067a7e0cb5a4f604d26bf770e0add9827705c391
+    stcg_v1_state_diagnostics_detail.csv: 2d328c8ef16a467867c5e0dfdc332b7079fa7e0772327f6b314a414f414cdcb7
+    stcg_v1_state_diagnostics_summary.csv: cfb53d1de1e8b48b202046a7f94b5cdf4a3ce1b3b78cb715d1a3384255fc438e
+    synthetic_all_methods_summary.csv: 638cb144d33b45ec739d7cc4d804e7c02b35e142aa9b14df796177f73cfd1900
+    synthetic_all_methods_table.tex: 966698beb5463d1483d98a9bd7310b41224b57876ea0e820082301271fb10aef
+    synthetic_dynotears_baseline_detail.csv: 236c1691f9166c8a3e99969dfe1a7692f052d2994741270eb56601f678389e75
+    synthetic_dynotears_baseline_summary.csv: 827247719b38297e1981437d3d84e9d1d3cf4fa3ed234e002d9b055c1576003d
+    synthetic_dynotears_baseline_table.tex: 0542b13ad269385a6554ffec2a575780a5e0b5a6f7d20b5752356ef3842ef493
+    synthetic_dynotears_paired_comparison_detail.csv: 8c5bc528355311d02be4d1f96b3e08f9f872f74c62b8e03a1804fd4adaf5a0a8
+    synthetic_dynotears_paired_comparison_summary.csv: 0533293d5899e426bb6d823087de0cdb7350924f085b7b6528a4297298ac0679
+    synthetic_dynotears_paired_comparison_table.tex: 4e63635cd610a36d2f38fb153f53f388bf5edefe9ac4ed7c41c3707b478aa821
+    synthetic_msvar_baseline_detail.csv: b212acc18c4a9138e8c0c451f5516eb06a421fe385b043def3a0a1465e5948cd
+    synthetic_msvar_baseline_summary.csv: 97f8064598479082d59251bee1adbeb50ede0d3dc85ec38f7a62317875b2a418
+    synthetic_msvar_baseline_table.tex: 183663cbdcbc517ce7a1fbe672e82f549d673f46e1d7f0a11d38151c3be9f7c3
+    synthetic_msvar_paired_comparison_detail.csv: 83b922583cbd0608909aad0f9ca55c6d5ea6fac5292545dfc23ba197368854da
+    synthetic_msvar_paired_comparison_summary.csv: 308a15f4b2deae0445110be652d1aecf3c999478ee7a0f51e8b5918844e0c410
+    synthetic_msvar_paired_comparison_table.tex: ccc1449adbd28fa0cc08928d70196b2621ce77a7a9ba4bfe1bedac851c0a1ed9
+    synthetic_neural_granger_baseline_detail.csv: 6bb50c727a369cb5068d7c5474f5f0da65d7abea2fa8d0ea049ecc09a2de50d5
+    synthetic_neural_granger_baseline_summary.csv: 701a7075b1e727c83a81187faaeca7a136c836899273e4ea02e7f7b971d34a8d
+    synthetic_neural_granger_baseline_table.tex: ad234d4f8b7838748d69c3b8cca119ee8cafed0674ff066b461bdd07b8900639
+    synthetic_neural_granger_paired_comparison_detail.csv: c7d841f90d509c5208a9e29166d20750d5170b7bca8dc87273a57bdd7a025809
+    synthetic_neural_granger_paired_comparison_summary.csv: e83396850e4d266e32907011334a56f38cb36214c49fccee300471b215db3931
+    synthetic_neural_granger_paired_comparison_table.tex: 4fe899eeb697395fa84eab33b7042e2187601f30d55c60082c4e757f94575753
+    synthetic_pcmci_baseline_detail.csv: 096f27bae7ab09f758411752d2993012ab327a44038ea55471e9b07ce6715f6b
+    synthetic_pcmci_baseline_summary.csv: 1c7b868bd196607f745660ac7055bf5fa09bc963252c6b624347769d6b09f4f4
+    synthetic_pcmci_baseline_table.tex: c8cb5b1fe6c957a3d3434388227397bd9bb8c9190cd3ee24474af6f3565d550b
+    synthetic_pcmciplus_baseline_detail.csv: 73234e507be35d432eb1c00918ece7aa3034e3ac00565ca3daa7717ac698033b
+    synthetic_pcmciplus_baseline_summary.csv: 69ba1294d0d1acf01b20d1a1d9c74e71654d40878b8178f73b491d0f39c10156
+    synthetic_pcmciplus_baseline_table.tex: 968329d4b7574b8b2f2575805aab5e74f635feae4853a84908c9a08607518f8f
+    synthetic_pcmciplus_paired_comparison_detail.csv: 28795f70e002a218ba111b99941ac7a470e0ecc45a4a041e56bb871c8aa8564b
+    synthetic_pcmciplus_paired_comparison_summary.csv: 89b3dfdb230e7979781f6b90040677f65036bde3c362a4f06b8ef7680a269dd3
+    synthetic_pcmciplus_paired_comparison_table.tex: 1ccc65d50321c53d8e09f985c33495d5c11e9647e27e0cf11d2f76ed533ee181
+    synthetic_postpilot_all_methods_detail.csv: b8de71f1c91dfcc66ab70a9dae92c999ab0adc957f3aa7f1d02534cc99a402fb
+    synthetic_postpilot_all_methods_summary.csv: 13fd78d723b985c3fd092eaf9ffdab7cd9b74e5776e3417ef4aedfffdb0d4643
+    synthetic_postpilot_paired_summary.csv: cd3f7ec06273d05c9149b7d81bbd9640026725bc88e9cb5a28409ea7ce669e94
+    synthetic_recovery_detail.csv: b5d5c502cea2cad52092512e75d1f305c12a37e24e1a02e1adb4bcbd95b1ecbf
+    synthetic_recovery_paired_comparison_detail.csv: abf5d62c7070bb926ad6b5e218a153716212bbbe04100b8ad66e5fd63b296863
+    synthetic_recovery_paired_comparison_summary.csv: dede10ef27eb6a791cc342ed9405de11c7f93b3b1937c4df8ba5acc24203adf4
+    synthetic_recovery_paired_comparison_table.tex: 24bfd4fcafc503193b9be4e7663c3db3332c392dc09827022f9976dffe841ac1
+    synthetic_recovery_paired_granger_comparison_detail.csv: e70e71baa095e57de269f878dd44b9f89a7d5e309d711a23f42486e4fe428a32
+    synthetic_recovery_paired_granger_comparison_summary.csv: 7a027c4849746f6d41d04e642c739693cc2c008e7573cd43207f79639ca6be74
+    synthetic_recovery_paired_granger_comparison_table.tex: 6248ba1e8319a20af93651c3f6b7f9e9657056cf75739a63a98b2578f8bb5c40
+    synthetic_recovery_paired_pcmci_comparison_detail.csv: ebf14009182d683726a6b8a5bd86a80124a54c8ad0384c2800638dfd1bbcfd43
+    synthetic_recovery_paired_pcmci_comparison_summary.csv: 04663109bebfd2e344c569730db4a3d7f7d57d4231fc663591ccec107707e328
+    synthetic_recovery_paired_pcmci_comparison_table.tex: 4750a61822d2fb6e8eff94916414eaa42a80b133eed85912efc2bcca777247df
+    synthetic_recovery_summary.csv: 4ef4056c6c78f4377ce78ec0c97e0a7850c616931d86de662f6d895f023c6c8c
+    synthetic_recovery_table.tex: ecc861854452cfdc8c83ea79090f18ba4ea29bfbb2c10014beffd1d6c1b96c82
+    synthetic_rpcmci_baseline_detail.csv: 2769f55650a78bb37a5ba0ea423cc7cbc661de185a7f7cc29012e34c7d4fbfa1
+    synthetic_rpcmci_baseline_summary.csv: de31f29e908729ff5d5312b3d17c418cb92e45443dc2773146bb8da1ef059b0d
+    synthetic_rpcmci_baseline_table.tex: b191a312559fa00860ad810c652791a0197885e56b239b9c7f0761b69c34ff67
+    synthetic_rpcmci_paired_comparison_detail.csv: ab493bb56d0e74664efb42c6430e4ba624d64212c3315dd83e0a8d9fe8d0e48e
+    synthetic_rpcmci_paired_comparison_summary.csv: dc51ee8d409b550468a455959231d1ba17434222de77fb1484845de93f57bcd5
+    synthetic_rpcmci_paired_comparison_table.tex: 291adeb9f05198ac40f346adced11869c83281160705e5999848541a4cfb7014
+    synthetic_rpcmci_two_sided_summary.csv: 887f489b2f0b304a1aae2713eab13b8c6a74b5d12284cce52b30a44d624319bd
+    synthetic_state_oracle_detail.csv: 8f21271e96a1a5ae6f211b9e953a40a4f0346b4ff2d7ea00cad24520e7aa968f
+    synthetic_state_oracle_summary.csv: 7aa9fa0f2a29a9b0aeddc10a831123a2f59a1721ccf9ea0fb9d3a29d8c15a743
+    synthetic_state_oracle_table.tex: 50e025caddc0c3a3946e2a70fc8fa1b4c07a591dd24e7472d5fa4609fdf39bac
+    synthetic_switch_difficulty_detail.csv: eb84beca0ed06e40eb169cc57f09b36c272fa739859fdf0461a07bd077f32689
+    synthetic_switch_difficulty_summary.csv: 911508b3f08ab6762a12e383185ed9a0c1ac1cae09a259f984ec5fbd01ebbe80
+    synthetic_switch_difficulty_table.tex: b9f8cb5937b42f079ce0df8c959914d964dc455862fad06d36ac3cc9515fd7a2
+    synthetic_switching_paired_edge_auc_table.tex: 88336023fc4047e0d8b509cd7973a8eb5c7ae9bbbf30d82e4e8634074116d55e
+    synthetic_switching_paired_matrix.csv: 56ccccab24200520c88405f57497284b30e1603c705073c9a9c4072d9536e423
+    UCIHARWindowSignals_state_label_alignment_detail.csv: 90986059114fd51dfb97ca5d99ce8a9e4c2d420853606c907e83039898780ca8
+    UCIHARWindowSignals_state_label_alignment_summary.csv: 21711dafbdf9263057582da2b52819c34e91f6082fd41c973c5b7b725ddcdb84
+    UCIHARWindowSignals_state_threshold_forecasting_detail.csv: ddd354c7a08cbf9982599268caa8eea5c7e44fa8b69981af9acafa97749c1c6b
+    UCIHARWindowSignals_state_threshold_forecasting_summary.csv: fddb2af611fdf6d4f9a667c86b9265e61d134a0573fa1a114b72f8583c906a44
+reproduction:
+  n_pairs: 49
+  n_match: 49
+  n_drift: 0
+  n_no_detail: 0

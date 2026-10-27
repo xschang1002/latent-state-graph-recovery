@@ -1,0 +1,30 @@
+Boundary evaluation depends on the amplitude reference and zero-score
+convention as well as the locations of changes. We retain positive-change
+AP and add standard non-interpolated AP, which includes the final zero-score
+group. For each edge their difference is
+$\pi_{\rm boundary}(1-R_+)$, where $R_+$ is the fraction of true boundary
+slots receiving positive change strength. Figure~\ref{fig:localisation}
+compares both AP conventions and two fixed q95 references. Supplement
+Section~S19 reports the full fixed quantile grid without selecting a best F1.
+
+The sensitivity changes the interpretation of the original boundary result.
+At $D=600$ in Study B, hard-minus-raw standard-AP changes are
+$+0.140$, $+0.154$ and $+0.077$ for fixed, random and irregular schedules;
+their pointwise intervals are above zero. Positive-change AP instead gives
+$+0.068$, $+0.074$ and $-0.022$, with intervals crossing zero.
+In B's fixed schedule, the q95 F1 contrast is $-0.077$
+$[-0.093,-0.060]$ with the common raw-amplitude threshold, but
+$+0.223$ $[0.178,0.268]$ with each method's own q95 reference.
+In C's central $300/150$ grid at $D=600$, the corresponding F1 contrasts
+are $-0.100$ $[-0.122,-0.079]$ and $+0.150$ $[0.093,0.206]$;
+its standard-AP contrast is $+0.040$ $[-0.020,0.104]$.
+
+Thus the original negative F1 contrasts diagnose performance at a shared
+amplitude operating point, not a demonstrated loss of boundary locations.
+Method-relative quantiles remove uniform positive rescaling but are not an
+independent equal-false-alarm calibration; exact zero ties still matter.
+Ordinary shrinkage preserves both AP definitions and method-relative F1 on
+these outputs, while it can lower common-threshold F1. All stable-present
+and stable-absent rates and all fixed operating points remain reported.
+Neither temporal state AUROC nor a single boundary convention identifies
+all these aspects of temporal recovery.

@@ -1,0 +1,47 @@
+{
+  "figures": [
+    "fig_boundary_sensitivity",
+    "fig_threshold_curves",
+    "fig_residual_pairs"
+  ],
+  "new_fits": 0,
+  "new_simulations": 0,
+  "output_sha256": {
+    "display_source.csv": "29c270eefc795ba68c15ea4e0baaa1c79d7c9c25beed31b1ad11376d7cc11e4b",
+    "fig_boundary_sensitivity.pdf": "281f30e88b048a7cd30b5f286e2e227ad43a47c436921b4bd9171c19ee6acf2e",
+    "fig_boundary_sensitivity.png": "fc8c9c59d5579636f4088a1273804d56b80f2cce84b46cc91ecef5581e9f0469",
+    "fig_residual_pairs.pdf": "9753f6385c5d5ab7050eeae57bf3f92c4c2ef355b0d2171969d61f920e49c09b",
+    "fig_residual_pairs.png": "6dd3af6ae93793118af8f4a44ba040f35db5b782a1f10a1b8a8e0ae9ef592ee5",
+    "fig_threshold_curves.pdf": "72e22aaf8a78b1982b915e1a0f2390be9c7bef44e669216244a2c846e5ed675d",
+    "fig_threshold_curves.png": "12ec458470402b7687db315d643216ac4c18356b67c406849d0f97944cf72421",
+    "tab_ap_sensitivity.tex": "38f9bc03ba26a81adc09fcb2ad066ef29eaa70e15390f55c664a0cbb687773db",
+    "tab_external_contrasts.tex": "4e336d2d1fdca31e0e5ccaa8b32d9b25c66370b19cb2a2cf3af91f0d49db1bfe",
+    "tab_external_framework.tex": "e90d7046245b4a21a86dd8e90f788c35418f9da72ee253359acf740732129ab6",
+    "tab_residual_pairs.tex": "05f679dce0a66814ff841bf315d9574ae94e64f827f50e257375264443ef48ab"
+  },
+  "scope": "Retained metric sensitivity, diagnostic residual pairs and a separately fitted PELT+VAR adapter",
+  "source_sha256": {
+    "results/information_sciences/evaluation_assets/results_boundary.tex": "d115c474f16ffb55c1412b035ec070f9406252a3605ddcbc7d23176c57b4ac2e",
+    "results/information_sciences/evaluation_assets/results_external.tex": "cc63c267b67e22c62f8266293f704e186c02fa814100f2114b85f31be95378d1",
+    "results/information_sciences/evaluation_assets/results_residual.tex": "1eac6a46a18293c6295a4ca0e1dbd3351f78db7e281b41d1559058da1e132b9b",
+    "results\\information_sciences\\boundary_sensitivity\\ap_paired_vs_raw.csv": "dceb64c17bd6a5bece7873ecd022be8a6c5f02f9622f826d8e17674cc854d027",
+    "results\\information_sciences\\boundary_sensitivity\\ap_summary.csv": "9939e59d5722e863f2284a54085e7a5b8ea70dcc2dab30947e649300e452f0db",
+    "results\\information_sciences\\boundary_sensitivity\\diagnostics.json": "4369e5dbaf8dc8231677cbd41906acbf6cf200733676eb136a47fa4bc2758356",
+    "results\\information_sciences\\boundary_sensitivity\\residual_paired_vs_hard.csv": "646550192d4c81aa3a3dc1836f26c2b786042317771bf3868042885564083779",
+    "results\\information_sciences\\boundary_sensitivity\\residual_summary.csv": "c742c41d05b78d7bcf3c72bedc8e8d74a8b4272b5a44bfd3eb1c46d0361c6741",
+    "results\\information_sciences\\boundary_sensitivity\\threshold_paired_vs_raw.csv": "24e9475345397a35231dc52326aa4fd0305e68069a12001465b4cfb5542a4e4c",
+    "results\\information_sciences\\boundary_sensitivity\\threshold_summary.csv": "0e475bd1bdf4e515c5b1ec1f6440278f6910003dd0d8b0d0d56487fb9d2d3eb5",
+    "results\\information_sciences\\segmentation_validation\\contrasts.csv": "d6d32916b64172376a55d3e318277af31c530255937822a39e8c6be0909b43f3",
+    "results\\information_sciences\\segmentation_validation\\diagnostics.json": "809f16c819588d646bab48594c2121b4a17b0b0f4a5c77c29aa5cfd3d4fabace",
+    "results\\information_sciences\\segmentation_validation\\summary.csv": "1f769d53fbb378174e6190aa60c5c824f17c042dcf168baddecfb11ec6698f05",
+    "tools/build_evaluation_sensitivity_assets.py": "fba9d96f5de60bab9ba0ba11b888aa2abed40b423eee4e4ef86c8040fa9e67ba",
+    "tools/build_reviewer_controls_assets.py": "9729ddf7128f34e7c04a03e590fc7231cced39d89f8a91f6bfe84469cc3516d1"
+  },
+  "tables": [
+    "tab_external_framework",
+    "tab_ap_sensitivity",
+    "tab_residual_pairs",
+    "tab_external_contrasts"
+  ],
+  "uncertainty": "95% pointwise paired-repeat percentile bootstrap; fixed grid; no best-q selection"
+}

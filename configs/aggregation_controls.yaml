@@ -1,0 +1,49 @@
+# Aggregation controls for WP3.
+#
+# All methods consume the same window-level Lasso scores. Nothing is re-fit
+# except `oracle_refit`, which is labelled separately because it uses the true
+# changepoints to re-estimate on pure segments and is a different upper bound.
+
+settings:
+  switching_core:
+    control: null
+    timesteps: 1200
+    max_lag: 3
+    edge_prob: 0.18
+    switch_period: 300
+    overlap: 0.5
+    noise_scale: 0.10
+  state_specific:
+    control: null
+    timesteps: 1200
+    max_lag: 3
+    edge_prob: 0.18
+    switch_period: 300
+    overlap: 0.0
+    noise_scale: 0.10
+  shared_graph:
+    control: same_support
+    timesteps: 1200
+    max_lag: 3
+    edge_prob: 0.18
+    switch_period: 300
+    overlap: 1.0
+    noise_scale: 0.10
+  stationary:
+    control: stationary
+    timesteps: 1200
+    max_lag: 3
+    edge_prob: 0.18
+    switch_period: 300
+    overlap: 0.5
+    noise_scale: 0.10
+
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+misassignment: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+random_partition_draws: 20
+bag_draws: 20
+n_states: 2
+window:
+  size: 300
+  stride: 150

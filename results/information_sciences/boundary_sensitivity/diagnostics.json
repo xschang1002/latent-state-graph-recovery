@@ -1,0 +1,11 @@
+{
+  "AP_identity_max_gap": 1.1102230246251565e-16,
+  "ap_rows": 15000,
+  "cases": 1000,
+  "new_fits": 0,
+  "new_simulations": 0,
+  "residual_identity_max_gap": 1.1102230246251565e-16,
+  "residual_rows": 6000,
+  "retained_failures": 0,
+  "threshold_rows": 150000
+}

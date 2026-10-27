@@ -1,0 +1,6 @@
+dataset,seed,n_windows,true_state_count,inferred_state_count,adjusted_rand,aligned_accuracy,mean_label_purity,true_label_counts,inferred_state_counts,state_mapping
+OccupancySensors,0,95,2,1,0.0,0.7368421052631579,0.8879298245614035,0:70;1:25,0:95,"{""0"": ""0""}"
+OccupancySensors,1,95,2,1,0.0,0.7368421052631579,0.8879298245614035,0:70;1:25,0:95,"{""0"": ""0""}"
+OccupancySensors,2,95,2,1,0.0,0.7368421052631579,0.8879298245614035,0:70;1:25,0:95,"{""0"": ""0""}"
+OccupancySensors,3,95,2,1,0.0,0.7368421052631579,0.8879298245614035,0:70;1:25,0:95,"{""0"": ""0""}"
+OccupancySensors,4,95,2,1,0.0,0.7368421052631579,0.8879298245614035,0:70;1:25,0:95,"{""0"": ""0""}"

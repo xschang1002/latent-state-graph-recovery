@@ -1,0 +1,34 @@
+{
+  "already_completed_fits": 1202,
+  "amendment_type": "Scheduling only after natural completion of all previous active fits",
+  "drain_verification": {
+    "preserved_worker_completions": [
+      "stress_ed9ac630f7cb_seed110_regimepcmci",
+      "stress_ed9ac630f7cb_seed104_regimepcmci",
+      "stress_ed9ac630f7cb_seed113_regimepcmci",
+      "stress_b810a66badd2_seed113_regimepcmci",
+      "stress_ba66e441719f_seed105_regimepcmci",
+      "stress_75b1de2443e7_seed106_regimepcmci",
+      "stress_ba66e441719f_seed104_regimepcmci",
+      "stress_1cd64b6fef02_seed111_regimepcmci"
+    ],
+    "prior_controller": 151452
+  },
+  "estimation_runner_sha256": "8d9dc22c3ef74bd4bcac0df5f9e60a393ffc0ae1cc5157f00b0a826dc777cea3",
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "reason": "Other heavy experiments completed; parent authorized up to 16 workers on 24 logical CPUs",
+  "recorded_at_utc": "2026-09-13T14:10:59.539373+00:00",
+  "scheduling_tool_sha256": "785c477cb3faab55dfacdc4e53598deb40ce4014027b6b56391daf30eb367381",
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "LOKY_MAX_CPU_COUNT": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "timing_limit": "These stress times remain concurrent-load descriptions; dedicated timing still requires one worker on a quiet machine",
+  "unchanged": "Frozen protocol, all input generation, seeds, method parameters/budgets, per-fit threads, timing boundary, timeout, metrics and statistical procedures",
+  "workers": 16
+}

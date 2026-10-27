@@ -1,0 +1,3 @@
+# Source/input/output manifests certify exact bytes, including line endings.
+# Preserve the published artifact on every checkout platform.
+* -text

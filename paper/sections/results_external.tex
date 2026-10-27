@@ -1,0 +1,22 @@
+A segmentation-and-refit framework exhibits a related separation between
+pooled and temporal gains (Table~\ref{tab:external-framework}). On Study C's
+30 paired repeats at each duration and the $300/150$ grid, penalised PELT
+partitions the raw window features into contiguous segments. A VAR-Lasso
+model is then fitted independently on each non-overlapping segment range.
+This comparison uses our graph-estimation adapter to the external change-point
+algorithm; it estimates segment count and uses neither recurrent K-means
+grouping nor the acceptance gate.
+
+Relative to raw windows, PELT plus VAR increases pooled AUROC by $+0.013$
+$[0.006,0.020]$ at $D=300$ and $+0.008$ $[0.001,0.014]$ at
+$D=600$. Within-edge temporal AUROC differences are $+0.005$
+$[-0.020,0.027]$ and $-0.006$ $[-0.020,0.008]$, leaving the temporal
+comparison inconclusive at both durations. At $D=600$, positive-change AP
+gives $-0.125$ $[-0.205,-0.044]$ while standard AP gives $-0.011$
+$[-0.067,0.048]$. Thus both the evaluation target and zero-score convention
+affect the comparison outside recurrent clustering.
+
+All 60 cases and 644 segment refits converge. The fixed configuration yields
+9--11 segments on 23 windows, reaching the 11-segment minimum-length cap in
+45 cases. Supplement Section~S6 provides the settings, counts and paired
+results, alongside the distinct auxiliary seven-window segmentation study.

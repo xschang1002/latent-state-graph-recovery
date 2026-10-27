@@ -1,0 +1,16 @@
+\begin{tabular}{lcc}
+\toprule
+Method & pooled temporal AUROC & $\mathrm{T\!-\!AUC}_{\Delta}$ \\
+\midrule
+Window mean & 0.799 & 0.500 \\
+Window max & 0.782 & 0.500 \\
+Bagged mean & 0.797 & 0.500 \\
+Raw window (no grouping) & 0.728 & 0.713 \\
+Random balanced & 0.774 & 0.563 \\
+K-means hard & 0.784 & 0.660 \\
+Temporal DP & 0.765 & 0.544 \\
+Oracle label & 0.805 & 0.788 \\
+\midrule
+Static ceiling $\mathrm{AUC}^*_{\mathrm{static}}$ & \multicolumn{2}{c}{0.979} \\
+\bottomrule
+\end{tabular}

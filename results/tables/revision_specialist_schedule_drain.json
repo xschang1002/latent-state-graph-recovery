@@ -1,0 +1,97 @@
+{
+  "child_termination_allowed": false,
+  "controller_action": "Suspend only controller, enumerate stable direct children, terminate only controller; leave every fit worker running naturally",
+  "old_controller_pid": 151452,
+  "old_status": {
+    "active": [
+      {
+        "elapsed_seconds": 414.44259890000103,
+        "job": "stress_ed9ac630f7cb_seed110_regimepcmci",
+        "pid": 164600
+      },
+      {
+        "elapsed_seconds": 412.62686560000293,
+        "job": "stress_ed9ac630f7cb_seed104_regimepcmci",
+        "pid": 139668
+      },
+      {
+        "elapsed_seconds": 302.4853744999855,
+        "job": "stress_ed9ac630f7cb_seed113_regimepcmci",
+        "pid": 166676
+      },
+      {
+        "elapsed_seconds": 282.34591069997987,
+        "job": "stress_b810a66badd2_seed113_regimepcmci",
+        "pid": 155964
+      },
+      {
+        "elapsed_seconds": 138.37850089999847,
+        "job": "stress_ba66e441719f_seed105_regimepcmci",
+        "pid": 149092
+      },
+      {
+        "elapsed_seconds": 121.72037240001373,
+        "job": "stress_75b1de2443e7_seed106_regimepcmci",
+        "pid": 166796
+      },
+      {
+        "elapsed_seconds": 83.02372820000164,
+        "job": "stress_ba66e441719f_seed104_regimepcmci",
+        "pid": 166688
+      },
+      {
+        "elapsed_seconds": 36.07023989997106,
+        "job": "stress_1cd64b6fef02_seed111_regimepcmci",
+        "pid": 147636
+      }
+    ],
+    "calibration": false,
+    "completed_jobs": 162,
+    "controller_pid": 151452,
+    "elapsed_seconds": 762.7624114000355,
+    "pending_jobs": 1130,
+    "phase": "stress",
+    "planned_jobs": 1300,
+    "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+    "updated_at_utc": "2026-09-13T12:52:28.896803+00:00",
+    "workers": 8
+  },
+  "protocol_hash": "49c408a3e907ccc46e8bdf69b417e130a4fb6c3e5a99dd48aba7982658bf9568",
+  "reason": "Scheduling-only change to 16 workers after other heavy experiments completed; parent authorized safe controller drain",
+  "recorded_at_utc": "2026-09-13T12:52:29.223120+00:00",
+  "running_children_to_drain": [
+    {
+      "name": "python.exe",
+      "pid": 164600
+    },
+    {
+      "name": "python.exe",
+      "pid": 139668
+    },
+    {
+      "name": "python.exe",
+      "pid": 166676
+    },
+    {
+      "name": "python.exe",
+      "pid": 155964
+    },
+    {
+      "name": "python.exe",
+      "pid": 149092
+    },
+    {
+      "name": "python.exe",
+      "pid": 166796
+    },
+    {
+      "name": "python.exe",
+      "pid": 166688
+    },
+    {
+      "name": "python.exe",
+      "pid": 147636
+    }
+  ],
+  "target_workers": 16
+}

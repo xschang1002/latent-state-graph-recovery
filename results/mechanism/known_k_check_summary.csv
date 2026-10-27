@@ -1,0 +1,5 @@
+setting,protocol,k_true,k_candidate,n,k_hat,accepted,union_auroc,regime_auprc,state_ari
+stationary,gate_stress_wrong_candidate,1,2,20,2.0,1.0,0.9078263552068571,0.7749666604028871,0.0
+stationary,track1_known_k,1,1,20,1.0,0.0,0.8926930275931293,0.7674471176437166,1.0
+switching_core,track1_known_k,2,2,20,2.0,1.0,0.8005870071245361,0.5868266011683627,0.29185435435435436
+switching_core,under_specified_candidate,2,1,20,1.0,0.0,0.8044259160336766,0.5427780401189073,0.0

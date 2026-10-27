@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<artifact>/scripts/run_revision_specialist_stress.py", line 552, in <module>
+    main()
+  File "<artifact>/scripts/run_revision_specialist_stress.py", line 536, in main
+    worker(args.output_dir, json.loads(args.worker_job))
+  File "<artifact>/scripts/run_revision_specialist_stress.py", line 294, in worker
+    atomic_json(result_path(output_dir, job), row)
+  File "<artifact>/scripts/run_revision_specialist_stress.py", line 62, in atomic_json
+    temporary.write_text(json.dumps(payload, indent=2, sort_keys=True, allow_nan=False) + "\n", encoding="utf-8")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "<python-runtime>/Lib/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "<python-runtime>/Lib/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "<python-runtime>/Lib/json/encoder.py", line 398, in _iterencode_dict
+    yield _floatstr(value)
+          ^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib/json/encoder.py", line 240, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan

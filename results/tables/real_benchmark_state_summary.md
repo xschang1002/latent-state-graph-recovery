@@ -1,0 +1,49 @@
+# Real Benchmark State Summary
+
+| Dataset | Seed | Windows | States | Dominant Fraction | Counts |
+|---|---:|---:|---:|---:|---|
+| AReMActivities | 0 | 197 | 2 | 0.741 | 0:51;1:146 |
+| AReMActivities | 1 | 197 | 2 | 0.741 | 0:146;1:51 |
+| AReMActivities | 2 | 197 | 2 | 0.741 | 0:51;1:146 |
+| AReMActivities | 3 | 197 | 2 | 0.741 | 0:51;1:146 |
+| AReMActivities | 4 | 197 | 2 | 0.741 | 0:51;1:146 |
+| BeijingPM25 | 0 | 163 | 1 | 1.000 | 0:163 |
+| BeijingPM25 | 1 | 163 | 1 | 1.000 | 0:163 |
+| BeijingPM25 | 2 | 163 | 1 | 1.000 | 0:163 |
+| BeijingPM25 | 3 | 163 | 1 | 1.000 | 0:163 |
+| BeijingPM25 | 4 | 163 | 1 | 1.000 | 0:163 |
+| ETTh1 | 0 | 81 | 2 | 0.654 | 0:53;1:28 |
+| ETTh1 | 1 | 81 | 2 | 0.716 | 0:58;1:23 |
+| ETTh1 | 2 | 81 | 2 | 0.728 | 0:59;1:22 |
+| ETTh1 | 3 | 81 | 2 | 0.728 | 0:59;1:22 |
+| ETTh1 | 4 | 81 | 2 | 0.728 | 0:59;1:22 |
+| ETTh2 | 0 | 81 | 1 | 1.000 | 0:81 |
+| ETTh2 | 1 | 81 | 1 | 1.000 | 0:81 |
+| ETTh2 | 2 | 81 | 1 | 1.000 | 0:81 |
+| ETTh2 | 3 | 81 | 1 | 1.000 | 0:81 |
+| ETTh2 | 4 | 81 | 1 | 1.000 | 0:81 |
+| ETTm1 | 0 | 325 | 1 | 1.000 | 0:325 |
+| ETTm1 | 1 | 325 | 1 | 1.000 | 0:325 |
+| ETTm1 | 2 | 325 | 1 | 1.000 | 0:325 |
+| ETTm1 | 3 | 325 | 1 | 1.000 | 0:325 |
+| ETTm1 | 4 | 325 | 1 | 1.000 | 0:325 |
+| ETTm2 | 0 | 325 | 1 | 1.000 | 0:325 |
+| ETTm2 | 1 | 325 | 1 | 1.000 | 0:325 |
+| ETTm2 | 2 | 325 | 1 | 1.000 | 0:325 |
+| ETTm2 | 3 | 325 | 1 | 1.000 | 0:325 |
+| ETTm2 | 4 | 325 | 1 | 1.000 | 0:325 |
+| HydraulicSystems | 0 | 617 | 2 | 0.512 | 0:316;1:301 |
+| HydraulicSystems | 1 | 617 | 2 | 0.520 | 0:321;1:296 |
+| HydraulicSystems | 2 | 617 | 2 | 0.514 | 0:317;1:300 |
+| HydraulicSystems | 3 | 617 | 2 | 0.514 | 0:300;1:317 |
+| HydraulicSystems | 4 | 617 | 2 | 0.514 | 0:300;1:317 |
+| OccupancySensors | 0 | 95 | 1 | 1.000 | 0:95 |
+| OccupancySensors | 1 | 95 | 1 | 1.000 | 0:95 |
+| OccupancySensors | 2 | 95 | 1 | 1.000 | 0:95 |
+| OccupancySensors | 3 | 95 | 1 | 1.000 | 0:95 |
+| OccupancySensors | 4 | 95 | 1 | 1.000 | 0:95 |
+| UCIHARWindowSignals | 0 | 48 | 1 | 1.000 | 0:48 |
+| UCIHARWindowSignals | 1 | 48 | 1 | 1.000 | 0:48 |
+| UCIHARWindowSignals | 2 | 48 | 1 | 1.000 | 0:48 |
+| UCIHARWindowSignals | 3 | 48 | 1 | 1.000 | 0:48 |
+| UCIHARWindowSignals | 4 | 48 | 1 | 1.000 | 0:48 |

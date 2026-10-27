@@ -1,0 +1,9 @@
+{
+  "D": 300,
+  "full_finite": true,
+  "input_sha256": "0d98f2869fb09ca703332af4743a10e697e6656b32b949f2f4a6e66788e30b01",
+  "observed_finite": true,
+  "seed": 70004,
+  "sha256": "9462fe65d12834c709fe13c502cde927d4e8c8b674c7728072d52d27e5235c8a",
+  "simulation_seconds": 0.04623520001769066
+}
