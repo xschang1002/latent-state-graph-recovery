@@ -19,7 +19,7 @@ gives the executable routes.
 
 The source repository is
 [latent-state-graph-recovery](https://github.com/xschang1002/latent-state-graph-recovery).
-[Release v2026.10.27](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27)
+[Release v2026.10.27.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1)
 provides the complete `information_sciences_reproducibility.zip`, article and
 supplement PDFs, a compact submission-files ZIP, and SHA-256 checksums. No DOI
 has been assigned. GitHub's automatically generated source ZIP is a different
@@ -40,8 +40,9 @@ Hefei, Anhui 230039, China
 
 The author confirms no formal previous publication, no overlapping submission,
 no external funding and no competing interests. No ORCID, degree or academic
-rank is inferred. AI assistance in code, testing, figures and manuscript
-preparation is disclosed; scientific responsibility remains with the author.
+rank is inferred. The author discloses use of OpenAI's ChatGPT and Codex for
+programming, English translation, LaTeX formatting corrections and data analysis,
+and retains responsibility for the manuscript.
 
 ## Final journal-system checks
 

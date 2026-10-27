@@ -10,7 +10,7 @@ of edges at the times they are active. Pooled edge ranking, within-edge state
 discrimination and adjacent-window boundary detection are evaluated separately.
 `docs/research_guide.md` maps the scientific questions and results. The archive's
 main article and supplement are `paper/main.pdf` and `paper/supplement.pdf`, with
-TeX sources beside them. The [versioned public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27)
+TeX sources beside them. The [versioned public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1)
 provides the complete `information_sciences_reproducibility.zip`, checksums and
 the manuscript PDFs. Download that named archive for the complete verified
 artifact; GitHub's automatically generated source ZIP is a different container.
@@ -287,7 +287,7 @@ contents of a repeatedly rebuilt ZIP filename.
 
 The public source repository is
 [latent-state-graph-recovery](https://github.com/xschang1002/latent-state-graph-recovery),
-with the complete archive in release `v2026.10.27`. No DOI has been assigned.
+with the complete archive in release `v2026.10.27.1`. No DOI has been assigned.
 Submission metadata and the remaining journal-system steps are in
 `submission_materials/information_sciences/README.md`. A GitHub release does not
 constitute submission to the journal.
