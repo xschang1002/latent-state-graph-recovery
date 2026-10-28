@@ -61,6 +61,8 @@ CANONICAL_CI_SOURCES = tuple(BASE + p for p in (
 TEMPORAL_DP_SOURCE = "results/revision2/temporal_delta_summary.csv"
 SCHEDULES = ("fixed_phase", "random_phase", "irregular")
 SCHEDULE_LABELS = {"fixed_phase": "Fixed", "random_phase": "Random", "irregular": "Irregular"}
+DERIVED_TABLES = ("tab_study_a_combined.tex", "tab_ap_sensitivity_ap.tex", "tab_ap_sensitivity_f1.tex")
+STUDY_A_DETAIL = BASE + "duration_confirmation/detail.csv"
 
 
 def one(frame, **where):
@@ -308,6 +310,109 @@ def transform_table(source, text):
     return text.rstrip() + "\n"
 
 
+def data_cells(text):
+    """Return intact printed cells; no float parsing or rounding is involved."""
+    return [line.rstrip().removesuffix(r"\\").rstrip().split(" & ")
+            for line in text.splitlines() if " & " in line and line.rstrip().endswith(r"\\")]
+
+
+def compact_table_layout(name, text):
+    """Wrap labels/intervals without changing their numeric token sequence."""
+    before = numeric_tokens(text)
+    if name == "tab_external_framework.tex":
+        text = text.replace("Pooled AUROC & Within-edge &", r"\shortstack{Pooled\\AUROC} & \shortstack{Within-edge\\AUROC} &")
+    elif name == "tab_residual_pairs.tex":
+        text = text.replace("Forced hard & Residual & Within $\\Delta$ & Cross $\\Delta$ & Total $\\Delta$",
+            r"\shortstack{Forced\\hard} & Residual & \shortstack{Within-group\\$\Delta$} & \shortstack{Cross-group\\$\Delta$} & \shortstack{Total\\$\Delta$}")
+        text = re.sub(r"\$([-+]?[0-9.]+)\\;\[([^\]]+)\]\$",
+            lambda m: r"\shortstack[r]{$" + m[1] + r"$\\$[" + m[2] + r"]$}", text)
+    elif name == "tab_controls.tex":
+        for old, new in (("structure change", r"\shortstack[l]{structure\\change}"),
+                         ("mechanism change", r"\shortstack[l]{mechanism\\change}"),
+                         ("nuisance change", r"\shortstack[l]{nuisance\\change}"),
+                         ("Switching (reference)", r"\shortstack[l]{Switching\\(reference)}"),
+                         ("Lag AUROC", r"\shortstack{Lag\\AUROC}"),
+                         ("Pair AUROC", r"\shortstack{Pair\\AUROC}"),
+                         ("Regime AUPRC", r"\shortstack{Regime\\AUPRC}"),
+                         ("Pooled AUROC", r"\shortstack{Pooled\\AUROC}"),
+                         ("Assignment ARI", r"\shortstack{Assignment\\ARI}")):
+            text = text.replace(old, new)
+    if numeric_tokens(text) != before:
+        raise AssertionError("Table wrapping changed printed numeric tokens: " + name)
+    return text
+
+
+def combined_study_a_table(root):
+    references = BASE + "tab_main_results.tex"
+    controls = BASE + "reviewer_assets/tab_score_controls.tex"
+    ref = {row[0]: row[1:] for row in data_cells((root / references).read_text(encoding="utf-8"))[2:]}
+    ctl = {row[0]: row[1:] for row in data_cells((root / controls).read_text(encoding="utf-8"))[1:]}
+    expected_ref = {"Raw windows", "Static mean", "Native hard", "Forced hard", "Matched random", "Oracle labels"}
+    expected_ctl = {"Raw", "Hard", "Shrink 0.25", "Shrink 0.5", "Shrink 0.75", "Residual 0.25", "Residual 0.5", "Residual 0.75"}
+    if set(ref) != expected_ref or set(ctl) != expected_ctl:
+        raise ValueError("Combined Study A input row inventory differs")
+    if (ref["Native hard"] != ref["Forced hard"] or ref["Raw windows"] != ctl["Raw"]
+            or ref["Forced hard"] != ctl["Hard"]):
+        raise ValueError("Combined Study A de-duplication requires identical reference cells")
+    detail = pd.read_csv(root / STUDY_A_DETAIL, float_precision="round_trip")
+    main = detail[detail.scorer == "lasso"]
+    if set(main.D) != {300, 600}:
+        raise ValueError("Combined Study A duration population differs")
+    for duration in (300, 600):
+        selected = main[(main.D == duration) & (main.method == "native_hard")]
+        if len(selected) != 100 or selected.repeat_seed.nunique() != 100 or not selected.hard_gate_accepted.all():
+            raise ValueError("Combined hard row is valid only when all Study A gates accept")
+        paired = main[(main.D == duration) & main.method.isin(["native_hard", "forced_hard"])].pivot(
+            index="repeat_seed", columns="method", values=["pooled_temporal_auroc", "temporal_delta_auroc"])
+        for metric in ("pooled_temporal_auroc", "temporal_delta_auroc"):
+            if not np.array_equal(paired[metric].native_hard, paired[metric].forced_hard, equal_nan=True):
+                raise ValueError("Combined hard row requires identical unrounded Study A metrics")
+    rows = [r"\begin{tabular}{lrrrr}", r"\toprule",
+        r" & \multicolumn{2}{c}{$D=300$} & \multicolumn{2}{c}{$D=600$} \\",
+        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}",
+        r"Emission & Pooled & Within-edge & Pooled & Within-edge \\", r"\midrule",
+        r"\multicolumn{5}{l}{\textit{(a) Reference emissions}} \\"]
+    evidence = []
+    for source_name, label in (("Raw windows", "Raw windows"), ("Static mean", "Static mean"),
+            ("Native hard", "Hard (gated = forced)"), ("Matched random", "Size-matched random"),
+            ("Oracle labels", "Oracle labels")):
+        rows.append(" & ".join([label, *ref[source_name]]) + r" \\")
+        evidence.append({"source": references, "source_row": source_name, "display_row": label, "cells": ref[source_name]})
+    rows.extend([r"\midrule", r"\multicolumn{5}{l}{\textit{(b) Additional score-emission controls}} \\"])
+    for family in ("Shrink", "Residual"):
+        for weight in ("0.25", "0.5", "0.75"):
+            source_name = family + " " + weight
+            label = ("Shrinkage" if family == "Shrink" else family) + r", $\lambda=" + weight + "$"
+            rows.append(" & ".join([label, *ctl[source_name]]) + r" \\")
+            evidence.append({"source": controls, "source_row": source_name, "display_row": label, "cells": ctl[source_name]})
+    rows.extend([r"\bottomrule", r"\end{tabular}"])
+    return "\n".join(rows) + "\n", {"derived_layout_only": True, "numeric_cells_unchanged": True,
+        "sources": {p: sha(root / p) for p in (references, controls, STUDY_A_DETAIL)}, "rows": evidence,
+        "merged_reference_rows": {"Native hard": "Forced hard", "Raw": "Raw windows", "Hard": "Forced hard"},
+        "gate_acceptance": {"300": "100/100", "600": "100/100"}, "primary_family_unchanged": True}
+
+
+def split_ap_sensitivity(root):
+    source = BASE + "evaluation_assets/tab_ap_sensitivity.tex"
+    original = data_cells((root / source).read_text(encoding="utf-8"))
+    rows = original[1:]
+    if len(rows) != 18 or any(len(row) != 7 for row in rows) or len({row[0] for row in rows}) != 18:
+        raise ValueError("AP/F1 split must preserve eighteen distinct seven-cell source rows")
+    outputs, proof = {}, {}
+    for suffix, columns, header in (("ap", (0, 1, 2, 3, 4),
+            r"Condition & $n_{\rm AP}$ & \shortstack{Raw\\AP$_{\rm std}$} & $\Delta$AP$_+$ & $\Delta$AP$_{\rm std}$ \\") ,
+            ("f1", (0, 5, 6), r"Condition & $\Delta$F1$_{\rm raw}$ & $\Delta$F1$_{\rm self}$ \\")):
+        projected = [[row[c] for c in columns] for row in rows]
+        text = "\n".join([r"\begin{tabular}{l" + "r" * (len(columns) - 1) + "}", r"\toprule", header,
+            r"\midrule", *[" & ".join(row) + r" \\" for row in projected], r"\bottomrule", r"\end{tabular}"]) + "\n"
+        name = "tab_ap_sensitivity_" + suffix + ".tex"
+        outputs[name] = text.encode()
+        proof[name] = {"derived_layout_only": True, "numeric_cells_unchanged": True,
+            "sources": {source: sha(root / source)}, "source_columns_zero_based": list(columns),
+            "rows": projected, "source_row_count": len(rows), "missing_cells_preserved": True}
+    return outputs, proof
+
+
 def protocol_table(root):
     a, b, c = [read(root / n) for n in PROTOCOLS]
     bc, cc = b["configuration"], c["configuration"]
@@ -323,11 +428,18 @@ def protocol_table(root):
     if (a["primary_family"]["hard"] != "native_hard" or len(a["primary_family"]["contrasts"]) != 4
             or "Holm6" not in b["inference"]["B_forced_family"] or "Holm3" not in b["inference"]["B_duration_difference_family"]):
         raise ValueError("Formal inferential identities differ")
-    rows = [r"\begin{tabular}{llrll}", r"\toprule", r"Study: repeats / seeds & Paired design & $T$ & Window grid: $h/s$; $M$ & Statistical role \\", r"\midrule",
-        r"\shortstack[l]{A: 100 independent repeats\\50000--50099} & \shortstack[l]{Fixed phase; $D=300,600$\\Two cells per repeat} & 1200 & $300/150$; $7$ & \shortstack[l]{Confirmation: gated Lasso Holm4\\Forced and OLS auxiliary} \\",
-        r"\shortstack[l]{B: 50 independent repeats\\60000--60049} & \shortstack[l]{Fixed/random/irregular\\$\bar D=300,600$; six cells} & 3600 & $300/150$; $23$ & \shortstack[l]{Secondary robustness\\Forced--raw Holm6; duration Holm3} \\",
-        r"\shortstack[l]{C: 30 independent repeats\\70000--70029} & \shortstack[l]{Symmetric generator\\$D=300,600$; ten cells} & 3600 & \shortstack[l]{$200/100$; $35$\\$300/150$; $23$\\$400/200$; $17$\\$300/75$; $45$\\$300/300$; $12$} & \shortstack[l]{Separate robustness study\\Pointwise 95\% intervals\\No confirmatory family} \\",
-        r"\bottomrule", r"\end{tabular}"]
+    def row(*cells):
+        # End each paragraph inside its group; the tabular row separator keeps
+        # its ordinary meaning without array.sty or an arraybackslash macro.
+        return " & ".join(value if index == 3 else r"{\raggedright " + value + r"\par}"
+                          for index, value in enumerate(cells)) + r" \\"
+    rows = [r"\begingroup", r"\setlength{\tabcolsep}{3pt}", r"\renewcommand{\arraystretch}{1.12}",
+        r"\begin{tabular}{@{}p{0.055\linewidth}p{0.045\linewidth}p{0.24\linewidth}rp{0.19\linewidth}p{0.27\linewidth}@{}}",
+        r"\toprule", row("Study", "$n$", "Schedule / generator", "$T$", "Windows: $h/s$; $M$", "Statistical role"), r"\midrule",
+        row("A", "100", "Asymmetric support; fixed phase; $D=300,600$", "1200", "$300/150$; $7$", "Primary confirmation: gated Lasso Holm4; forced and OLS auxiliary"),
+        row("B", "50", r"Asymmetric support; fixed/random/irregular; $\bar D=300,600$", "3600", "$300/150$; $23$", "Secondary robustness: forced--raw Holm6; duration Holm3"),
+        row("C", "30", "Symmetric generator; fixed phase; $D=300,600$", "3600", "Five specified pairs; $M=12$--$45$; see S4.2", r"Separate robustness study; pointwise 95\% intervals; no confirmatory family"),
+        r"\bottomrule", r"\end{tabular}", r"\endgroup"]
     evidence = {"A": {"repeats": len(a["repeat_seeds"]), "seeds": a["repeat_seeds"], "T": a["base_config"]["timesteps"], "protocol": PROTOCOLS[0]},
                 "B": {"repeats": len(b["repeats"]), "seeds": b["repeats"], "T": bc["mechanism"]["timesteps"], "protocol": PROTOCOLS[1]},
                 "C": {"repeats": len(c["repeats"]), "seeds": c["repeats"], "T": cc["mechanism"]["timesteps"], "windows": windows, "M": counts, "protocol": PROTOCOLS[2]}}
@@ -357,7 +469,12 @@ def table_outputs(root):
                 check["all_other_printed_numeric_tokens_unchanged"] = True
             if name == "tab_temporal_delta.tex":
                 check["temporal_dp_unrounded_binding"] = validate_temporal_dp_display(root, display)
+            display = compact_table_layout(name, display)
         outputs[name] = display.encode(); proof[name] = {"source": source, "source_sha256": sha(root / source), **check}
+    combined, combined_proof = combined_study_a_table(root)
+    outputs[DERIVED_TABLES[0]] = combined.encode(); proof[DERIVED_TABLES[0]] = combined_proof
+    split, split_proof = split_ap_sensitivity(root)
+    outputs.update(split); proof.update(split_proof)
     return outputs, proof
 
 
@@ -419,6 +536,22 @@ def rewrite_figure_text(fig, name):
     return changes
 
 
+def layout_figure(fig, name):
+    """Keep all coordinates/limits fixed while moving the B-policy legend."""
+    if name != "fig_fallback":
+        return {}
+    if len(fig.axes) != 1:
+        raise ValueError("Study B policy figure axis inventory changed")
+    ax = fig.axes[0]
+    handles, labels = ax.get_legend_handles_labels()
+    labels = [text_label(label, name) for label in labels]
+    if labels != ["Gated hard", "Forced hard", "Raw fallback"]:
+        raise ValueError("Study B policy legend inventory changed")
+    ax.legend(handles, labels, loc="upper center", bbox_to_anchor=(.5, -.18), frameon=False, ncols=3)
+    return {"legend_location": "outside below axis", "legend_labels": labels,
+            "axes_limits_and_data_unchanged": True}
+
+
 def figure_outputs(root, output, write):
     import matplotlib.pyplot as plt
     from matplotlib.figure import Figure
@@ -450,11 +583,12 @@ def figure_outputs(root, output, write):
             raise ValueError("Unexpected publication figure: " + name)
         if getattr(fig, "_narrative_display_name", None) != name:
             before = figure_signature(fig); changes = rewrite_figure_text(fig, name)
+            layout = layout_figure(fig, name)
             after = figure_signature(fig)
             if before != after: raise AssertionError("Figure label rewrite changed data or axes")
             proofs[name] = {"source": FIGURE_SOURCES[name], "source_sha256": sha(root / FIGURE_SOURCES[name]),
                 "data_signature_before": before, "data_signature_after": after, "data_and_axes_unchanged_by_text_rewrite": True,
-                "text_changes": changes, "size_inches": list(fig.get_size_inches())}
+                "text_changes": changes, "layout_changes": layout, "size_inches": list(fig.get_size_inches())}
             fig._narrative_display_name = name
         if write:
             suffix = Path(target).suffix.lower(); k = dict(kwargs)
@@ -508,7 +642,7 @@ def build(root=ROOT, output=None):
         raise ValueError("Narrative output must use its dedicated new directory")
     output.mkdir(parents=True, exist_ok=True)
     previous = read(output / "manifest.json") if (output / "manifest.json").is_file() else {}
-    sources = {n: sha(root / n) for n in (*TABLES, *FIGURE_SOURCES.values(), *BUILDERS, *PROTOCOLS, *CANONICAL_CI_SOURCES, TEMPORAL_DP_SOURCE,
+    sources = {n: sha(root / n) for n in (*TABLES, *FIGURE_SOURCES.values(), *BUILDERS, *PROTOCOLS, *CANONICAL_CI_SOURCES, TEMPORAL_DP_SOURCE, STUDY_A_DETAIL,
         "configs/aggregation_controls.yaml", "scripts/run_final_confirmation.py", "scripts/diagnose_ess_null.py",
         "requirements-revision.txt", "tools/build_narrative_assets.py", "tests/test_narrative_assets.py")}
     tables, table_proofs = table_outputs(root)
@@ -525,8 +659,10 @@ def build(root=ROOT, output=None):
         "source_sha256": sources, "creation_date_only_source": date_exception,
         "table_checks": table_proofs, "figure_checks": figure_proofs, "method_glossary": GLOSSARY,
         "canonical_interval_display": canonical_intervals(root),
-        "transformations": ["metric and policy labels; all original printed estimates retained except explicitly audited repeated CI endpoint displays", "same paired B/C AUROC comparisons reuse original corresponding-study intervals; later raw-fallback, boundary and component intervals retain separate fixed streams", "protocol table replaces earlier exploratory row with formal A/B/C designs", "historical unmatched runtime row retained in source but omitted from publication display", "no new scenario table, bootstrap draws or numerical analysis"],
-        "source_to_display": mapping, "table_count": len(TABLES), "figure_count": len(FIGURE_SOURCES),
+        "transformations": ["metric and policy labels; all original printed estimates retained except explicitly audited repeated CI endpoint displays", "same paired B/C AUROC comparisons reuse original corresponding-study intervals; later raw-fallback, boundary and component intervals retain separate fixed streams", "protocol table replaces earlier exploratory row with formal A/B/C designs; seed ranges remain in supplement/protocols", "Study A reference/control table merges only identical A reference rows; AP/F1 split projects all eighteen source rows without numeric reformatting", "table headers/interval cells wrapped; B-policy legend moved outside below axes; every figure data/axis signature preserved", "historical unmatched runtime row retained in source but omitted from publication display", "no new scenario table, bootstrap draws or numerical analysis"],
+        "source_to_display": mapping,
+        "derived_table_sources": {name: list(table_proofs[name]["sources"]) for name in DERIVED_TABLES},
+        "table_count": len(table_proofs), "figure_count": len(FIGURE_SOURCES),
         "new_fits": 0, "new_simulations": 0, "no_original_assets_modified": True,
         "environment": {"python": platform.python_version(), "packages": {n: importlib.metadata.version(n) for n in ("numpy", "pandas", "matplotlib")}},
         "original_sample_distinction": "tab_factorial: early seeds0-19; tab_final: separate seeds3000-3049, retaining the original within-seed four-scenario comparison family",

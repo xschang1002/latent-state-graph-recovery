@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 message: >-
-  If you use these materials, cite this versioned research artifact and the
-  accompanying manuscript. GitHub provides the source and complete release archive.
+  If you use these materials, cite this versioned presentation release and the
+  accompanying manuscript. The release provides the complete reproducibility
+  archive and the current manuscript presentation.
 type: software
 title: >-
   State Aggregation in Dynamic Graph Recovery: Separating Structural Ranking
@@ -11,10 +12,10 @@ authors:
     given-names: Xuansong
     affiliation: Stony Brook Institute at Anhui University, Hefei, China
     email: alec.xs.chang@gmail.com
-version: v2026.10.28
+version: v2026.10.28-layout.1
 date-released: '2026-10-28'
 repository-code: https://github.com/xschang1002/latent-state-graph-recovery
-url: https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28
+url: https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1
 license: MIT
 abstract: >-
   Code, simulation inputs and retained fitted outputs for the study of state

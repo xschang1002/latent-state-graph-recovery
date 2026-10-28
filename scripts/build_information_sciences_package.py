@@ -39,6 +39,7 @@ EXTRA_FILES = {
     "paper/supplement.tex",
     "docs/research_guide.md",
     "docs/narrative_cleanup_2026-10-27.md",
+    "docs/ins_layout_revision_2026-10-28.md",
     "docs/information_sciences_artifact_readme.md",
     "docs/information_sciences_requirements_2026-10-24.md",
     "docs/information_sciences_related_work_2026-10-24.md",
@@ -256,16 +257,21 @@ def check_release_ready(root: Path = ROOT) -> dict:
             raise ValueError(f"{name} PDF predates its current source/input; compile it before packaging")
     verifier = within_root(root, "tools/verify_information_sciences.py")
     subprocess.run([sys.executable, "-B", str(verifier)], cwd=root, check=True)
-    return {"study_a_repeats": 100, "study_b_cell_records": 300, "study_c_cell_records": 300, "main_tables": 5,
-            "main_figures": 6, "pdfs": ["paper/main.pdf", "paper/supplement.pdf"],
+    return {"study_a_repeats": 100, "study_b_cell_records": 300, "study_c_cell_records": 300, "main_tables": 3,
+            "main_figures": 5, "pdfs": ["paper/main.pdf", "paper/supplement.pdf"],
             "verification": "tools/verify_information_sciences.py completed before collection"}
 
 
 def repository_metadata(root: Path = ROOT) -> dict:
     metadata = json.loads(within_root(root, MATERIALS + "deposit_metadata.json").read_text(encoding="utf-8"))
-    return {"status": metadata["repository_status"], "doi": metadata["doi"],
-            "url": metadata["public_url"], "release_url": metadata.get("release_url"),
-            "version": metadata["version"]}
+    result = {"status": metadata["repository_status"], "doi": metadata["doi"],
+              "url": metadata["public_url"], "release_url": metadata.get("release_url"),
+              "version": metadata["version"]}
+    for key in ("scientific_content_version", "public_scientific_release_url",
+                "preceding_public_delivery_url", "presentation_revision_published"):
+        if key in metadata:
+            result[key] = metadata[key]
+    return result
 
 
 def build_manifest(entries: list[legacy.PackageEntry], name: str, checkpoint: dict, ready: dict) -> dict:

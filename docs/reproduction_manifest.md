@@ -1,8 +1,10 @@
 # Reproduction manifest
 
-Current guide: 28 October 2026, delivery release `v2026.10.28`.
-This filename-only delivery preserves the PDFs and scientific content of
-`v2026.10.27.1`, whose archive link remains printed in the unchanged PDFs.
+Current guide: 28 October 2026, presentation revision `v2026.10.28-layout.1`.
+This revision changes display organisation and readability, with scientific
+inputs, fitted outputs and inferential results unchanged. The accompanying ZIP
+contains the revised sources and PDFs. The public scientific archive remains
+`v2026.10.27.1`; public delivery `v2026.10.28` has the preceding PDF layout.
 
 The scientific entry is [research_guide.md](research_guide.md): questions,
 evidence scope and the current supplement map. Exact executable routes are in
@@ -11,9 +13,11 @@ and [scripts/README.md](../scripts/README.md) groups entry points by task.
 The current PDFs are `Manuscript.pdf`
 and `Supplementary_Material.pdf`; package
 counterparts are `paper/main.pdf` and `paper/supplement.pdf`.
-The complete named ZIP, checksums and PDF assets are in the
-[public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28).
-The GitHub release and journal submission are separate actions.
+The complete named ZIP, checksums and revised PDF assets are available from
+[release v2026.10.28-layout.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1).
+The preceding public release, `v2026.10.28`, remains unchanged with its earlier
+presentation. Publication of the release does not submit the article to a journal. The
+[layout revision map](ins_layout_revision_2026-10-28.md) identifies current displays.
 
 The supplement now follows targets (S1), procedures (S2), derivations (S3),
 Studies A–C (S4), emissions/boundary sensitivity (S5), additional comparisons

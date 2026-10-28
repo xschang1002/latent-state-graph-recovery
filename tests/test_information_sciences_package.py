@@ -65,6 +65,22 @@ def test_manifest_repository_metadata_tracks_the_declared_release(tmp_path):
     assert package.repository_metadata(tmp_path)["url"] is None
 
 
+def test_local_presentation_does_not_claim_the_prior_public_release_is_current(tmp_path):
+    path = tmp_path / package.MATERIALS / "deposit_metadata.json"
+    path.parent.mkdir(parents=True)
+    metadata = {"repository_status": "local presentation revision", "doi": None,
+                "public_url": "https://github.com/example/research", "version": "v2-layout.1",
+                "release_url": None, "scientific_content_version": "v1",
+                "public_scientific_release_url": "https://github.com/example/research/releases/tag/v1",
+                "presentation_revision_published": False}
+    path.write_text(json.dumps(metadata), encoding="utf-8")
+    actual = package.repository_metadata(tmp_path)
+    assert actual["version"] == "v2-layout.1" and actual["release_url"] is None
+    assert actual["scientific_content_version"] == "v1"
+    assert actual["presentation_revision_published"] is False
+    assert actual["public_scientific_release_url"].endswith("/v1")
+
+
 def test_changed_source_is_rejected_without_a_partial_archive(tmp_path):
     source = tmp_path / "scientific-output.csv"
     source.write_text("value\n1\n", encoding="utf-8")

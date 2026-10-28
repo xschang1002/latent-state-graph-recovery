@@ -22,9 +22,11 @@ are `paper/main.pdf` and `paper/supplement.pdf`.
 
 ## Current supplement map
 
-This map follows the scientific organisation of the 27 October narrative
-version. Labels identify the corresponding TeX locations; detailed table
-numbers should be read from the current PDF.
+This map follows the S1--S8 scientific organisation and the 28 October layout
+revision. Labels identify the corresponding TeX locations; detailed table
+numbers should be read from the current PDF. The
+[display relocation map](ins_layout_revision_2026-10-28.md) records the combined
+Study A table and the Study B displays moved into S4.1.
 
 | Section | Scientific content | Source label |
 |---|---|---|

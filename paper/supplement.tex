@@ -768,6 +768,15 @@ AUROCs are averaged within repeat after evaluating each partition separately.}
 \resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_supp_a_contrasts.tex}}
 \end{table}
 
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_schedule.pdf}
+\caption{Study B: forced aggregation gains, realised window-centre switch
+counts and mean window purity for all six planned cells. Points/intervals use
+independent simulation repeats.
+The schedule comparisons are secondary robustness analyses.}
+\label{fig:schedule}
+\end{figure}
+
 \paragraph{Gate-conditioned effects and factors.}
 Table~\ref{tab:supp-b-gate-factors} separates all-repeat gated hard output from
 the forced candidate. Its accepted-only mean uses each accepted repeat's own
@@ -778,6 +787,8 @@ panel~(b) instead use all fifty evaluable candidates. They average the
 per-repeat product $JC_{\rm edge}$, preserving
 $\overline T_{\rm forced}=\tfrac12+\tfrac12\overline{JC_{\rm edge}}$,
 rather than multiplying two marginal means.
+Figure~\ref{fig:schedule} retains the schedule switch-count and purity
+diagnostics; Table~\ref{tab:factors} gives the combined A/B factor summary.
 
 \begin{table}[!htbp]
 \centering
@@ -792,6 +803,15 @@ AUROC over all fifty repeats. Fixed, Random and Irregular denote the three
 full-time schedules defined above.}
 \label{tab:supp-b-gate-factors}
 \input{results/information_sciences/narrative_assets/tab_supp_b_gate_factors.tex}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\caption{Candidate-hard factor diagnostics. Every row uses all evaluable forced
+candidates, including gate rejections. Per-repeat products are averaged across repeats;
+raw reference is $2\overline T_{\rm raw}-1$. Differences among jointly estimated
+factors are descriptive.}
+\label{tab:factors}
+\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_factors.tex}}
 \end{table}
 
 \paragraph{Numerical coverage and the auxiliary scorer.}
@@ -820,6 +840,7 @@ warnings; no fit failed or OLS matrix failed its rank requirement.}
 \input{results/information_sciences/narrative_assets/tab_supp_diagnostics_ols.tex}
 \end{table}
 
+\FloatBarrier
 \subsection{Symmetric-generator and window Study C}
 \label{app:symmetric-sensitivity}
 Study C is a separately specified robustness study with 30 independent
@@ -1055,20 +1076,34 @@ error.
 
 \paragraph{Complete sensitivity displays.}
 
-Table~\ref{tab:ap-sensitivity} reports all eighteen Lasso condition cells,
+Tables~\ref{tab:ap-sensitivity} and~\ref{tab:ap-sensitivity-f1} report all eighteen Lasso condition cells,
 including the zero-eligible-AP cell. The full numerical outputs also retain
 the two auxiliary OLS cells and every original method/weight. Intervals here
 use common within-cell bootstrap resamples for the sensitivity comparisons;
 small differences from Section~\ref{app:direct-localisation}'s intervals reflect only its earlier
 Monte Carlo stream. The underlying AP$_+$, raw-q95 F1 and samples are unchanged.
 \begin{table}[!htbp]\centering
-\caption{Hard-minus-raw boundary sensitivity, fixed q95. Standard AP includes
-the zero-strength group; positive-change AP abstains there. F1 uses the shared
-raw or each method's own amplitude reference. Differences and pointwise
-$95\%$ intervals use unrounded paired repeats. Dashes in the zero-eligible
-cell remain missing, not zero.}
+\caption{Hard-minus-raw AP sensitivity. Standard AP includes the zero-strength
+group; positive-change AP abstains there. Differences and pointwise $95\%$
+intervals use unrounded paired repeats. $n_{\rm AP}$ is the evaluable paired-repeat
+count; dashes in the zero-eligible cell remain missing, not zero.}
 \label{tab:ap-sensitivity}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_ap_sensitivity.tex}}
+\begingroup\small
+\setlength{\tabcolsep}{5pt}
+\input{results/information_sciences/narrative_assets/tab_ap_sensitivity_ap.tex}
+\endgroup
+\end{table}
+\begin{table}[!htbp]\centering
+\caption{Hard-minus-raw boundary-slot F1 sensitivity at fixed q95. F1 uses
+the shared raw or each method's own amplitude reference. Differences and
+pointwise $95\%$ intervals use unrounded paired repeats: $100$ per A cell,
+$50$ per B cell and $30$ per C cell. The all-positive-slot C cell retains
+all thirty evaluable F1 repeats even though its AP is undefined.}
+\label{tab:ap-sensitivity-f1}
+\begingroup\small
+\setlength{\tabcolsep}{7pt}
+\input{results/information_sciences/narrative_assets/tab_ap_sensitivity_f1.tex}
+\endgroup
 \end{table}
 \begin{figure}[!htbp]\centering
 \includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_threshold_curves.pdf}
@@ -1114,7 +1149,11 @@ auxiliary conditions remain in the numerical files. At $\lambda=1$, the C
 total-contrast interval is the sign-reversed original C forced-minus-raw
 interval; within/cross component intervals retain their decomposition stream.}
 \label{tab:residual-pairs}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_residual_pairs.tex}}
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\input{results/information_sciences/narrative_assets/tab_residual_pairs.tex}
+\endgroup
 \end{table}
 \begin{figure}[!htbp]\centering
 \includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_residual_pairs.pdf}
@@ -1204,7 +1243,11 @@ a two-state split in all eight conditions.
 lag-specific support. $\kdyn$ counts dynamical mechanisms, $\kgraph$ counts
 binary supports; Pooled denotes the mixed-ranking, time-indexed AUROC.}
 \label{tab:controls}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_controls.tex}}
+\begingroup
+\small
+\setlength{\tabcolsep}{2pt}
+\input{results/information_sciences/narrative_assets/tab_controls.tex}
+\endgroup
 \end{table}
 
 \begin{figure}[!htbp]
@@ -2049,16 +2092,18 @@ fixed protocols, per-case arrays, summaries and evidence index. Its read-only
 entry point recomputes saved-output metrics and intervals without fitting;
 the display-rebuild route reconstructs figures and tables. New generation
 and fitting require an explicit new destination and are documented separately.
-The complete archive is available for review in
-the versioned public release identified in Section~\ref{app:reproduction}.
+The accompanying archive supplies the current presentation alongside the
+unchanged retained scientific inputs and fitted outputs. The corresponding
+public release is identified in Section~\ref{app:reproduction}.
 
 \subsection{Access, cached replay, and rebuilding}
 \label{app:reproduction}
 The companion archive \path{information_sciences_reproducibility.zip}
 contains manuscript sources, configurations, retained inputs, emissions,
-assignments, truth, per-repeat results and presentation builders. Version
-\texttt{v2026.10.27.1} is available at
-\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1}.
+assignments, truth, per-repeat results and presentation builders for this
+presentation revision. The complete archive is publicly available in version
+\texttt{v2026.10.28-layout.1} at
+\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1}.
 Its root README gives environment setup, data-access
 requirements and the execution index. The basic entries are:
 \begin{quote}\small\ttfamily
@@ -2083,6 +2128,7 @@ not pooled with the simulation-study tables. Internal source-lock times and
 filesystem observations are distinguished from externally attested registration;
 no public-preregistration claim is made.
 
+\setlength{\bibsep}{3pt plus 1pt minus 1pt}
 \bibliographystyle{plainnat}
 \bibliography{paper/references}
 \end{document}

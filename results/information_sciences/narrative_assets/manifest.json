@@ -1260,6 +1260,19 @@
     "path": "results/figures/rev2_temporal_grid.pdf",
     "rule": "Only /CreationDate(...); every other PDF byte must remain identical; original full source SHA retained"
   },
+  "derived_table_sources": {
+    "tab_ap_sensitivity_ap.tex": [
+      "results/information_sciences/evaluation_assets/tab_ap_sensitivity.tex"
+    ],
+    "tab_ap_sensitivity_f1.tex": [
+      "results/information_sciences/evaluation_assets/tab_ap_sensitivity.tex"
+    ],
+    "tab_study_a_combined.tex": [
+      "results/information_sciences/tab_main_results.tex",
+      "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+      "results/information_sciences/duration_confirmation/detail.csv"
+    ]
+  },
   "environment": {
     "packages": {
       "matplotlib": "3.10.9",
@@ -1273,6 +1286,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "f5bd55390651f4d08a18ac77321d28b6f4c299a1663e2e864377d1185de3ffba",
       "data_signature_before": "f5bd55390651f4d08a18ac77321d28b6f4c299a1663e2e864377d1185de3ffba",
+      "layout_changes": {},
       "size_inches": [
         8.5,
         5.8
@@ -1294,6 +1308,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "5776de437425b734ec4011eefa5dcf27980ec23fbd549ed93508aa1d12c2713a",
       "data_signature_before": "5776de437425b734ec4011eefa5dcf27980ec23fbd549ed93508aa1d12c2713a",
+      "layout_changes": {},
       "size_inches": [
         6.6,
         3.2
@@ -2373,6 +2388,15 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "c1a4d45a96db19ec4c0442338cab965dfa8729dab28d36b9382cb752fd3f02b3",
       "data_signature_before": "c1a4d45a96db19ec4c0442338cab965dfa8729dab28d36b9382cb752fd3f02b3",
+      "layout_changes": {
+        "axes_limits_and_data_unchanged": true,
+        "legend_labels": [
+          "Gated hard",
+          "Forced hard",
+          "Raw fallback"
+        ],
+        "legend_location": "outside below axis"
+      },
       "size_inches": [
         7.2,
         4.9
@@ -2398,6 +2422,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "1591e5eb666a221365b79bb63fa12dcb87195986c7c6cd9d359d927c7585ecb6",
       "data_signature_before": "1591e5eb666a221365b79bb63fa12dcb87195986c7c6cd9d359d927c7585ecb6",
+      "layout_changes": {},
       "size_inches": [
         8.0,
         3.8
@@ -2410,6 +2435,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "350e4b17354dd76ff721f207823ebc2b7910c0506808cedf1897fabefcd1b93c",
       "data_signature_before": "350e4b17354dd76ff721f207823ebc2b7910c0506808cedf1897fabefcd1b93c",
+      "layout_changes": {},
       "size_inches": [
         6.6,
         4.1
@@ -2427,6 +2453,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "042783168f5fd11bcd9f7c6bc6eee09e1c8649a34856d10f42809fbb7ad1f042",
       "data_signature_before": "042783168f5fd11bcd9f7c6bc6eee09e1c8649a34856d10f42809fbb7ad1f042",
+      "layout_changes": {},
       "size_inches": [
         8.0,
         4.1
@@ -2444,6 +2471,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "d0dea5fab2ab85a51d7af28502263e277119dcf0ace6a3eb8de54e718bcf42f9",
       "data_signature_before": "d0dea5fab2ab85a51d7af28502263e277119dcf0ace6a3eb8de54e718bcf42f9",
+      "layout_changes": {},
       "size_inches": [
         6.6,
         2.9
@@ -2465,6 +2493,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "3feccd96662bf46714fc5ccd4b55b17a8d0c8f65b7d4f6398cdf595b88e6b462",
       "data_signature_before": "3feccd96662bf46714fc5ccd4b55b17a8d0c8f65b7d4f6398cdf595b88e6b462",
+      "layout_changes": {},
       "size_inches": [
         8.0,
         5.8
@@ -2482,6 +2511,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "8934828e6c7227390cdcc474dae0827310eed70a1b5c9ff18b7abb12ba693a4a",
       "data_signature_before": "8934828e6c7227390cdcc474dae0827310eed70a1b5c9ff18b7abb12ba693a4a",
+      "layout_changes": {},
       "size_inches": [
         9.6,
         3.5
@@ -2515,6 +2545,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "1a0ae1accc0648bcef760ed93fdb1d6fca8ef60992ac1be9b74720196441716e",
       "data_signature_before": "1a0ae1accc0648bcef760ed93fdb1d6fca8ef60992ac1be9b74720196441716e",
+      "layout_changes": {},
       "size_inches": [
         9.4,
         3.2
@@ -2532,6 +2563,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "65acba5be181a03e2ed9937e9ff1301b73bb3967c2fbe0c60cdd890f042fb2e7",
       "data_signature_before": "65acba5be181a03e2ed9937e9ff1301b73bb3967c2fbe0c60cdd890f042fb2e7",
+      "layout_changes": {},
       "size_inches": [
         8.4,
         4.0
@@ -2569,6 +2601,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "03eb56eca5e209215f8222537edbd0400d1a615c4e8a797ac9a46920b6d993f2",
       "data_signature_before": "03eb56eca5e209215f8222537edbd0400d1a615c4e8a797ac9a46920b6d993f2",
+      "layout_changes": {},
       "size_inches": [
         6.4,
         3.8
@@ -2581,6 +2614,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "5f7409d620dd8ec5d8b6a4a97c24ae9caf778346c0cc45d3b500fbc5aa13325f",
       "data_signature_before": "5f7409d620dd8ec5d8b6a4a97c24ae9caf778346c0cc45d3b500fbc5aa13325f",
+      "layout_changes": {},
       "size_inches": [
         10.0,
         3.0
@@ -2598,6 +2632,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "00c58175026102e81155f81460857bc2eecdeeeda7a3a8673d945be05b9a37f4",
       "data_signature_before": "00c58175026102e81155f81460857bc2eecdeeeda7a3a8673d945be05b9a37f4",
+      "layout_changes": {},
       "size_inches": [
         9.4,
         3.2
@@ -2610,6 +2645,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "783f22f7675a5294a9c1a15bd9e168cbbb5f2c6bbd2da7f893df23544b31f0c6",
       "data_signature_before": "783f22f7675a5294a9c1a15bd9e168cbbb5f2c6bbd2da7f893df23544b31f0c6",
+      "layout_changes": {},
       "size_inches": [
         6.6,
         3.2
@@ -2622,6 +2658,7 @@
       "data_and_axes_unchanged_by_text_rewrite": true,
       "data_signature_after": "ae068b0f526e63b179289e20f87a960f6bb4c1539c022426f8169fe70f6df77a",
       "data_signature_before": "ae068b0f526e63b179289e20f87a960f6bb4c1539c022426f8169fe70f6df77a",
+      "layout_changes": {},
       "size_inches": [
         6.4,
         6.7
@@ -2659,8 +2696,8 @@
     "fig_confirmation.pdf": "bed92bfdcd137ececfc574d311a6d1be4b3f78b4dbe8a5c378d89d96aa760fd9",
     "fig_confirmation.png": "439f227a7d04daa84a63e88894826abf19042e7c484786f78ee1a59bc524f4d0",
     "fig_confirmation_source.csv": "55d60d538977702eb78b616ff74453541e0a695eca682d36a7330176984b15ac",
-    "fig_fallback.pdf": "200c50f777ae0b3a5347a398a2a84018375bfa3cd61a737b5a9cc7fd4e6d0c07",
-    "fig_fallback.png": "43a9c242fe985da554735f8bb1d307f0892b939f6c28c3448f6dda339dce49b1",
+    "fig_fallback.pdf": "071fc387a80e72a3fe1d757ed8b78337a71f08c9174ff83e9dd970058d643daa",
+    "fig_fallback.png": "d90f9519c0db9ec7a7f185a2e4df2f36289c815cc03ae6f76d3bc89c80ebce46",
     "fig_residual_pairs.pdf": "54d502386290c9d0e6198b7767a92446f1291e4bf0dc08ca48f0c72562a9c1b8",
     "fig_residual_pairs.png": "a437ddcd404fe1397fea7c43adf9672a656dc13c25756134d284ffe143692ffb",
     "fig_schedule.pdf": "dd488f5cd5e3b090496cb3ed01076dd68f37f81161470272b5dcebcb060dac28",
@@ -2691,12 +2728,14 @@
     "source_to_display.json": "8320643bb561c5106496da1f21626c6fe9db772870818fdeb84ab07783f82af3",
     "tab_aggregation.tex": "561d61d52c1fa1cb6a0ba5d2a3bffc93ca47cdde4faf1e6d2db08cdc8ab26a62",
     "tab_ap_sensitivity.tex": "38f9bc03ba26a81adc09fcb2ad066ef29eaa70e15390f55c664a0cbb687773db",
-    "tab_controls.tex": "09efb086ca9503086b44272aa962f90a393bf1ae1c036951cb3d8f90e9ab46c7",
+    "tab_ap_sensitivity_ap.tex": "ce036c84c935eb1e30393cbef5d967f06a8e7101897101c1d4bafbd9e89279f2",
+    "tab_ap_sensitivity_f1.tex": "0c5ae1649d28d254d7a99045f6a970d8d11ebbbf3daf30970ce5e261f4962a87",
+    "tab_controls.tex": "f240db72a9f4922b5b38a2c7fc499bf4c2d9cca7b0dcc8028ee350ccfebb9153",
     "tab_cost.tex": "d8ba7283e5d0726f2f36677f3970ac0f573e035af3b889d2eddaee35f85b608a",
     "tab_ess.tex": "8e59ecb6e3b9f568a1e83ffccf9dfdd66e7085dc5d352f305d5eb90356fda557",
     "tab_ess_diagnostics.tex": "788ec3b75f6cb16ce9fe5c9115ffb2968c5af3ec3ab6562d3baf700793af9094",
     "tab_external_contrasts.tex": "28b3114c5026ce4ca6d3f2af7ccd23b452b1d5b42d93fd1c289d5e3d654299af",
-    "tab_external_framework.tex": "495a90eff054f143c983885c1b68f6d7830614c76986b2f8ec3ba618ceba14bd",
+    "tab_external_framework.tex": "229aea2b0f266cf908fe325bb7fc5af433b2339f009c8d753fb5027ee8591865",
     "tab_factorial.tex": "1c93c2548c053a9b26f258257da796cfe77efccf27148f9bc1d8bc34865cb0f6",
     "tab_factors.tex": "dde01f987ce73b57e0651faca16579740f6c2fe0ffa88b4852ceb071af60a8de",
     "tab_fallback_full.tex": "64c490b3c0678ad0bba3d0e8b2d0bd4c17ba1aca9d95d23e5819582af3431534",
@@ -2709,12 +2748,13 @@
     "tab_matched_grouping.tex": "b307f04297d46530ba351396001ab10056ab13ef36c313df4633740735baf7b4",
     "tab_metrics_layers.tex": "3bb5712b6bfc5d49c35f650fd8fed0effe5fe67e48987390307881e4c501a9c4",
     "tab_penalty_scan.tex": "8436b2c4f77c325771b2a14bb9912b27ecf1880489e9ea4cac12f2918b83638f",
-    "tab_protocol.tex": "97e788af7a322f0fb81891accb555df4445b37e18d3d53662c9e3481c99d904d",
-    "tab_residual_pairs.tex": "6edc53ce852950eab4ab9ec51696228a0cd195b7b223549bd995900fbceabdd8",
+    "tab_protocol.tex": "859722521a703c3b3144247565e8bb636fdfcf9294ccf313b182d927f91efb3c",
+    "tab_residual_pairs.tex": "43910e938b55cb11a2ad023fee95020cf354bdc747c23c2c6a0779d7441dcd5e",
     "tab_score_controls.tex": "e5e29f083009dd7c285a85bac66a4c43253ab493bf44eb829a6e9b11770e96cd",
     "tab_score_controls_aux.tex": "8a192d564f56f044c465edd7770f745201ed04adb0fde6c22bdb013f90faed14",
     "tab_segmentation.tex": "05d6f2c05b7ad823225a0284010256a7d79cb45f4d20059786ac4c5b2b5a6b68",
     "tab_stable_changes.tex": "37d2d8f4d80aa7d97d70ab333797ee39aa3d0390a7c36d050517633eab43175a",
+    "tab_study_a_combined.tex": "67cdf8b1bd56dd1c5f2a484adc82131c1432dd915e0ad39d2c36a10879cab3b4",
     "tab_supp_a_contrasts.tex": "2efa5aa59a9f42988a13fe8f4a48a87a24a82dfa90c8e168605a803b9136abee",
     "tab_supp_b_gate_factors.tex": "ff72d443f3e58f7d4b7501358de065ee51b6e21509327cb7311406e8c374d1d7",
     "tab_supp_diagnostics_ols.tex": "10d1b659343bd34afa360fa7900821b3dd6f102b71b3b4fdedd91cc4d7ea62d7",
@@ -2833,10 +2873,10 @@
     "results/tables/ess_null_traces.csv": "bc70937c4932325a96b0bd222d13e6fe17fe0b8b656f6d1b0b1318e6f21cf3f0",
     "scripts/diagnose_ess_null.py": "ec1c7ca5eaf9aa91d1a2da5a90dfa18fa26bf06c5d2cb769374d69817d6f8438",
     "scripts/run_final_confirmation.py": "722b39d5b96487c5d9fb9ebbc9b237dc0a7293e4da59d55382a256dd13a51dd2",
-    "tests/test_narrative_assets.py": "f91779e9f265028dee0033f671503e3e00ada7040bfa9c7ae10a3cea3282b0e3",
+    "tests/test_narrative_assets.py": "63d00d0ab4048ab2501c76b29299586944216183bfafdd50d1c8731d4dfa5232",
     "tools/build_evaluation_sensitivity_assets.py": "fba9d96f5de60bab9ba0ba11b888aa2abed40b423eee4e4ef86c8040fa9e67ba",
     "tools/build_information_sciences_assets.py": "b9f76b978bcbaa3ec2ec570a2729e99b710994f0f9e947a221dbd734e2341753",
-    "tools/build_narrative_assets.py": "403cc3308278d31a623db8b60ba6a98ef4e3d4127fecccca15cbfda306dbfd44",
+    "tools/build_narrative_assets.py": "a33bdd99d72a39ce6b971af907b0804b5552b30c2e6b643eaecd5d4588a4ceeb",
     "tools/build_reviewer_controls_assets.py": "9729ddf7128f34e7c04a03e590fc7231cced39d89f8a91f6bfe84469cc3516d1",
     "tools/build_revision2_tables.py": "8b8ca9c166047c935598671934d46a8ea887b0707613b516352138045fda1281"
   },
@@ -2905,6 +2945,256 @@
       "printed_numeric_tokens_unchanged": true,
       "source": "results/information_sciences/evaluation_assets/tab_ap_sensitivity.tex",
       "source_sha256": "38f9bc03ba26a81adc09fcb2ad066ef29eaa70e15390f55c664a0cbb687773db"
+    },
+    "tab_ap_sensitivity_ap.tex": {
+      "derived_layout_only": true,
+      "missing_cells_preserved": true,
+      "numeric_cells_unchanged": true,
+      "rows": [
+        [
+          "A 300, Fixed",
+          "100",
+          "0.725",
+          "$-0.230\\;[-0.296,-0.161]$",
+          "$+0.006\\;[-0.030,0.043]$"
+        ],
+        [
+          "A 600, Fixed",
+          "100",
+          "0.509",
+          "$+0.184\\;[0.098,0.267]$",
+          "$+0.229\\;[0.156,0.299]$"
+        ],
+        [
+          "B 300, Fixed",
+          "50",
+          "0.657",
+          "$-0.247\\;[-0.310,-0.184]$",
+          "$-0.025\\;[-0.057,0.010]$"
+        ],
+        [
+          "B 300, Random",
+          "50",
+          "0.633",
+          "$-0.218\\;[-0.272,-0.161]$",
+          "$+0.002\\;[-0.027,0.033]$"
+        ],
+        [
+          "B 300, Irregular",
+          "50",
+          "0.630",
+          "$-0.256\\;[-0.320,-0.190]$",
+          "$-0.013\\;[-0.046,0.024]$"
+        ],
+        [
+          "B 600, Fixed",
+          "50",
+          "0.421",
+          "$+0.068\\;[-0.005,0.144]$",
+          "$+0.140\\;[0.080,0.202]$"
+        ],
+        [
+          "B 600, Random",
+          "50",
+          "0.439",
+          "$+0.074\\;[-0.006,0.156]$",
+          "$+0.154\\;[0.089,0.221]$"
+        ],
+        [
+          "B 600, Irregular",
+          "50",
+          "0.434",
+          "$-0.022\\;[-0.092,0.052]$",
+          "$+0.077\\;[0.022,0.136]$"
+        ],
+        [
+          "C 300, 200/100",
+          "30",
+          "0.417",
+          "$-0.238\\;[-0.282,-0.190]$",
+          "$-0.043\\;[-0.069,-0.012]$"
+        ],
+        [
+          "C 300, 300/150",
+          "30",
+          "0.665",
+          "$-0.295\\;[-0.384,-0.198]$",
+          "$-0.037\\;[-0.084,0.015]$"
+        ],
+        [
+          "C 300, 400/200",
+          "30",
+          "0.772",
+          "$-0.568\\;[-0.618,-0.515]$",
+          "$-0.074\\;[-0.089,-0.059]$"
+        ],
+        [
+          "C 300, 300/75",
+          "30",
+          "0.325",
+          "$-0.154\\;[-0.202,-0.103]$",
+          "$+0.011\\;[-0.022,0.045]$"
+        ],
+        [
+          "C 300, 300/300",
+          "0",
+          "--",
+          "--",
+          "--"
+        ],
+        [
+          "C 600, 200/100",
+          "30",
+          "0.289",
+          "$-0.087\\;[-0.145,-0.024]$",
+          "$-0.006\\;[-0.054,0.047]$"
+        ],
+        [
+          "C 600, 300/150",
+          "30",
+          "0.440",
+          "$-0.055\\;[-0.132,0.025]$",
+          "$+0.040\\;[-0.020,0.104]$"
+        ],
+        [
+          "C 600, 400/200",
+          "30",
+          "0.552",
+          "$+0.109\\;[0.009,0.207]$",
+          "$+0.175\\;[0.098,0.250]$"
+        ],
+        [
+          "C 600, 300/75",
+          "30",
+          "0.226",
+          "$+0.089\\;[-0.003,0.187]$",
+          "$+0.146\\;[0.065,0.234]$"
+        ],
+        [
+          "C 600, 300/300",
+          "30",
+          "0.633",
+          "$-0.175\\;[-0.260,-0.086]$",
+          "$-0.019\\;[-0.072,0.040]$"
+        ]
+      ],
+      "source_columns_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_row_count": 18,
+      "sources": {
+        "results/information_sciences/evaluation_assets/tab_ap_sensitivity.tex": "38f9bc03ba26a81adc09fcb2ad066ef29eaa70e15390f55c664a0cbb687773db"
+      }
+    },
+    "tab_ap_sensitivity_f1.tex": {
+      "derived_layout_only": true,
+      "missing_cells_preserved": true,
+      "numeric_cells_unchanged": true,
+      "rows": [
+        [
+          "A 300, Fixed",
+          "$-0.165\\;[-0.179,-0.151]$",
+          "$-0.015\\;[-0.040,0.010]$"
+        ],
+        [
+          "A 600, Fixed",
+          "$+0.021\\;[-0.005,0.046]$",
+          "$+0.262\\;[0.207,0.317]$"
+        ],
+        [
+          "B 300, Fixed",
+          "$-0.209\\;[-0.220,-0.198]$",
+          "$-0.010\\;[-0.035,0.016]$"
+        ],
+        [
+          "B 300, Random",
+          "$-0.185\\;[-0.196,-0.173]$",
+          "$+0.024\\;[0.004,0.043]$"
+        ],
+        [
+          "B 300, Irregular",
+          "$-0.181\\;[-0.194,-0.167]$",
+          "$+0.016\\;[-0.009,0.040]$"
+        ],
+        [
+          "B 600, Fixed",
+          "$-0.077\\;[-0.093,-0.060]$",
+          "$+0.223\\;[0.178,0.268]$"
+        ],
+        [
+          "B 600, Random",
+          "$-0.068\\;[-0.088,-0.048]$",
+          "$+0.218\\;[0.175,0.262]$"
+        ],
+        [
+          "B 600, Irregular",
+          "$-0.087\\;[-0.105,-0.069]$",
+          "$+0.177\\;[0.130,0.223]$"
+        ],
+        [
+          "C 300, 200/100",
+          "$-0.143\\;[-0.155,-0.131]$",
+          "$+0.017\\;[-0.012,0.046]$"
+        ],
+        [
+          "C 300, 300/150",
+          "$-0.225\\;[-0.248,-0.200]$",
+          "$-0.036\\;[-0.077,0.003]$"
+        ],
+        [
+          "C 300, 400/200",
+          "$-0.234\\;[-0.245,-0.222]$",
+          "$-0.101\\;[-0.128,-0.074]$"
+        ],
+        [
+          "C 300, 300/75",
+          "$-0.090\\;[-0.109,-0.069]$",
+          "$+0.071\\;[0.026,0.117]$"
+        ],
+        [
+          "C 300, 300/300",
+          "$-0.187\\;[-0.199,-0.176]$",
+          "$-0.054\\;[-0.069,-0.038]$"
+        ],
+        [
+          "C 600, 200/100",
+          "$-0.089\\;[-0.104,-0.074]$",
+          "$+0.116\\;[0.066,0.169]$"
+        ],
+        [
+          "C 600, 300/150",
+          "$-0.100\\;[-0.122,-0.079]$",
+          "$+0.150\\;[0.093,0.206]$"
+        ],
+        [
+          "C 600, 400/200",
+          "$-0.083\\;[-0.118,-0.050]$",
+          "$+0.196\\;[0.143,0.248]$"
+        ],
+        [
+          "C 600, 300/75",
+          "$+0.027\\;[-0.009,0.064]$",
+          "$+0.274\\;[0.195,0.351]$"
+        ],
+        [
+          "C 600, 300/300",
+          "$-0.171\\;[-0.188,-0.153]$",
+          "$+0.020\\;[-0.017,0.059]$"
+        ]
+      ],
+      "source_columns_zero_based": [
+        0,
+        5,
+        6
+      ],
+      "source_row_count": 18,
+      "sources": {
+        "results/information_sciences/evaluation_assets/tab_ap_sensitivity.tex": "38f9bc03ba26a81adc09fcb2ad066ef29eaa70e15390f55c664a0cbb687773db"
+      }
     },
     "tab_controls.tex": {
       "numeric_token_count": 56,
@@ -3563,6 +3853,148 @@
       "source": "results/information_sciences/reviewer_assets/tab_stable_changes.tex",
       "source_sha256": "dcc9596285ada11cb4973524dd0550ad51b9ec7eb05a109737333b216125c592"
     },
+    "tab_study_a_combined.tex": {
+      "derived_layout_only": true,
+      "gate_acceptance": {
+        "300": "100/100",
+        "600": "100/100"
+      },
+      "merged_reference_rows": {
+        "Hard": "Forced hard",
+        "Native hard": "Forced hard",
+        "Raw": "Raw windows"
+      },
+      "numeric_cells_unchanged": true,
+      "primary_family_unchanged": true,
+      "rows": [
+        {
+          "cells": [
+            "0.727",
+            "0.707",
+            "0.772",
+            "0.767"
+          ],
+          "display_row": "Raw windows",
+          "source": "results/information_sciences/tab_main_results.tex",
+          "source_row": "Raw windows"
+        },
+        {
+          "cells": [
+            "0.806",
+            "0.500",
+            "0.841",
+            "0.500"
+          ],
+          "display_row": "Static mean",
+          "source": "results/information_sciences/tab_main_results.tex",
+          "source_row": "Static mean"
+        },
+        {
+          "cells": [
+            "0.780",
+            "0.639",
+            "0.839",
+            "0.805"
+          ],
+          "display_row": "Hard (gated = forced)",
+          "source": "results/information_sciences/tab_main_results.tex",
+          "source_row": "Native hard"
+        },
+        {
+          "cells": [
+            "0.779",
+            "0.559",
+            "0.817",
+            "0.579"
+          ],
+          "display_row": "Size-matched random",
+          "source": "results/information_sciences/tab_main_results.tex",
+          "source_row": "Matched random"
+        },
+        {
+          "cells": [
+            "0.803",
+            "0.797",
+            "0.846",
+            "0.848"
+          ],
+          "display_row": "Oracle labels",
+          "source": "results/information_sciences/tab_main_results.tex",
+          "source_row": "Oracle labels"
+        },
+        {
+          "cells": [
+            "0.804",
+            "0.707",
+            "0.843",
+            "0.767"
+          ],
+          "display_row": "Shrinkage, $\\lambda=0.25$",
+          "source": "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+          "source_row": "Shrink 0.25"
+        },
+        {
+          "cells": [
+            "0.781",
+            "0.707",
+            "0.825",
+            "0.767"
+          ],
+          "display_row": "Shrinkage, $\\lambda=0.5$",
+          "source": "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+          "source_row": "Shrink 0.5"
+        },
+        {
+          "cells": [
+            "0.753",
+            "0.707",
+            "0.799",
+            "0.767"
+          ],
+          "display_row": "Shrinkage, $\\lambda=0.75$",
+          "source": "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+          "source_row": "Shrink 0.75"
+        },
+        {
+          "cells": [
+            "0.779",
+            "0.718",
+            "0.835",
+            "0.824"
+          ],
+          "display_row": "Residual, $\\lambda=0.25$",
+          "source": "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+          "source_row": "Residual 0.25"
+        },
+        {
+          "cells": [
+            "0.766",
+            "0.716",
+            "0.819",
+            "0.809"
+          ],
+          "display_row": "Residual, $\\lambda=0.5$",
+          "source": "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+          "source_row": "Residual 0.5"
+        },
+        {
+          "cells": [
+            "0.747",
+            "0.713",
+            "0.797",
+            "0.789"
+          ],
+          "display_row": "Residual, $\\lambda=0.75$",
+          "source": "results/information_sciences/reviewer_assets/tab_score_controls.tex",
+          "source_row": "Residual 0.75"
+        }
+      ],
+      "sources": {
+        "results/information_sciences/duration_confirmation/detail.csv": "e11c75a9ac06e944e7c9b363b96b8140cb4ee066aee3173737961684b9883c3f",
+        "results/information_sciences/reviewer_assets/tab_score_controls.tex": "ffbd46e576072508cb444b06b7d0f85992bc9c1f084821a8e6c028571ff51c07",
+        "results/information_sciences/tab_main_results.tex": "2081227080e99b03afb8cdf4eb757c88b90cba46dcf6ccecefd9a3823a10fca4"
+      }
+    },
     "tab_supp_a_contrasts.tex": {
       "numeric_token_count": 137,
       "printed_numeric_tokens_unchanged": true,
@@ -3624,11 +4056,13 @@
       "source_sha256": "99501f81e43628c5dc94c320fdfe17c89220f066eb61b3c7ec6fc210d152fa85"
     }
   },
-  "table_count": 35,
+  "table_count": 38,
   "transformations": [
     "metric and policy labels; all original printed estimates retained except explicitly audited repeated CI endpoint displays",
     "same paired B/C AUROC comparisons reuse original corresponding-study intervals; later raw-fallback, boundary and component intervals retain separate fixed streams",
-    "protocol table replaces earlier exploratory row with formal A/B/C designs",
+    "protocol table replaces earlier exploratory row with formal A/B/C designs; seed ranges remain in supplement/protocols",
+    "Study A reference/control table merges only identical A reference rows; AP/F1 split projects all eighteen source rows without numeric reformatting",
+    "table headers/interval cells wrapped; B-policy legend moved outside below axes; every figure data/axis signature preserved",
     "historical unmatched runtime row retained in source but omitted from publication display",
     "no new scenario table, bootstrap draws or numerical analysis"
   ]

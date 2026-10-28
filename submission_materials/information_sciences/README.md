@@ -19,16 +19,20 @@ gives the executable routes.
 
 The source repository is
 [latent-state-graph-recovery](https://github.com/xschang1002/latent-state-graph-recovery).
-[Release v2026.10.28](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28)
-provides the complete `information_sciences_reproducibility.zip`, article and
-supplement PDFs, a compact submission-files ZIP, and SHA-256 checksums. No DOI
-has been assigned. GitHub's automatically generated source ZIP is a different
-container; use the named reproducibility ZIP for the delivered artifact.
+[Release v2026.10.28-layout.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1)
+supplies the current presentation:
+PDFs, source ZIPs, a compact submission-files ZIP and the complete named
+`information_sciences_reproducibility.zip`, with SHA-256 checksums. The preceding
+release, `v2026.10.28`, remains unchanged with its earlier presentation and the
+same scientific evidence. No DOI has been assigned. GitHub's automatic
+source ZIP is a different container from the named reproducibility archive.
 
 The current article and supplement are `Manuscript.pdf` and
-`Supplementary_Material.pdf`. This delivery changes filenames and metadata only;
-PDF bytes and scientific content match `v2026.10.27.1`, whose scientific archive
-link remains valid inside the PDFs. Dated evidence
+`Supplementary_Material.pdf`. This revision changes display organisation,
+readability and immediately affected references. The
+[layout revision map](../../docs/ins_layout_revision_2026-10-28.md) identifies all
+relocations and combinations. Scientific inputs, fits and inferential results
+match the public scientific archive `v2026.10.27.1`. Dated evidence
 indices retain the section numbering of their own snapshots; the research guide
 gives current locations. Historical verification records describe their own
 versions of the archive and are not checksums for this release.
@@ -59,16 +63,17 @@ Publication of a GitHub release does not submit the article to the journal.
    is included; none has been generated or inferred.
 3. The directly inspected journal guide on 24 October 2026 advised 40
    double-spaced pages and eight combined figures/tables for experimental
-   articles. The current article has 26 double-spaced pages, six figures and
-   five tables. Confirm acceptance of the 11 displays with the editor or
-   submission system; the advisory count has not been treated as a verified
-   automatic rejection rule or used to remove scientific evidence.
+   articles. The author-supplied layout handoff adopts five main figures and
+   three main tables, retaining moved diagnostics in the supplement. The
+   revision follows that eight-display target. Current page/display counts are
+   recorded in the delivery verification report; panel and supplement rules
+   still follow the actual submission system's instructions.
 4. Upload the current manuscript, supplement, editable highlights, requested
    author materials and source files. Check the actual system's attachment
-   size limits: acceptance of the approximately 310 MB reproducibility ZIP
-   has not been verified. The complete ZIP is accessible through the public
-   release; if the system cannot accept it, supply that download link and
-   follow the journal's instructions for externally hosted research material.
+   size limits: acceptance of the full reproducibility ZIP has not been
+   verified. The current archive and PDFs are available in release
+   `v2026.10.28-layout.1`; earlier releases retain their preceding presentations. Follow the
+   journal's instructions for externally hosted research material.
 5. Open the system-generated merged PDF after upload and check formulas,
    figures, tables, cross-references and attachment completeness. That PDF
    can only be checked after an actual submission-system upload.

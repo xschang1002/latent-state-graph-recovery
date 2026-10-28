@@ -272,6 +272,16 @@ and it excludes edges whose support is constant. Permuting scores within the
 active windows, or within the inactive windows, leaves it unchanged while
 potentially changing the locations of thresholded errors. We therefore also evaluate boundary detection and variation on stable edges.
 
+\begin{figure}[!htbp]
+\centering\includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_target_example.pdf}
+\caption{A deterministic evaluation example, not an empirical estimate.
+Time-indexed truth is compared with constant occupancy scores. The static
+predictor can rank frequent edges accurately while having within-edge
+temporal AUROC $0.5$. The underlying truth and scores accompany the figure.}
+\label{fig:targets}
+\end{figure}
+\FloatBarrier
+
 \paragraph{Boundary-slot detection.}
 A slot is the interval between consecutive window centres. It is positive for
 an edge if its true support changes at least once in that interval, and the
@@ -282,15 +292,6 @@ edges. Standard AP includes the zero-score group; positive-change AP treats
 zero strength as abstention. Supplement Section~S1 summarises slot targets;
 Section~S5 defines threshold references and AP conventions, compared here
 in Section~\ref{sec:localisation-results}.
-
-\begin{figure}[!htbp]
-\centering\includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_target_example.pdf}
-\caption{A deterministic evaluation example, not an empirical estimate.
-Time-indexed truth is compared with constant occupancy scores. The static
-predictor can rank frequent edges accurately while having within-edge
-temporal AUROC $0.5$. The underlying truth and scores accompany the figure.}
-\label{fig:targets}
-\end{figure}
 
 \subsection{Two-state hard emission and relative gain}
 \label{sec:state-factor}
@@ -336,16 +337,19 @@ rules alongside acceptance rates (Supplement Section~S3).
 
 \subsection{Score-preserving controls and the fallback decision}
 \label{sec:score-controls}
-For each edge, let $\overline S_e=M^{-1}\sum_w S_{w,e}$. Global shrinkage
+\begin{samepage}
+For each edge, let $\overline S_e=M^{-1}\sum_w S_{w,e}$. Global shrinkage is defined by
 \begin{equation}
 S^{\rm shrink}_{w,e}=\lambda S_{w,e}+(1-\lambda)\overline S_e,
 \qquad 0<\lambda\leq1,
 \label{eq:score-shrink}
 \end{equation}
-preserves every within-edge comparison, including ties, in exact arithmetic:
+It preserves every within-edge comparison, including ties, in exact arithmetic:
 $S^{\rm shrink}_{u,e}-S^{\rm shrink}_{v,e}
 =\lambda(S_{u,e}-S_{v,e})$. Hence it preserves
 Eq.~\eqref{eq:temporal-target} for any graph generator and any local scorer.
+\par
+\end{samepage}
 Across different edges, the edge-specific offsets can change pooled rankings.
 This gives a non-clustering control for structural improvement with temporal
 order preserved: any pooled gain under this intervention arises through
@@ -421,20 +425,36 @@ Study C's five settings assess window resolution under a separate generator.
 Primary, secondary and exploratory analyses use the distinct inference rules
 described in the text.}
 \label{tab:protocol}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_protocol.tex}}
+\begingroup\small
+\input{results/information_sciences/narrative_assets/tab_protocol.tex}
+\endgroup
 \end{table}
 
 \subsection{Structural ranking gains versus temporal discrimination}
 \input{paper/sections/results_a.tex}
 \begin{table}[!htbp]\centering
-\caption{Study A: mean pooled and within-edge temporal AUROC on the same
-independent repeats. All methods share local Lasso scores within each fit.
-Intervals and the four primary comparisons are shown in Figure~\ref{fig:confirmation};
-coverage and failure counts are reported in Supplement Section~S4.
-Paired differences are computed before rounding: the displayed marginal means
-$0.639$ and $0.707$ do not determine the displayed difference $-0.069$.}
+\caption{Study A: pooled and within-edge temporal AUROC for reference emissions
+(a) and additional score-emission controls (b), averaged over the same
+100 independent paired repeats. All rows share local Lasso scores within each fit.}
+\label{tab:study-a-main}
 \label{tab:main-results}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_main_results.tex}}
+\label{tab:score-controls}
+\begingroup\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\input{results/information_sciences/narrative_assets/tab_study_a_combined.tex}
+\par\medskip
+\begin{minipage}{\linewidth}\small
+\textit{Notes.} One hard row represents gated and forced output in Study A,
+where all $100/100$ gates accept at both durations. The two policies remain
+distinct in B and C. Figure~\ref{fig:confirmation} reports the four
+primary contrasts; the additional controls do not join that family. For both
+control families, $\lambda=1$ reproduces raw; $\lambda=0$ is the residual
+hard endpoint. Paired differences use unrounded repeat values: the displayed
+means $0.639$ and $0.707$ do not determine the contrast $-0.069$.
+Supplement Sections~S4 and S5 report intervals, numerical coverage and auxiliary results.
+\end{minipage}
+\endgroup
 \end{table}
 \begin{figure}[!htbp]\centering
 \includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_confirmation.pdf}
@@ -445,24 +465,9 @@ within the same mechanism/noise repeat.}
 \label{fig:confirmation}
 \end{figure}
 
+\FloatBarrier
 \subsection{Sensitivity to switching schedules and gate acceptance}
 \input{paper/sections/results_b.tex}
-\begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_schedule.pdf}
-\caption{Study B: forced aggregation gains, realised window-centre switch
-counts and mean window purity for all six planned cells. Points/intervals use
-independent simulation repeats.
-The schedule comparisons are secondary robustness analyses.}
-\label{fig:schedule}
-\end{figure}
-\begin{table}[!htbp]\centering
-\caption{Candidate-hard factor diagnostics. Every row uses all evaluable forced
-candidates, including gate rejections. Per-repeat products are averaged across repeats;
-raw reference is $2\overline T_{\rm raw}-1$. Differences among jointly estimated
-factors are descriptive.}
-\label{tab:factors}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_factors.tex}}
-\end{table}
 \begin{figure}[!htbp]\centering
 \includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_fallback.pdf}
 \caption{Study B with the gate held fixed: gated hard with static fallback, forced
@@ -475,19 +480,11 @@ information discarded by the rejection output.}
 \label{fig:gate}
 \end{figure}
 
+\FloatBarrier
 \subsection{Disentangling cross-edge gains and within-edge information loss}
 \label{sec:control-results}
 \input{paper/sections/results_controls.tex}
 \input{paper/sections/results_residual.tex}
-\begin{table}[!htbp]\centering
-\caption{Score-emission controls on Study A's Lasso scores. Within-edge denotes
-within-edge temporal AUROC. All fixed non-endpoint
-$\lambda$ values are shown; $\lambda=1$ duplicates raw. Hard is the residual
-$\lambda=0$ endpoint. The paired intervals, OLS checks and full Study B grid
-appear in Supplement Section~S5.}
-\label{tab:score-controls}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_score_controls.tex}}
-\end{table}
 
 \subsection{Robustness across generators and window configurations}
 \label{sec:symmetric-results}
@@ -502,6 +499,7 @@ paired-repeat bootstrap intervals.}
 \label{fig:symmetric}
 \end{figure}
 
+\FloatBarrier
 \subsection{Sensitivity of boundary detection to evaluation conventions}
 \label{sec:localisation-results}
 \input{paper/sections/results_boundary.tex}
@@ -517,6 +515,7 @@ both AP conventions are reported in Supplement Section~S5.}
 \label{fig:localisation}
 \end{figure}
 
+\FloatBarrier
 \subsection{Evaluation beyond recurrent clustering}
 \label{sec:external-framework}
 \input{paper/sections/results_external.tex}
@@ -527,7 +526,10 @@ temporal AUROC. Standard AP includes the zero-score group. F1 uses raw-shared or
 method-specific q95, without selecting a best operating point. Paired
 differences use unrounded repeat values and appear in Supplement Section~S6.}
 \label{tab:external-framework}
-\resizebox{\linewidth}{!}{\input{results/information_sciences/narrative_assets/tab_external_framework.tex}}
+\begingroup\small
+\setlength{\tabcolsep}{4pt}
+\input{results/information_sciences/narrative_assets/tab_external_framework.tex}
+\endgroup
 \end{table}
 
 \FloatBarrier
@@ -543,9 +545,9 @@ tools are included in the accompanying reproducibility archive,
 routes for recomputing saved results and generating and fitting new runs;
 Supplement Section~S8 describes the environment and selected same-seed
 reproduction checks.
-The source code and complete archive are available in version
-\texttt{v2026.10.27.1} at
-\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1}.
+The archive includes the current presentation sources and PDFs and is publicly
+available in version \texttt{v2026.10.28-layout.1} at
+\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1}.
 
 \paragraph{Funding and competing interests.}
 This research received no external funding. The author declares no competing

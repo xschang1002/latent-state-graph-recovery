@@ -49,8 +49,12 @@ verification of retained outputs, rebuilding displays and separate fresh-fitting
 routes. AP/threshold sensitivity, residual pair accounting and the distinct PELT
 segment-refit adapter are retained separately. Eight selected same-seed fresh
 generation/fitting comparisons are bounded reproduction checks, not a new
-independent study or a full-grid fresh run. The source code and complete archive
-are available in version v2026.10.27.1 at
+independent study or a full-grid fresh run. The accompanying archive includes the
+current presentation sources and PDFs, publicly available in release
+v2026.10.28-layout.1 at
+https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1.
+The unchanged underlying scientific archive remains available in version
+v2026.10.27.1 at
 https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1.
 No DOI has been assigned. Existing third-party sources retain their licensing
 and acquisition conditions.

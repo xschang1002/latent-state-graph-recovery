@@ -25,8 +25,8 @@ from validate_paper_static import clean_source, collect_sources, group_end, vali
 
 FIGURES = {"fig_target_example", "fig_confirmation", "fig_schedule", "fig_gate"}
 TABLES = {"tab_protocol", "tab_main_results", "tab_factors", "tab_ess_compact"}
-MAIN_FIGURES = (FIGURES - {"fig_gate"}) | {"fig_fallback", "fig_symmetric", "fig_boundary_sensitivity"}
-MAIN_TABLES = (TABLES - {"tab_ess_compact"}) | {"tab_score_controls", "tab_external_framework"}
+MAIN_FIGURES = {"fig_target_example", "fig_confirmation", "fig_fallback", "fig_symmetric", "fig_boundary_sensitivity"}
+MAIN_TABLES = {"tab_protocol", "tab_study_a_combined", "tab_external_framework"}
 SUPPLEMENT_OUTPUTS = {
     "tab_supp_a_contrasts.tex", "tab_supp_b_gate_factors.tex", "tab_supp_diagnostics_ols.tex",
     "supp_a_contrasts_source.csv", "supp_b_gate_source.csv", "supp_b_factors_source.csv",

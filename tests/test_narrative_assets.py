@@ -1,5 +1,6 @@
 """Display-only regressions: semantic labels may change, scientific values may not."""
 from pathlib import Path
+import re
 import sys
 
 import numpy as np
@@ -12,17 +13,25 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_narrative_assets as display
 
 
+def inline_interval_cells(text):
+    return re.sub(r"\\shortstack\[r\]\{\$([-+]?[0-9.]+)\$\\\\\$\[([^\]]+)\]\$\}",
+                  lambda m: "$" + m[1] + r"\;[" + m[2] + "]$", text)
+
+
 def test_current_table_rewrites_preserve_every_printed_number():
     outputs, checks = display.table_outputs(ROOT)
-    assert len(outputs) == len(checks) == 35
+    assert len(outputs) == len(checks) == 38
     for name, proof in checks.items():
+        if proof.get("derived_layout_only"):
+            assert name in display.DERIVED_TABLES and proof["numeric_cells_unchanged"]
+            continue
         if name != "tab_protocol.tex":
             if "authorized_interval_overrides" not in proof:
                 assert proof["printed_numeric_tokens_unchanged"]
             else:
                 assert name in {"tab_fallback_full.tex", "tab_external_contrasts.tex", "tab_residual_pairs.tex"}
                 assert proof["all_other_printed_numeric_tokens_unchanged"]
-                restored = outputs[name].decode()
+                restored = inline_interval_cells(outputs[name].decode())
                 for change in proof["authorized_interval_overrides"]:
                     lines = restored.splitlines()
                     index, = [i for i, line in enumerate(lines) if line.startswith(change["row_prefix"])]
@@ -65,12 +74,77 @@ def test_only_reviewed_unmatched_historical_runtime_row_is_removed():
 
 def test_formal_design_is_from_three_protocols_and_drops_earlier_exploration():
     text, record = display.protocol_table(ROOT)
-    assert "Earlier" not in text and "C: 30" in text
+    assert "Earlier" not in text and r"C\par} & {\raggedright 30" in text
     assert record["A"]["repeats"] == 100 and record["B"]["repeats"] == 50
     assert record["C"]["seeds"] == list(range(70000, 70030))
     assert record["C"]["M"] == [35, 23, 17, 45, 12]
     assert "Holm4" in text and "Holm6" in text and "Holm3" in text
     assert "Separate robustness study" in text
+    assert all(seed not in text for seed in ("50000", "60000", "70000"))
+    assert "Five specified pairs" in text and "see S4.2" in text
+    assert "resizebox" not in text and "p{0.24" in text
+    assert text.count(r"{\raggedright ") == 20
+    assert "arraybackslash" not in text and ">{" not in text
+
+
+def test_combined_study_a_preserves_all_reference_and_nonendpoint_cells():
+    text, proof = display.combined_study_a_table(ROOT)
+    rows = {row[0]: row[1:] for row in display.data_cells(text)[2:]}
+    assert len(rows) == len(proof["rows"]) == 11
+    assert list(rows)[:5] == ["Raw windows", "Static mean", "Hard (gated = forced)",
+                             "Size-matched random", "Oracle labels"]
+    assert len([name for name in rows if name.startswith("Shrinkage")]) == 3
+    assert len([name for name in rows if name.startswith("Residual")]) == 3
+    for record in proof["rows"]:
+        original_rows = {row[0]: row[1:] for row in display.data_cells(
+            (ROOT / record["source"]).read_text(encoding="utf-8"))}
+        assert rows[record["display_row"]] == original_rows[record["source_row"]]
+        assert len(rows[record["display_row"]]) == 4
+    assert proof["gate_acceptance"] == {"300": "100/100", "600": "100/100"}
+    assert "\\begin{table}" not in text and "\\textbf" not in text
+
+
+def test_combined_study_a_rejects_rejected_gates_and_hidden_unrounded_difference(monkeypatch):
+    import pandas as pd
+    original = pd.read_csv(ROOT / display.STUDY_A_DETAIL, float_precision="round_trip")
+    changed = original.copy()
+    first = changed.index[(changed.scorer == "lasso") & (changed.method == "native_hard")][0]
+    changed.loc[first, "hard_gate_accepted"] = False
+    monkeypatch.setattr(display.pd, "read_csv", lambda *args, **kwargs: changed)
+    with pytest.raises(ValueError, match="all Study A gates accept"):
+        display.combined_study_a_table(ROOT)
+    changed = original.copy()
+    changed.loc[first, "temporal_delta_auroc"] += 1e-10
+    with pytest.raises(ValueError, match="identical unrounded"):
+        display.combined_study_a_table(ROOT)
+
+
+def test_ap_f1_projection_reconstructs_all_eighteen_original_rows_and_missing_cells():
+    outputs, checks = display.split_ap_sensitivity(ROOT)
+    ap = display.data_cells(outputs["tab_ap_sensitivity_ap.tex"].decode())[1:]
+    f1 = display.data_cells(outputs["tab_ap_sensitivity_f1.tex"].decode())[1:]
+    source = display.data_cells((ROOT / display.BASE / "evaluation_assets/tab_ap_sensitivity.tex").read_text())[1:]
+    assert len(ap) == len(f1) == len(source) == 18
+    assert [a + f[1:] for a, f in zip(ap, f1)] == source
+    missing = [i for i, row in enumerate(source) if row[1] == "0"]
+    assert len(missing) == 1 and ap[missing[0]][2:] == ["--", "--", "--"]
+    assert all(value != "--" for value in f1[missing[0]][1:])
+    assert all(x["numeric_cells_unchanged"] and x["missing_cells_preserved"] for x in checks.values())
+
+
+def test_wrapped_table_layout_preserves_interval_endpoints_and_metric_columns():
+    outputs, _ = display.table_outputs(ROOT)
+    residual = outputs["tab_residual_pairs.tex"].decode()
+    assert inline_interval_cells(residual).count(r"\;[") == 48
+    assert r"\shortstack[r]" in residual and r"\shortstack{Within-group" in residual
+    source = display.transform_table("tab_controls.tex", (ROOT / "results/revision2/tab_controls.tex").read_text())
+    controls = outputs["tab_controls.tex"].decode()
+    assert display.numeric_tokens(controls) == display.numeric_tokens(source)
+    assert r"\shortstack{Assignment\\ARI}" in controls
+    external = outputs["tab_external_framework.tex"].decode()
+    assert len(display.data_cells(external)[1:]) == 6
+    assert all(len(row) == 7 for row in display.data_cells(external))
+    assert r"\shortstack{Pooled\\AUROC}" in external
 
 
 def test_figure_policy_names_depend_on_the_original_comparison():
@@ -97,7 +171,7 @@ def test_duplicate_intervals_reuse_original_study_and_leave_fallback_boundary_co
     old_external = display.transform_table("tab_external_contrasts.tex", (ROOT / "results/information_sciences/evaluation_assets/tab_external_contrasts.tex").read_text())
     for before, after in zip(old_external.splitlines(), external.splitlines()):
         if " & Within-edge AUROC & " not in before: assert before == after
-    residual = outputs["tab_residual_pairs.tex"].decode()
+    residual = inline_interval_cells(outputs["tab_residual_pairs.tex"].decode())
     assert r"C, 300 & 1 & 0.661 & 0.707" in residual and r"$+0.047\;[0.006,0.084]$" in residual
     assert r"$-0.037\;[-0.067,-0.002]$" in residual
     changes = proof["tab_residual_pairs.tex"]["authorized_interval_overrides"]
@@ -136,6 +210,24 @@ def test_numeric_artist_signature_detects_data_changes_but_not_labels():
     assert display.figure_signature(fig) == original
     line.set_ydata([0.5, 0.8, 0.6])
     assert display.figure_signature(fig) != original
+    plt.close(fig)
+
+
+def test_fallback_legend_is_below_observations_without_axis_or_data_changes():
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots(figsize=(7.2, 4.9), layout="constrained")
+    for offset, label in enumerate(("Native", "Hard", "Raw fallback")):
+        ax.errorbar([.02 + offset * .01], [offset * .2], xerr=[[.01], [.02]], fmt="o", label=label)
+    ax.set(xlabel="Paired change in within-edge AUROC", ylim=(-.3, 5.3))
+    ax.legend(loc="lower left", frameon=False, ncols=3)
+    before = display.figure_signature(fig)
+    record = display.layout_figure(fig, "fig_fallback")
+    fig.canvas.draw()
+    assert display.figure_signature(fig) == before
+    assert record["legend_labels"] == ["Gated hard", "Forced hard", "Raw fallback"]
+    renderer = fig.canvas.get_renderer()
+    assert ax.get_legend().get_window_extent(renderer).y1 < ax.get_window_extent(renderer).y0
+    assert ax.get_legend().get_window_extent(renderer).y1 < ax.xaxis.label.get_window_extent(renderer).y0
     plt.close(fig)
 
 

@@ -111,7 +111,7 @@ def test_abstract_count_resolves_the_actual_input_and_does_not_write(tmp_path):
     before = {p.relative_to(tmp_path): (gate.sha(p), p.stat().st_mtime_ns) for p in tmp_path.rglob("*") if p.is_file()}
     result = gate.verify_manuscript(tmp_path)
     assert result["abstract_words"] == 182 and result["contributions"] == 3
-    assert result["main_figures"] == 6 and result["main_tables"] == 5
+    assert result["main_figures"] == 5 and result["main_tables"] == 3
     after = {p.relative_to(tmp_path): (gate.sha(p), p.stat().st_mtime_ns) for p in tmp_path.rglob("*") if p.is_file()}
     assert before == after
     abstract.write_text("Too short", encoding="utf-8")
@@ -131,6 +131,31 @@ def test_real_author_and_exact_main_asset_inventory_are_enforced(tmp_path):
     main.write_text(original.replace(r"\item Diagnostics", r"\item Diagnostics\item Extra"), encoding="utf-8")
     with pytest.raises(gate.VerificationError, match="three substantive"):
         gate.verify_manuscript(tmp_path)
+
+
+@pytest.mark.parametrize("name,kind", [
+    ("fig_schedule", "figure"),
+    ("tab_factors", "table"),
+    ("tab_score_controls", "table"),
+])
+def test_relocated_or_combined_displays_cannot_reenter_the_main_inventory(tmp_path, name, kind):
+    main, _ = manuscript_fixture(tmp_path)
+    if kind == "table":
+        (tmp_path / "results/information_sciences" / f"{name}.tex").write_text(
+            r"\begin{tabular}{r}1\end{tabular}", encoding="utf-8")
+        display = r"\begin{table}\input{results/information_sciences/" + name + r".tex}\end{table}"
+    else:
+        display = r"\begin{figure}\includegraphics{results/information_sciences/" + name + r".pdf}\end{figure}"
+    main.write_text(main.read_text(encoding="utf-8").replace(r"\end{document}", display + r"\end{document}"), encoding="utf-8")
+    with pytest.raises(gate.VerificationError, match="Expected main 5 figures/3 tables"):
+        gate.verify_manuscript(tmp_path)
+
+
+def test_current_layout_inventory_does_not_rewrite_the_original_asset_inventory():
+    assert gate.FIGURES == {"fig_target_example", "fig_confirmation", "fig_schedule", "fig_gate"}
+    assert gate.TABLES == {"tab_protocol", "tab_main_results", "tab_factors", "tab_ess_compact"}
+    assert gate.MAIN_FIGURES == {"fig_target_example", "fig_confirmation", "fig_fallback", "fig_symmetric", "fig_boundary_sensitivity"}
+    assert gate.MAIN_TABLES == {"tab_protocol", "tab_study_a_combined", "tab_external_framework"}
 
 
 def test_recursive_input_paths_are_checked_and_cycles_do_not_hang(tmp_path):

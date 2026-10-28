@@ -1,6 +1,6 @@
 {
   "title": "State Aggregation in Dynamic Graph Recovery: Separating Structural Ranking from Temporal Discrimination - Reproducibility Artifact",
-  "version": "v2026.10.28",
+  "version": "v2026.10.28-layout.1",
   "resource_type": "software with retained simulation data and manuscript sources",
   "creators": [
     {
@@ -12,11 +12,11 @@
       "postal_address": "Anhui University, 3 Feixi Road, Shushan District, Hefei, Anhui 230039, China"
     }
   ],
-  "repository_status": "public versioned GitHub release",
+  "repository_status": "public versioned GitHub presentation release",
   "doi": null,
   "public_url": "https://github.com/xschang1002/latent-state-graph-recovery",
-  "release_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28",
-  "archive_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/download/v2026.10.28/information_sciences_reproducibility.zip",
+  "release_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1",
+  "archive_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/download/v2026.10.28-layout.1/information_sciences_reproducibility.zip",
   "identifier_status": "versioned GitHub release; no DOI has been assigned",
   "license_scope": "Project code: MIT. Third-party code and data retain their own notices and acquisition conditions.",
   "description_file": "upload_description.md",
@@ -41,5 +41,8 @@
   ],
   "release_checklist": "submission_materials/information_sciences/README.md",
   "scientific_content_version": "v2026.10.27.1",
-  "delivery_revision": "Formal submission filenames only; PDF bytes and scientific content are unchanged."
+  "delivery_revision": "Five main figures and three main tables; complete diagnostics relocated and readability improved. Scientific inputs, fitted outputs and inference unchanged.",
+  "public_scientific_release_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.27.1",
+  "preceding_public_delivery_url": "https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28",
+  "presentation_revision_published": true
 }

@@ -1,9 +1,13 @@
-\begin{tabular}{llrll}
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{0.055\linewidth}p{0.045\linewidth}p{0.24\linewidth}rp{0.19\linewidth}p{0.27\linewidth}@{}}
 \toprule
-Study: repeats / seeds & Paired design & $T$ & Window grid: $h/s$; $M$ & Statistical role \\
+{\raggedright Study\par} & {\raggedright $n$\par} & {\raggedright Schedule / generator\par} & $T$ & {\raggedright Windows: $h/s$; $M$\par} & {\raggedright Statistical role\par} \\
 \midrule
-\shortstack[l]{A: 100 independent repeats\\50000--50099} & \shortstack[l]{Fixed phase; $D=300,600$\\Two cells per repeat} & 1200 & $300/150$; $7$ & \shortstack[l]{Confirmation: gated Lasso Holm4\\Forced and OLS auxiliary} \\
-\shortstack[l]{B: 50 independent repeats\\60000--60049} & \shortstack[l]{Fixed/random/irregular\\$\bar D=300,600$; six cells} & 3600 & $300/150$; $23$ & \shortstack[l]{Secondary robustness\\Forced--raw Holm6; duration Holm3} \\
-\shortstack[l]{C: 30 independent repeats\\70000--70029} & \shortstack[l]{Symmetric generator\\$D=300,600$; ten cells} & 3600 & \shortstack[l]{$200/100$; $35$\\$300/150$; $23$\\$400/200$; $17$\\$300/75$; $45$\\$300/300$; $12$} & \shortstack[l]{Separate robustness study\\Pointwise 95\% intervals\\No confirmatory family} \\
+{\raggedright A\par} & {\raggedright 100\par} & {\raggedright Asymmetric support; fixed phase; $D=300,600$\par} & 1200 & {\raggedright $300/150$; $7$\par} & {\raggedright Primary confirmation: gated Lasso Holm4; forced and OLS auxiliary\par} \\
+{\raggedright B\par} & {\raggedright 50\par} & {\raggedright Asymmetric support; fixed/random/irregular; $\bar D=300,600$\par} & 3600 & {\raggedright $300/150$; $23$\par} & {\raggedright Secondary robustness: forced--raw Holm6; duration Holm3\par} \\
+{\raggedright C\par} & {\raggedright 30\par} & {\raggedright Symmetric generator; fixed phase; $D=300,600$\par} & 3600 & {\raggedright Five specified pairs; $M=12$--$45$; see S4.2\par} & {\raggedright Separate robustness study; pointwise 95\% intervals; no confirmatory family\par} \\
 \bottomrule
 \end{tabular}
+\endgroup

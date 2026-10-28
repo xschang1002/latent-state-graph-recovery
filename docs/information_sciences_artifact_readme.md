@@ -10,17 +10,21 @@ of edges at the times they are active. Pooled edge ranking, within-edge state
 discrimination and adjacent-window boundary detection are evaluated separately.
 `docs/research_guide.md` maps the scientific questions and results. The archive's
 main article and supplement are `paper/main.pdf` and `paper/supplement.pdf`, with
-TeX sources beside them. The [versioned public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28)
-provides the complete `information_sciences_reproducibility.zip`, checksums and
-the manuscript PDFs. Download that named archive for the complete verified
-artifact; GitHub's automatically generated source ZIP is a different container.
-The separate PDF release assets are
-`Manuscript.pdf` and
-`Supplementary_Material.pdf`.
-Release `v2026.10.28` changes submission filenames and delivery metadata only.
-Both PDFs and all scientific content are identical to `v2026.10.27.1`; the
-scientific archive link printed inside the PDFs remains valid. Compilation
-paths inside the archive remain `paper/main.pdf` and `paper/supplement.pdf`.
+TeX sources beside them. This is presentation revision
+`v2026.10.28-layout.1`, with five main figures and three main tables. The
+accompanying `information_sciences_reproducibility.zip` and its checksums identify
+the current deliverable. The separate PDFs are `Manuscript.pdf` and
+`Supplementary_Material.pdf`. The
+layout revision map, `docs/ins_layout_revision_2026-10-28.md`, records moved and
+combined displays in the exported archive.
+Scientific inputs, fitted outputs and inferential results are unchanged.
+
+The [versioned public release](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1)
+provides the complete named reproducibility archive, both PDFs and checksums.
+The preceding release, `v2026.10.28`, remains unchanged and contains the same
+scientific evidence with its earlier presentation. GitHub's automatically
+generated source ZIP is a different container from the named reproducibility archive.
+Compilation paths remain `paper/main.pdf` and `paper/supplement.pdf`.
 
 ## What to reproduce
 
@@ -290,8 +294,11 @@ records. Earlier audit reports describe their own snapshots, not the current
 contents of a repeatedly rebuilt ZIP filename.
 
 The public source repository is
-[latent-state-graph-recovery](https://github.com/xschang1002/latent-state-graph-recovery),
-with the complete archive in release `v2026.10.28`. No DOI has been assigned.
+[latent-state-graph-recovery](https://github.com/xschang1002/latent-state-graph-recovery).
+Release [v2026.10.28-layout.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1)
+provides the current presentation and complete named archive. The preceding
+release, `v2026.10.28`, remains available with the same scientific inputs and
+fitted results and its earlier presentation. No DOI has been assigned.
 Submission metadata and the remaining journal-system steps are in
 `submission_materials/information_sciences/README.md`. A GitHub release does not
 constitute submission to the journal.
