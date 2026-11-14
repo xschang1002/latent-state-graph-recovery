@@ -12,10 +12,10 @@ authors:
     given-names: Xuansong
     affiliation: Stony Brook Institute at Anhui University, Hefei, China
     email: alec.xs.chang@gmail.com
-version: v2026.10.28-layout.1
-date-released: '2026-10-28'
+version: v2026.11.15-kbs
+date-released: '2026-11-15'
 repository-code: https://github.com/xschang1002/latent-state-graph-recovery
-url: https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1
+url: https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.11.15-kbs
 license: MIT
 abstract: >-
   Code, simulation inputs and retained fitted outputs for the study of state

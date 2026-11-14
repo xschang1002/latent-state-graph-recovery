@@ -20,6 +20,8 @@
 \setlength{\intextsep}{12pt plus 2pt minus 2pt}
 \setlength{\emergencystretch}{2em}
 \newcommand{\Tauc}{\mathrm{T\!-\!AUC}_{\Delta}}
+\newtheorem{proposition}{Proposition}
+\newenvironment{proof}[1][Proof]{\par\noindent\textit{#1.}\ }{\nobreak\hspace*{\fill}\begingroup\setlength{\fboxsep}{0pt}\fbox{\rule{0pt}{0.52em}\hspace{0.52em}}\endgroup\par\smallskip}
 \title{State Aggregation in Dynamic Graph Recovery:\\
 Separating Structural Ranking from Temporal Discrimination}
 \author{Xuansong Chang\\
@@ -36,17 +38,17 @@ Separating Structural Ranking from Temporal Discrimination}
 \begin{abstract}
 \input{paper/sections/abstract.tex}
 \end{abstract}
-\noindent\textbf{Keywords:} Dynamic graph recovery; temporal discrimination;
-boundary detection; state aggregation; evaluation; switching autoregression.
+\noindent\textbf{Keywords:} Dynamic graph recovery; relational knowledge discovery;
+temporal discrimination; boundary detection; state aggregation; switching
+autoregression.
 
 \section{Introduction}
 \label{sec:intro}
-A time-varying graph estimator must recover which relationships exist and when
-they are active. An aggregation step can improve the first objective while
-weakening the second. This creates a practical ambiguity: a better ranking of
-edges may reflect more accurate long-run structure even when the output loses
-information about changes. Evaluation must resolve that ambiguity before a
-structural improvement can guide interpretation of a dynamic system.
+Interpreting relational knowledge from time-varying multivariate observations
+requires a dynamic graph estimator to recover both which directed relationships
+exist and when they are active. Post-estimation aggregation across windows can
+improve the first objective while weakening the second. This creates a
+practical ambiguity for knowledge discovery in dynamic systems: a better ranking of edges may reflect more accurate long-run structure even when the output loses information about temporal changes. Evaluation must resolve that ambiguity before a structural improvement can guide interpretation of a dynamic system.
 
 Grouping local connectivity estimates into recurring states is an established
 strategy. Sliding-window functional-connectivity studies use representative
@@ -57,11 +59,12 @@ by group summaries changes the recovery of individual edges across time.
 Shared observations support a controlled comparison: hold the local scores
 fixed and vary grouping, score emission and the decision to execute aggregation.
 
-We distinguish three evaluation targets. Pooled AUROC compares positive and
-negative edge--window entries, mixing comparisons within and across edges.
+We distinguish three evaluation targets. Pooled area under the receiver
+operating characteristic curve (AUROC) compares positive and negative
+edge--window entries, mixing comparisons within and across edges.
 Within-edge temporal AUROC compares an edge's active and inactive windows.
 Boundary detection evaluates score changes between adjacent windows.
-A static occupancy example and finite-score identities connect these targets
+Analytical propositions and a static occupancy example connect these targets
 to the information that different emission rules preserve.
 
 The distinctions change the empirical assessment of aggregation. Across
@@ -84,15 +87,16 @@ improvement depends on the evaluation target.
 aggregation at two duration configurations. Schedule, generator and window
 comparisons show how these effects depend on the evaluated configuration;
 score-preserving controls identify structural gains that occur without grouping.
-\item Diagnostic identities connect hard-emission performance to state-assignment
-discrimination and graph contrast, and decompose residual gains into same-group
-and cross-group comparisons. Boundary sensitivities and a segmentation/refit
-comparison show how score conventions affect the resulting assessment.
+\item Analytical propositions and exact finite-sample proofs connect
+hard-emission performance to state-assignment discrimination and graph contrast,
+attribute linear-shrinkage gains solely to cross-edge reordering, and
+establish a closed-form near-zero discontinuity for residual tie breaking,
+complemented by boundary-convention and segmentation/refit analyses.
 \end{itemize}
 The experiments use two-state linear switching systems with local Lasso and
-OLS scores. This controlled setting links the evaluation analysis to paired
-changes in graph recovery while exposing the roles of window resolution,
-score emission and gate acceptance.
+ordinary least squares (OLS) scores. This controlled setting links the
+evaluation analysis to paired changes in dynamic relational recovery while
+exposing the roles of window resolution, score emission and gate acceptance.
 
 \section{Related work}
 \label{sec:related}
@@ -101,8 +105,9 @@ analysis. \citet{allen2014tracking} cluster regularised windowed covariance
 matrices into recurring states, using Manhattan distances and cluster-median
 maps. \citet{abrol2017replicability} examine replication of state profiles and
 temporal summaries, including dwell times and transitions, with hard clustering
-and fuzzy meta-states. Task-fMRI work also relates clustered connectivity
-states to ongoing events and behaviour \citep{chang2026neurocognitive}.
+and fuzzy meta-states. Task-based functional magnetic resonance imaging (fMRI)
+work also relates clustered connectivity states to ongoing events and behaviour
+\citep{chang2026neurocognitive}.
 These are meaningful validation targets for functional association. They differ
 from recovery of the temporal support of individual directed lagged edges.
 
@@ -121,8 +126,9 @@ estimators include Regime-PCMCI, CASTOR and SPACETIME
 \citep{saggioro2020regime,rahmani2025castor,mameche2025spacetime}.
 Jointly fitting state assignments and graph models changes the local estimates
 as well as their grouping. Aggregating fixed scores is a separate intervention.
-Penalised changepoint optimisation \citep{killick2012optimal} and VAR break
-models \citep{bai1998estimating} motivate the segmentation comparisons in Supplement Section~S6.
+Penalised changepoint optimisation \citep{killick2012optimal} and vector
+autoregressive (VAR) break models \citep{bai1998estimating} motivate the
+segmentation comparisons in Supplement Section~S6.
 
 Multidimensional evaluation can expose differences that a single structural
 score conceals. \citet{velev2026evaluation} evaluate causal discovery from
@@ -148,8 +154,9 @@ to target $j$ in state $k$. Regression includes self- and cross-lags, but edge
 evaluation and clustering exclude self-lag scores. Union evaluation uses
 $A_{\cup,\ell,i,j}=\mathbf1\{\exists k:A_{k,\ell,i,j}=1\}$; regime evaluation
 matches state identities before scoring; time-indexed evaluation compares each
-emitted graph with the true state at its window centre. AUROC, AUPRC and
-precision inherit the meaning of the chosen target and indexing.
+emitted graph with the true state at its window centre. AUROC, area under the
+precision--recall curve (AUPRC) and precision inherit the meaning of the chosen
+target and indexing.
 
 \subsection{A shared-score aggregation experiment}
 \label{sec:method}
@@ -216,61 +223,82 @@ for English translation and LaTeX formatting corrections is disclosed in the
 end-matter declaration. Figures are generated by reproducible Python scripts
 from the numerical outputs and the specified finite example. The reproducibility
 archive supplies these scripts and their inputs. The author reviewed and
-verified the AI-assisted outputs as appropriate.
+verified the artificial intelligence (AI)-assisted outputs as appropriate.
 
 \section{Evaluation and mechanism analysis}
 \label{sec:evaluation}
 \subsection{Pooled ranking and within-edge temporal discrimination}
 \label{sec:static-occupancy}
-For edge occupancy $\pi_e=M^{-1}\sum_{w=1}^{M} A_{w,e}$ and constant scores $s_e$,
-writing $H(u)=\mathbf1(u>0)+\tfrac12\mathbf1(u=0)$, pooled AUROC is
-\begin{equation}
-\mathrm{AUC}_{\rm static}
-=\frac{\sum_{e,f}\pi_e(1-\pi_f)H(s_e-s_f)}
-{P Q},\qquad P=\sum_e\pi_e,\quad Q=\sum_e(1-\pi_e).
-\label{eq:auc-static}
-\end{equation}
-It depends on frequencies rather than activation times. Sorting edges by
-$\pi_e$ is optimal among constant scores: an adjacent exchange changes the
-numerator by the difference in occupancies. Classical optimal ranking thus gives
-\begin{equation}
-\mathrm{AUC}_{\rm static}^{*}
-=\tfrac12+\frac{\sum_{e,f}|\pi_e-\pi_f|}{4P Q}.
-\label{eq:static-ceiling}
-\end{equation}
-This ceiling characterises the ranking attainable from occupancy alone.
-
-For general time-indexed scores, the positive--negative comparison pairs split
-exactly into same-edge and cross-edge parts:
-\begin{equation}
-\mathrm{AUC}_{\rm pooled}=\omega\mathrm{AUC}_{\rm same}
-+(1-\omega)\mathrm{AUC}_{\rm cross},\qquad
-\omega=\frac{\sum_e n_e^+n_e^-}{(\sum_e n_e^+)(\sum_e n_e^-)}.
-\label{eq:pooled-split}
-\end{equation}
-Here $n_e^+=\sum_{w=1}^{M} A_{w,e}$ and $n_e^-=M-n_e^+$ count the
-positive and negative window labels of edge $e$ on the same evaluation grid.
-Cross-edge comparisons can also depend on time. Equation~\eqref{eq:pooled-split}
-therefore identifies the mixture of comparisons in pooled AUROC, with its
-same-edge weight determined by the evaluation labels.
-
-Let $\mathcal E_\Delta$ contain non-self lagged edges whose binary label changes
-in the evaluation windows. Within-edge temporal AUROC on changing edges is
+Let $A_{w,e}\in\{0,1\}$ denote the true support of non-self lagged edge $e$ at
+window centre $w\in\{1,\dots,M\}$, let $\pi_e=M^{-1}\sum_{w=1}^{M} A_{w,e}$ be
+its occupancy, and let $n_e^+=M\pi_e$ and $n_e^-=M(1-\pi_e)$ count its active
+and inactive windows. Write $H(u)=\mathbf1(u>0)+\tfrac12\mathbf1(u=0)$ and let
+$\mathcal E_\Delta=\{e:n_e^+>0,\ n_e^->0\}$ collect edges whose binary support
+changes across evaluation windows. Within-edge temporal AUROC is
 \begin{equation}
 \Tauc=|\mathcal E_\Delta|^{-1}
 \sum_{e\in\mathcal E_\Delta}\mathrm{AUROC}
-\bigl((A_{w,e})_w,(\widehat S_{w,e})_w\bigr).
+\bigl((A_{w,e})_w,(\widehat S_{w,e})_w\bigr),
 \label{eq:temporal-target}
 \end{equation}
-An edge without both positive and negative evaluation labels is not scored;
-undefined targets remain missing. Constant emission scores $0.5$ whenever
-this target is defined. Figure~\ref{fig:targets} illustrates why high pooled
-ranking need not imply within-edge temporal discrimination.
-Equation~\eqref{eq:temporal-target} measures the ordering of an edge's active
-and inactive windows. It does not measure distance to a switch boundary,
-and it excludes edges whose support is constant. Permuting scores within the
-active windows, or within the inactive windows, leaves it unchanged while
-potentially changing the locations of thresholded errors. We therefore also evaluate boundary detection and variation on stable edges.
+where edges without both positive and negative window labels are excluded
+rather than imputed, and constant scores attain $1/2$ on every $e\in\mathcal E_\Delta$.
+
+\begin{proposition}[Static occupancy ceiling and pooled--temporal pair split]
+\label{prop:occupancy-pooled}
+Assume $P=\sum_e\pi_e>0$ and $Q=\sum_e(1-\pi_e)>0$.
+\begin{enumerate}
+\item[(i)] For any time-constant scores $\widehat S_{w,e}\equiv s_e$, pooled
+AUROC depends only on edgewise occupancies,
+\begin{equation}
+\mathrm{AUC}_{\rm static}(s)
+=\frac{\sum_{e,f}\pi_e(1-\pi_f)H(s_e-s_f)}
+{PQ},
+\label{eq:auc-static}
+\end{equation}
+and is bounded above over all constant score vectors $s$ by
+\begin{equation}
+\mathrm{AUC}_{\rm static}^{*}
+=\tfrac12+\frac{\sum_{e,f}|\pi_e-\pi_f|}{4PQ},
+\label{eq:static-ceiling}
+\end{equation}
+with equality if and only if $(s_e)$ strictly separates distinct occupancies
+($\pi_e>\pi_f\Rightarrow s_e>s_f$), while $\Tauc=1/2$ whenever
+$\mathcal E_\Delta\neq\emptyset$.
+\item[(ii)] For any emitted array $(\widehat S_{w,e})$ with non-empty same-edge
+and cross-edge positive--negative pair sets, pooled AUROC decomposes exactly as
+\begin{equation}
+\mathrm{AUC}_{\rm pooled}=\omega\,\mathrm{AUC}_{\rm same}
++(1-\omega)\,\mathrm{AUC}_{\rm cross},\qquad
+\omega=\frac{\sum_e n_e^+n_e^-}{(\sum_e n_e^+)(\sum_e n_e^-)},
+\label{eq:pooled-split}
+\end{equation}
+where $\mathrm{AUC}_{\rm same}=\bigl(\sum_{e\in\mathcal E_\Delta}n_e^+ n_e^-\bigr)^{-1}
+\sum_{e\in\mathcal E_\Delta}n_e^+ n_e^-\,\mathrm{AUROC}_e$ weights per-edge
+temporal AUROCs by $n_e^+ n_e^-$ (equalling $\Tauc$ whenever all
+$e\in\mathcal E_\Delta$ share one two-state schedule).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Part~(i) follows directly by summing $H(s_e-s_f)$ over all $M^2\pi_e(1-\pi_f)$
+active--inactive window pairs between edges $e$ and $f$; exact global
+optimality of sorting by $\pi_e$ via $H(u)+H(-u)=1$ pair symmetrisation
+(including tied scores) is proved in Supplement Section~S3.1.
+Part~(ii) partitions all $(\sum_e n_e^+)(\sum_e n_e^-)$ positive--negative
+``window $\times$ edge'' pairs into within-edge pairs ($e=f$, contributing only
+when $e\in\mathcal E_\Delta$) and cross-edge pairs ($e\neq f$).
+\end{proof}
+
+Proposition~\ref{prop:occupancy-pooled} clarifies why high pooled ranking need
+not imply temporal discrimination: the weight $\omega$ is fixed by evaluation
+labels, cross-edge comparisons remain exposed to long-run occupancy gaps
+\citep{clemencon2008ranking}, and permuting scores within an edge's active (or
+inactive) windows leaves Eq.~\eqref{eq:temporal-target} invariant while
+potentially moving thresholded boundary errors. Figure~\ref{fig:targets}
+illustrates Proposition~\ref{prop:occupancy-pooled}(i) on a deterministic
+constant predictor. We therefore report Eq.~\eqref{eq:temporal-target} together
+with boundary detection and variation on stable edges.
 
 \begin{figure}[!htbp]
 \centering\includegraphics[width=\linewidth]{results/information_sciences/narrative_assets/fig_target_example.pdf}
@@ -287,31 +315,38 @@ A slot is the interval between consecutive window centres. It is positive for
 an edge if its true support changes at least once in that interval, and the
 predicted change strength is the absolute difference between consecutive
 emitted scores. This target evaluates change detection at stride resolution.
-We report boundary-detection AP and F1, together with false changes on stable
-edges. Standard AP includes the zero-score group; positive-change AP treats
-zero strength as abstention. Supplement Section~S1 summarises slot targets;
-Section~S5 defines threshold references and AP conventions, compared here
-in Section~\ref{sec:localisation-results}.
+We report boundary-detection average precision (AP) and F1 score, together
+with false changes on stable edges. Standard AP includes the zero-score group;
+positive-change AP treats zero strength as abstention. Supplement Section~S1
+summarises slot targets; Section~S5 defines threshold references and AP
+conventions, compared here in Section~\ref{sec:localisation-results}.
 
 \subsection{Two-state hard emission and relative gain}
 \label{sec:state-factor}
-With two true states and two fixed predicted maps, align state numbering once.
-Define state-assignment discrimination
-$J=\Pr(\widehat z=1\mid z=1)-\Pr(\widehat z=1\mid z=0)$ and, for changing edges,
+Suppose the evaluation windows visit two true regimes $z_w\in\{0,1\}$ with both
+states occurring ($1\le M_1=\sum_{w=1}^M \mathbf1\{z_w=1\}\le M-1$) and statewise
+supports $A_{w,e}=A_{z_w,e}$. Under a two-state hard policy $\widehat S_{w,e}=G_{\widehat z_w,e}$
+with $\widehat z_w\in\{0,1\}$ and fixed label alignment, define state-assignment
+discrimination $J=\Pr(\widehat z=1\mid z=1)-\Pr(\widehat z=1\mid z=0)$ (measured
+on window centres) and, for changing edges ($\mathcal E_\Delta\neq\emptyset$),
 \begin{equation}
 C_{\rm edge}=|\mathcal E_\Delta|^{-1}
 \sum_{e\in\mathcal E_\Delta}
-\operatorname{sign}\!\left[(A_{1,e}-A_{0,e})(G_{1,e}-G_{0,e})\right].
+\operatorname{sign}\!\left[(A_{1,e}-A_{0,e})(G_{1,e}-G_{0,e})\right],
 \end{equation}
-The two possible emitted scores per edge make its AUROC depend only on
-state-assignment discrimination and the direction of the map difference, yielding
+with $\operatorname{sign}(0)=0$.
+
+\begin{proposition}[Two-state hard-emission factorisation]
+\label{prop:two-state-factor}
+Under two true states with $A_{w,e}=A_{z_w,e}$ and two emitted state maps
+$\widehat S_{w,e}=G_{\widehat z_w,e}$, half-credit ties $H(0)=1/2$ yield the
+exact finite-sample identity (including tied map entries $G_{1,e}=G_{0,e}$)
 \begin{equation}
 \Tauc=\tfrac12+\tfrac12 J C_{\rm edge}.
 \label{eq:state-factor}
 \end{equation}
-The identity is invariant to exchanging predicted state names. Across repeats,
-the mean of products is required; marginal means must not be multiplied.
-For the same repeat set, with $T$ denoting Eq.~\eqref{eq:temporal-target},
+Consequently, over any repeat set on which $T$ denotes
+Eq.~\eqref{eq:temporal-target}, mean hard-minus-raw gain satisfies
 \begin{equation}
 \overline\Delta_{\rm temporal}
 =\overline T_{\rm hard}-\overline T_{\rm raw}
@@ -319,58 +354,98 @@ For the same repeat set, with $T$ denoting Eq.~\eqref{eq:temporal-target},
 -(2\overline T_{\rm raw}-1)\right].
 \label{eq:temporal-gain-factor}
 \end{equation}
-The identity makes relative gain explicit: the mean grouping--contrast product
-must exceed the raw score's temporal-ranking reference for a positive mean
-hard-minus-raw difference. Both factors use ground-truth states and changing
-edges, so this is a retrospective diagnostic of the evaluated configuration.
-The occupancy and comparison identities apply to finite arrays independently
-of the local scorer; the factorisation requires two true states and two
-emitted maps. Supplement Section~S3 gives the derivations and auxiliary
-window-mixing and risk analyses.
+\end{proposition}
 
-The specified gate has a separate geometric property. With seven windows,
-optimal two-group inertia improvement is at least $1/6$, exceeding its $0.12$
-acceptance threshold even without state structure. The bound concerns the
-optimal partition; actual K-means fits and gate outcomes are measured
-separately. This motivates reporting forced candidates and both fallback
-rules alongside acceptance rates (Supplement Section~S3).
+Proposition~\ref{prop:two-state-factor} is invariant to relabelling the
+predicted states (which negates both $J$ and $C_{\rm edge}$); its proof by
+bipartite pair counting across $(\widehat z_u,\widehat z_v)\in\{0,1\}^2$ is
+given in Supplement Section~S3.2. Notice that the factorisation relies on all
+$e\in\mathcal E_\Delta$ sharing one two-state window partition and requires the
+mean of products $\overline{JC_{\rm edge}}$, not the product of marginal means.
+Thus hard aggregation beats raw scores on average when $\overline{JC_{\rm edge}}$
+exceeds raw temporal ranking strength $2\overline T_{\rm raw}-1$; because both
+factors reference true states and changing edges, Eq.~\eqref{eq:state-factor}
+serves as a retrospective diagnostic. The occupancy and pair-split identities of
+Proposition~\ref{prop:occupancy-pooled} apply without restricting the state or
+map count, whereas Eq.~\eqref{eq:state-factor} requires two true states and two
+emitted maps (Supplement Section~S3).
+
+The specified gate has a separate geometric property. For any $M$ centred
+window features with nonzero total scatter, Proposition~S3 in Supplement
+Section~S3.3 proves that the globally optimal two-group relative inertia
+improvement satisfies $\Delta_2^{*}\ge 1/(M-1)$ (sharply attained at centred
+regular-simplex vertices) and that a random $K$-group assignment has exact
+expectation $(K-1)/(M-1)$. With $M=7$ windows, $1/(M-1)=1/6$ already exceeds
+the $0.12$ acceptance threshold even without state structure. The bound
+concerns the optimal partition; actual K-means fits and gate outcomes are
+measured separately, motivating reporting forced candidates and both fallback
+rules alongside acceptance rates.
 
 \subsection{Score-preserving controls and the fallback decision}
 \label{sec:score-controls}
 \begin{samepage}
-For each edge, let $\overline S_e=M^{-1}\sum_w S_{w,e}$. Global shrinkage is defined by
-\begin{equation}
-S^{\rm shrink}_{w,e}=\lambda S_{w,e}+(1-\lambda)\overline S_e,
+For each edge, let $\overline S_e=M^{-1}\sum_{w=1}^{M} S_{w,e}$. Global shrinkage
+and candidate-residual emission interpolate around edgewise means and the hard
+candidate $H_{w,e}=G_{\widehat z_w,e}$, respectively:
+\begin{align}
+S^{\rm shrink}_{w,e}&=\lambda S_{w,e}+(1-\lambda)\overline S_e,
 \qquad 0<\lambda\leq1,
-\label{eq:score-shrink}
-\end{equation}
-It preserves every within-edge comparison, including ties, in exact arithmetic:
-$S^{\rm shrink}_{u,e}-S^{\rm shrink}_{v,e}
-=\lambda(S_{u,e}-S_{v,e})$. Hence it preserves
-Eq.~\eqref{eq:temporal-target} for any graph generator and any local scorer.
+\label{eq:score-shrink}\\
+S^{\rm residual}_{w,e}&=H_{w,e}+\lambda(S_{w,e}-H_{w,e}),
+\qquad 0\leq\lambda\leq1.
+\label{eq:score-residual}
+\end{align}
 \par
 \end{samepage}
-Across different edges, the edge-specific offsets can change pooled rankings.
-This gives a non-clustering control for structural improvement with temporal
-order preserved: any pooled gain under this intervention arises through
-changed cross-edge comparisons.
+For any changing edge $e\in\mathcal E_\Delta$, partition its positive--negative
+pairs $\mathcal P_e=\{(u,v):A_{u,e}=1,A_{v,e}=0\}$ into same-group pairs
+($\widehat z_u=\widehat z_v$) and cross-group pairs ($\widehat z_u\neq\widehat z_v$),
+and let $T_{\mathrm{residual}}(\lambda)-T_{\mathrm{hard}}=G_{\mathrm{within}}(\lambda)+G_{\mathrm{cross}}(\lambda)$
+denote the macro-averaged pair-credit increments defined in Supplement
+Section~S5.5.
 
-We also retain window residuals around the candidate hard emission $H_{w,e}$:
-\begin{equation}
-S^{\rm residual}_{w,e}=H_{w,e}+\lambda(S_{w,e}-H_{w,e}).
-\label{eq:score-residual}
-\end{equation}
-This interpolates between hard ($\lambda=0$) and raw ($\lambda=1$).
-Its edgewise ordering across candidate groups need not equal raw ordering.
-Within a common candidate group, $H_{u,e}=H_{v,e}$ and the residual score
-difference is $\lambda(S_{u,e}-S_{v,e})$. Thus every positive weight restores
-that group's raw ordering, whereas hard emission ties those comparisons.
-AUROC can jump at zero residual weight; it need not improve smoothly with
-the retained amplitude. We account for same-group and cross-group pair
-contributions separately, including a diagnostic near-zero weight.
+\begin{proposition}[Shrinkage invariance and residual tie-breaking jump]
+\label{prop:emission-controls}
+Fix any local score matrix $(S_{w,e})$, binary support $(A_{w,e})$ with
+$\mathcal E_\Delta\neq\emptyset$, and candidate hard emission $(H_{w,e})$.
+\begin{enumerate}
+\item[(i)] Under Eq.~\eqref{eq:score-shrink}, every positive weight
+$\lambda\in(0,1]$ satisfies $\Tauc(\lambda)=T_{\rm raw}$ and
+$\mathrm{AUC}_{\rm same}(\lambda)=\mathrm{AUC}_{\rm same}(1)$ in exact
+arithmetic; hence by Eq.~\eqref{eq:pooled-split},
+\begin{equation*}
+\mathrm{AUC}_{\rm pooled}(\lambda)-\mathrm{AUC}_{\rm pooled}(1)
+=(1-\omega)\bigl[\mathrm{AUC}_{\rm cross}(\lambda)-\mathrm{AUC}_{\rm cross}(1)\bigr],
+\end{equation*}
+while $\lambda=0$ collapses to constant edge scores with $\Tauc(0)=1/2$.
+\item[(ii)] Under Eq.~\eqref{eq:score-residual}, within-group pair credit obeys
+$G_{\rm within}(\lambda)=G_{\rm within}(1)$ for every $\lambda>0$ (jumping
+discontinuously from $G_{\rm within}(0)=0$). Moreover, there exists a finite
+threshold $\lambda^*>0$ such that every strict cross-group hard comparison
+($H_{u,e}\neq H_{v,e}$) retains its sign on $(0,\lambda^*)$. Whenever no
+changing edge has tied state maps ($G_{1,e}\neq G_{0,e}$ on $\mathcal E_\Delta$),
+$G_{\rm cross}(\lambda)=0$ identically on $(0,\lambda^*)$ and
+\begin{equation*}
+\lim_{\lambda\downarrow 0^+}\bigl[T_{\rm residual}(\lambda)-T_{\rm hard}\bigr]
+=G_{\rm within}(1).
+\end{equation*}
+\end{enumerate}
+\end{proposition}
+
+Part~(i) provides a non-clustering control for structural improvement with
+within-edge temporal ordering strictly preserved (since
+$S^{\rm shrink}_{u,e}-S^{\rm shrink}_{v,e}=\lambda(S_{u,e}-S_{v,e})$): any
+pooled gain under Eq.~\eqref{eq:score-shrink} arises exclusively from cross-edge
+offsets $\overline S_e-\overline S_f$. Part~(ii) explains why AUROC can jump
+discontinuously at $\lambda=0$ yet need not vary monotonically for larger
+$\lambda$: within a candidate group, $H_{u,e}=H_{v,e}$ so any positive $\lambda$
+instantly restores raw ordering, whereas cross-group reorderings accumulate once
+$\lambda\ge\lambda^*$ (proof and explicit formula for $\lambda^*$ in Supplement
+Sections~S5.1 and~S5.5).
 We report all fixed values $\lambda\in\{0.25,0.5,0.75,1\}$ for both controls,
-alongside the hard endpoint, without choosing a value using the evaluation
-truth. The implementation checks actual finite-precision order and tie changes.
+alongside the hard endpoint and a diagnostic near-zero residual weight,
+without choosing a value using the evaluation truth. The implementation checks
+actual finite-precision order and tie changes.
 
 Let $I$ indicate the fixed gate's acceptance and $T$ the within-edge
 temporal AUROC of one repeat. Emitting raw on rejection gives
@@ -382,8 +457,8 @@ temporal AUROC of one repeat. Emitting raw on rejection gives
 \end{equation}
 Thus the difference between the two fallback rules isolates information lost
 by constant emission on rejection. The mean raw-fallback gain is the acceptance
-rate times the accepted subset's own mean hard-minus-raw gain. This separates candidate selection from information discarded by the
-rejection output.
+rate times the accepted subset's own mean hard-minus-raw gain. This separates
+candidate selection from information discarded by the rejection output.
 
 \section{Controlled empirical study}
 \label{sec:empirical}
@@ -541,13 +616,13 @@ differences use unrounded repeat values and appear in Supplement Section~S6.}
 \paragraph{Data and code availability.}
 Simulation inputs, fitted outputs, analysis code and figure/table generation
 tools are included in the accompanying reproducibility archive,
-\nolinkurl{information_sciences_reproducibility.zip}. Its README provides separate
+\nolinkurl{knowledge_based_systems_reproducibility.zip}. Its README provides separate
 routes for recomputing saved results and generating and fitting new runs;
 Supplement Section~S8 describes the environment and selected same-seed
 reproduction checks.
 The archive includes the current presentation sources and PDFs and is publicly
-available in version \texttt{v2026.10.28-layout.1} at
-\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1}.
+available in version \texttt{v2026.11.15-kbs} at
+\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.11.15-kbs}.
 
 \paragraph{Funding and competing interests.}
 This research received no external funding. The author declares no competing

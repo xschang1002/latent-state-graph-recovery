@@ -75,7 +75,7 @@ conditional aggregation effects.
 
 ## Reproduction and historical records
 
-The [reproduction guide](information_sciences_artifact_readme.md) gives exact
+The [reproduction guide](knowledge_based_systems_artifact_readme.md) gives exact
 commands for read-only verification, display rebuilding, analysis regeneration
 and fresh fitting. Writing routes use separate output and execution-record
 directories. The [script index](../scripts/README.md) maps entry points to
@@ -104,4 +104,4 @@ The prior narrative presentation checkpoint is recorded in
 The same ZIP filename has been rebuilt across versions; use its actual manifest
 and file hash to identify a delivered copy. Public deposition, persistent
 identifiers and journal upload belong to the
-[submission/release checklist](../submission_materials/information_sciences/README.md).
+[submission/release checklist](../submission_materials/knowledge_based_systems/README.md).

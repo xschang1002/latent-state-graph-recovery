@@ -1,0 +1,19 @@
+15 November 2026
+
+Dear Editors of Knowledge-Based Systems,
+
+I submit "State Aggregation in Dynamic Graph Recovery: Separating Structural Ranking from Temporal Discrimination" for consideration as an original research article. The paper asks when post-estimation aggregation of local graph estimates improves the recovery of dynamic relational knowledge, and proves why overall edge-ranking gains can coexist with losses in within-edge temporal discrimination.
+
+The contribution extends window-sensitivity analyses by isolating the paired effect of aggregation on shared local lagged-edge scores. Our evaluation protocol separates pooled structural ranking, within-edge temporal area under the receiver operating characteristic curve (AUROC) and boundary detection. In 100 independent paired simulations, hard aggregation increases pooled AUROC from 0.727 to 0.780 while reducing within-edge temporal AUROC from 0.707 to 0.639 at the shorter duration; the paired temporal gain is +0.038 at the longer duration. Separate schedule and generator/window studies establish the configuration dependence of this contrast.
+
+The scientific significance lies in formalising the distinction between recovering relational links and recovering when they are active. Analytical diagnostics—a static occupancy ceiling, an exact two-state hard-emission tie decomposition, a right-limit residual rank-restoration identity and invariance under linear shrinkage—identify the information lost through hard grouping. Boundary-score conventions and a segmentation/refit comparator further show how evaluation targets govern the assessment of dynamic graph recovery, supporting a reusable protocol for interpretable relational learning within the tested two-state linear settings.
+
+This focus on machine-learning evaluation methodology and relational structure discovery aligns closely with Knowledge-Based Systems' readership. The manuscript pairs proved diagnostic propositions with controlled empirical evidence, and the supplement and reproducibility archive provide the inputs, fitted outputs, code and analysis procedures.
+
+The manuscript is being transferred from Information Sciences through Elsevier's transfer service. It has not been formally published and is not under consideration elsewhere. AI assistance is disclosed in the manuscript, and I take responsibility for its content.
+
+Sincerely,
+Xuansong Chang
+Stony Brook Institute at Anhui University
+Anhui University, 3 Feixi Road, Shushan District, Hefei, Anhui 230039, China
+alec.xs.chang@gmail.com

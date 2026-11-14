@@ -1,23 +1,22 @@
 # Reproduction manifest
 
-Current guide: 28 October 2026, presentation revision `v2026.10.28-layout.1`.
-This revision changes display organisation and readability, with scientific
-inputs, fitted outputs and inferential results unchanged. The accompanying ZIP
-contains the revised sources and PDFs. The public scientific archive remains
-`v2026.10.27.1`; public delivery `v2026.10.28` has the preceding PDF layout.
+Current guide: 15 November 2026, KBS transfer release `v2026.11.15-kbs`.
+Scientific inputs, fitted outputs, inference and figure/table organisation are
+unchanged from preceding release
+[v2026.10.28-layout.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1).
+The accompanying `knowledge_based_systems_reproducibility.zip` contains the
+current sources and PDFs and is publicly available in release
+[v2026.11.15-kbs](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.11.15-kbs).
+No DOI is claimed.
 
-The scientific entry is [research_guide.md](research_guide.md): questions,
-evidence scope and the current supplement map. Exact executable routes are in
-[information_sciences_artifact_readme.md](information_sciences_artifact_readme.md),
+The scientific entry is [research_guide.md](research_guide.md). Exact executable
+routes are in [knowledge_based_systems_artifact_readme.md](knowledge_based_systems_artifact_readme.md),
 and [scripts/README.md](../scripts/README.md) groups entry points by task.
-The current PDFs are `Manuscript.pdf`
-and `Supplementary_Material.pdf`; package
-counterparts are `paper/main.pdf` and `paper/supplement.pdf`.
-The complete named ZIP, checksums and revised PDF assets are available from
-[release v2026.10.28-layout.1](https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1).
-The preceding public release, `v2026.10.28`, remains unchanged with its earlier
-presentation. Publication of the release does not submit the article to a journal. The
-[layout revision map](ins_layout_revision_2026-10-28.md) identifies current displays.
+The current PDFs are `Manuscript.pdf` and `Supplementary_Material.pdf`;
+package counterparts are `paper/main.pdf` and `paper/supplement.pdf`.
+The [KBS transfer checklist](../submission_materials/knowledge_based_systems/README.md)
+records current files and remaining system steps. The
+[layout revision map](ins_layout_revision_2026-10-28.md) still identifies all displays.
 
 The supplement now follows targets (S1), procedures (S2), derivations (S3),
 Studies A–C (S4), emissions/boundary sensitivity (S5), additional comparisons
@@ -45,7 +44,7 @@ numbers, availability statements and claims apply to those snapshots; they are
 not current acceptance or publication claims. The same archive filename has
 been rebuilt. Check the actual delivered manifest/hash and follow the current
 instructions above. Public deposition, persistent identifiers and submission
-steps are in the [release checklist](../submission_materials/information_sciences/README.md).
+steps are in the [release checklist](../submission_materials/knowledge_based_systems/README.md).
 
 ## Earlier command and experiment history
 

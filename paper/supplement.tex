@@ -23,6 +23,9 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand{\theequation}{S\arabic{equation}}
+\newtheorem{proposition}{Proposition}
+\renewcommand{\theproposition}{S\arabic{proposition}}
+\newenvironment{proof}[1][Proof]{\par\noindent\textit{#1.}\ }{\nobreak\hspace*{\fill}\begingroup\setlength{\fboxsep}{0pt}\fbox{\rule{0pt}{0.52em}\hspace{0.52em}}\endgroup\par\smallskip}
 
 \title{Supplementary Material\\[0.6em]
 \large State Aggregation in Dynamic Graph Recovery:\\
@@ -59,9 +62,8 @@ Let $X(1{:}T)\in\mathbb{R}^{T\times N}$ be observed, with latent dynamic state
 $z(t)\in\{1,\dots,\kdyn\}$ and directed lag-specific support
 $A[k,\ell,i,j]=1$ when $i(t-\ell)$ directly precedes $j(t)$ in state $k$.
 For window length $h$ and stride $s$, the window count is
-$M=1+\lfloor(T-h)/s\rfloor$, with indices $w=1,\ldots,M$.
-Earlier formulas in this supplement use $W$ for the same scalar window count;
-there $W=M$. The main article uses $M$ throughout.
+$M=1+\lfloor(T-h)/s\rfloor$, with indices $w=1,\ldots,M$, matching the notation
+used in the main article throughout.
 
 \paragraph{Union graph.} $A_{\cup}[\ell,i,j]=1\{\exists k: A[k,\ell,i,j]=1\}$,
 scored by AUROC, AUPRC, precision at the true union edge count, and SHD.
@@ -270,8 +272,9 @@ accept, so the gated and forced hard outputs coincide there; the distinction
 is essential when acceptance is incomplete.
 
 \subsection{Partitioning and legal contiguous-range refitting}
-The PELT baseline partitions the same window features (five principal
-components, penalty $d_{\mathrm{eff}}\log W$, $\mathrm{jump}=1$). A partition
+The pruned exact linear time (PELT) baseline partitions the same window
+features (five principal components, penalty $d_{\mathrm{eff}}\log M$,
+$\mathrm{jump}=1$). A partition
 can be scored by \emph{window averaging} (average existing window scores within
 each group) or by \emph{refit} (re-estimate Lasso on each group's contiguous
 time ranges, with boundaries at window-centre midpoints). A group that recurs in
@@ -282,7 +285,7 @@ two rules gives the $2\times2$ factorial of
 Section~\ref{sec:baselines}. A global VAR-Lasso with no partition is reported as
 a reference.
 
-At seven windows the BIC-scaled penalty $d_{\mathrm{eff}}\log W$ is too small to
+At seven windows the BIC-scaled penalty $d_{\mathrm{eff}}\log M$ is too small to
 merge any pair of windows, so PELT returns one segment per window; a brute-force
 check over all $2^{6}=64$ contiguous partitions confirms that this is the global
 optimum of the penalised cost (Section~\ref{app:penalty}).
@@ -334,44 +337,85 @@ probabilistic risk, rather than explaining the Lasso/AUROC ranking differences.
 \subsection{Static occupancy ranking and its diagnostic ceiling}
 \label{sec:static-occupancy}
 
-For a time-constant score $s_e$ per edge and
-per-edge activation frequency $\pi_e=\tfrac1W\sum_w A_{w,e}$, writing
-$H(u)=\mathbf1(u>0)+\tfrac12\mathbf1(u=0)$, the pooled AUROC over all
-``window $\times$ edge'' pairs is exactly
+\begin{proposition}[Global optimality of occupancy ranking and pair split]
+\label{prop:supp-occupancy}
+Let $A_{w,e}\in\{0,1\}$ mark edge support across windows $w=1,\dots,M$, with
+per-edge activation frequency $\pi_e=M^{-1}\sum_{w=1}^M A_{w,e}$, $n_e^+=M\pi_e$,
+$n_e^-=M(1-\pi_e)$, $P=\sum_e\pi_e>0$, $Q=\sum_f(1-\pi_f)>0$, and tie kernel
+$H(u)=\mathbf1(u>0)+\tfrac12\mathbf1(u=0)$.
+\begin{enumerate}
+\item[(i)] For any time-constant scores $(s_e)_e$, pooled AUROC over all
+``window $\times$ edge'' pairs is
 \begin{equation}
-\mathrm{AUC}_{\mathrm{static}}
+\mathrm{AUC}_{\mathrm{static}}(s)
 =
 \frac{\sum_{e,f}\pi_e(1-\pi_f)\,H(s_e-s_f)}
-{\bigl(\sum_e\pi_e\bigr)\bigl(\sum_f(1-\pi_f)\bigr)}.
+{PQ},
 \label{eq:auc-static}
 \end{equation}
-Only the activation \emph{frequencies} $\pi_e$ appear, never the times at which
-each edge activates. Permuting each edge's activation times (holding counts
-fixed) therefore leaves a constant prediction's pooled AUROC unchanged, and the
-optimal static ordering ranks edges by $\pi_e$. A static ``occupancy oracle''
-that knows which edges are more frequent but not when they occur is thus the
-natural diagnostic ceiling.
-
-Maximising Eq.~\eqref{eq:auc-static} over orderings gives a closed-form ceiling.
-Writing $P=\sum_e\pi_e$ and $Q=\sum_e(1-\pi_e)$, ranking by $\pi_e$ is optimal
-(swapping two edges changes the numerator by
-$\pi_e(1-\pi_f)-\pi_f(1-\pi_e)=\pi_e-\pi_f$, non-negative under the sorted
-order), and the pairwise contributions sum to
+and over all real vectors $s$ satisfies
 \begin{equation}
+\mathrm{AUC}_{\mathrm{static}}(s)
+\le
 \mathrm{AUC}_{\mathrm{static}}^{*}
 =
-\frac12+\frac{\sum_{e,f}|\pi_e-\pi_f|}{4PQ}.
+\frac12+\frac{\sum_{e,f}|\pi_e-\pi_f|}{4PQ},
 \label{eq:static-ceiling}
 \end{equation}
-This is a finite-edge specialisation
+with equality if and only if $\pi_e>\pi_f\implies s_e>s_f$ for all edges $e,f$.
+\item[(ii)] For any time-indexed array $(\widehat S_{w,e})$ with nonzero
+same-edge and cross-edge pair counts,
+\begin{equation}
+\mathrm{AUC}_{\mathrm{pooled}}
+=
+\omega\,\mathrm{AUC}_{\mathrm{same}}
++
+(1-\omega)\,\mathrm{AUC}_{\mathrm{cross}},
+\qquad
+\omega=\frac{\sum_e n_e^+n_e^-}{\bigl(\sum_e n_e^+\bigr)\bigl(\sum_e n_e^-\bigr)},
+\label{eq:pooled-split}
+\end{equation}
+where $\mathrm{AUC}_{\mathrm{same}}$ is the per-edge temporal AUROC weighted by
+$n_e^+n_e^-$ over $e\in\mathcal E_\Delta$ (equalling $\mathrm{T\!-\!AUC}_\Delta$
+whenever every changing edge shares a common two-state schedule).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For constant scores $s_e$, every active--inactive window pair between edge $e$
+and edge $f$ contributes $H(s_e-s_f)$ and there are $M^2\pi_e(1-\pi_f)$ such
+pairs out of $M^2 P Q$ total pairs, yielding Eq.~\eqref{eq:auc-static}. Only the
+activation frequencies $\pi_e$ appear, never the activation times. To prove
+Eq.~\eqref{eq:static-ceiling} without ruling out score ties, use $H(u)+H(-u)=1$
+and swap indices $(e,f)\leftrightarrow(f,e)$ in $S(s)=\sum_{e,f}\pi_e(1-\pi_f)H(s_e-s_f)$:
+\begin{align*}
+2S(s)
+&=\sum_{e,f}\Bigl[\pi_e(1-\pi_f)H(s_e-s_f)+\pi_f(1-\pi_e)\bigl(1-H(s_e-s_f)\bigr)\Bigr]\\
+&=PQ+\sum_{e,f}(\pi_e-\pi_f)H(s_e-s_f).
+\end{align*}
+Now for each $(e,f)$, $H(s_e-s_f)\in\{0,\tfrac12,1\}$ implies
+$(\pi_e-\pi_f)H(s_e-s_f)\le\max(\pi_e-\pi_f,0)$, with equality across all pairs if
+and only if $\pi_e>\pi_f\implies H(s_e-s_f)=1$ (i.e.\ $s_e>s_f$), since the
+complementary pairs $\pi_e<\pi_f$ then satisfy $H(s_e-s_f)=0$. Using
+$\max(x,0)=\tfrac12(x+|x|)$ and $\sum_{e,f}(\pi_e-\pi_f)=0$ gives
+$\sum_{e,f}\max(\pi_e-\pi_f,0)=\tfrac12\sum_{e,f}|\pi_e-\pi_f|$; dividing by
+$2PQ$ establishes Eq.~\eqref{eq:static-ceiling}. Part~(ii) splits all
+$(\sum_e n_e^+)(\sum_e n_e^-)$ positive--negative ``window $\times$ edge'' pairs
+into $e=f$ (nonzero only when $n_e^+n_e^->0$, i.e.\ $e\in\mathcal E_\Delta$)
+and $e\neq f$.
+\end{proof}
+
+Equation~\eqref{eq:static-ceiling} is a finite-edge specialisation
 of classical bipartite ranking: the Bayes score orders the posterior positive
 probability, and the optimal risk depends on its Gini mean difference
-\citep[Example~1]{clemencon2008ranking}. Here that posterior is $\pi_e$ when time
-is omitted. Our contribution is its use as an occupancy diagnostic for dynamic
-graph recovery, together with the temporal controls, rather than a new general
-optimal-ranking theorem. This is a ceiling for \emph{constant} scores,
-not for dynamic predictors, and it is not a pass line --- a model can localise
-changing edges correctly yet score below it through cross-edge ranking error.
+\citep[Example~1]{clemencon2008ranking}. A static ``occupancy oracle'' that
+ranks edges strictly by $\pi_e$ attains $\mathrm{AUC}_{\mathrm{static}}^{*}$
+without knowing when any edge activates. Our contribution is its use as an
+occupancy diagnostic for dynamic graph recovery, together with the temporal
+controls, rather than a new general optimal-ranking theorem. This is a ceiling
+for \emph{constant} scores, not for dynamic predictors, and it is not a pass
+line --- a model can localise changing edges correctly yet score below it
+through cross-edge ranking error.
 
 A finite counterexample shows how far this goes: with $100$ candidate edges over
 $100$ windows --- $10$ always active, $10$ active in half the windows, $80$ never
@@ -400,24 +444,56 @@ report both targets and the static ceiling in Table~\ref{tab:temporal-delta}.
 \subsection{State-assignment discrimination and graph contrast}
 \label{sec:state-factor}
 
-The changing-edge metric has a two-factor reading that locates the remaining gap.
-For a two-state hard assignment $\widehat z_w\in\{0,1\}$ with one fixed score map
-$G_{\widehat z,e}$ per state, and true states $z_w$, define the state-assignment
-discrimination $J=\Pr(\widehat z=1\mid z=1)-\Pr(\widehat z=1\mid z=0)$ (the true-
-minus-false-positive rate under a fixed label matching) and, for a genuinely
-changing edge with $d_e=A_{1,e}-A_{0,e}\in\{\pm1\}$ and predicted gap
-$\delta_e=G_{1,e}-G_{0,e}$, the state-contrast concordance
-$C_{\mathrm{edge}}=\tfrac1{|\mathcal E_\Delta|}\sum_{e\in\mathcal E_\Delta}
-\operatorname{sign}(d_e\delta_e)$. As long as the prediction is
-$\widehat S_{w,e}=G_{\widehat z_w,e}$ and the evaluation windows contain both
-states, each changing edge has only two predicted values, so its per-edge AUROC
-is fixed by the true- and false-positive rates of the assignment and by whether
-the two values point the right way; averaging over $\mathcal E_\Delta$ gives the
-exact identity
+The changing-edge metric admits an exact two-factor representation under two
+true states and two hard state emissions.
+
+\begin{proposition}[Tie-aware two-state hard-emission factorisation]
+\label{prop:supp-state-factor}
+Suppose the evaluation windows $\{1,\dots,M\}$ visit two true states
+$z_w\in\{0,1\}$ with $1\le M_1=\sum_{w=1}^M \mathbf1\{z_w=1\}\le M-1$, $M_0=M-M_1$,
+and $A_{w,e}=A_{z_w,e}$, so $\mathcal E_\Delta=\{e:A_{1,e}\neq A_{0,e}\}$ is
+assumed non-empty. Under any two-state hard prediction
+$\widehat S_{w,e}=G_{\widehat z_w,e}$ with $\widehat z_w\in\{0,1\}$, fixed label
+matching, empirical state-assignment discrimination
+$J=\Pr(\widehat z=1\mid z=1)-\Pr(\widehat z=1\mid z=0)$, $d_e=A_{1,e}-A_{0,e}\in\{\pm1\}$,
+$\delta_e=G_{1,e}-G_{0,e}$, and state-contrast concordance
+\begin{equation*}
+C_{\mathrm{edge}}=\frac1{|\mathcal E_\Delta|}\sum_{e\in\mathcal E_\Delta}
+\operatorname{sign}(d_e\delta_e)
+\qquad\bigl(\operatorname{sign}(0)=0\bigr),
+\end{equation*}
+within-edge temporal AUROC under half-credit ties satisfies
 \begin{equation}
 \mathrm{T\!-\!AUC}_{\Delta}=\frac12+\frac12 J\,C_{\mathrm{edge}}.
 \label{eq:state-factor}
 \end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $p_1=M_1^{-1}\sum_{w:z_w=1}\mathbf1\{\widehat z_w=1\}$ and
+$p_0=M_0^{-1}\sum_{w:z_w=0}\mathbf1\{\widehat z_w=1\}$, so $J=p_1-p_0$.
+Fix $e\in\mathcal E_\Delta$. Consider first $d_e=+1$, where positive windows are
+$\{u:z_u=1\}$ and negative windows are $\{v:z_v=0\}$, giving $M_1 M_0$ pairs
+$(u,v)$. For each pair, $\widehat S_{u,e}-\widehat S_{v,e}=(\widehat z_u-\widehat z_v)\delta_e$.
+Grouping the $M_1 M_0$ pairs by $(\widehat z_u,\widehat z_v)\in\{0,1\}^2$ and using
+$H(-\delta_e)=1-H(\delta_e)$ and $H(0)=\tfrac12$ yields
+\begin{align*}
+\mathrm{AUROC}_e
+&=p_1(1-p_0)H(\delta_e)+(1-p_1)p_0\bigl(1-H(\delta_e)\bigr)
++\tfrac12\bigl[p_1 p_0+(1-p_1)(1-p_0)\bigr]\\
+&=\tfrac12+\bigl[p_1(1-p_0)-(1-p_1)p_0\bigr]\bigl(H(\delta_e)-\tfrac12\bigr)\\
+&=\tfrac12+\tfrac12 J\operatorname{sign}(\delta_e),
+\end{align*}
+where the last step uses the identity $2H(u)-1=\operatorname{sign}(u)$ valid for
+all $u\in\mathbb R$, including tied state maps $\delta_e=0$. When $d_e=-1$, the
+active and inactive window sets exchange roles, negating every score difference
+so that $\mathrm{AUROC}_e=1-\bigl(\tfrac12+\tfrac12 J\operatorname{sign}(\delta_e)\bigr)
+=\tfrac12+\tfrac12 J\operatorname{sign}(d_e\delta_e)$. Because every
+$e\in\mathcal E_\Delta$ shares the same two-state window partition
+$\{w:z_w=1\}\cup\{w:z_w=0\}$, $J$ is identical across all $e\in\mathcal E_\Delta$
+and factors out upon averaging over $\mathcal E_\Delta$, proving Eq.~\eqref{eq:state-factor}.
+\end{proof}
+
 Swapping the predicted state numbering flips both $J$ and $C_{\mathrm{edge}}$, so
 the product is invariant. On the twenty core sequences the mean per-seed product
 $\mathbb E[JC_{\mathrm{edge}}]=0.298$ reproduces mean within-edge temporal AUROC $0.649$
@@ -440,24 +516,7 @@ would apportion the two terms differently, so these are conditional diagnostics,
 not unique causal contributions; in particular, correcting the labels alone is
 not guaranteed to recover the full oracle gain.
 
-The pooled metric admits a parallel split. Let $n_e^+$, $n_e^-$ be the positive
-and negative window counts of edge $e$. Every ``window $\times$ edge'' pair is
-either a same-edge comparison (two windows of one edge) or a cross-edge
-comparison (two edges), so
-\begin{equation}
-\mathrm{AUC}_{\mathrm{pooled}}
-=
-\omega\,\mathrm{AUC}_{\mathrm{same}}
-+
-(1-\omega)\,\mathrm{AUC}_{\mathrm{cross}},
-\qquad
-\omega=\frac{\sum_e n_e^+n_e^-}{\bigl(\sum_e n_e^+\bigr)\bigl(\sum_e n_e^-\bigr)},
-\label{eq:pooled-split}
-\end{equation}
-where $\mathrm{AUC}_{\mathrm{same}}$ is the per-edge time AUROC weighted by
-$n_e^+n_e^-$ (equal to the unweighted $\mathrm{T\!-\!AUC}_{\Delta}$ here because
-the changing edges share one state schedule) and $\mathrm{AUC}_{\mathrm{cross}}$
-is the cross-edge ranking. On this evaluation panel $\omega=0.0017$: only about
+On this evaluation panel $\omega=0.0017$ in Proposition~\ref{prop:supp-occupancy}(ii): only about
 $0.17\%$ of the positive--negative ``window $\times$ edge'' pairs directly compare
 the same edge across two times ($\mathrm{AUC}_{\mathrm{same}}=0.649$), the rest
 being cross-edge comparisons ($\mathrm{AUC}_{\mathrm{cross}}=0.776$). This is a
@@ -476,16 +535,74 @@ truth and sample counts, not by any method.
 \label{sec:gate-geometry}
 
 The gate's main path accepts a two-state split when the relative inertia
-improvement $\Delta_2=1-\mathrm{SSE}_2/\mathrm{SSE}_1$ exceeds $0.12$. With $M$
-centred window features $x_1,\dots,x_M$ and total scatter
-$\mathrm{TSS}=\sum_i\|x_i\|^2>0$, placing point $i$ alone in one cluster and the
-remaining $M-1$ points in the other gives between-cluster scatter
-$\mathrm{BSS}_i=\tfrac{M}{M-1}\|x_i\|^2$. Since $\max_i\|x_i\|^2\ge
-\mathrm{TSS}/M$, the globally optimal bipartition satisfies
+improvement $\Delta_2=1-\mathrm{SSE}_2/\mathrm{SSE}_1$ exceeds $0.12$.
+
+\begin{proposition}[Sharp inertia lower bound and random-partition expectation]
+\label{prop:gate-geometry}
+Let $x_1,\dots,x_M\in\mathbb R^d$ ($M\ge 2$) be centred window features with
+$\sum_{i=1}^M x_i=0$ and nonzero total scatter
+$\mathrm{TSS}=\sum_{i=1}^M\|x_i\|^2>0$. Write
+$\mathrm{BSS}(\mathcal C)=\sum_{k=1}^K |C_k|\,\|\bar x_{C_k}\|^2=\mathrm{TSS}-\mathrm{SSE}_K(\mathcal C)$
+for the between-cluster scatter of any $K$-part partition $\mathcal C=(C_1,\dots,C_K)$
+into non-empty clusters.
+\begin{enumerate}
+\item[(i)] The globally optimal bipartition relative inertia improvement
+satisfies
 \begin{equation}
-\Delta_2^{*}\;\ge\;\frac{1}{M-1}.
+\Delta_2^{*}=\max_{|C_1|\in\{1,\dots,M-1\}}\frac{\mathrm{BSS}(C_1,C_1^c)}{\mathrm{TSS}}\;\ge\;\frac{1}{M-1}.
 \label{eq:gate-lower-bound}
 \end{equation}
+Whenever $d\ge M-1$, equality $\Delta_2^{*}=\frac{1}{M-1}$ holds at centred
+regular-simplex vertices ($\|x_i\|^2=r^2>0$ and $\langle x_i,x_j\rangle=-\frac{r^2}{M-1}$ for $i\neq j$).
+\item[(ii)] For any fixed non-empty cluster sizes $m_1,\dots,m_K\ge 1$ with
+$\sum_{k=1}^K m_k=M$, a uniformly random partition $\mathcal C=(C_1,\dots,C_K)$
+with $|C_k|=m_k$ satisfies the exact finite-population expectation
+\begin{equation*}
+\mathbb E\left[\frac{\mathrm{BSS}(\mathcal C)}{\mathrm{TSS}}\right]=\frac{K-1}{M-1}.
+\end{equation*}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For Part~(i), consider placing point $i$ alone in $C_1=\{i\}$ and the remaining
+$M-1$ points in $C_2$. Since $\sum_{j=1}^M x_j=0$, the complement mean is
+$\bar x_{C_2}=-\frac{1}{M-1}x_i$, so the singleton split has between-cluster
+scatter
+$\mathrm{BSS}_i=\|x_i\|^2+(M-1)\bigl\|-\tfrac{1}{M-1}x_i\bigr\|^2=\frac{M}{M-1}\|x_i\|^2$.
+Because $\max_i\|x_i\|^2\ge\mathrm{TSS}/M$, taking $\arg\max_i\|x_i\|^2$ yields
+$\Delta_2^{*}\ge\frac{M}{M-1}\cdot\frac{\mathrm{TSS}/M}{\mathrm{TSS}}=\frac{1}{M-1}$.
+To establish sharpness when $d\ge M-1$, take $M$ vertices of a centred regular
+$(M-1)$-simplex with $\|x_i\|^2=r^2>0$; symmetry of $\langle x_i,\sum_{j=1}^M x_j\rangle=0$
+gives $\langle x_i,x_j\rangle=-\frac{r^2}{M-1}$ ($i\neq j$) and $\mathrm{TSS}=Mr^2$.
+For any non-empty subset $C_1$ of size $m\in\{1,\dots,M-1\}$ with complement
+$C_2$ of size $M-m$, $\sum_{j\in C_2}x_j=-\sum_{i\in C_1}x_i$ implies
+\begin{equation*}
+\begin{aligned}
+\mathrm{BSS}(C_1,C_2)
+&=\left(\frac1m+\frac1{M-m}\right)\Bigl\|\sum_{i\in C_1}x_i\Bigr\|^2 \\
+&=\frac{M}{m(M-m)}\left(mr^2-m(m-1)\frac{r^2}{M-1}\right)
+=\frac{M r^2}{M-1}=\frac{\mathrm{TSS}}{M-1}.
+\end{aligned}
+\end{equation*}
+Every bipartition therefore attains ratio $\frac{1}{M-1}$, so $\Delta_2^{*}=\frac{1}{M-1}$.
+
+For Part~(ii), expanding $0=\|\sum_{i=1}^M x_i\|^2=\mathrm{TSS}+\sum_{i\neq j}\langle x_i,x_j\rangle$
+gives $\sum_{i\neq j}\langle x_i,x_j\rangle=-\mathrm{TSS}$. Under uniform random
+sampling without replacement of $m_k$ indices for cluster $C_k$, each index $i$
+belongs to $C_k$ with probability $\frac{m_k}{M}$ and each ordered distinct pair
+$(i,j)$ belongs to $C_k$ with probability $\frac{m_k(m_k-1)}{M(M-1)}$. Therefore
+\begin{equation*}
+\begin{aligned}
+\mathbb E\bigl[m_k\|\bar x_{C_k}\|^2\bigr]
+&=\frac1{m_k}\mathbb E\Bigl[\sum_{i\in C_k}\|x_i\|^2+\sum_{\substack{i,j\in C_k\\i\neq j}}\langle x_i,x_j\rangle\Bigr] \\
+&=\frac1{m_k}\left(\frac{m_k}{M}\mathrm{TSS}-\frac{m_k(m_k-1)}{M(M-1)}\mathrm{TSS}\right)
+=\frac{M-m_k}{M(M-1)}\mathrm{TSS}.
+\end{aligned}
+\end{equation*}
+Summing over $k=1,\dots,K$ using $\sum_{k=1}^K m_k=M$ and dividing by
+$\mathrm{TSS}$ gives $\sum_{k=1}^K\frac{M-m_k}{M(M-1)}=\frac{KM-M}{M(M-1)}=\frac{K-1}{M-1}$.
+\end{proof}
+
 This needs no Gaussianity, no independence, no true second state, and no
 high-dimensional assumption. At the seven-window reference configuration this lower bound is
 $\tfrac16\approx0.1667>0.12$, so \emph{if} the improvement is defined as the
@@ -517,10 +634,9 @@ state-free Gaussian features in $168$ dimensions, standardized across windows,
 K-means with ten restarts exceeded $0.12$ in $200/200$ cases at $M=5,7,9$ and in
 $0/200$ at $M=19$, with mean improvements $0.284$, $0.199$, $0.154$ and $0.074$
 respectively (the first three also verified by exhaustive bipartition
-enumeration). More generally, for fixed non-empty group sizes, a random
-assignment of windows to $K$ groups has expected relative improvement
-$(K-1)/(M-1)$, so moving from one to two clusters produces a sizeable fit gain
-even under no state structure. This does not estimate the gate's false-acceptance
+enumeration). Consistent with Proposition~\ref{prop:gate-geometry}(ii), moving
+from one to two clusters yields a substantial expected inertia drop even under
+no state structure. This does not estimate the gate's false-acceptance
 rate; it isolates the geometric dependence of the threshold on the number of
 windows, and it predicts the earlier exploratory grid's observation that the gate accepts at
 seven windows. At nineteen windows (a $T{=}3000$ switching series, same
@@ -910,10 +1026,19 @@ $a_e>0$ preserves the signs of all positive--negative score differences and
 all ties. The finite pair-comparison definition of AUROC therefore gives
 $\mathrm{AUROC}(A_{\cdot,e},S'_{\cdot,e})
 =\mathrm{AUROC}(A_{\cdot,e},S_{\cdot,e})$. Averaging over the same changing
-edges proves invariance of $\mathrm{T\!-\!AUC}_{\Delta}$. This elementary
-rank property supplies a control-design criterion rather than a new ranking
-theorem. For global shrinkage, $a_e=\lambda$ and
-$b_e=(1-\lambda)\overline S_e$. A cross-edge comparison instead uses
+edges proves invariance of $\mathrm{T\!-\!AUC}_{\Delta}$, and weighting by
+$n_e^+n_e^-$ similarly keeps $\mathrm{AUC}_{\mathrm{same}}$ in Eq.~\eqref{eq:pooled-split}
+strictly unchanged. This elementary rank property supplies a control-design
+criterion rather than a new ranking theorem. For global shrinkage, $a_e=\lambda$
+and $b_e=(1-\lambda)\overline S_e$ give
+$\mathrm{AUC}_{\mathrm{same}}(\lambda)=\mathrm{AUC}_{\mathrm{same}}(1)$ and
+$\mathrm{T\!-\!AUC}_{\Delta}(\lambda)=\mathrm{T\!-\!AUC}_{\Delta}(1)$ for every
+$\lambda\in(0,1]$, so by Eq.~\eqref{eq:pooled-split},
+\[
+\mathrm{AUC}_{\mathrm{pooled}}(\lambda)-\mathrm{AUC}_{\mathrm{pooled}}(1)
+=(1-\omega)\bigl[\mathrm{AUC}_{\mathrm{cross}}(\lambda)-\mathrm{AUC}_{\mathrm{cross}}(1)\bigr],
+\]
+reflecting cross-edge comparisons
 \[
 S^{\rm shrink}_{u,e}-S^{\rm shrink}_{v,f}
 =\lambda(S_{u,e}-S_{v,f})
@@ -922,8 +1047,9 @@ S^{\rm shrink}_{u,e}-S^{\rm shrink}_{v,f}
 whose sign can change for $e\ne f$. Hence pooled ranking can improve or worsen
 without any change in within-edge temporal discrimination. At
 $\lambda=0$ the temporal scores become constant, so the positive-slope
-invariance no longer applies. Finite-precision order/tie changes are checked
-explicitly rather than replaced by theoretical ranks.
+invariance no longer applies and $\mathrm{T\!-\!AUC}_{\Delta}(0)=1/2$.
+Finite-precision order/tie changes are checked explicitly rather than replaced by
+theoretical ranks.
 
 For a hard candidate $H$, residual emission
 $H+\lambda(S-H)$ preserves differences between raw windows assigned to the
@@ -1040,9 +1166,18 @@ As in Section~\ref{app:direct-localisation}, both positive and negative slots
 are required for AP. Define $\pi_{\rm boundary}=R^{-1}\sum_r y_r$ and
 $R_+=\sum_r y_r\mathbf1\{a_r>0\}/\sum_r y_r$.
 Standard non-interpolated AP includes every distinct score level, with whole
-tie groups \citep{sklearn_average_precision_docs}. The original positive-change AP omits only the final zero-strength
-group. That group's precision is $\pi_{\rm boundary}$ and its recall increment
-is $1-R_+$, giving the exact per-edge identity
+tie groups \citep{sklearn_average_precision_docs}, whereas positive-change AP
+omits only the final zero-strength group. Writing $P_{\rm slot}=\sum_{r=1}^R y_r\in\{1,\dots,R-1\}$
+and ordering the distinct strictly positive values of $(a_r)$ as
+$v_1>\dots>v_L>0$ with group totals $(n_\ell,p_\ell)$ and cumulative totals
+$(N_\ell,P_\ell)=\sum_{t\le\ell}(n_t,p_t)$, non-interpolated AP sums
+$\sum_{\ell}\frac{P_\ell}{N_\ell}\frac{p_\ell}{P_{\rm slot}}$.
+Positive-change AP sums $\ell=1,\dots,L$ and reaches cumulative recall
+$R_+=P_L/P_{\rm slot}$. If every $a_r>0$, then $R_+=1$ and both conventions equal
+$\mathrm{AP}_+$. Otherwise the zero-strength group is non-empty and forms one
+terminal tie group ($\ell=L+1$) with $N_{L+1}=R$ and $P_{L+1}=P_{\rm slot}$,
+contributing precision $P_{\rm slot}/R=\pi_{\rm boundary}$ times recall increment
+$(P_{\rm slot}-P_L)/P_{\rm slot}=1-R_+$, which gives the exact per-edge identity
 \begin{equation}
 \mathrm{AP}_{\rm standard}
 =\mathrm{AP}_+ + \pi_{\rm boundary}(1-R_+).
@@ -1119,10 +1254,14 @@ selection or independent false-alarm calibration.}
 \label{app:residual-pairs}
 Let $\mathcal P_e=\{(u,v):A_{u,e}=1,A_{v,e}=0\}$ and
 $c(d)=\mathbf1\{d>0\}+\tfrac12\mathbf1\{d=0\}$. For a residual weight
-$\lambda$, write
-$d^{(\lambda)}_{uv,e}=(1-\lambda)(H_{u,e}-H_{v,e})+
-\lambda(S_{u,e}-S_{v,e})$. Partition $\mathcal P_e$ by equality of the
-candidate group labels, and define
+$\lambda\ge 0$, write $\Delta H_{uv,e}=H_{u,e}-H_{v,e}$,
+$\Delta S_{uv,e}=S_{u,e}-S_{v,e}$, and
+$d^{(\lambda)}_{uv,e}=(1-\lambda)\Delta H_{uv,e}+\lambda\Delta S_{uv,e}$.
+Partition $\mathcal P_e$ into same-group pairs
+$\mathcal P_e^{\mathrm{within}}=\{(u,v)\in\mathcal P_e:\widehat z_u=\widehat z_v\}$
+and cross-group pairs
+$\mathcal P_e^{\mathrm{cross}}=\{(u,v)\in\mathcal P_e:\widehat z_u\neq\widehat z_v\}$,
+and define
 \begin{equation}
 G_g(\lambda)=\frac1{|\mathcal E_\Delta|}\sum_{e\in\mathcal E_\Delta}
 \frac{\sum_{(u,v)\in\mathcal P_e^{g}}
@@ -1131,11 +1270,57 @@ G_g(\lambda)=\frac1{|\mathcal E_\Delta|}\sum_{e\in\mathcal E_\Delta}
 \end{equation}
 Each component uses the edge's total positive--negative pair denominator,
 then the same macro average as within-edge temporal AUROC. Hence
-$G_{\rm within}+G_{\rm cross}=T_{\rm residual}-T_{\rm hard}$ exactly in
-the finite score representation, up to reported floating-point differences.
-Within a candidate group, $d^{(0)}=0$ and every positive $\lambda$ restores
-raw ordering; across groups both nonzero hard contrasts and tied map values
-are retained in the accounting. We report all original weights and a fixed
+$G_{\rm within}(\lambda)+G_{\rm cross}(\lambda)=T_{\rm residual}(\lambda)-T_{\rm hard}$
+exactly in the finite score representation, up to reported floating-point differences.
+
+\begin{proposition}[Near-zero discontinuity and finite-threshold invariance]
+\label{prop:supp-residual-jump}
+Define the cross-group sign-stability threshold
+\begin{equation*}
+\begin{aligned}
+\lambda^*=\min\Bigl\{1,\;\min\Bigl\{&\frac{|\Delta H_{uv,e}|}{|\Delta H_{uv,e}-\Delta S_{uv,e}|}: \\
+&e\in\mathcal E_\Delta,\ (u,v)\in\mathcal P_e^{\mathrm{cross}},\
+\Delta H_{uv,e}\neq 0,\ \Delta H_{uv,e}\neq\Delta S_{uv,e}\Bigr\}\Bigr\}>0,
+\end{aligned}
+\end{equation*}
+with $\min\emptyset=1$.
+\begin{enumerate}
+\item[(i)] For every $\lambda>0$, $G_{\mathrm{within}}(\lambda)=G_{\mathrm{within}}(1)$
+(jumping from $G_{\mathrm{within}}(0)=0$).
+\item[(ii)] For every $\lambda\in(0,\lambda^*)$, every cross-group pair with
+$\Delta H_{uv,e}\neq 0$ retains the strict sign of $\Delta H_{uv,e}$, so its
+pair increment is zero. In particular, whenever $G_{1,e}\neq G_{0,e}$ for all
+$e\in\mathcal E_\Delta$, $G_{\mathrm{cross}}(\lambda)=0$ identically on
+$(0,\lambda^*)$ and
+\[
+\lim_{\lambda\downarrow 0^+}\bigl[T_{\mathrm{residual}}(\lambda)-T_{\mathrm{hard}}\bigr]
+=G_{\mathrm{within}}(1).
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For $(u,v)\in\mathcal P_e^{\mathrm{within}}$, $\widehat z_u=\widehat z_v$ implies
+$\Delta H_{uv,e}=0$ and $d^{(\lambda)}_{uv,e}=\lambda\Delta S_{uv,e}$; hence for
+all $\lambda>0$, $c(d^{(\lambda)}_{uv,e})=c(\Delta S_{uv,e})=c(d^{(1)}_{uv,e})$,
+establishing~(i). For $(u,v)\in\mathcal P_e^{\mathrm{cross}}$ with $\Delta H_{uv,e}\neq 0$,
+rewriting $d^{(\lambda)}_{uv,e}=\Delta H_{uv,e}-\lambda(\Delta H_{uv,e}-\Delta S_{uv,e})$
+shows that if $\Delta H_{uv,e}=\Delta S_{uv,e}$ then $d^{(\lambda)}_{uv,e}=\Delta H_{uv,e}$
+is independent of $\lambda$, while if $\Delta H_{uv,e}\neq\Delta S_{uv,e}$ then
+$0<\lambda<\lambda^*$ guarantees
+$\lambda|\Delta H_{uv,e}-\Delta S_{uv,e}|<|\Delta H_{uv,e}|$, forcing
+$d^{(\lambda)}_{uv,e}$ to keep the strict sign of $\Delta H_{uv,e}$ and giving
+$c(d^{(\lambda)}_{uv,e})-c(\Delta H_{uv,e})=0$. Finally, because $\mathcal P_e$
+and $\mathcal E_\Delta$ are finite, $\lambda^*>0$; when $G_{1,e}\neq G_{0,e}$ on
+all $e\in\mathcal E_\Delta$, every cross-group pair has $\Delta H_{uv,e}=\pm(G_{1,e}-G_{0,e})\neq 0$,
+yielding $G_{\mathrm{cross}}(\lambda)=0$ for all $\lambda\in(0,\lambda^*)$ and
+the right-hand limit identity. (If an isolated changing edge satisfies
+$G_{1,e}=G_{0,e}$, cross-group pairs on that edge resolve like ties and add
+their $\lambda=1$ tie-breaking contribution on $(0,\lambda^*)$.)
+\end{proof}
+
+Across groups, both nonzero hard contrasts and rare tied map values are retained
+in the numerical accounting. We report all original weights and a fixed
 $10^{-8}$ diagnostic weight, together with lost/new ties and reversed
 comparisons. A near-zero rank jump is not evidence of robust thresholded
 detection or improved latent-state inference.
@@ -1841,7 +2026,7 @@ one CPU worker under the same timing protocol.
 \label{sec:real}
 
 \paragraph{ESS.}
-The ESS benchmark provides 227 process variables, an expert subsystem graph over
+The European Spallation Source (ESS) benchmark provides 227 process variables, an expert subsystem graph over
 23 subsystems, and one hour of one-second data \citep{mogensen2024causal}. We
 z-score each variable, average the variables inside each subsystem, and keep the
 23 subsystems in the expert matrix (45 variables outside those subsystems are
@@ -2098,12 +2283,12 @@ public release is identified in Section~\ref{app:reproduction}.
 
 \subsection{Access, cached replay, and rebuilding}
 \label{app:reproduction}
-The companion archive \path{information_sciences_reproducibility.zip}
-contains manuscript sources, configurations, retained inputs, emissions,
-assignments, truth, per-repeat results and presentation builders for this
-presentation revision. The complete archive is publicly available in version
-\texttt{v2026.10.28-layout.1} at
-\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.10.28-layout.1}.
+The companion archive \path{knowledge_based_systems_reproducibility.zip}
+contains the current manuscript sources and PDFs, configurations, retained
+inputs, emissions, assignments, truth, per-repeat results and presentation
+builders. The complete archive is publicly available in version
+\texttt{v2026.11.15-kbs} at
+\url{https://github.com/xschang1002/latent-state-graph-recovery/releases/tag/v2026.11.15-kbs}.
 Its root README gives environment setup, data-access
 requirements and the execution index. The basic entries are:
 \begin{quote}\small\ttfamily
